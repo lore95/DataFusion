@@ -1,0 +1,40 @@
+git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
+
+cd openpose
+
+git submodule update --init --recursive --remote
+
+Use CMake app, origin openpose folder, output openpose/build
+
+make -j`sysctl -n hw.logicalcpu`
+
+ Go to build/caffe/src/openpose_lib-build/CMakeCache.txt and manually change this:
+vecLib_INCLUDE_DIR:PATH=vecLib_INCLUDE_DIR-NOTFOUND to
+
+vecLib_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Versions/Current/Frameworks/vecLib.framework/Headers/
+
+Go to 3rdparty/caffe/CMakeList.txt change version c++ to 17
+
+Go to openpose/3rdparty/caffe/src/caffe/layers/hdf5_data_layer.cpp
+
+Change std::random_shuffle with:
+
+#include <algorithm>  // For std::shuffle
+#include <random>     // For random number generators
+
+std::random_device rd;            // Obtain a random number from hardware
+std::mt19937 generator(rd());     // Seed the generator
+std::shuffle(file_permutation_.begin(), file_permutation_.end(),generator);
+
+Go to: openpose/3rdparty/caffe/src/caffe/util/io.cpp
+
+Go to CMakeLists.txt in openpose and change c++ version everywhere and also change the line if 
+if (APPLE)
+  include_directories("/usr/local/opt/openblas/include")
+endif (APPLE)
+to
+(APPLE)
+  include_directories("/opt/homebrew/opt/openblas/include")
+endif (APPLE)
+
+
