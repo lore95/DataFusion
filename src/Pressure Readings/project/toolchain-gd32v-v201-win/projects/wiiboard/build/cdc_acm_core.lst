@@ -1,0 +1,2206 @@
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 1
+
+
+   1              		.file	"cdc_acm_core.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.comm	usb_data_buffer,64,4
+  10              		.comm	usb_cmd_buffer,8,4
+  11              		.globl	packet_sent
+  12              		.globl	packet_receive
+  13              		.globl	receive_length
+  14              		.globl	rx_custom_cb
+  15              		.globl	linecoding
+  16              		.globl	device_descriptor
+  17              		.globl	configuration_descriptor
+  18              		.globl	usbd_language_id_desc
+  19              		.globl	usbd_strings
+  20              		.section	.text.cdc_acm_init,"ax",@progbits
+  21              		.align	1
+  22              		.globl	cdc_acm_init
+  24              	cdc_acm_init:
+  25              	.LFB3:
+  26              		.file 1 "lib/usbcdc/src/cdc_acm_core.c"
+   1:lib/usbcdc/src/cdc_acm_core.c **** /*!
+   2:lib/usbcdc/src/cdc_acm_core.c ****     \file  cdc_acm_core.c
+   3:lib/usbcdc/src/cdc_acm_core.c ****     \brief CDC ACM driver
+   4:lib/usbcdc/src/cdc_acm_core.c **** 
+   5:lib/usbcdc/src/cdc_acm_core.c ****     \version 2019-6-5, V1.0.0, demo for GD32VF103
+   6:lib/usbcdc/src/cdc_acm_core.c **** */
+   7:lib/usbcdc/src/cdc_acm_core.c **** 
+   8:lib/usbcdc/src/cdc_acm_core.c **** /*
+   9:lib/usbcdc/src/cdc_acm_core.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  10:lib/usbcdc/src/cdc_acm_core.c **** 
+  11:lib/usbcdc/src/cdc_acm_core.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  12:lib/usbcdc/src/cdc_acm_core.c **** are permitted provided that the following conditions are met:
+  13:lib/usbcdc/src/cdc_acm_core.c **** 
+  14:lib/usbcdc/src/cdc_acm_core.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  15:lib/usbcdc/src/cdc_acm_core.c ****        list of conditions and the following disclaimer.
+  16:lib/usbcdc/src/cdc_acm_core.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  17:lib/usbcdc/src/cdc_acm_core.c ****        this list of conditions and the following disclaimer in the documentation 
+  18:lib/usbcdc/src/cdc_acm_core.c ****        and/or other materials provided with the distribution.
+  19:lib/usbcdc/src/cdc_acm_core.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  20:lib/usbcdc/src/cdc_acm_core.c ****        may be used to endorse or promote products derived from this software without 
+  21:lib/usbcdc/src/cdc_acm_core.c ****        specific prior written permission.
+  22:lib/usbcdc/src/cdc_acm_core.c **** 
+  23:lib/usbcdc/src/cdc_acm_core.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  24:lib/usbcdc/src/cdc_acm_core.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  25:lib/usbcdc/src/cdc_acm_core.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  26:lib/usbcdc/src/cdc_acm_core.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  27:lib/usbcdc/src/cdc_acm_core.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  28:lib/usbcdc/src/cdc_acm_core.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  29:lib/usbcdc/src/cdc_acm_core.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  30:lib/usbcdc/src/cdc_acm_core.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  31:lib/usbcdc/src/cdc_acm_core.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  32:lib/usbcdc/src/cdc_acm_core.c **** OF SUCH DAMAGE.
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 2
+
+
+  33:lib/usbcdc/src/cdc_acm_core.c **** */
+  34:lib/usbcdc/src/cdc_acm_core.c **** 
+  35:lib/usbcdc/src/cdc_acm_core.c **** #include "cdc_acm_core.h"
+  36:lib/usbcdc/src/cdc_acm_core.c **** 
+  37:lib/usbcdc/src/cdc_acm_core.c **** #include "riscv_encoding.h"
+  38:lib/usbcdc/src/cdc_acm_core.c **** 
+  39:lib/usbcdc/src/cdc_acm_core.c **** #define USBD_VID                          0x28e9
+  40:lib/usbcdc/src/cdc_acm_core.c **** #define USBD_PID                          0x018a
+  41:lib/usbcdc/src/cdc_acm_core.c **** 
+  42:lib/usbcdc/src/cdc_acm_core.c **** static uint32_t cdc_cmd = 0xFFU;
+  43:lib/usbcdc/src/cdc_acm_core.c **** 
+  44:lib/usbcdc/src/cdc_acm_core.c **** static uint32_t usb_serial_connected = 0;
+  45:lib/usbcdc/src/cdc_acm_core.c **** 
+  46:lib/usbcdc/src/cdc_acm_core.c **** 
+  47:lib/usbcdc/src/cdc_acm_core.c **** uint8_t usb_data_buffer[CDC_ACM_DATA_PACKET_SIZE];
+  48:lib/usbcdc/src/cdc_acm_core.c **** uint8_t usb_cmd_buffer[CDC_ACM_CMD_PACKET_SIZE];
+  49:lib/usbcdc/src/cdc_acm_core.c **** 
+  50:lib/usbcdc/src/cdc_acm_core.c **** __IO uint8_t packet_sent = 1U;
+  51:lib/usbcdc/src/cdc_acm_core.c **** __IO uint8_t packet_receive = 1U;
+  52:lib/usbcdc/src/cdc_acm_core.c **** __IO uint32_t  receive_length = 0U;
+  53:lib/usbcdc/src/cdc_acm_core.c **** 
+  54:lib/usbcdc/src/cdc_acm_core.c **** //usbd_int_cb_struct *usbd_int_fops = NULL;
+  55:lib/usbcdc/src/cdc_acm_core.c **** 
+  56:lib/usbcdc/src/cdc_acm_core.c **** 
+  57:lib/usbcdc/src/cdc_acm_core.c **** usb_rx_custom_cb rx_custom_cb = (usb_rx_custom_cb)NULL;
+  58:lib/usbcdc/src/cdc_acm_core.c **** 
+  59:lib/usbcdc/src/cdc_acm_core.c **** typedef struct
+  60:lib/usbcdc/src/cdc_acm_core.c **** {
+  61:lib/usbcdc/src/cdc_acm_core.c ****     uint32_t dwDTERate;   /* data terminal rate */
+  62:lib/usbcdc/src/cdc_acm_core.c ****     uint8_t  bCharFormat; /* stop bits */
+  63:lib/usbcdc/src/cdc_acm_core.c ****     uint8_t  bParityType; /* parity */
+  64:lib/usbcdc/src/cdc_acm_core.c ****     uint8_t  bDataBits;   /* data bits */
+  65:lib/usbcdc/src/cdc_acm_core.c **** }line_coding_struct;
+  66:lib/usbcdc/src/cdc_acm_core.c **** 
+  67:lib/usbcdc/src/cdc_acm_core.c **** line_coding_struct linecoding =
+  68:lib/usbcdc/src/cdc_acm_core.c **** {
+  69:lib/usbcdc/src/cdc_acm_core.c ****     115200, /* baud rate     */
+  70:lib/usbcdc/src/cdc_acm_core.c ****     0x00,   /* stop bits - 1 */
+  71:lib/usbcdc/src/cdc_acm_core.c ****     0x00,   /* parity - none */
+  72:lib/usbcdc/src/cdc_acm_core.c ****     0x08    /* num of bits 8 */
+  73:lib/usbcdc/src/cdc_acm_core.c **** };
+  74:lib/usbcdc/src/cdc_acm_core.c **** 
+  75:lib/usbcdc/src/cdc_acm_core.c **** /* note:it should use the C99 standard when compiling the below codes */
+  76:lib/usbcdc/src/cdc_acm_core.c **** /* USB standard device descriptor */
+  77:lib/usbcdc/src/cdc_acm_core.c **** const usb_desc_dev device_descriptor =
+  78:lib/usbcdc/src/cdc_acm_core.c **** {
+  79:lib/usbcdc/src/cdc_acm_core.c ****     .header = 
+  80:lib/usbcdc/src/cdc_acm_core.c ****      {
+  81:lib/usbcdc/src/cdc_acm_core.c ****          .bLength = USB_DEV_DESC_LEN, 
+  82:lib/usbcdc/src/cdc_acm_core.c ****          .bDescriptorType = USB_DESCTYPE_DEV
+  83:lib/usbcdc/src/cdc_acm_core.c ****      },
+  84:lib/usbcdc/src/cdc_acm_core.c ****     .bcdUSB = 0x0200,
+  85:lib/usbcdc/src/cdc_acm_core.c ****     .bDeviceClass = 0x02,  // Communications and CDC Control
+  86:lib/usbcdc/src/cdc_acm_core.c ****     .bDeviceSubClass = 0x00,
+  87:lib/usbcdc/src/cdc_acm_core.c ****     .bDeviceProtocol = 0x00,
+  88:lib/usbcdc/src/cdc_acm_core.c ****     .bMaxPacketSize0 = USB_FS_EP0_MAX_LEN,
+  89:lib/usbcdc/src/cdc_acm_core.c ****     .idVendor = USBD_VID,
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 3
+
+
+  90:lib/usbcdc/src/cdc_acm_core.c ****     .idProduct = USBD_PID,
+  91:lib/usbcdc/src/cdc_acm_core.c ****     .bcdDevice = 0x0100,
+  92:lib/usbcdc/src/cdc_acm_core.c ****     .iManufacturer = STR_IDX_MFC,
+  93:lib/usbcdc/src/cdc_acm_core.c ****     .iProduct = STR_IDX_PRODUCT,
+  94:lib/usbcdc/src/cdc_acm_core.c ****     .iSerialNumber = STR_IDX_SERIAL,
+  95:lib/usbcdc/src/cdc_acm_core.c ****     .bNumberConfigurations = USBD_CFG_MAX_NUM
+  96:lib/usbcdc/src/cdc_acm_core.c **** };
+  97:lib/usbcdc/src/cdc_acm_core.c **** 
+  98:lib/usbcdc/src/cdc_acm_core.c **** /* USB device configuration descriptor */
+  99:lib/usbcdc/src/cdc_acm_core.c **** usb_descriptor_configuration_set_struct configuration_descriptor = 
+ 100:lib/usbcdc/src/cdc_acm_core.c **** {
+ 101:lib/usbcdc/src/cdc_acm_core.c ****     .config = 
+ 102:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 103:lib/usbcdc/src/cdc_acm_core.c ****         .header = 
+ 104:lib/usbcdc/src/cdc_acm_core.c ****          {
+ 105:lib/usbcdc/src/cdc_acm_core.c ****             .bLength = USB_CFG_DESC_LEN,
+ 106:lib/usbcdc/src/cdc_acm_core.c ****             .bDescriptorType = USB_DESCTYPE_CONFIG
+ 107:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 108:lib/usbcdc/src/cdc_acm_core.c ****         .wTotalLength = USB_CDC_ACM_CONFIG_DESC_SIZE,
+ 109:lib/usbcdc/src/cdc_acm_core.c ****         .bNumInterfaces = 0x02,
+ 110:lib/usbcdc/src/cdc_acm_core.c ****         .bConfigurationValue = 0x01,
+ 111:lib/usbcdc/src/cdc_acm_core.c ****         .iConfiguration = 0x00,
+ 112:lib/usbcdc/src/cdc_acm_core.c ****         .bmAttributes = 0x80,
+ 113:lib/usbcdc/src/cdc_acm_core.c ****         .bMaxPower = 0x32
+ 114:lib/usbcdc/src/cdc_acm_core.c ****     },
+ 115:lib/usbcdc/src/cdc_acm_core.c **** 
+ 116:lib/usbcdc/src/cdc_acm_core.c ****     .cdc_loopback_interface = 
+ 117:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 118:lib/usbcdc/src/cdc_acm_core.c ****         .header = 
+ 119:lib/usbcdc/src/cdc_acm_core.c ****          {
+ 120:lib/usbcdc/src/cdc_acm_core.c ****              .bLength = USB_ITF_DESC_LEN,
+ 121:lib/usbcdc/src/cdc_acm_core.c ****              .bDescriptorType = USB_DESCTYPE_ITF 
+ 122:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 123:lib/usbcdc/src/cdc_acm_core.c ****         .bInterfaceNumber = 0x00,
+ 124:lib/usbcdc/src/cdc_acm_core.c ****         .bAlternateSetting = 0x00,
+ 125:lib/usbcdc/src/cdc_acm_core.c ****         .bNumEndpoints = 0x01,
+ 126:lib/usbcdc/src/cdc_acm_core.c ****         .bInterfaceClass = 0x02,     // Communications Interface Class
+ 127:lib/usbcdc/src/cdc_acm_core.c ****         .bInterfaceSubClass = 0x02,  // Abstract Control Model
+ 128:lib/usbcdc/src/cdc_acm_core.c ****         .bInterfaceProtocol = 0x00,  // No class specific protocol required
+ 129:lib/usbcdc/src/cdc_acm_core.c ****         .iInterface = 0x00
+ 130:lib/usbcdc/src/cdc_acm_core.c ****     },
+ 131:lib/usbcdc/src/cdc_acm_core.c **** 
+ 132:lib/usbcdc/src/cdc_acm_core.c ****     .cdc_loopback_header = 
+ 133:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 134:lib/usbcdc/src/cdc_acm_core.c ****         .header =
+ 135:lib/usbcdc/src/cdc_acm_core.c ****          {
+ 136:lib/usbcdc/src/cdc_acm_core.c ****             .bLength = sizeof(usb_descriptor_header_function_struct), 
+ 137:lib/usbcdc/src/cdc_acm_core.c ****             .bDescriptorType = USB_DESCTYPE_CS_INTERFACE
+ 138:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 139:lib/usbcdc/src/cdc_acm_core.c ****         .bDescriptorSubtype = 0x00,
+ 140:lib/usbcdc/src/cdc_acm_core.c ****         .bcdCDC = 0x0110
+ 141:lib/usbcdc/src/cdc_acm_core.c ****     },
+ 142:lib/usbcdc/src/cdc_acm_core.c **** 
+ 143:lib/usbcdc/src/cdc_acm_core.c ****     .cdc_loopback_call_managment = 
+ 144:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 145:lib/usbcdc/src/cdc_acm_core.c ****         .header = 
+ 146:lib/usbcdc/src/cdc_acm_core.c ****          {
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 4
+
+
+ 147:lib/usbcdc/src/cdc_acm_core.c ****             .bLength = sizeof(usb_descriptor_call_managment_function_struct), 
+ 148:lib/usbcdc/src/cdc_acm_core.c ****             .bDescriptorType = USB_DESCTYPE_CS_INTERFACE
+ 149:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 150:lib/usbcdc/src/cdc_acm_core.c ****         .bDescriptorSubtype = 0x01,
+ 151:lib/usbcdc/src/cdc_acm_core.c ****         .bmCapabilities = 0x00,
+ 152:lib/usbcdc/src/cdc_acm_core.c ****         .bDataInterface = 0x01
+ 153:lib/usbcdc/src/cdc_acm_core.c ****     },
+ 154:lib/usbcdc/src/cdc_acm_core.c **** 
+ 155:lib/usbcdc/src/cdc_acm_core.c ****     .cdc_loopback_acm = 
+ 156:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 157:lib/usbcdc/src/cdc_acm_core.c ****         .header = 
+ 158:lib/usbcdc/src/cdc_acm_core.c ****          {
+ 159:lib/usbcdc/src/cdc_acm_core.c ****             .bLength = sizeof(usb_descriptor_acm_function_struct), 
+ 160:lib/usbcdc/src/cdc_acm_core.c ****             .bDescriptorType = USB_DESCTYPE_CS_INTERFACE
+ 161:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 162:lib/usbcdc/src/cdc_acm_core.c ****         .bDescriptorSubtype = 0x02,
+ 163:lib/usbcdc/src/cdc_acm_core.c ****         .bmCapabilities = 0x02,
+ 164:lib/usbcdc/src/cdc_acm_core.c ****     },
+ 165:lib/usbcdc/src/cdc_acm_core.c **** 
+ 166:lib/usbcdc/src/cdc_acm_core.c ****     .cdc_loopback_union = 
+ 167:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 168:lib/usbcdc/src/cdc_acm_core.c ****         .header = 
+ 169:lib/usbcdc/src/cdc_acm_core.c ****          {
+ 170:lib/usbcdc/src/cdc_acm_core.c ****             .bLength = sizeof(usb_descriptor_union_function_struct), 
+ 171:lib/usbcdc/src/cdc_acm_core.c ****             .bDescriptorType = USB_DESCTYPE_CS_INTERFACE
+ 172:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 173:lib/usbcdc/src/cdc_acm_core.c ****         .bDescriptorSubtype = 0x06,
+ 174:lib/usbcdc/src/cdc_acm_core.c ****         .bMasterInterface = 0x00,
+ 175:lib/usbcdc/src/cdc_acm_core.c ****         .bSlaveInterface0 = 0x01,
+ 176:lib/usbcdc/src/cdc_acm_core.c ****     },
+ 177:lib/usbcdc/src/cdc_acm_core.c **** 
+ 178:lib/usbcdc/src/cdc_acm_core.c ****     .cdc_loopback_cmd_endpoint = 
+ 179:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 180:lib/usbcdc/src/cdc_acm_core.c ****         .header = 
+ 181:lib/usbcdc/src/cdc_acm_core.c ****          {
+ 182:lib/usbcdc/src/cdc_acm_core.c ****             .bLength = USB_EP_DESC_LEN, 
+ 183:lib/usbcdc/src/cdc_acm_core.c ****             .bDescriptorType = USB_DESCTYPE_EP
+ 184:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 185:lib/usbcdc/src/cdc_acm_core.c ****         .bEndpointAddress = CDC_ACM_CMD_EP,
+ 186:lib/usbcdc/src/cdc_acm_core.c ****         .bmAttributes = 0x03,
+ 187:lib/usbcdc/src/cdc_acm_core.c ****         .wMaxPacketSize = CDC_ACM_CMD_PACKET_SIZE,
+ 188:lib/usbcdc/src/cdc_acm_core.c ****         .bInterval = 0x0A
+ 189:lib/usbcdc/src/cdc_acm_core.c ****     },
+ 190:lib/usbcdc/src/cdc_acm_core.c **** 
+ 191:lib/usbcdc/src/cdc_acm_core.c ****     .cdc_loopback_data_interface = 
+ 192:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 193:lib/usbcdc/src/cdc_acm_core.c ****         .header = 
+ 194:lib/usbcdc/src/cdc_acm_core.c ****          {
+ 195:lib/usbcdc/src/cdc_acm_core.c ****             .bLength = USB_ITF_DESC_LEN,
+ 196:lib/usbcdc/src/cdc_acm_core.c ****             .bDescriptorType = USB_DESCTYPE_ITF
+ 197:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 198:lib/usbcdc/src/cdc_acm_core.c ****         .bInterfaceNumber = 0x01,
+ 199:lib/usbcdc/src/cdc_acm_core.c ****         .bAlternateSetting = 0x00,
+ 200:lib/usbcdc/src/cdc_acm_core.c ****         .bNumEndpoints = 0x02,
+ 201:lib/usbcdc/src/cdc_acm_core.c ****         .bInterfaceClass = 0x0A,     // Data Interface Class
+ 202:lib/usbcdc/src/cdc_acm_core.c ****         .bInterfaceSubClass = 0x00,  // unused
+ 203:lib/usbcdc/src/cdc_acm_core.c ****         .bInterfaceProtocol = 0x00,  // No class specific protocol required
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 5
+
+
+ 204:lib/usbcdc/src/cdc_acm_core.c ****         .iInterface = 0x00
+ 205:lib/usbcdc/src/cdc_acm_core.c ****     },
+ 206:lib/usbcdc/src/cdc_acm_core.c **** 
+ 207:lib/usbcdc/src/cdc_acm_core.c ****     .cdc_loopback_out_endpoint = 
+ 208:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 209:lib/usbcdc/src/cdc_acm_core.c ****         .header = 
+ 210:lib/usbcdc/src/cdc_acm_core.c ****          {
+ 211:lib/usbcdc/src/cdc_acm_core.c ****              .bLength = USB_EP_DESC_LEN, 
+ 212:lib/usbcdc/src/cdc_acm_core.c ****              .bDescriptorType = USB_DESCTYPE_EP 
+ 213:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 214:lib/usbcdc/src/cdc_acm_core.c ****         .bEndpointAddress = CDC_ACM_DATA_OUT_EP,
+ 215:lib/usbcdc/src/cdc_acm_core.c ****         .bmAttributes = 0x02,
+ 216:lib/usbcdc/src/cdc_acm_core.c ****         .wMaxPacketSize = CDC_ACM_DATA_PACKET_SIZE,
+ 217:lib/usbcdc/src/cdc_acm_core.c ****         .bInterval = 0x00
+ 218:lib/usbcdc/src/cdc_acm_core.c ****     },
+ 219:lib/usbcdc/src/cdc_acm_core.c **** 
+ 220:lib/usbcdc/src/cdc_acm_core.c ****     .cdc_loopback_in_endpoint = 
+ 221:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 222:lib/usbcdc/src/cdc_acm_core.c ****         .header = 
+ 223:lib/usbcdc/src/cdc_acm_core.c ****          {
+ 224:lib/usbcdc/src/cdc_acm_core.c ****              .bLength = USB_EP_DESC_LEN, 
+ 225:lib/usbcdc/src/cdc_acm_core.c ****              .bDescriptorType = USB_DESCTYPE_EP 
+ 226:lib/usbcdc/src/cdc_acm_core.c ****          },
+ 227:lib/usbcdc/src/cdc_acm_core.c ****         .bEndpointAddress = CDC_ACM_DATA_IN_EP,
+ 228:lib/usbcdc/src/cdc_acm_core.c ****         .bmAttributes = 0x02,
+ 229:lib/usbcdc/src/cdc_acm_core.c ****         .wMaxPacketSize = CDC_ACM_DATA_PACKET_SIZE,
+ 230:lib/usbcdc/src/cdc_acm_core.c ****         .bInterval = 0x00
+ 231:lib/usbcdc/src/cdc_acm_core.c ****     }
+ 232:lib/usbcdc/src/cdc_acm_core.c **** };
+ 233:lib/usbcdc/src/cdc_acm_core.c **** 
+ 234:lib/usbcdc/src/cdc_acm_core.c **** /* USB language ID Descriptor */
+ 235:lib/usbcdc/src/cdc_acm_core.c **** const usb_desc_LANGID usbd_language_id_desc = 
+ 236:lib/usbcdc/src/cdc_acm_core.c **** {
+ 237:lib/usbcdc/src/cdc_acm_core.c ****     .header = 
+ 238:lib/usbcdc/src/cdc_acm_core.c ****      {
+ 239:lib/usbcdc/src/cdc_acm_core.c ****          .bLength = sizeof(usb_desc_LANGID), 
+ 240:lib/usbcdc/src/cdc_acm_core.c ****          .bDescriptorType = USB_DESCTYPE_STR
+ 241:lib/usbcdc/src/cdc_acm_core.c ****      },
+ 242:lib/usbcdc/src/cdc_acm_core.c ****     .wLANGID = ENG_LANGID
+ 243:lib/usbcdc/src/cdc_acm_core.c **** };
+ 244:lib/usbcdc/src/cdc_acm_core.c **** 
+ 245:lib/usbcdc/src/cdc_acm_core.c **** void* const usbd_strings[] = 
+ 246:lib/usbcdc/src/cdc_acm_core.c **** {
+ 247:lib/usbcdc/src/cdc_acm_core.c ****     [STR_IDX_LANGID] = (uint8_t *)&usbd_language_id_desc,
+ 248:lib/usbcdc/src/cdc_acm_core.c ****     [STR_IDX_MFC] = USBD_STRING_DESC("GigaDevice"),
+ 249:lib/usbcdc/src/cdc_acm_core.c ****     [STR_IDX_PRODUCT] = USBD_STRING_DESC("GD32 USB CDC ACM in FS Mode"),
+ 250:lib/usbcdc/src/cdc_acm_core.c ****     [STR_IDX_SERIAL] = USBD_STRING_DESC("GD32XXX-3.0.0-7z8x9yer")
+ 251:lib/usbcdc/src/cdc_acm_core.c **** };
+ 252:lib/usbcdc/src/cdc_acm_core.c **** 
+ 253:lib/usbcdc/src/cdc_acm_core.c **** /*!
+ 254:lib/usbcdc/src/cdc_acm_core.c ****     \brief      initialize the CDC ACM device
+ 255:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  pudev: pointer to USB device instance
+ 256:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  config_index: configuration index
+ 257:lib/usbcdc/src/cdc_acm_core.c ****     \param[out] none
+ 258:lib/usbcdc/src/cdc_acm_core.c ****     \retval     USB device operation status
+ 259:lib/usbcdc/src/cdc_acm_core.c **** */
+ 260:lib/usbcdc/src/cdc_acm_core.c **** uint8_t cdc_acm_init (usb_dev *pudev, uint8_t config_index)
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 6
+
+
+ 261:lib/usbcdc/src/cdc_acm_core.c **** {
+  27              		.loc 1 261 1
+  28              		.cfi_startproc
+  29              	.LVL0:
+ 262:lib/usbcdc/src/cdc_acm_core.c ****     /* initialize the data Tx/Rx endpoint */
+ 263:lib/usbcdc/src/cdc_acm_core.c ****     usbd_ep_setup(pudev, &(configuration_descriptor.cdc_loopback_in_endpoint));
+  30              		.loc 1 263 5
+ 261:lib/usbcdc/src/cdc_acm_core.c ****     /* initialize the data Tx/Rx endpoint */
+  31              		.loc 1 261 1 is_stmt 0
+  32 0000 4111     		addi	sp,sp,-16
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 16
+  35 0002 22C4     		sw	s0,8(sp)
+  36              		.cfi_offset 8, -8
+  37              		.loc 1 263 5
+  38 0004 37040000 		lui	s0,%hi(.LANCHOR0)
+  39 0008 13040400 		addi	s0,s0,%lo(.LANCHOR0)
+  40 000c 9305C403 		addi	a1,s0,60
+  41              	.LVL1:
+ 261:lib/usbcdc/src/cdc_acm_core.c ****     /* initialize the data Tx/Rx endpoint */
+  42              		.loc 1 261 1
+  43 0010 06C6     		sw	ra,12(sp)
+  44 0012 26C2     		sw	s1,4(sp)
+  45              		.cfi_offset 1, -4
+  46              		.cfi_offset 9, -12
+ 261:lib/usbcdc/src/cdc_acm_core.c ****     /* initialize the data Tx/Rx endpoint */
+  47              		.loc 1 261 1
+  48 0014 AA84     		mv	s1,a0
+  49              		.loc 1 263 5
+  50 0016 97000000 		call	usbd_ep_setup
+  50      E7800000 
+  51              	.LVL2:
+ 264:lib/usbcdc/src/cdc_acm_core.c ****     usbd_ep_setup(pudev, &(configuration_descriptor.cdc_loopback_out_endpoint));
+  52              		.loc 1 264 5 is_stmt 1
+  53 001e 93055403 		addi	a1,s0,53
+  54 0022 2685     		mv	a0,s1
+  55 0024 97000000 		call	usbd_ep_setup
+  55      E7800000 
+  56              	.LVL3:
+ 265:lib/usbcdc/src/cdc_acm_core.c **** 
+ 266:lib/usbcdc/src/cdc_acm_core.c ****     /* initialize the command Tx endpoint */
+ 267:lib/usbcdc/src/cdc_acm_core.c ****     usbd_ep_setup(pudev, &(configuration_descriptor.cdc_loopback_cmd_endpoint));
+  57              		.loc 1 267 5
+  58 002c 93055402 		addi	a1,s0,37
+  59 0030 2685     		mv	a0,s1
+  60 0032 97000000 		call	usbd_ep_setup
+  60      E7800000 
+  61              	.LVL4:
+ 268:lib/usbcdc/src/cdc_acm_core.c **** 
+ 269:lib/usbcdc/src/cdc_acm_core.c ****     return USBD_OK;
+  62              		.loc 1 269 5
+ 270:lib/usbcdc/src/cdc_acm_core.c **** }
+  63              		.loc 1 270 1 is_stmt 0
+  64 003a B240     		lw	ra,12(sp)
+  65              		.cfi_restore 1
+  66 003c 2244     		lw	s0,8(sp)
+  67              		.cfi_restore 8
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 7
+
+
+  68 003e 9244     		lw	s1,4(sp)
+  69              		.cfi_restore 9
+  70              	.LVL5:
+  71 0040 0145     		li	a0,0
+  72 0042 4101     		addi	sp,sp,16
+  73              	.LCFI1:
+  74              		.cfi_def_cfa_offset 0
+  75 0044 8280     		jr	ra
+  76              		.cfi_endproc
+  77              	.LFE3:
+  79              		.section	.text.cdc_acm_deinit,"ax",@progbits
+  80              		.align	1
+  81              		.globl	cdc_acm_deinit
+  83              	cdc_acm_deinit:
+  84              	.LFB4:
+ 271:lib/usbcdc/src/cdc_acm_core.c **** 
+ 272:lib/usbcdc/src/cdc_acm_core.c **** /*!
+ 273:lib/usbcdc/src/cdc_acm_core.c ****     \brief      de-initialize the CDC ACM device
+ 274:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  pudev: pointer to USB device instance
+ 275:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  config_index: configuration index
+ 276:lib/usbcdc/src/cdc_acm_core.c ****     \param[out] none
+ 277:lib/usbcdc/src/cdc_acm_core.c ****     \retval     USB device operation status
+ 278:lib/usbcdc/src/cdc_acm_core.c **** */
+ 279:lib/usbcdc/src/cdc_acm_core.c **** uint8_t cdc_acm_deinit (usb_dev *pudev, uint8_t config_index)
+ 280:lib/usbcdc/src/cdc_acm_core.c **** {
+  85              		.loc 1 280 1 is_stmt 1
+  86              		.cfi_startproc
+  87              	.LVL6:
+ 281:lib/usbcdc/src/cdc_acm_core.c ****     /* deinitialize the data Tx/Rx endpoint */
+ 282:lib/usbcdc/src/cdc_acm_core.c ****     usbd_ep_clear(pudev, CDC_ACM_DATA_IN_EP);
+  88              		.loc 1 282 5
+ 280:lib/usbcdc/src/cdc_acm_core.c ****     /* deinitialize the data Tx/Rx endpoint */
+  89              		.loc 1 280 1 is_stmt 0
+  90 0000 4111     		addi	sp,sp,-16
+  91              	.LCFI2:
+  92              		.cfi_def_cfa_offset 16
+  93              		.loc 1 282 5
+  94 0002 93051008 		li	a1,129
+  95              	.LVL7:
+ 280:lib/usbcdc/src/cdc_acm_core.c ****     /* deinitialize the data Tx/Rx endpoint */
+  96              		.loc 1 280 1
+  97 0006 06C6     		sw	ra,12(sp)
+  98 0008 22C4     		sw	s0,8(sp)
+  99              		.cfi_offset 1, -4
+ 100              		.cfi_offset 8, -8
+ 280:lib/usbcdc/src/cdc_acm_core.c ****     /* deinitialize the data Tx/Rx endpoint */
+ 101              		.loc 1 280 1
+ 102 000a 2A84     		mv	s0,a0
+ 103              		.loc 1 282 5
+ 104 000c 97000000 		call	usbd_ep_clear
+ 104      E7800000 
+ 105              	.LVL8:
+ 283:lib/usbcdc/src/cdc_acm_core.c ****     usbd_ep_clear(pudev, CDC_ACM_DATA_OUT_EP);
+ 106              		.loc 1 283 5 is_stmt 1
+ 107 0014 8D45     		li	a1,3
+ 108 0016 2285     		mv	a0,s0
+ 109 0018 97000000 		call	usbd_ep_clear
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 8
+
+
+ 109      E7800000 
+ 110              	.LVL9:
+ 284:lib/usbcdc/src/cdc_acm_core.c **** 
+ 285:lib/usbcdc/src/cdc_acm_core.c ****     /* deinitialize the command Tx endpoint */
+ 286:lib/usbcdc/src/cdc_acm_core.c ****     usbd_ep_clear(pudev, CDC_ACM_CMD_EP);
+ 111              		.loc 1 286 5
+ 112 0020 2285     		mv	a0,s0
+ 113 0022 93052008 		li	a1,130
+ 114 0026 97000000 		call	usbd_ep_clear
+ 114      E7800000 
+ 115              	.LVL10:
+ 287:lib/usbcdc/src/cdc_acm_core.c **** 
+ 288:lib/usbcdc/src/cdc_acm_core.c ****     return USBD_OK;
+ 116              		.loc 1 288 5
+ 289:lib/usbcdc/src/cdc_acm_core.c **** }
+ 117              		.loc 1 289 1 is_stmt 0
+ 118 002e B240     		lw	ra,12(sp)
+ 119              		.cfi_restore 1
+ 120 0030 2244     		lw	s0,8(sp)
+ 121              		.cfi_restore 8
+ 122              	.LVL11:
+ 123 0032 0145     		li	a0,0
+ 124 0034 4101     		addi	sp,sp,16
+ 125              	.LCFI3:
+ 126              		.cfi_def_cfa_offset 0
+ 127 0036 8280     		jr	ra
+ 128              		.cfi_endproc
+ 129              	.LFE4:
+ 131              		.section	.text.cdc_acm_data_out_handler,"ax",@progbits
+ 132              		.align	1
+ 133              		.globl	cdc_acm_data_out_handler
+ 135              	cdc_acm_data_out_handler:
+ 136              	.LFB5:
+ 290:lib/usbcdc/src/cdc_acm_core.c **** 
+ 291:lib/usbcdc/src/cdc_acm_core.c **** /*!
+ 292:lib/usbcdc/src/cdc_acm_core.c ****     \brief      handle CDC ACM data
+ 293:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  pudev: pointer to USB device instance
+ 294:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  rx_tx: data transfer direction:
+ 295:lib/usbcdc/src/cdc_acm_core.c ****       \arg        USBD_TX
+ 296:lib/usbcdc/src/cdc_acm_core.c ****       \arg        USBD_RX
+ 297:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  ep_id: endpoint identifier
+ 298:lib/usbcdc/src/cdc_acm_core.c ****     \param[out] none
+ 299:lib/usbcdc/src/cdc_acm_core.c ****     \retval     USB device operation status
+ 300:lib/usbcdc/src/cdc_acm_core.c **** */
+ 301:lib/usbcdc/src/cdc_acm_core.c **** uint8_t cdc_acm_data_out_handler (usb_dev *pudev, uint8_t ep_id)
+ 302:lib/usbcdc/src/cdc_acm_core.c **** {
+ 137              		.loc 1 302 1 is_stmt 1
+ 138              		.cfi_startproc
+ 139              	.LVL12:
+ 303:lib/usbcdc/src/cdc_acm_core.c ****     if ((EP0_OUT & 0x7F) == ep_id) 
+ 140              		.loc 1 303 5
+ 302:lib/usbcdc/src/cdc_acm_core.c ****     if ((EP0_OUT & 0x7F) == ep_id) 
+ 141              		.loc 1 302 1 is_stmt 0
+ 142 0000 4111     		addi	sp,sp,-16
+ 143              	.LCFI4:
+ 144              		.cfi_def_cfa_offset 16
+ 145 0002 06C6     		sw	ra,12(sp)
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 9
+
+
+ 146              		.cfi_offset 1, -4
+ 147              		.loc 1 303 8
+ 148 0004 91E9     		bne	a1,zero,.L6
+ 304:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 305:lib/usbcdc/src/cdc_acm_core.c ****         cdc_acm_EP0_RxReady (pudev);
+ 149              		.loc 1 305 9 is_stmt 1
+ 150 0006 97000000 		call	cdc_acm_EP0_RxReady
+ 150      E7800000 
+ 151              	.LVL13:
+ 306:lib/usbcdc/src/cdc_acm_core.c ****         /*if(rx_custom_cb != NULL){
+ 307:lib/usbcdc/src/cdc_acm_core.c ****             rx_custom_cb();
+ 308:lib/usbcdc/src/cdc_acm_core.c ****         }*/
+ 309:lib/usbcdc/src/cdc_acm_core.c ****     } 
+ 310:lib/usbcdc/src/cdc_acm_core.c ****     else if ((CDC_ACM_DATA_OUT_EP & 0x7F) == ep_id) 
+ 311:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 312:lib/usbcdc/src/cdc_acm_core.c ****         packet_receive = 1;
+ 313:lib/usbcdc/src/cdc_acm_core.c ****         receive_length = usbd_rxcount_get(pudev, CDC_ACM_DATA_OUT_EP);
+ 314:lib/usbcdc/src/cdc_acm_core.c ****         if(rx_custom_cb != NULL){
+ 315:lib/usbcdc/src/cdc_acm_core.c ****             rx_custom_cb();
+ 316:lib/usbcdc/src/cdc_acm_core.c ****         }
+ 317:lib/usbcdc/src/cdc_acm_core.c **** 
+ 318:lib/usbcdc/src/cdc_acm_core.c ****         return USBD_OK;
+ 319:lib/usbcdc/src/cdc_acm_core.c ****     }
+ 320:lib/usbcdc/src/cdc_acm_core.c ****     return USBD_FAIL;
+ 152              		.loc 1 320 12 is_stmt 0
+ 153 000e 8947     		li	a5,2
+ 154              	.L7:
+ 321:lib/usbcdc/src/cdc_acm_core.c **** }
+ 155              		.loc 1 321 1
+ 156 0010 B240     		lw	ra,12(sp)
+ 157              		.cfi_remember_state
+ 158              		.cfi_restore 1
+ 159 0012 3E85     		mv	a0,a5
+ 160 0014 4101     		addi	sp,sp,16
+ 161              	.LCFI5:
+ 162              		.cfi_def_cfa_offset 0
+ 163 0016 8280     		jr	ra
+ 164              	.LVL14:
+ 165              	.L6:
+ 166              	.LCFI6:
+ 167              		.cfi_restore_state
+ 310:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 168              		.loc 1 310 10 is_stmt 1
+ 310:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 169              		.loc 1 310 13 is_stmt 0
+ 170 0018 8D46     		li	a3,3
+ 320:lib/usbcdc/src/cdc_acm_core.c **** }
+ 171              		.loc 1 320 12
+ 172 001a 8947     		li	a5,2
+ 310:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 173              		.loc 1 310 13
+ 174 001c E39AD5FE 		bne	a1,a3,.L7
+ 175              	.LVL15:
+ 176              	.LBB5:
+ 177              	.LBB6:
+ 312:lib/usbcdc/src/cdc_acm_core.c ****         receive_length = usbd_rxcount_get(pudev, CDC_ACM_DATA_OUT_EP);
+ 178              		.loc 1 312 9 is_stmt 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 10
+
+
+ 312:lib/usbcdc/src/cdc_acm_core.c ****         receive_length = usbd_rxcount_get(pudev, CDC_ACM_DATA_OUT_EP);
+ 179              		.loc 1 312 24 is_stmt 0
+ 180 0020 B7070000 		lui	a5,%hi(.LANCHOR1)
+ 181 0024 0547     		li	a4,1
+ 182 0026 2380E700 		sb	a4,%lo(.LANCHOR1)(a5)
+ 313:lib/usbcdc/src/cdc_acm_core.c ****         if(rx_custom_cb != NULL){
+ 183              		.loc 1 313 9 is_stmt 1
+ 313:lib/usbcdc/src/cdc_acm_core.c ****         if(rx_custom_cb != NULL){
+ 184              		.loc 1 313 26 is_stmt 0
+ 185 002a 97000000 		call	usbd_rxcount_get
+ 185      E7800000 
+ 186              	.LVL16:
+ 313:lib/usbcdc/src/cdc_acm_core.c ****         if(rx_custom_cb != NULL){
+ 187              		.loc 1 313 24
+ 188 0032 B7070000 		lui	a5,%hi(.LANCHOR2)
+ 189 0036 23A0A700 		sw	a0,%lo(.LANCHOR2)(a5)
+ 314:lib/usbcdc/src/cdc_acm_core.c ****             rx_custom_cb();
+ 190              		.loc 1 314 9 is_stmt 1
+ 314:lib/usbcdc/src/cdc_acm_core.c ****             rx_custom_cb();
+ 191              		.loc 1 314 25 is_stmt 0
+ 192 003a B7070000 		lui	a5,%hi(.LANCHOR3)
+ 193 003e 03A70700 		lw	a4,%lo(.LANCHOR3)(a5)
+ 314:lib/usbcdc/src/cdc_acm_core.c ****             rx_custom_cb();
+ 194              		.loc 1 314 11
+ 195 0042 8147     		li	a5,0
+ 196 0044 71D7     		beq	a4,zero,.L7
+ 315:lib/usbcdc/src/cdc_acm_core.c ****         }
+ 197              		.loc 1 315 13 is_stmt 1
+ 198 0046 0297     		jalr	a4
+ 199              	.LVL17:
+ 200 0048 8147     		li	a5,0
+ 201 004a D9B7     		j	.L7
+ 202              	.LBE6:
+ 203              	.LBE5:
+ 204              		.cfi_endproc
+ 205              	.LFE5:
+ 207              		.section	.text.cdc_acm_data_in_handler,"ax",@progbits
+ 208              		.align	1
+ 209              		.globl	cdc_acm_data_in_handler
+ 211              	cdc_acm_data_in_handler:
+ 212              	.LFB6:
+ 322:lib/usbcdc/src/cdc_acm_core.c **** 
+ 323:lib/usbcdc/src/cdc_acm_core.c **** uint8_t cdc_acm_data_in_handler (usb_dev *pudev, uint8_t ep_id)
+ 324:lib/usbcdc/src/cdc_acm_core.c **** {
+ 213              		.loc 1 324 1
+ 214              		.cfi_startproc
+ 215              	.LVL18:
+ 325:lib/usbcdc/src/cdc_acm_core.c ****     if ((CDC_ACM_DATA_IN_EP & 0x7F) == ep_id) 
+ 216              		.loc 1 325 5
+ 217              		.loc 1 325 8 is_stmt 0
+ 218 0000 0547     		li	a4,1
+ 219 0002 639DE502 		bne	a1,a4,.L14
+ 220              	.LVL19:
+ 221              	.LBB10:
+ 222              	.LBB11:
+ 326:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 327:lib/usbcdc/src/cdc_acm_core.c ****         usb_transc *transc = &pudev->dev.transc_in[EP_ID(ep_id)];
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 11
+
+
+ 223              		.loc 1 327 9 is_stmt 1
+ 328:lib/usbcdc/src/cdc_acm_core.c **** 
+ 329:lib/usbcdc/src/cdc_acm_core.c ****         if ((transc->xfer_len % transc->max_len == 0) && (transc->xfer_len != 0)) {
+ 224              		.loc 1 329 9
+ 225              		.loc 1 329 20 is_stmt 0
+ 226 0006 0327050F 		lw	a4,240(a0)
+ 227              		.loc 1 329 39
+ 228 000a 8357850E 		lhu	a5,232(a0)
+ 229              		.loc 1 329 31
+ 230 000e B377F702 		remu	a5,a4,a5
+ 231              		.loc 1 329 12
+ 232 0012 91EF     		bne	a5,zero,.L13
+ 233              		.loc 1 329 55
+ 234 0014 09CF     		beq	a4,zero,.L13
+ 330:lib/usbcdc/src/cdc_acm_core.c ****             usbd_ep_send (pudev, ep_id, NULL, 0U);
+ 235              		.loc 1 330 13 is_stmt 1
+ 236              	.LBE11:
+ 237              	.LBE10:
+ 324:lib/usbcdc/src/cdc_acm_core.c ****     if ((CDC_ACM_DATA_IN_EP & 0x7F) == ep_id) 
+ 238              		.loc 1 324 1 is_stmt 0
+ 239 0016 4111     		addi	sp,sp,-16
+ 240              	.LCFI7:
+ 241              		.cfi_def_cfa_offset 16
+ 242              	.LBB16:
+ 243              	.LBB12:
+ 244              		.loc 1 330 13
+ 245 0018 8146     		li	a3,0
+ 246 001a 0146     		li	a2,0
+ 247              	.LBE12:
+ 248              	.LBE16:
+ 324:lib/usbcdc/src/cdc_acm_core.c ****     if ((CDC_ACM_DATA_IN_EP & 0x7F) == ep_id) 
+ 249              		.loc 1 324 1
+ 250 001c 06C6     		sw	ra,12(sp)
+ 251              		.cfi_offset 1, -4
+ 252              	.LBB17:
+ 253              	.LBB13:
+ 254              		.loc 1 330 13
+ 255 001e 97000000 		call	usbd_ep_send
+ 255      E7800000 
+ 256              	.LVL20:
+ 257              	.LBE13:
+ 258              	.LBE17:
+ 331:lib/usbcdc/src/cdc_acm_core.c ****         } else {
+ 332:lib/usbcdc/src/cdc_acm_core.c ****             packet_sent = 1;
+ 333:lib/usbcdc/src/cdc_acm_core.c ****         }
+ 334:lib/usbcdc/src/cdc_acm_core.c ****         return USBD_OK;
+ 335:lib/usbcdc/src/cdc_acm_core.c ****     } 
+ 336:lib/usbcdc/src/cdc_acm_core.c ****     return USBD_FAIL;
+ 337:lib/usbcdc/src/cdc_acm_core.c **** }
+ 259              		.loc 1 337 1
+ 260 0026 B240     		lw	ra,12(sp)
+ 261              		.cfi_restore 1
+ 262              	.LBB18:
+ 263              	.LBB14:
+ 330:lib/usbcdc/src/cdc_acm_core.c ****         } else {
+ 264              		.loc 1 330 13
+ 265 0028 0145     		li	a0,0
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 12
+
+
+ 266              	.LBE14:
+ 267              	.LBE18:
+ 268              		.loc 1 337 1
+ 269 002a 4101     		addi	sp,sp,16
+ 270              	.LCFI8:
+ 271              		.cfi_def_cfa_offset 0
+ 272 002c 8280     		jr	ra
+ 273              	.LVL21:
+ 274              	.L13:
+ 275              	.LBB19:
+ 276              	.LBB15:
+ 332:lib/usbcdc/src/cdc_acm_core.c ****         }
+ 277              		.loc 1 332 13 is_stmt 1
+ 332:lib/usbcdc/src/cdc_acm_core.c ****         }
+ 278              		.loc 1 332 25 is_stmt 0
+ 279 002e B7070000 		lui	a5,%hi(.LANCHOR4)
+ 280 0032 0547     		li	a4,1
+ 281 0034 2380E700 		sb	a4,%lo(.LANCHOR4)(a5)
+ 282 0038 0145     		li	a0,0
+ 283              	.LVL22:
+ 284 003a 8280     		ret
+ 285              	.LVL23:
+ 286              	.L14:
+ 287              	.LBE15:
+ 288              	.LBE19:
+ 336:lib/usbcdc/src/cdc_acm_core.c **** }
+ 289              		.loc 1 336 12
+ 290 003c 0945     		li	a0,2
+ 291              	.LVL24:
+ 292              		.loc 1 337 1
+ 293 003e 8280     		ret
+ 294              		.cfi_endproc
+ 295              	.LFE6:
+ 297              		.section	.text.cdc_acm_req_handler,"ax",@progbits
+ 298              		.align	1
+ 299              		.globl	cdc_acm_req_handler
+ 301              	cdc_acm_req_handler:
+ 302              	.LFB7:
+ 338:lib/usbcdc/src/cdc_acm_core.c **** 
+ 339:lib/usbcdc/src/cdc_acm_core.c **** 
+ 340:lib/usbcdc/src/cdc_acm_core.c **** /*!
+ 341:lib/usbcdc/src/cdc_acm_core.c ****     \brief      handle the CDC ACM class-specific requests
+ 342:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  pudev: pointer to USB device instance
+ 343:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  req: device class-specific request
+ 344:lib/usbcdc/src/cdc_acm_core.c ****     \param[out] none
+ 345:lib/usbcdc/src/cdc_acm_core.c ****     \retval     USB device operation status
+ 346:lib/usbcdc/src/cdc_acm_core.c **** */
+ 347:lib/usbcdc/src/cdc_acm_core.c **** uint8_t cdc_acm_req_handler (usb_dev *pudev, usb_req *req)
+ 348:lib/usbcdc/src/cdc_acm_core.c **** {
+ 303              		.loc 1 348 1 is_stmt 1
+ 304              		.cfi_startproc
+ 305              	.LVL25:
+ 349:lib/usbcdc/src/cdc_acm_core.c ****     switch (req->bRequest) 
+ 306              		.loc 1 349 5
+ 307              		.loc 1 349 16 is_stmt 0
+ 308 0000 83C71500 		lbu	a5,1(a1)
+ 309              		.loc 1 349 5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 13
+
+
+ 310 0004 13071002 		li	a4,33
+ 311 0008 6386E702 		beq	a5,a4,.L23
+ 312 000c 13072002 		li	a4,34
+ 313 0010 638FE706 		beq	a5,a4,.L24
+ 314 0014 13070002 		li	a4,32
+ 315 0018 639CE700 		bne	a5,a4,.L25
+ 350:lib/usbcdc/src/cdc_acm_core.c ****     {
+ 351:lib/usbcdc/src/cdc_acm_core.c ****         case SEND_ENCAPSULATED_COMMAND:
+ 352:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 353:lib/usbcdc/src/cdc_acm_core.c ****         case GET_ENCAPSULATED_RESPONSE:
+ 354:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 355:lib/usbcdc/src/cdc_acm_core.c ****         case SET_COMM_FEATURE:
+ 356:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 357:lib/usbcdc/src/cdc_acm_core.c ****         case GET_COMM_FEATURE:
+ 358:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 359:lib/usbcdc/src/cdc_acm_core.c ****         case CLEAR_COMM_FEATURE:
+ 360:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 361:lib/usbcdc/src/cdc_acm_core.c ****         case SET_LINE_CODING:
+ 362:lib/usbcdc/src/cdc_acm_core.c ****             /* set the value of the current command to be processed */
+ 363:lib/usbcdc/src/cdc_acm_core.c ****             cdc_cmd = req->bRequest;
+ 316              		.loc 1 363 13 is_stmt 1
+ 317              		.loc 1 363 21 is_stmt 0
+ 318 001c 37070000 		lui	a4,%hi(.LANCHOR5)
+ 319 0020 2320F700 		sw	a5,%lo(.LANCHOR5)(a4)
+ 364:lib/usbcdc/src/cdc_acm_core.c ****             /* enable EP0 prepare to receive command data packet */
+ 365:lib/usbcdc/src/cdc_acm_core.c ****             pudev->dev.transc_out[0].xfer_buf = usb_cmd_buffer;
+ 320              		.loc 1 365 13 is_stmt 1
+ 321              		.loc 1 365 47 is_stmt 0
+ 322 0024 B7070000 		lui	a5,%hi(usb_cmd_buffer)
+ 323 0028 93870700 		addi	a5,a5,%lo(usb_cmd_buffer)
+ 324 002c 232AF526 		sw	a5,628(a0)
+ 366:lib/usbcdc/src/cdc_acm_core.c ****            break;
+ 325              		.loc 1 366 12 is_stmt 1
+ 326              	.L25:
+ 367:lib/usbcdc/src/cdc_acm_core.c ****         case GET_LINE_CODING:
+ 368:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[0] = (uint8_t)(linecoding.dwDTERate);
+ 369:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[1] = (uint8_t)(linecoding.dwDTERate >> 8);
+ 370:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[2] = (uint8_t)(linecoding.dwDTERate >> 16);
+ 371:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[3] = (uint8_t)(linecoding.dwDTERate >> 24);
+ 372:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[4] = linecoding.bCharFormat;
+ 373:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[5] = linecoding.bParityType;
+ 374:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[6] = linecoding.bDataBits;
+ 375:lib/usbcdc/src/cdc_acm_core.c ****             /* send the request data to the host */
+ 376:lib/usbcdc/src/cdc_acm_core.c ****             pudev->dev.transc_in[0].xfer_buf = usb_cmd_buffer;
+ 377:lib/usbcdc/src/cdc_acm_core.c ****             pudev->dev.transc_in[0].remain_len = req->wLength;
+ 378:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 379:lib/usbcdc/src/cdc_acm_core.c ****         case SET_CONTROL_LINE_STATE:
+ 380:lib/usbcdc/src/cdc_acm_core.c ****             usb_serial_connected = req->wValue;
+ 381:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 382:lib/usbcdc/src/cdc_acm_core.c ****         case SEND_BREAK:
+ 383:lib/usbcdc/src/cdc_acm_core.c ****             //dbg_set_temporary_breakpoint(read_csr(mepc), 0);
+ 384:lib/usbcdc/src/cdc_acm_core.c ****             //dbg_break();
+ 385:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 386:lib/usbcdc/src/cdc_acm_core.c ****         default:
+ 387:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 388:lib/usbcdc/src/cdc_acm_core.c ****     }
+ 389:lib/usbcdc/src/cdc_acm_core.c **** 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 14
+
+
+ 390:lib/usbcdc/src/cdc_acm_core.c ****     return USBD_OK;
+ 327              		.loc 1 390 5
+ 391:lib/usbcdc/src/cdc_acm_core.c **** }
+ 328              		.loc 1 391 1 is_stmt 0
+ 329 0030 0145     		li	a0,0
+ 330              	.LVL26:
+ 331 0032 8280     		ret
+ 332              	.LVL27:
+ 333              	.L23:
+ 334              	.LBB22:
+ 335              	.LBB23:
+ 368:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[1] = (uint8_t)(linecoding.dwDTERate >> 8);
+ 336              		.loc 1 368 13 is_stmt 1
+ 368:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[1] = (uint8_t)(linecoding.dwDTERate >> 8);
+ 337              		.loc 1 368 53 is_stmt 0
+ 338 0034 37070000 		lui	a4,%hi(.LANCHOR6)
+ 339 0038 13070700 		addi	a4,a4,%lo(.LANCHOR6)
+ 340 003c 1443     		lw	a3,0(a4)
+ 368:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[1] = (uint8_t)(linecoding.dwDTERate >> 8);
+ 341              		.loc 1 368 31
+ 342 003e B7070000 		lui	a5,%hi(usb_cmd_buffer)
+ 343 0042 93870700 		addi	a5,a5,%lo(usb_cmd_buffer)
+ 369:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[2] = (uint8_t)(linecoding.dwDTERate >> 16);
+ 344              		.loc 1 369 64
+ 345 0046 13D68600 		srli	a2,a3,8
+ 368:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[1] = (uint8_t)(linecoding.dwDTERate >> 8);
+ 346              		.loc 1 368 33
+ 347 004a 2380D700 		sb	a3,0(a5)
+ 369:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[2] = (uint8_t)(linecoding.dwDTERate >> 16);
+ 348              		.loc 1 369 13 is_stmt 1
+ 369:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[2] = (uint8_t)(linecoding.dwDTERate >> 16);
+ 349              		.loc 1 369 33 is_stmt 0
+ 350 004e A380C700 		sb	a2,1(a5)
+ 370:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[3] = (uint8_t)(linecoding.dwDTERate >> 24);
+ 351              		.loc 1 370 13 is_stmt 1
+ 370:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[3] = (uint8_t)(linecoding.dwDTERate >> 24);
+ 352              		.loc 1 370 64 is_stmt 0
+ 353 0052 13D60601 		srli	a2,a3,16
+ 371:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[4] = linecoding.bCharFormat;
+ 354              		.loc 1 371 64
+ 355 0056 E182     		srli	a3,a3,24
+ 371:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[4] = linecoding.bCharFormat;
+ 356              		.loc 1 371 33
+ 357 0058 A381D700 		sb	a3,3(a5)
+ 372:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[5] = linecoding.bParityType;
+ 358              		.loc 1 372 31
+ 359 005c 83464700 		lbu	a3,4(a4)
+ 370:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[3] = (uint8_t)(linecoding.dwDTERate >> 24);
+ 360              		.loc 1 370 33
+ 361 0060 2381C700 		sb	a2,2(a5)
+ 371:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[4] = linecoding.bCharFormat;
+ 362              		.loc 1 371 13 is_stmt 1
+ 372:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[5] = linecoding.bParityType;
+ 363              		.loc 1 372 13
+ 376:lib/usbcdc/src/cdc_acm_core.c ****             pudev->dev.transc_in[0].remain_len = req->wLength;
+ 364              		.loc 1 376 46 is_stmt 0
+ 365 0064 2328F50C 		sw	a5,208(a0)
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 15
+
+
+ 372:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[5] = linecoding.bParityType;
+ 366              		.loc 1 372 31
+ 367 0068 2382D700 		sb	a3,4(a5)
+ 373:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[6] = linecoding.bDataBits;
+ 368              		.loc 1 373 13 is_stmt 1
+ 373:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[6] = linecoding.bDataBits;
+ 369              		.loc 1 373 31 is_stmt 0
+ 370 006c 83465700 		lbu	a3,5(a4)
+ 374:lib/usbcdc/src/cdc_acm_core.c ****             /* send the request data to the host */
+ 371              		.loc 1 374 31
+ 372 0070 03476700 		lbu	a4,6(a4)
+ 373:lib/usbcdc/src/cdc_acm_core.c ****             usb_cmd_buffer[6] = linecoding.bDataBits;
+ 373              		.loc 1 373 31
+ 374 0074 A382D700 		sb	a3,5(a5)
+ 374:lib/usbcdc/src/cdc_acm_core.c ****             /* send the request data to the host */
+ 375              		.loc 1 374 13 is_stmt 1
+ 374:lib/usbcdc/src/cdc_acm_core.c ****             /* send the request data to the host */
+ 376              		.loc 1 374 31 is_stmt 0
+ 377 0078 2383E700 		sb	a4,6(a5)
+ 376:lib/usbcdc/src/cdc_acm_core.c ****             pudev->dev.transc_in[0].remain_len = req->wLength;
+ 378              		.loc 1 376 13 is_stmt 1
+ 377:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 379              		.loc 1 377 13
+ 377:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 380              		.loc 1 377 53 is_stmt 0
+ 381 007c 83C77500 		lbu	a5,7(a1)
+ 382 0080 03C76500 		lbu	a4,6(a1)
+ 383 0084 A207     		slli	a5,a5,8
+ 384 0086 D98F     		or	a5,a5,a4
+ 385 0088 232EF50C 		sw	a5,220(a0)
+ 378:lib/usbcdc/src/cdc_acm_core.c ****         case SET_CONTROL_LINE_STATE:
+ 386              		.loc 1 378 13 is_stmt 1
+ 387 008c 55B7     		j	.L25
+ 388              	.LVL28:
+ 389              	.L24:
+ 390              	.LBE23:
+ 391              	.LBE22:
+ 380:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 392              		.loc 1 380 13
+ 380:lib/usbcdc/src/cdc_acm_core.c ****             break;
+ 393              		.loc 1 380 39 is_stmt 0
+ 394 008e 83C73500 		lbu	a5,3(a1)
+ 395 0092 03C72500 		lbu	a4,2(a1)
+ 396 0096 A207     		slli	a5,a5,8
+ 397 0098 D98F     		or	a5,a5,a4
+ 398 009a 37070000 		lui	a4,%hi(.LANCHOR7)
+ 399 009e 2320F700 		sw	a5,%lo(.LANCHOR7)(a4)
+ 381:lib/usbcdc/src/cdc_acm_core.c ****         case SEND_BREAK:
+ 400              		.loc 1 381 13 is_stmt 1
+ 401 00a2 79B7     		j	.L25
+ 402              		.cfi_endproc
+ 403              	.LFE7:
+ 405              		.section	.text.cdc_acm_data_receive,"ax",@progbits
+ 406              		.align	1
+ 407              		.globl	cdc_acm_data_receive
+ 409              	cdc_acm_data_receive:
+ 410              	.LFB8:
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 16
+
+
+ 392:lib/usbcdc/src/cdc_acm_core.c **** 
+ 393:lib/usbcdc/src/cdc_acm_core.c **** /*!
+ 394:lib/usbcdc/src/cdc_acm_core.c ****     \brief      receive CDC ACM data
+ 395:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  pudev: pointer to USB device instance
+ 396:lib/usbcdc/src/cdc_acm_core.c ****     \param[out] none
+ 397:lib/usbcdc/src/cdc_acm_core.c ****     \retval     USB device operation status
+ 398:lib/usbcdc/src/cdc_acm_core.c **** */
+ 399:lib/usbcdc/src/cdc_acm_core.c **** void cdc_acm_data_receive(usb_dev *pudev)
+ 400:lib/usbcdc/src/cdc_acm_core.c **** {
+ 411              		.loc 1 400 1
+ 412              		.cfi_startproc
+ 413              	.LVL29:
+ 401:lib/usbcdc/src/cdc_acm_core.c ****     packet_receive = 0;
+ 414              		.loc 1 401 5
+ 402:lib/usbcdc/src/cdc_acm_core.c **** 
+ 403:lib/usbcdc/src/cdc_acm_core.c ****     usbd_ep_recev(pudev, CDC_ACM_DATA_OUT_EP, (uint8_t*)(usb_data_buffer), CDC_ACM_DATA_PACKET_SIZE
+ 415              		.loc 1 403 5 is_stmt 0
+ 416 0000 37060000 		lui	a2,%hi(usb_data_buffer)
+ 401:lib/usbcdc/src/cdc_acm_core.c ****     packet_receive = 0;
+ 417              		.loc 1 401 20
+ 418 0004 B7070000 		lui	a5,%hi(.LANCHOR1)
+ 419              		.loc 1 403 5
+ 420 0008 93060004 		li	a3,64
+ 421 000c 13060600 		addi	a2,a2,%lo(usb_data_buffer)
+ 422 0010 8D45     		li	a1,3
+ 401:lib/usbcdc/src/cdc_acm_core.c ****     packet_receive = 0;
+ 423              		.loc 1 401 20
+ 424 0012 23800700 		sb	zero,%lo(.LANCHOR1)(a5)
+ 425              		.loc 1 403 5 is_stmt 1
+ 426 0016 17030000 		tail	usbd_ep_recev
+ 426      67000300 
+ 427              	.LVL30:
+ 428              		.cfi_endproc
+ 429              	.LFE8:
+ 431              		.section	.text.cdc_acm_data_send,"ax",@progbits
+ 432              		.align	1
+ 433              		.globl	cdc_acm_data_send
+ 435              	cdc_acm_data_send:
+ 436              	.LFB9:
+ 404:lib/usbcdc/src/cdc_acm_core.c **** }
+ 405:lib/usbcdc/src/cdc_acm_core.c **** 
+ 406:lib/usbcdc/src/cdc_acm_core.c **** /*!
+ 407:lib/usbcdc/src/cdc_acm_core.c ****     \brief      send CDC ACM data
+ 408:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  pudev: pointer to USB device instance
+ 409:lib/usbcdc/src/cdc_acm_core.c ****     \param[out] none
+ 410:lib/usbcdc/src/cdc_acm_core.c ****     \retval     USB device operation status
+ 411:lib/usbcdc/src/cdc_acm_core.c **** */
+ 412:lib/usbcdc/src/cdc_acm_core.c **** void cdc_acm_data_send (usb_dev *pudev, uint32_t data_len)
+ 413:lib/usbcdc/src/cdc_acm_core.c **** {
+ 437              		.loc 1 413 1
+ 438              		.cfi_startproc
+ 439              	.LVL31:
+ 414:lib/usbcdc/src/cdc_acm_core.c ****     /* limit the transfer data length */
+ 415:lib/usbcdc/src/cdc_acm_core.c ****     if (data_len <= CDC_ACM_DATA_PACKET_SIZE) {
+ 440              		.loc 1 415 5
+ 441              		.loc 1 415 8 is_stmt 0
+ 442 0000 93070004 		li	a5,64
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 17
+
+
+ 443 0004 63E3B702 		bgtu	a1,a5,.L27
+ 416:lib/usbcdc/src/cdc_acm_core.c ****         packet_sent = 0;
+ 444              		.loc 1 416 9 is_stmt 1
+ 417:lib/usbcdc/src/cdc_acm_core.c ****         usbd_ep_send(pudev, CDC_ACM_DATA_IN_EP, (uint8_t*)(usb_data_buffer), data_len);
+ 445              		.loc 1 417 9 is_stmt 0
+ 446 0008 93960501 		slli	a3,a1,16
+ 447 000c 37060000 		lui	a2,%hi(usb_data_buffer)
+ 416:lib/usbcdc/src/cdc_acm_core.c ****         packet_sent = 0;
+ 448              		.loc 1 416 21
+ 449 0010 B7070000 		lui	a5,%hi(.LANCHOR4)
+ 450              		.loc 1 417 9
+ 451 0014 C182     		srli	a3,a3,16
+ 452 0016 13060600 		addi	a2,a2,%lo(usb_data_buffer)
+ 453 001a 93051008 		li	a1,129
+ 454              	.LVL32:
+ 416:lib/usbcdc/src/cdc_acm_core.c ****         packet_sent = 0;
+ 455              		.loc 1 416 21
+ 456 001e 23800700 		sb	zero,%lo(.LANCHOR4)(a5)
+ 457              		.loc 1 417 9 is_stmt 1
+ 458 0022 17030000 		tail	usbd_ep_send
+ 458      67000300 
+ 459              	.LVL33:
+ 460              	.L27:
+ 418:lib/usbcdc/src/cdc_acm_core.c ****     }
+ 419:lib/usbcdc/src/cdc_acm_core.c **** }
+ 461              		.loc 1 419 1 is_stmt 0
+ 462 002a 8280     		ret
+ 463              		.cfi_endproc
+ 464              	.LFE9:
+ 466              		.section	.text.cdc_acm_EP0_RxReady,"ax",@progbits
+ 467              		.align	1
+ 468              		.globl	cdc_acm_EP0_RxReady
+ 470              	cdc_acm_EP0_RxReady:
+ 471              	.LFB10:
+ 420:lib/usbcdc/src/cdc_acm_core.c **** 
+ 421:lib/usbcdc/src/cdc_acm_core.c **** /*!
+ 422:lib/usbcdc/src/cdc_acm_core.c ****     \brief      command data received on control endpoint
+ 423:lib/usbcdc/src/cdc_acm_core.c ****     \param[in]  pudev: pointer to USB device instance
+ 424:lib/usbcdc/src/cdc_acm_core.c ****     \param[out] none
+ 425:lib/usbcdc/src/cdc_acm_core.c ****     \retval     USB device operation status
+ 426:lib/usbcdc/src/cdc_acm_core.c **** */
+ 427:lib/usbcdc/src/cdc_acm_core.c **** uint8_t cdc_acm_EP0_RxReady (usb_dev *pudev)
+ 428:lib/usbcdc/src/cdc_acm_core.c **** {
+ 472              		.loc 1 428 1 is_stmt 1
+ 473              		.cfi_startproc
+ 474              	.LVL34:
+ 429:lib/usbcdc/src/cdc_acm_core.c ****     if (NO_CMD != cdc_cmd) {
+ 475              		.loc 1 429 5
+ 476              		.loc 1 429 16 is_stmt 0
+ 477 0000 B7050000 		lui	a1,%hi(.LANCHOR5)
+ 478 0004 93850500 		addi	a1,a1,%lo(.LANCHOR5)
+ 479              		.loc 1 429 8
+ 480 0008 9C41     		lw	a5,0(a1)
+ 481 000a 1305F00F 		li	a0,255
+ 482              	.LVL35:
+ 483 000e 6386A704 		beq	a5,a0,.L30
+ 484              	.LVL36:
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 18
+
+
+ 485              	.LBB26:
+ 486              	.LBB27:
+ 430:lib/usbcdc/src/cdc_acm_core.c ****         /* process the command data */
+ 431:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.dwDTERate = (uint32_t)(usb_cmd_buffer[0] | 
+ 487              		.loc 1 431 9 is_stmt 1
+ 488              		.loc 1 431 30 is_stmt 0
+ 489 0012 B7070000 		lui	a5,%hi(usb_cmd_buffer)
+ 490 0016 03C61700 		lbu	a2,%lo(usb_cmd_buffer+1)(a5)
+ 491 001a 83C60700 		lbu	a3,%lo(usb_cmd_buffer)(a5)
+ 492 001e 37070000 		lui	a4,%hi(.LANCHOR6)
+ 493 0022 2206     		slli	a2,a2,8
+ 494 0024 558E     		or	a2,a2,a3
+ 495 0026 83C62700 		lbu	a3,%lo(usb_cmd_buffer+2)(a5)
+ 496 002a 13070700 		addi	a4,a4,%lo(.LANCHOR6)
+ 432:lib/usbcdc/src/cdc_acm_core.c ****                                          (usb_cmd_buffer[1] << 8) |
+ 433:lib/usbcdc/src/cdc_acm_core.c ****                                          (usb_cmd_buffer[2] << 16) |
+ 434:lib/usbcdc/src/cdc_acm_core.c ****                                          (usb_cmd_buffer[3] << 24));
+ 435:lib/usbcdc/src/cdc_acm_core.c **** 
+ 436:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.bCharFormat = usb_cmd_buffer[4];
+ 437:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.bParityType = usb_cmd_buffer[5];
+ 438:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.bDataBits = usb_cmd_buffer[6];
+ 439:lib/usbcdc/src/cdc_acm_core.c **** 
+ 440:lib/usbcdc/src/cdc_acm_core.c ****         cdc_cmd = NO_CMD;
+ 497              		.loc 1 440 17
+ 498 002e 88C1     		sw	a0,0(a1)
+ 431:lib/usbcdc/src/cdc_acm_core.c ****                                          (usb_cmd_buffer[1] << 8) |
+ 499              		.loc 1 431 30
+ 500 0030 C206     		slli	a3,a3,16
+ 501 0032 558E     		or	a2,a3,a2
+ 502 0034 83C63700 		lbu	a3,%lo(usb_cmd_buffer+3)(a5)
+ 436:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.bParityType = usb_cmd_buffer[5];
+ 503              		.loc 1 436 48
+ 504 0038 93870700 		addi	a5,a5,%lo(usb_cmd_buffer)
+ 431:lib/usbcdc/src/cdc_acm_core.c ****                                          (usb_cmd_buffer[1] << 8) |
+ 505              		.loc 1 431 30
+ 506 003c E206     		slli	a3,a3,24
+ 507 003e D18E     		or	a3,a3,a2
+ 508 0040 14C3     		sw	a3,0(a4)
+ 436:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.bParityType = usb_cmd_buffer[5];
+ 509              		.loc 1 436 9 is_stmt 1
+ 436:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.bParityType = usb_cmd_buffer[5];
+ 510              		.loc 1 436 32 is_stmt 0
+ 511 0042 83C64700 		lbu	a3,4(a5)
+ 512 0046 2302D700 		sb	a3,4(a4)
+ 437:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.bDataBits = usb_cmd_buffer[6];
+ 513              		.loc 1 437 9 is_stmt 1
+ 437:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.bDataBits = usb_cmd_buffer[6];
+ 514              		.loc 1 437 32 is_stmt 0
+ 515 004a 83C65700 		lbu	a3,5(a5)
+ 438:lib/usbcdc/src/cdc_acm_core.c **** 
+ 516              		.loc 1 438 30
+ 517 004e 83C76700 		lbu	a5,6(a5)
+ 437:lib/usbcdc/src/cdc_acm_core.c ****         linecoding.bDataBits = usb_cmd_buffer[6];
+ 518              		.loc 1 437 32
+ 519 0052 A302D700 		sb	a3,5(a4)
+ 438:lib/usbcdc/src/cdc_acm_core.c **** 
+ 520              		.loc 1 438 9 is_stmt 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 19
+
+
+ 438:lib/usbcdc/src/cdc_acm_core.c **** 
+ 521              		.loc 1 438 30 is_stmt 0
+ 522 0056 2303F700 		sb	a5,6(a4)
+ 523              		.loc 1 440 9 is_stmt 1
+ 524              	.LVL37:
+ 525              	.L30:
+ 526              	.LBE27:
+ 527              	.LBE26:
+ 441:lib/usbcdc/src/cdc_acm_core.c ****     }
+ 442:lib/usbcdc/src/cdc_acm_core.c **** 
+ 443:lib/usbcdc/src/cdc_acm_core.c ****     return USBD_OK;
+ 528              		.loc 1 443 5
+ 444:lib/usbcdc/src/cdc_acm_core.c **** }
+ 529              		.loc 1 444 1 is_stmt 0
+ 530 005a 0145     		li	a0,0
+ 531 005c 8280     		ret
+ 532              		.cfi_endproc
+ 533              	.LFE10:
+ 535              		.section	.text.cdc_acm_set_custom_cb,"ax",@progbits
+ 536              		.align	1
+ 537              		.globl	cdc_acm_set_custom_cb
+ 539              	cdc_acm_set_custom_cb:
+ 540              	.LFB11:
+ 445:lib/usbcdc/src/cdc_acm_core.c **** 
+ 446:lib/usbcdc/src/cdc_acm_core.c **** void cdc_acm_set_custom_cb(usb_rx_custom_cb cb){
+ 541              		.loc 1 446 48 is_stmt 1
+ 542              		.cfi_startproc
+ 543              	.LVL38:
+ 447:lib/usbcdc/src/cdc_acm_core.c ****     rx_custom_cb = cb;
+ 544              		.loc 1 447 5
+ 545              		.loc 1 447 18 is_stmt 0
+ 546 0000 B7070000 		lui	a5,%hi(.LANCHOR3)
+ 547 0004 23A0A700 		sw	a0,%lo(.LANCHOR3)(a5)
+ 448:lib/usbcdc/src/cdc_acm_core.c **** }
+ 548              		.loc 1 448 1
+ 549 0008 8280     		ret
+ 550              		.cfi_endproc
+ 551              	.LFE11:
+ 553              		.section	.text.cdc_acm_get_line_state,"ax",@progbits
+ 554              		.align	1
+ 555              		.globl	cdc_acm_get_line_state
+ 557              	cdc_acm_get_line_state:
+ 558              	.LFB12:
+ 449:lib/usbcdc/src/cdc_acm_core.c **** 
+ 450:lib/usbcdc/src/cdc_acm_core.c **** uint32_t cdc_acm_get_line_state(void){
+ 559              		.loc 1 450 38 is_stmt 1
+ 560              		.cfi_startproc
+ 451:lib/usbcdc/src/cdc_acm_core.c ****     return usb_serial_connected;
+ 561              		.loc 1 451 5
+ 452:lib/usbcdc/src/cdc_acm_core.c **** }
+ 562              		.loc 1 452 1 is_stmt 0
+ 563 0000 B7070000 		lui	a5,%hi(.LANCHOR7)
+ 564 0004 03A50700 		lw	a0,%lo(.LANCHOR7)(a5)
+ 565 0008 8280     		ret
+ 566              		.cfi_endproc
+ 567              	.LFE12:
+ 569              		.globl	usbd_cdc_cb
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 20
+
+
+ 570              		.section	.data.configuration_descriptor,"aw"
+ 571              		.align	2
+ 572              		.set	.LANCHOR0,. + 0
+ 575              	configuration_descriptor:
+ 576 0000 09       		.byte	9
+ 577 0001 02       		.byte	2
+ 578 0002 4300     		.half	67
+ 579 0004 02       		.byte	2
+ 580 0005 01       		.byte	1
+ 581 0006 00       		.byte	0
+ 582 0007 80       		.byte	-128
+ 583 0008 32       		.byte	50
+ 584 0009 09       		.byte	9
+ 585 000a 04       		.byte	4
+ 586 000b 00       		.byte	0
+ 587 000c 00       		.byte	0
+ 588 000d 01       		.byte	1
+ 589 000e 02       		.byte	2
+ 590 000f 02       		.byte	2
+ 591 0010 00       		.byte	0
+ 592 0011 00       		.byte	0
+ 593 0012 05       		.byte	5
+ 594 0013 24       		.byte	36
+ 595 0014 00       		.byte	0
+ 596 0015 1001     		.2byte	272
+ 597 0017 05       		.byte	5
+ 598 0018 24       		.byte	36
+ 599 0019 01       		.byte	1
+ 600 001a 00       		.byte	0
+ 601 001b 01       		.byte	1
+ 602 001c 04       		.byte	4
+ 603 001d 24       		.byte	36
+ 604 001e 02       		.byte	2
+ 605 001f 02       		.byte	2
+ 606 0020 05       		.byte	5
+ 607 0021 24       		.byte	36
+ 608 0022 06       		.byte	6
+ 609 0023 00       		.byte	0
+ 610 0024 01       		.byte	1
+ 611 0025 07       		.byte	7
+ 612 0026 05       		.byte	5
+ 613 0027 82       		.byte	-126
+ 614 0028 03       		.byte	3
+ 615 0029 0800     		.2byte	8
+ 616 002b 0A       		.byte	10
+ 617 002c 09       		.byte	9
+ 618 002d 04       		.byte	4
+ 619 002e 01       		.byte	1
+ 620 002f 00       		.byte	0
+ 621 0030 02       		.byte	2
+ 622 0031 0A       		.byte	10
+ 623 0032 00       		.byte	0
+ 624 0033 00       		.byte	0
+ 625 0034 00       		.byte	0
+ 626 0035 07       		.byte	7
+ 627 0036 05       		.byte	5
+ 628 0037 03       		.byte	3
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 21
+
+
+ 629 0038 02       		.byte	2
+ 630 0039 4000     		.2byte	64
+ 631 003b 00       		.byte	0
+ 632 003c 07       		.byte	7
+ 633 003d 05       		.byte	5
+ 634 003e 81       		.byte	-127
+ 635 003f 02       		.byte	2
+ 636 0040 4000     		.half	64
+ 637 0042 00       		.byte	0
+ 638              		.section	.data.usbd_cdc_cb,"aw"
+ 639              		.align	2
+ 642              	usbd_cdc_cb:
+ 643 0000 FF       		.byte	-1
+ 644 0001 00       		.byte	0
+ 645 0002 0000     		.zero	2
+ 646 0004 00000000 		.word	cdc_acm_init
+ 647 0008 00000000 		.word	cdc_acm_deinit
+ 648 000c 00000000 		.word	cdc_acm_req_handler
+ 649 0010 00000000 		.word	cdc_acm_data_in_handler
+ 650 0014 00000000 		.word	cdc_acm_data_out_handler
+ 651 0018 00000000 		.zero	12
+ 651      00000000 
+ 651      00000000 
+ 652              		.section	.rodata.__compound_literal.0,"a"
+ 653              		.align	2
+ 656              	__compound_literal.0:
+ 657 0000 16       		.byte	22
+ 658 0001 03       		.byte	3
+ 659 0002 4700     		.string	"G"
+ 660 0004 6900     		.string	"i"
+ 661 0006 6700     		.string	"g"
+ 662 0008 6100     		.string	"a"
+ 663 000a 4400     		.string	"D"
+ 664 000c 6500     		.string	"e"
+ 665 000e 7600     		.string	"v"
+ 666 0010 6900     		.string	"i"
+ 667 0012 6300     		.string	"c"
+ 668 0014 6500     		.string	"e"
+ 669 0016 00       		.string	""
+ 670 0017 00       		.string	""
+ 671              		.section	.rodata.__compound_literal.1,"a"
+ 672              		.align	2
+ 675              	__compound_literal.1:
+ 676 0000 38       		.byte	56
+ 677 0001 03       		.byte	3
+ 678 0002 4700     		.string	"G"
+ 679 0004 4400     		.string	"D"
+ 680 0006 3300     		.string	"3"
+ 681 0008 3200     		.string	"2"
+ 682 000a 2000     		.string	" "
+ 683 000c 5500     		.string	"U"
+ 684 000e 5300     		.string	"S"
+ 685 0010 4200     		.string	"B"
+ 686 0012 2000     		.string	" "
+ 687 0014 4300     		.string	"C"
+ 688 0016 4400     		.string	"D"
+ 689 0018 4300     		.string	"C"
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 22
+
+
+ 690 001a 2000     		.string	" "
+ 691 001c 4100     		.string	"A"
+ 692 001e 4300     		.string	"C"
+ 693 0020 4D00     		.string	"M"
+ 694 0022 2000     		.string	" "
+ 695 0024 6900     		.string	"i"
+ 696 0026 6E00     		.string	"n"
+ 697 0028 2000     		.string	" "
+ 698 002a 4600     		.string	"F"
+ 699 002c 5300     		.string	"S"
+ 700 002e 2000     		.string	" "
+ 701 0030 4D00     		.string	"M"
+ 702 0032 6F00     		.string	"o"
+ 703 0034 6400     		.string	"d"
+ 704 0036 6500     		.string	"e"
+ 705 0038 00       		.string	""
+ 706 0039 00       		.string	""
+ 707              		.section	.rodata.__compound_literal.2,"a"
+ 708              		.align	2
+ 711              	__compound_literal.2:
+ 712 0000 2E       		.byte	46
+ 713 0001 03       		.byte	3
+ 714 0002 4700     		.string	"G"
+ 715 0004 4400     		.string	"D"
+ 716 0006 3300     		.string	"3"
+ 717 0008 3200     		.string	"2"
+ 718 000a 5800     		.string	"X"
+ 719 000c 5800     		.string	"X"
+ 720 000e 5800     		.string	"X"
+ 721 0010 2D00     		.string	"-"
+ 722 0012 3300     		.string	"3"
+ 723 0014 2E00     		.string	"."
+ 724 0016 3000     		.string	"0"
+ 725 0018 2E00     		.string	"."
+ 726 001a 3000     		.string	"0"
+ 727 001c 2D00     		.string	"-"
+ 728 001e 3700     		.string	"7"
+ 729 0020 7A00     		.string	"z"
+ 730 0022 3800     		.string	"8"
+ 731 0024 7800     		.string	"x"
+ 732 0026 3900     		.string	"9"
+ 733 0028 7900     		.string	"y"
+ 734 002a 6500     		.string	"e"
+ 735 002c 7200     		.string	"r"
+ 736 002e 00       		.string	""
+ 737 002f 00       		.string	""
+ 738              		.section	.rodata.device_descriptor,"a"
+ 739              		.align	2
+ 742              	device_descriptor:
+ 743 0000 12       		.byte	18
+ 744 0001 01       		.byte	1
+ 745 0002 0002     		.half	512
+ 746 0004 02       		.byte	2
+ 747 0005 00       		.byte	0
+ 748 0006 00       		.byte	0
+ 749 0007 40       		.byte	64
+ 750 0008 E928     		.half	10473
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 23
+
+
+ 751 000a 8A01     		.half	394
+ 752 000c 0001     		.half	256
+ 753 000e 01       		.byte	1
+ 754 000f 02       		.byte	2
+ 755 0010 03       		.byte	3
+ 756 0011 01       		.byte	1
+ 757              		.section	.rodata.usbd_strings,"a"
+ 758              		.align	2
+ 761              	usbd_strings:
+ 762 0000 00000000 		.word	usbd_language_id_desc
+ 763 0004 00000000 		.word	__compound_literal.0
+ 764 0008 00000000 		.word	__compound_literal.1
+ 765 000c 00000000 		.word	__compound_literal.2
+ 766              		.section	.sbss.receive_length,"aw",@nobits
+ 767              		.align	2
+ 768              		.set	.LANCHOR2,. + 0
+ 771              	receive_length:
+ 772 0000 00000000 		.zero	4
+ 773              		.section	.sbss.rx_custom_cb,"aw",@nobits
+ 774              		.align	2
+ 775              		.set	.LANCHOR3,. + 0
+ 778              	rx_custom_cb:
+ 779 0000 00000000 		.zero	4
+ 780              		.section	.sbss.usb_serial_connected,"aw",@nobits
+ 781              		.align	2
+ 782              		.set	.LANCHOR7,. + 0
+ 785              	usb_serial_connected:
+ 786 0000 00000000 		.zero	4
+ 787              		.section	.sdata.cdc_cmd,"aw"
+ 788              		.align	2
+ 789              		.set	.LANCHOR5,. + 0
+ 792              	cdc_cmd:
+ 793 0000 FF000000 		.word	255
+ 794              		.section	.sdata.linecoding,"aw"
+ 795              		.align	2
+ 796              		.set	.LANCHOR6,. + 0
+ 799              	linecoding:
+ 800 0000 00C20100 		.word	115200
+ 801 0004 00       		.byte	0
+ 802 0005 00       		.byte	0
+ 803 0006 08       		.byte	8
+ 804 0007 00       		.zero	1
+ 805              		.section	.sdata.packet_receive,"aw"
+ 806              		.set	.LANCHOR1,. + 0
+ 809              	packet_receive:
+ 810 0000 01       		.byte	1
+ 811              		.section	.sdata.packet_sent,"aw"
+ 812              		.set	.LANCHOR4,. + 0
+ 815              	packet_sent:
+ 816 0000 01       		.byte	1
+ 817              		.section	.sdata2.usbd_language_id_desc,"a"
+ 818              		.align	2
+ 821              	usbd_language_id_desc:
+ 822 0000 04       		.byte	4
+ 823 0001 03       		.byte	3
+ 824 0002 0904     		.half	1033
+ 825              		.text
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 24
+
+
+ 826              	.Letext0:
+ 827              		.file 2 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
+ 828              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
+ 829              		.file 4 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
+ 830              		.file 5 "lib/usbcdc/include/drv_usb_regs.h"
+ 831              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+ 832              		.file 7 "lib/usbcdc/include/usb_ch9_std.h"
+ 833              		.file 8 "lib/usbcdc/include/drv_usb_core.h"
+ 834              		.file 9 "lib/usbcdc/include/drv_usb_dev.h"
+ 835              		.file 10 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
+ 836              		.file 11 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
+ 837              		.file 12 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
+ 838              		.file 13 "lib/usbcdc/include/usbd_enum.h"
+ 839              		.file 14 "lib/usbcdc/include/cdc_acm_core.h"
+ 840              		.file 15 "lib/usbcdc/include/usbd_core.h"
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 25
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 cdc_acm_core.c
+                            *COM*:0000000000000040 usb_data_buffer
+                            *COM*:0000000000000008 usb_cmd_buffer
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:815    .sdata.packet_sent:0000000000000000 packet_sent
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:809    .sdata.packet_receive:0000000000000000 packet_receive
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:771    .sbss.receive_length:0000000000000000 receive_length
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:778    .sbss.rx_custom_cb:0000000000000000 rx_custom_cb
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:799    .sdata.linecoding:0000000000000000 linecoding
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:742    .rodata.device_descriptor:0000000000000000 device_descriptor
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:575    .data.configuration_descriptor:0000000000000000 configuration_descriptor
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:821    .sdata2.usbd_language_id_desc:0000000000000000 usbd_language_id_desc
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:761    .rodata.usbd_strings:0000000000000000 usbd_strings
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:24     .text.cdc_acm_init:0000000000000000 cdc_acm_init
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:28     .text.cdc_acm_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:30     .text.cdc_acm_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:31     .text.cdc_acm_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:32     .text.cdc_acm_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:34     .text.cdc_acm_init:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:36     .text.cdc_acm_init:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:38     .text.cdc_acm_init:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:43     .text.cdc_acm_init:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:45     .text.cdc_acm_init:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:46     .text.cdc_acm_init:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:48     .text.cdc_acm_init:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:50     .text.cdc_acm_init:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:53     .text.cdc_acm_init:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:58     .text.cdc_acm_init:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:63     .text.cdc_acm_init:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:64     .text.cdc_acm_init:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:65     .text.cdc_acm_init:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:67     .text.cdc_acm_init:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:69     .text.cdc_acm_init:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:74     .text.cdc_acm_init:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:76     .text.cdc_acm_init:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:83     .text.cdc_acm_deinit:0000000000000000 cdc_acm_deinit
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:86     .text.cdc_acm_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:88     .text.cdc_acm_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:89     .text.cdc_acm_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:90     .text.cdc_acm_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:92     .text.cdc_acm_deinit:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:94     .text.cdc_acm_deinit:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:97     .text.cdc_acm_deinit:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:99     .text.cdc_acm_deinit:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:100    .text.cdc_acm_deinit:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:102    .text.cdc_acm_deinit:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:104    .text.cdc_acm_deinit:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:107    .text.cdc_acm_deinit:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:112    .text.cdc_acm_deinit:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:117    .text.cdc_acm_deinit:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:118    .text.cdc_acm_deinit:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:119    .text.cdc_acm_deinit:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:121    .text.cdc_acm_deinit:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:126    .text.cdc_acm_deinit:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:128    .text.cdc_acm_deinit:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:135    .text.cdc_acm_data_out_handler:0000000000000000 cdc_acm_data_out_handler
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:138    .text.cdc_acm_data_out_handler:0000000000000000 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 26
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:140    .text.cdc_acm_data_out_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:141    .text.cdc_acm_data_out_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:142    .text.cdc_acm_data_out_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:144    .text.cdc_acm_data_out_handler:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:146    .text.cdc_acm_data_out_handler:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:148    .text.cdc_acm_data_out_handler:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:470    .text.cdc_acm_EP0_RxReady:0000000000000000 cdc_acm_EP0_RxReady
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:150    .text.cdc_acm_data_out_handler:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:153    .text.cdc_acm_data_out_handler:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:156    .text.cdc_acm_data_out_handler:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:157    .text.cdc_acm_data_out_handler:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:158    .text.cdc_acm_data_out_handler:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:162    .text.cdc_acm_data_out_handler:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:167    .text.cdc_acm_data_out_handler:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:169    .text.cdc_acm_data_out_handler:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:170    .text.cdc_acm_data_out_handler:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:172    .text.cdc_acm_data_out_handler:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:174    .text.cdc_acm_data_out_handler:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:179    .text.cdc_acm_data_out_handler:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:180    .text.cdc_acm_data_out_handler:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:184    .text.cdc_acm_data_out_handler:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:185    .text.cdc_acm_data_out_handler:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:188    .text.cdc_acm_data_out_handler:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:191    .text.cdc_acm_data_out_handler:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:192    .text.cdc_acm_data_out_handler:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:195    .text.cdc_acm_data_out_handler:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:198    .text.cdc_acm_data_out_handler:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:204    .text.cdc_acm_data_out_handler:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:211    .text.cdc_acm_data_in_handler:0000000000000000 cdc_acm_data_in_handler
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:214    .text.cdc_acm_data_in_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:216    .text.cdc_acm_data_in_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:217    .text.cdc_acm_data_in_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:218    .text.cdc_acm_data_in_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:224    .text.cdc_acm_data_in_handler:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:225    .text.cdc_acm_data_in_handler:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:226    .text.cdc_acm_data_in_handler:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:228    .text.cdc_acm_data_in_handler:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:230    .text.cdc_acm_data_in_handler:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:232    .text.cdc_acm_data_in_handler:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:234    .text.cdc_acm_data_in_handler:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:238    .text.cdc_acm_data_in_handler:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:239    .text.cdc_acm_data_in_handler:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:241    .text.cdc_acm_data_in_handler:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:245    .text.cdc_acm_data_in_handler:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:250    .text.cdc_acm_data_in_handler:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:251    .text.cdc_acm_data_in_handler:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:255    .text.cdc_acm_data_in_handler:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:260    .text.cdc_acm_data_in_handler:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:261    .text.cdc_acm_data_in_handler:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:265    .text.cdc_acm_data_in_handler:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:269    .text.cdc_acm_data_in_handler:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:271    .text.cdc_acm_data_in_handler:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:278    .text.cdc_acm_data_in_handler:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:279    .text.cdc_acm_data_in_handler:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:290    .text.cdc_acm_data_in_handler:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:293    .text.cdc_acm_data_in_handler:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:294    .text.cdc_acm_data_in_handler:0000000000000040 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 27
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:301    .text.cdc_acm_req_handler:0000000000000000 cdc_acm_req_handler
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:304    .text.cdc_acm_req_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:306    .text.cdc_acm_req_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:307    .text.cdc_acm_req_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:308    .text.cdc_acm_req_handler:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:310    .text.cdc_acm_req_handler:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:317    .text.cdc_acm_req_handler:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:318    .text.cdc_acm_req_handler:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:321    .text.cdc_acm_req_handler:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:322    .text.cdc_acm_req_handler:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:327    .text.cdc_acm_req_handler:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:328    .text.cdc_acm_req_handler:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:329    .text.cdc_acm_req_handler:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:337    .text.cdc_acm_req_handler:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:338    .text.cdc_acm_req_handler:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:342    .text.cdc_acm_req_handler:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:345    .text.cdc_acm_req_handler:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:347    .text.cdc_acm_req_handler:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:349    .text.cdc_acm_req_handler:000000000000004e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:350    .text.cdc_acm_req_handler:000000000000004e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:352    .text.cdc_acm_req_handler:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:353    .text.cdc_acm_req_handler:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:355    .text.cdc_acm_req_handler:0000000000000056 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:357    .text.cdc_acm_req_handler:0000000000000058 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:359    .text.cdc_acm_req_handler:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:361    .text.cdc_acm_req_handler:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:363    .text.cdc_acm_req_handler:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:364    .text.cdc_acm_req_handler:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:365    .text.cdc_acm_req_handler:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:367    .text.cdc_acm_req_handler:0000000000000068 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:369    .text.cdc_acm_req_handler:000000000000006c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:370    .text.cdc_acm_req_handler:000000000000006c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:372    .text.cdc_acm_req_handler:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:374    .text.cdc_acm_req_handler:0000000000000074 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:376    .text.cdc_acm_req_handler:0000000000000078 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:377    .text.cdc_acm_req_handler:0000000000000078 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:379    .text.cdc_acm_req_handler:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:380    .text.cdc_acm_req_handler:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:381    .text.cdc_acm_req_handler:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:387    .text.cdc_acm_req_handler:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:393    .text.cdc_acm_req_handler:000000000000008e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:394    .text.cdc_acm_req_handler:000000000000008e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:401    .text.cdc_acm_req_handler:00000000000000a2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:402    .text.cdc_acm_req_handler:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:409    .text.cdc_acm_data_receive:0000000000000000 cdc_acm_data_receive
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:412    .text.cdc_acm_data_receive:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:414    .text.cdc_acm_data_receive:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:415    .text.cdc_acm_data_receive:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:416    .text.cdc_acm_data_receive:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:418    .text.cdc_acm_data_receive:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:420    .text.cdc_acm_data_receive:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:424    .text.cdc_acm_data_receive:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:426    .text.cdc_acm_data_receive:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:428    .text.cdc_acm_data_receive:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:435    .text.cdc_acm_data_send:0000000000000000 cdc_acm_data_send
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:438    .text.cdc_acm_data_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:440    .text.cdc_acm_data_send:0000000000000000 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 28
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:441    .text.cdc_acm_data_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:442    .text.cdc_acm_data_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:445    .text.cdc_acm_data_send:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:446    .text.cdc_acm_data_send:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:449    .text.cdc_acm_data_send:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:451    .text.cdc_acm_data_send:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:456    .text.cdc_acm_data_send:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:458    .text.cdc_acm_data_send:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:462    .text.cdc_acm_data_send:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:463    .text.cdc_acm_data_send:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:473    .text.cdc_acm_EP0_RxReady:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:475    .text.cdc_acm_EP0_RxReady:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:476    .text.cdc_acm_EP0_RxReady:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:477    .text.cdc_acm_EP0_RxReady:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:480    .text.cdc_acm_EP0_RxReady:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:488    .text.cdc_acm_EP0_RxReady:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:489    .text.cdc_acm_EP0_RxReady:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:498    .text.cdc_acm_EP0_RxReady:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:500    .text.cdc_acm_EP0_RxReady:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:504    .text.cdc_acm_EP0_RxReady:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:506    .text.cdc_acm_EP0_RxReady:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:510    .text.cdc_acm_EP0_RxReady:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:511    .text.cdc_acm_EP0_RxReady:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:514    .text.cdc_acm_EP0_RxReady:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:515    .text.cdc_acm_EP0_RxReady:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:517    .text.cdc_acm_EP0_RxReady:000000000000004e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:519    .text.cdc_acm_EP0_RxReady:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:521    .text.cdc_acm_EP0_RxReady:0000000000000056 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:522    .text.cdc_acm_EP0_RxReady:0000000000000056 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:528    .text.cdc_acm_EP0_RxReady:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:529    .text.cdc_acm_EP0_RxReady:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:530    .text.cdc_acm_EP0_RxReady:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:532    .text.cdc_acm_EP0_RxReady:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:539    .text.cdc_acm_set_custom_cb:0000000000000000 cdc_acm_set_custom_cb
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:542    .text.cdc_acm_set_custom_cb:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:544    .text.cdc_acm_set_custom_cb:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:545    .text.cdc_acm_set_custom_cb:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:546    .text.cdc_acm_set_custom_cb:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:549    .text.cdc_acm_set_custom_cb:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:550    .text.cdc_acm_set_custom_cb:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:557    .text.cdc_acm_get_line_state:0000000000000000 cdc_acm_get_line_state
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:560    .text.cdc_acm_get_line_state:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:561    .text.cdc_acm_get_line_state:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:562    .text.cdc_acm_get_line_state:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:563    .text.cdc_acm_get_line_state:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:566    .text.cdc_acm_get_line_state:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:642    .data.usbd_cdc_cb:0000000000000000 usbd_cdc_cb
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:572    .data.configuration_descriptor:0000000000000000 .LANCHOR0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:656    .rodata.__compound_literal.0:0000000000000000 __compound_literal.0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:675    .rodata.__compound_literal.1:0000000000000000 __compound_literal.1
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:711    .rodata.__compound_literal.2:0000000000000000 __compound_literal.2
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:768    .sbss.receive_length:0000000000000000 .LANCHOR2
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:775    .sbss.rx_custom_cb:0000000000000000 .LANCHOR3
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:782    .sbss.usb_serial_connected:0000000000000000 .LANCHOR7
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:785    .sbss.usb_serial_connected:0000000000000000 usb_serial_connected
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:789    .sdata.cdc_cmd:0000000000000000 .LANCHOR5
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:792    .sdata.cdc_cmd:0000000000000000 cdc_cmd
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 29
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:796    .sdata.linecoding:0000000000000000 .LANCHOR6
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:806    .sdata.packet_receive:0000000000000000 .LANCHOR1
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:812    .sdata.packet_sent:0000000000000000 .LANCHOR4
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:79     .text.cdc_acm_init:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:131    .text.cdc_acm_deinit:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:207    .text.cdc_acm_data_out_handler:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:297    .text.cdc_acm_data_in_handler:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:405    .text.cdc_acm_req_handler:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:431    .text.cdc_acm_data_receive:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:466    .text.cdc_acm_data_send:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:535    .text.cdc_acm_EP0_RxReady:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:553    .text.cdc_acm_set_custom_cb:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:570    .text.cdc_acm_get_line_state:000000000000000a .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:165    .text.cdc_acm_data_out_handler:0000000000000018 .L6
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:154    .text.cdc_acm_data_out_handler:0000000000000010 .L7
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:286    .text.cdc_acm_data_in_handler:000000000000003c .L14
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:274    .text.cdc_acm_data_in_handler:000000000000002e .L13
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:333    .text.cdc_acm_req_handler:0000000000000034 .L23
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:389    .text.cdc_acm_req_handler:000000000000008e .L24
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:326    .text.cdc_acm_req_handler:0000000000000030 .L25
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:460    .text.cdc_acm_data_send:000000000000002a .L27
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:525    .text.cdc_acm_EP0_RxReady:000000000000005a .L30
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:5631   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7202   .debug_str:0000000000000218 .LASF394
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7486   .debug_str:0000000000000968 .LASF395
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7504   .debug_str:00000000000009d7 .LASF396
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7078   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7114   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7568   .debug_str:0000000000000b9f .LASF0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7304   .debug_str:0000000000000501 .LASF1
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7224   .debug_str:0000000000000308 .LASF4
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7316   .debug_str:0000000000000561 .LASF2
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7780   .debug_str:0000000000001035 .LASF3
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7378   .debug_str:00000000000006e0 .LASF5
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7868   .debug_str:000000000000122a .LASF6
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7252   .debug_str:00000000000003aa .LASF7
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7516   .debug_str:0000000000000a7e .LASF8
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7458   .debug_str:00000000000008b2 .LASF9
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7520   .debug_str:0000000000000a94 .LASF10
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7672   .debug_str:0000000000000df7 .LASF11
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7306   .debug_str:000000000000050d .LASF12
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7680   .debug_str:0000000000000e2b .LASF13
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7844   .debug_str:00000000000011b1 .LASF14
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7472   .debug_str:0000000000000913 .LASF88
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7914   .debug_str:0000000000001339 .LASF15
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7634   .debug_str:0000000000000d35 .LASF16
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7324   .debug_str:0000000000000590 .LASF17
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7522   .debug_str:0000000000000aa2 .LASF18
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7396   .debug_str:000000000000074d .LASF19
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7762   .debug_str:0000000000000fd5 .LASF20
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7414   .debug_str:00000000000007ad .LASF21
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7882   .debug_str:0000000000001284 .LASF22
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7782   .debug_str:000000000000103f .LASF23
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7890   .debug_str:00000000000012ae .LASF24
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7888   .debug_str:00000000000012a6 .LASF25
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7752   .debug_str:0000000000000fa9 .LASF26
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 30
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7886   .debug_str:0000000000001292 .LASF27
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7856   .debug_str:00000000000011f3 .LASF28
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7402   .debug_str:000000000000076c .LASF29
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7336   .debug_str:00000000000005c1 .LASF30
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7426   .debug_str:00000000000007e6 .LASF31
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7884   .debug_str:000000000000128a .LASF32
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7214   .debug_str:00000000000002d2 .LASF33
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7878   .debug_str:000000000000126c .LASF34
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7698   .debug_str:0000000000000e83 .LASF35
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7300   .debug_str:00000000000004ed .LASF36
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7646   .debug_str:0000000000000d70 .LASF37
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7848   .debug_str:00000000000011cc .LASF38
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7744   .debug_str:0000000000000f83 .LASF39
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7876   .debug_str:0000000000001262 .LASF40
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7898   .debug_str:00000000000012e1 .LASF41
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7448   .debug_str:0000000000000871 .LASF42
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7394   .debug_str:0000000000000744 .LASF43
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7864   .debug_str:0000000000001218 .LASF44
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7756   .debug_str:0000000000000fba .LASF45
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7696   .debug_str:0000000000000e7c .LASF46
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7280   .debug_str:0000000000000456 .LASF47
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7584   .debug_str:0000000000000c10 .LASF48
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7326   .debug_str:0000000000000597 .LASF49
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7330   .debug_str:00000000000005a5 .LASF50
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7684   .debug_str:0000000000000e40 .LASF51
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7182   .debug_str:0000000000000194 .LASF52
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7352   .debug_str:000000000000062c .LASF53
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7498   .debug_str:00000000000009bd .LASF54
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7376   .debug_str:00000000000006d6 .LASF55
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7900   .debug_str:00000000000012e8 .LASF56
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7166   .debug_str:0000000000000150 .LASF57
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7388   .debug_str:0000000000000727 .LASF58
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7390   .debug_str:0000000000000732 .LASF59
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7800   .debug_str:0000000000001096 .LASF60
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7334   .debug_str:00000000000005b9 .LASF61
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7246   .debug_str:000000000000038a .LASF62
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7138   .debug_str:0000000000000090 .LASF63
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7694   .debug_str:0000000000000e74 .LASF64
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7248   .debug_str:0000000000000392 .LASF65
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7650   .debug_str:0000000000000d82 .LASF66
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7434   .debug_str:0000000000000814 .LASF67
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7912   .debug_str:000000000000132e .LASF68
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7796   .debug_str:0000000000001085 .LASF69
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7804   .debug_str:00000000000010bc .LASF70
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7346   .debug_str:0000000000000603 .LASF71
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7160   .debug_str:0000000000000119 .LASF72
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7284   .debug_str:0000000000000472 .LASF73
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7320   .debug_str:000000000000057d .LASF74
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7624   .debug_str:0000000000000cfd .LASF75
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7492   .debug_str:00000000000009a1 .LASF76
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7296   .debug_str:00000000000004d2 .LASF77
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7398   .debug_str:0000000000000754 .LASF78
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7542   .debug_str:0000000000000b12 .LASF79
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7784   .debug_str:0000000000001046 .LASF80
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7266   .debug_str:00000000000003e9 .LASF81
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7410   .debug_str:000000000000079b .LASF99
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7256   .debug_str:00000000000003bf .LASF82
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 31
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7764   .debug_str:0000000000000fdc .LASF83
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7758   .debug_str:0000000000000fc3 .LASF84
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7480   .debug_str:000000000000094b .LASF85
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7216   .debug_str:00000000000002dc .LASF86
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7654   .debug_str:0000000000000d93 .LASF87
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7754   .debug_str:0000000000000fb0 .LASF89
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7858   .debug_str:00000000000011fe .LASF325
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7664   .debug_str:0000000000000dc8 .LASF90
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7370   .debug_str:00000000000006a4 .LASF91
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7292   .debug_str:00000000000004a9 .LASF92
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7282   .debug_str:0000000000000461 .LASF93
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7444   .debug_str:0000000000000852 .LASF94
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7738   .debug_str:0000000000000f5b .LASF95
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7802   .debug_str:000000000000109e .LASF96
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7242   .debug_str:0000000000000363 .LASF97
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7612   .debug_str:0000000000000c9c .LASF98
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7418   .debug_str:00000000000007ba .LASF100
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7318   .debug_str:000000000000056f .LASF101
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7608   .debug_str:0000000000000c8c .LASF102
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7328   .debug_str:000000000000059e .LASF103
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7676   .debug_str:0000000000000e1c .LASF104
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7178   .debug_str:0000000000000182 .LASF105
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7502   .debug_str:00000000000009cf .LASF106
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7226   .debug_str:0000000000000312 .LASF107
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7670   .debug_str:0000000000000def .LASF108
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7442   .debug_str:0000000000000842 .LASF109
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7384   .debug_str:0000000000000703 .LASF110
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7700   .debug_str:0000000000000e88 .LASF111
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7348   .debug_str:000000000000060e .LASF112
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7212   .debug_str:00000000000002cb .LASF113
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7760   .debug_str:0000000000000fc8 .LASF114
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7154   .debug_str:00000000000000f4 .LASF115
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7244   .debug_str:000000000000037a .LASF116
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7462   .debug_str:00000000000008da .LASF117
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7710   .debug_str:0000000000000ec6 .LASF118
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7702   .debug_str:0000000000000e96 .LASF119
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7314   .debug_str:0000000000000557 .LASF120
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7552   .debug_str:0000000000000b43 .LASF121
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7116   .debug_str:0000000000000000 .LASF122
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7464   .debug_str:00000000000008ea .LASF123
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7460   .debug_str:00000000000008c4 .LASF124
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7532   .debug_str:0000000000000ad1 .LASF125
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7364   .debug_str:0000000000000684 .LASF126
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7640   .debug_str:0000000000000d52 .LASF127
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7574   .debug_str:0000000000000bc5 .LASF128
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7580   .debug_str:0000000000000bed .LASF129
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7604   .debug_str:0000000000000c72 .LASF130
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7510   .debug_str:0000000000000a5c .LASF131
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7852   .debug_str:00000000000011de .LASF132
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7484   .debug_str:0000000000000958 .LASF133
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7312   .debug_str:0000000000000549 .LASF134
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7774   .debug_str:000000000000100e .LASF135
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7120   .debug_str:0000000000000015 .LASF136
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7476   .debug_str:000000000000092b .LASF137
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7578   .debug_str:0000000000000bdd .LASF138
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7748   .debug_str:0000000000000f91 .LASF139
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7298   .debug_str:00000000000004da .LASF140
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 32
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7728   .debug_str:0000000000000f20 .LASF141
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7124   .debug_str:0000000000000035 .LASF142
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7818   .debug_str:0000000000001103 .LASF143
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7130   .debug_str:0000000000000064 .LASF144
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7538   .debug_str:0000000000000af4 .LASF145
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7264   .debug_str:00000000000003df .LASF146
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7452   .debug_str:0000000000000891 .LASF147
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7278   .debug_str:0000000000000445 .LASF148
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7596   .debug_str:0000000000000c4b .LASF149
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7404   .debug_str:0000000000000777 .LASF150
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7866   .debug_str:0000000000001220 .LASF151
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7494   .debug_str:00000000000009aa .LASF152
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7778   .debug_str:000000000000102c .LASF153
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7276   .debug_str:000000000000043e .LASF154
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7122   .debug_str:0000000000000027 .LASF155
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7586   .debug_str:0000000000000c19 .LASF156
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7786   .debug_str:0000000000001052 .LASF157
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7806   .debug_str:00000000000010c4 .LASF158
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7626   .debug_str:0000000000000d08 .LASF159
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7660   .debug_str:0000000000000db0 .LASF160
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7722   .debug_str:0000000000000efd .LASF161
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7172   .debug_str:0000000000000167 .LASF162
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7768   .debug_str:0000000000000feb .LASF163
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7240   .debug_str:000000000000035b .LASF164
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7644   .debug_str:0000000000000d67 .LASF165
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7136   .debug_str:0000000000000088 .LASF166
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7528   .debug_str:0000000000000abe .LASF167
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7770   .debug_str:0000000000000ff4 .LASF168
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7846   .debug_str:00000000000011ba .LASF169
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7222   .debug_str:00000000000002f7 .LASF170
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7322   .debug_str:0000000000000589 .LASF171
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7536   .debug_str:0000000000000ae7 .LASF172
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7616   .debug_str:0000000000000cb5 .LASF173
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7512   .debug_str:0000000000000a69 .LASF174
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7118   .debug_str:0000000000000009 .LASF175
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7766   .debug_str:0000000000000fe3 .LASF176
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7142   .debug_str:00000000000000a1 .LASF177
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7666   .debug_str:0000000000000dd9 .LASF178
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7358   .debug_str:0000000000000662 .LASF179
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7474   .debug_str:0000000000000923 .LASF180
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7200   .debug_str:000000000000020f .LASF181
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7576   .debug_str:0000000000000bd4 .LASF182
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7854   .debug_str:00000000000011e8 .LASF183
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7344   .debug_str:00000000000005f8 .LASF184
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7192   .debug_str:00000000000001f1 .LASF185
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7420   .debug_str:00000000000007c3 .LASF186
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7642   .debug_str:0000000000000d5f .LASF187
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7874   .debug_str:0000000000001251 .LASF188
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7628   .debug_str:0000000000000d17 .LASF189
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7732   .debug_str:0000000000000f30 .LASF190
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7678   .debug_str:0000000000000e23 .LASF191
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7290   .debug_str:000000000000049f .LASF192
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7750   .debug_str:0000000000000fa4 .LASF193
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7392   .debug_str:000000000000073d .LASF194
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7228   .debug_str:0000000000000323 .LASF195
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7220   .debug_str:00000000000002ef .LASF196
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7342   .debug_str:00000000000005ef .LASF197
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 33
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7362   .debug_str:0000000000000671 .LASF198
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7588   .debug_str:0000000000000c21 .LASF199
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7724   .debug_str:0000000000000f06 .LASF200
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7424   .debug_str:00000000000007d8 .LASF201
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7194   .debug_str:00000000000001fa .LASF202
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7562   .debug_str:0000000000000b7f .LASF203
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7572   .debug_str:0000000000000bba .LASF204
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7674   .debug_str:0000000000000e0e .LASF205
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7706   .debug_str:0000000000000ead .LASF206
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7716   .debug_str:0000000000000ede .LASF207
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7730   .debug_str:0000000000000f2b .LASF208
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7558   .debug_str:0000000000000b5d .LASF209
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7590   .debug_str:0000000000000c35 .LASF210
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7794   .debug_str:0000000000001078 .LASF211
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7158   .debug_str:0000000000000111 .LASF212
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7368   .debug_str:000000000000069a .LASF213
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7870   .debug_str:000000000000123d .LASF214
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7740   .debug_str:0000000000000f76 .LASF215
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7860   .debug_str:000000000000120c .LASF216
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7656   .debug_str:0000000000000da1 .LASF217
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7128   .debug_str:000000000000005b .LASF218
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7234   .debug_str:0000000000000340 .LASF219
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7658   .debug_str:0000000000000da9 .LASF220
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7618   .debug_str:0000000000000cbf .LASF221
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7134   .debug_str:0000000000000080 .LASF222
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7726   .debug_str:0000000000000f15 .LASF223
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7838   .debug_str:0000000000001189 .LASF224
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7478   .debug_str:0000000000000939 .LASF225
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7714   .debug_str:0000000000000ed5 .LASF226
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7496   .debug_str:00000000000009b5 .LASF227
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7742   .debug_str:0000000000000f7d .LASF228
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7500   .debug_str:00000000000009c7 .LASF229
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7556   .debug_str:0000000000000b57 .LASF230
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7416   .debug_str:00000000000007b5 .LASF231
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7170   .debug_str:0000000000000162 .LASF232
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7176   .debug_str:0000000000000179 .LASF233
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7906   .debug_str:000000000000130c .LASF234
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7872   .debug_str:0000000000001247 .LASF235
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7438   .debug_str:0000000000000827 .LASF236
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7286   .debug_str:000000000000047a .LASF237
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7798   .debug_str:000000000000108c .LASF238
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7630   .debug_str:0000000000000d1c .LASF239
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7638   .debug_str:0000000000000d48 .LASF240
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7892   .debug_str:00000000000012b6 .LASF241
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7232   .debug_str:0000000000000332 .LASF242
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7196   .debug_str:0000000000000201 .LASF243
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7682   .debug_str:0000000000000e34 .LASF244
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7788   .debug_str:000000000000105d .LASF245
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7822   .debug_str:0000000000001117 .LASF246
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7614   .debug_str:0000000000000cad .LASF247
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7816   .debug_str:00000000000010fe .LASF248
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7366   .debug_str:0000000000000695 .LASF249
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7820   .debug_str:0000000000001110 .LASF250
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7712   .debug_str:0000000000000ecf .LASF251
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7262   .debug_str:00000000000003d9 .LASF252
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7466   .debug_str:00000000000008f8 .LASF253
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7610   .debug_str:0000000000000c95 .LASF254
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 34
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7230   .debug_str:000000000000032c .LASF255
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7812   .debug_str:00000000000010f0 .LASF256
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7412   .debug_str:00000000000007a5 .LASF257
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7144   .debug_str:00000000000000a9 .LASF258
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7150   .debug_str:00000000000000e1 .LASF259
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7652   .debug_str:0000000000000d8d .LASF260
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7636   .debug_str:0000000000000d41 .LASF261
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7594   .debug_str:0000000000000c45 .LASF262
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7174   .debug_str:0000000000000173 .LASF263
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7692   .debug_str:0000000000000e6b .LASF264
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7432   .debug_str:000000000000080c .LASF265
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7746   .debug_str:0000000000000f8b .LASF266
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7198   .debug_str:0000000000000209 .LASF267
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7602   .debug_str:0000000000000c69 .LASF268
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7470   .debug_str:000000000000090b .LASF269
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7208   .debug_str:00000000000002b1 .LASF270
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7482   .debug_str:0000000000000951 .LASF271
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7382   .debug_str:00000000000006fc .LASF272
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7688   .debug_str:0000000000000e4d .LASF273
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7598   .debug_str:0000000000000c53 .LASF274
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7814   .debug_str:00000000000010f9 .LASF275
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7518   .debug_str:0000000000000a89 .LASF276
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7894   .debug_str:00000000000012c1 .LASF277
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7836   .debug_str:0000000000001181 .LASF278
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7468   .debug_str:0000000000000900 .LASF279
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7148   .debug_str:00000000000000d7 .LASF280
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7850   .debug_str:00000000000011d6 .LASF281
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7258   .debug_str:00000000000003c5 .LASF282
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7456   .debug_str:00000000000008ad .LASF283
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7548   .debug_str:0000000000000b33 .LASF284
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7408   .debug_str:0000000000000793 .LASF285
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7436   .debug_str:000000000000081f .LASF286
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7592   .debug_str:0000000000000c40 .LASF287
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7508   .debug_str:0000000000000a53 .LASF288
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7422   .debug_str:00000000000007ce .LASF289
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7530   .debug_str:0000000000000ac9 .LASF290
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7140   .debug_str:000000000000009c .LASF291
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7360   .debug_str:000000000000066c .LASF292
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7720   .debug_str:0000000000000ef6 .LASF293
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7554   .debug_str:0000000000000b51 .LASF294
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7526   .debug_str:0000000000000ab7 .LASF295
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7550   .debug_str:0000000000000b3d .LASF296
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7686   .debug_str:0000000000000e45 .LASF297
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7648   .debug_str:0000000000000d7c .LASF298
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7204   .debug_str:00000000000002a0 .LASF299
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7862   .debug_str:0000000000001213 .LASF300
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7302   .debug_str:00000000000004f4 .LASF301
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7704   .debug_str:0000000000000ea0 .LASF302
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7156   .debug_str:0000000000000104 .LASF303
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7274   .debug_str:000000000000042f .LASF304
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7540   .debug_str:0000000000000b03 .LASF305
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7606   .debug_str:0000000000000c81 .LASF306
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7734   .debug_str:0000000000000f40 .LASF307
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7776   .debug_str:000000000000101f .LASF308
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7662   .debug_str:0000000000000dba .LASF309
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7600   .debug_str:0000000000000c5b .LASF310
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7180   .debug_str:000000000000018a .LASF311
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 35
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7488   .debug_str:0000000000000986 .LASF312
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7910   .debug_str:0000000000001321 .LASF313
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7250   .debug_str:000000000000039c .LASF314
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7708   .debug_str:0000000000000eb7 .LASF315
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7880   .debug_str:0000000000001273 .LASF316
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7582   .debug_str:0000000000000c01 .LASF317
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7564   .debug_str:0000000000000b88 .LASF318
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7372   .debug_str:00000000000006b8 .LASF319
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7826   .debug_str:000000000000112c .LASF320
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7534   .debug_str:0000000000000ade .LASF321
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7168   .debug_str:000000000000015a .LASF322
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7132   .debug_str:0000000000000075 .LASF397
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7254   .debug_str:00000000000003b3 .LASF323
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7622   .debug_str:0000000000000cea .LASF324
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7904   .debug_str:0000000000001301 .LASF326
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7238   .debug_str:000000000000034c .LASF327
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7524   .debug_str:0000000000000aab .LASF328
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7772   .debug_str:0000000000000ffe .LASF329
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7632   .debug_str:0000000000000d26 .LASF330
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7354   .debug_str:0000000000000637 .LASF331
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7268   .debug_str:00000000000003f3 .LASF332
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7406   .debug_str:0000000000000787 .LASF333
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7338   .debug_str:00000000000005c7 .LASF334
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7896   .debug_str:00000000000012da .LASF335
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7828   .debug_str:0000000000001133 .LASF336
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7310   .debug_str:000000000000053a .LASF337
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7332   .debug_str:00000000000005aa .LASF338
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7184   .debug_str:000000000000019a .LASF339
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7620   .debug_str:0000000000000cc7 .LASF340
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7832   .debug_str:000000000000116b .LASF341
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7380   .debug_str:00000000000006eb .LASF342
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7308   .debug_str:0000000000000515 .LASF343
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7272   .debug_str:0000000000000418 .LASF344
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7808   .debug_str:00000000000010ce .LASF345
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7288   .debug_str:0000000000000483 .LASF346
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7440   .debug_str:0000000000000831 .LASF347
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7210   .debug_str:00000000000002b8 .LASF348
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7164   .debug_str:0000000000000136 .LASF349
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7356   .debug_str:0000000000000646 .LASF350
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7560   .debug_str:0000000000000b65 .LASF351
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7126   .debug_str:0000000000000042 .LASF352
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7146   .debug_str:00000000000000af .LASF353
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7428   .debug_str:00000000000007f1 .LASF354
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7824   .debug_str:000000000000111f .LASF355
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7830   .debug_str:0000000000001159 .LASF356
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7270   .debug_str:00000000000003ff .LASF357
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7152   .debug_str:00000000000000e8 .LASF358
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7506   .debug_str:0000000000000a4b .LASF359
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7340   .debug_str:00000000000005da .LASF360
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7454   .debug_str:000000000000089d .LASF361
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7400   .debug_str:000000000000075d .LASF362
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7546   .debug_str:0000000000000b27 .LASF363
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7188   .debug_str:00000000000001cf .LASF364
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7446   .debug_str:0000000000000862 .LASF365
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7718   .debug_str:0000000000000ee9 .LASF366
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7260   .debug_str:00000000000003cf .LASF367
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7908   .debug_str:0000000000001315 .LASF368
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 36
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7790   .debug_str:0000000000001066 .LASF369
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7430   .debug_str:0000000000000802 .LASF370
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7190   .debug_str:00000000000001de .LASF371
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7206   .debug_str:00000000000002a6 .LASF372
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7690   .debug_str:0000000000000e55 .LASF373
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7834   .debug_str:000000000000117c .LASF374
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7566   .debug_str:0000000000000b99 .LASF375
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7350   .debug_str:0000000000000615 .LASF398
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:558    .text.cdc_acm_get_line_state:0000000000000000 .LFB12
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:567    .text.cdc_acm_get_line_state:000000000000000a .LFE12
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7736   .debug_str:0000000000000f45 .LASF376
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:540    .text.cdc_acm_set_custom_cb:0000000000000000 .LFB11
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:551    .text.cdc_acm_set_custom_cb:000000000000000a .LFE11
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7386   .debug_str:0000000000000713 .LASF381
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7792   .debug_str:0000000000001072 .LASF378
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7842   .debug_str:000000000000119f .LASF377
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:436    .text.cdc_acm_data_send:0000000000000000 .LFB9
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:464    .text.cdc_acm_data_send:000000000000002c .LFE9
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6630   .debug_loc:0000000000000000 .LLST19
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7218   .debug_str:00000000000002e6 .LASF379
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6648   .debug_loc:000000000000002c .LLST20
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:459    .text.cdc_acm_data_send:000000000000002a .LVL33
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7374   .debug_str:00000000000006c1 .LASF380
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:410    .text.cdc_acm_data_receive:0000000000000000 .LFB8
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:429    .text.cdc_acm_data_receive:000000000000001e .LFE8
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6666   .debug_loc:0000000000000058 .LLST18
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:427    .text.cdc_acm_data_receive:000000000000001e .LVL30
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7162   .debug_str:0000000000000122 .LASF382
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7294   .debug_str:00000000000004ba .LASF383
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7236   .debug_str:0000000000000346 .LASF384
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7186   .debug_str:00000000000001c8 .LASF399
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7450   .debug_str:0000000000000878 .LASF385
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7490   .debug_str:0000000000000992 .LASF387
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:84     .text.cdc_acm_deinit:0000000000000000 .LFB4
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:129    .text.cdc_acm_deinit:0000000000000038 .LFE4
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6680   .debug_loc:0000000000000079 .LLST3
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6698   .debug_loc:00000000000000a5 .LLST4
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7544   .debug_str:0000000000000b1a .LASF386
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6716   .debug_loc:00000000000000d1 .LLST5
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:105    .text.cdc_acm_deinit:0000000000000014 .LVL8
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:110    .text.cdc_acm_deinit:0000000000000020 .LVL9
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:115    .text.cdc_acm_deinit:000000000000002e .LVL10
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7514   .debug_str:0000000000000a71 .LASF388
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:25     .text.cdc_acm_init:0000000000000000 .LFB3
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:77     .text.cdc_acm_init:0000000000000046 .LFE3
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6730   .debug_loc:00000000000000f2 .LLST0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6748   .debug_loc:000000000000011e .LLST1
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6766   .debug_loc:000000000000014a .LLST2
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:51     .text.cdc_acm_init:000000000000001e .LVL2
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:56     .text.cdc_acm_init:000000000000002c .LVL3
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:61     .text.cdc_acm_init:000000000000003a .LVL4
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:136    .text.cdc_acm_data_out_handler:0000000000000000 .LFB5
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:205    .text.cdc_acm_data_out_handler:000000000000004c .LFE5
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6780   .debug_loc:000000000000016b .LLST6
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6803   .debug_loc:00000000000001a3 .LLST7
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6828   .debug_loc:00000000000001dd .LLST8
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:176    .text.cdc_acm_data_out_handler:0000000000000020 .LBB5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 37
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:203    .text.cdc_acm_data_out_handler:000000000000004c .LBE5
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:186    .text.cdc_acm_data_out_handler:0000000000000032 .LVL16
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:151    .text.cdc_acm_data_out_handler:000000000000000e .LVL13
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:212    .text.cdc_acm_data_in_handler:0000000000000000 .LFB6
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:295    .text.cdc_acm_data_in_handler:0000000000000040 .LFE6
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6853   .debug_loc:0000000000000217 .LLST9
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6871   .debug_loc:0000000000000243 .LLST10
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6907   .debug_loc:0000000000000296 .LLST11
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:221    .text.cdc_acm_data_in_handler:0000000000000006 .LBB10
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6925   .debug_loc:00000000000002c2 .LLST12
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6933   .debug_loc:00000000000002d6 .LLST13
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6958   .debug_loc:0000000000000310 .LLST14
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:256    .text.cdc_acm_data_in_handler:0000000000000026 .LVL20
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:302    .text.cdc_acm_req_handler:0000000000000000 .LFB7
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:403    .text.cdc_acm_req_handler:00000000000000a4 .LFE7
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:6991   .debug_loc:0000000000000356 .LLST15
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:334    .text.cdc_acm_req_handler:0000000000000034 .LBB22
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:391    .text.cdc_acm_req_handler:000000000000008e .LBE22
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7009   .debug_loc:0000000000000382 .LLST16
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7016   .debug_loc:0000000000000395 .LLST17
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:471    .text.cdc_acm_EP0_RxReady:0000000000000000 .LFB10
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:533    .text.cdc_acm_EP0_RxReady:000000000000005e .LFE10
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7023   .debug_loc:00000000000003a8 .LLST21
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:485    .text.cdc_acm_EP0_RxReady:0000000000000012 .LBB26
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:527    .text.cdc_acm_EP0_RxReady:000000000000005a .LBE26
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7037   .debug_loc:00000000000003c9 .LLST22
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7668   .debug_str:0000000000000de2 .LASF389
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7810   .debug_str:00000000000010e2 .LASF390
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7840   .debug_str:0000000000001191 .LASF391
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7570   .debug_str:0000000000000bac .LASF392
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:7902   .debug_str:00000000000012f0 .LASF393
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:439    .text.cdc_acm_data_send:0000000000000000 .LVL31
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:454    .text.cdc_acm_data_send:000000000000001e .LVL32
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:413    .text.cdc_acm_data_receive:0000000000000000 .LVL29
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:91     .text.cdc_acm_deinit:0000000000000002 .LCFI2
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:125    .text.cdc_acm_deinit:0000000000000036 .LCFI3
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:87     .text.cdc_acm_deinit:0000000000000000 .LVL6
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:122    .text.cdc_acm_deinit:0000000000000032 .LVL11
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:95     .text.cdc_acm_deinit:0000000000000006 .LVL7
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:33     .text.cdc_acm_init:0000000000000002 .LCFI0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:73     .text.cdc_acm_init:0000000000000044 .LCFI1
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:29     .text.cdc_acm_init:0000000000000000 .LVL0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:70     .text.cdc_acm_init:0000000000000040 .LVL5
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:41     .text.cdc_acm_init:0000000000000010 .LVL1
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:143    .text.cdc_acm_data_out_handler:0000000000000002 .LCFI4
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:161    .text.cdc_acm_data_out_handler:0000000000000016 .LCFI5
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:166    .text.cdc_acm_data_out_handler:0000000000000018 .LCFI6
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:139    .text.cdc_acm_data_out_handler:0000000000000000 .LVL12
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:164    .text.cdc_acm_data_out_handler:0000000000000018 .LVL14
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:240    .text.cdc_acm_data_in_handler:0000000000000018 .LCFI7
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:270    .text.cdc_acm_data_in_handler:000000000000002c .LCFI8
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:215    .text.cdc_acm_data_in_handler:0000000000000000 .LVL18
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:273    .text.cdc_acm_data_in_handler:000000000000002e .LVL21
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:283    .text.cdc_acm_data_in_handler:000000000000003a .LVL22
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:285    .text.cdc_acm_data_in_handler:000000000000003c .LVL23
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:291    .text.cdc_acm_data_in_handler:000000000000003e .LVL24
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:220    .text.cdc_acm_data_in_handler:0000000000000006 .LVL19
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s 			page 38
+
+
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:305    .text.cdc_acm_req_handler:0000000000000000 .LVL25
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:330    .text.cdc_acm_req_handler:0000000000000032 .LVL26
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:332    .text.cdc_acm_req_handler:0000000000000034 .LVL27
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:388    .text.cdc_acm_req_handler:000000000000008e .LVL28
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:474    .text.cdc_acm_EP0_RxReady:0000000000000000 .LVL34
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:482    .text.cdc_acm_EP0_RxReady:000000000000000e .LVL35
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:484    .text.cdc_acm_EP0_RxReady:0000000000000012 .LVL36
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:524    .text.cdc_acm_EP0_RxReady:000000000000005a .LVL37
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:842    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:237    .text.cdc_acm_data_in_handler:0000000000000016 .LBE10
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:242    .text.cdc_acm_data_in_handler:0000000000000018 .LBB16
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:248    .text.cdc_acm_data_in_handler:000000000000001c .LBE16
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:252    .text.cdc_acm_data_in_handler:000000000000001e .LBB17
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:258    .text.cdc_acm_data_in_handler:0000000000000026 .LBE17
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:262    .text.cdc_acm_data_in_handler:0000000000000028 .LBB18
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:267    .text.cdc_acm_data_in_handler:000000000000002a .LBE18
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:275    .text.cdc_acm_data_in_handler:000000000000002e .LBB19
+C:\Users\marwz\AppData\Local\Temp\ccVMJVn7.s:288    .text.cdc_acm_data_in_handler:000000000000003c .LBE19
+
+UNDEFINED SYMBOLS
+usbd_ep_setup
+usbd_ep_clear
+usbd_rxcount_get
+usbd_ep_send
+usbd_ep_recev
