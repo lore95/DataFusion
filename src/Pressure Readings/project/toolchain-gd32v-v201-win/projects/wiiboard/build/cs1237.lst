@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 1
 
 
    1              		.file	"cs1237.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
   45              		.globl	drdy_input
   47              	drdy_input:
   48              	.LFB2:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 2
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 2
 
 
   13:lib/cs1237/src/cs1237.c **** }
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
   96              	.L5:
   97              	.LCFI2:
   98              		.cfi_restore_state
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 3
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 3
 
 
   99              	.LBB95:
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  145              	.LBB97:
  146              		.loc 1 20 10
  147 000c 0144     		li	s0,0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 4
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 4
 
 
  148              		.loc 1 20 38
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  198              	.LFB4:
   22:lib/cs1237/src/cs1237.c **** 
   23:lib/cs1237/src/cs1237.c **** void set_drdy(uint8_t n_channels, cs1237_channel_t* channels, uint8_t value){
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 5
 
 
  199              		.loc 1 23 77 is_stmt 1
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  249              		.cfi_def_cfa_offset 0
  250 0024 8280     		jr	ra
  251              	.LVL22:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 6
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 6
 
 
  252              	.L13:
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  299              		.cfi_offset 8, -8
   27:lib/cs1237/src/cs1237.c **** 	for(int i = 0; i < n_channels; i++) channels[i].value = (channels[i].value << 1) | cs1237_port_get
  300              		.loc 1 27 62
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 7
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 7
 
 
  301 000a 2A89     		mv	s2,a0
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
   28:lib/cs1237/src/cs1237.c **** 	for(int i = 0; i < n_channels; i++) channels[i].value = (channels[i].value << 1) | cs1237_port_get
  346              		.loc 1 28 34 discriminator 3
  347 0034 8504     		addi	s1,s1,1
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 8
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 8
 
 
  348              	.LVL31:
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
   37:lib/cs1237/src/cs1237.c **** int32_t cs1237_read(uint8_t n_channels, cs1237_channel_t* channels){
  396              		.loc 1 37 68 is_stmt 1
  397              		.cfi_startproc
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 9
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 9
 
 
  398              	.LVL33:
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  441 0028 0545     		li	a0,1
  442 002a 97000000 		call	clk
  442      E7800000 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 10
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 10
 
 
  443              	.LVL38:
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  482              	.LBE111:
  483              	.LBB112:
   54:lib/cs1237/src/cs1237.c **** 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 11
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 11
 
 
   55:lib/cs1237/src/cs1237.c **** 	//Convert from 24bit 2s complement to 32bit 2s complement
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  525              	.L26:
  526              	.LBE113:
  527              	.LBB114:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 12
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 12
 
 
   53:lib/cs1237/src/cs1237.c **** 
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  571              	cs1237_data_ready:
  572              	.LFB8:
   64:lib/cs1237/src/cs1237.c **** 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 13
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 13
 
 
   65:lib/cs1237/src/cs1237.c **** uint8_t cs1237_data_ready(uint8_t n_channels, cs1237_channel_t* channels){
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  619 001c 2685     		mv	a0,s1
  620 001e 0259     		lw	s2,32(sp)
  621              		.cfi_restore 18
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 14
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 14
 
 
  622 0020 9254     		lw	s1,36(sp)
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
   74:lib/cs1237/src/cs1237.c **** 	
   75:lib/cs1237/src/cs1237.c **** 	//Do a read, discard result
   76:lib/cs1237/src/cs1237.c **** 	cs1237_read(n_channels, channels);
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 15
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 15
 
 
  668              		.loc 1 76 2
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  711 0038 0546     		li	a2,1
  712 003a A285     		mv	a1,s0
  713 003c 2685     		mv	a0,s1
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 16
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 16
 
 
  714 003e 97000000 		call	set_drdy
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  750      E7800000 
  751              	.LVL74:
   90:lib/cs1237/src/cs1237.c **** 	wait();
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 17
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 17
 
 
  752              		.loc 1 90 2
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  792              	.LBE168:
   97:lib/cs1237/src/cs1237.c **** 		clk(0);
  793              		.loc 1 97 3
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 18
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 18
 
 
  794 00b0 0145     		li	a0,0
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  831      E7800000 
  832              	.LVL86:
  833              	.LBE175:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 19
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 19
 
 
  834              	.LBE174:
@@ -1138,7 +1138,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  874              	.LVL93:
  875              	.LBE180:
  876              	.LBE179:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 20
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 20
 
 
  106:lib/cs1237/src/cs1237.c **** 		clk(1);
@@ -1198,7 +1198,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  914              		.loc 1 120 13 is_stmt 0
  915 015e 8147     		li	a5,0
  916              	.LVL100:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 21
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 21
 
 
  917              	.L46:
@@ -1258,7 +1258,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  967              		.align	1
  968              		.globl	cs1237_get_configuration
  970              	cs1237_get_configuration:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 22
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 22
 
 
  971              	.LFB10:
@@ -1318,7 +1318,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  1013 0024 63CB8714 		bgt	s0,a5,.L53
  1014              	.LBE189:
  132:lib/cs1237/src/cs1237.c **** 	//Clk 28, change drdy to output
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 23
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 23
 
 
  133:lib/cs1237/src/cs1237.c **** 	clk(1);
@@ -1378,7 +1378,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  1052 0068 97000000 		call	clk
  1052      E7800000 
  1053              	.LVL114:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 24
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 24
 
 
  142:lib/cs1237/src/cs1237.c **** 	wait();
@@ -1438,7 +1438,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  1092 00a0 058A     		andi	a2,a2,1
  1093 00a2 A685     		mv	a1,s1
  1094 00a4 2285     		mv	a0,s0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 25
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 25
 
 
  1095 00a6 97000000 		call	set_drdy
@@ -1498,7 +1498,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  1132              	.LBE204:
  1133              	.LBE203:
  157:lib/cs1237/src/cs1237.c **** 	clk(0);
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 26
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 26
 
 
  1134              		.loc 1 157 2
@@ -1558,7 +1558,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  1172              		.loc 1 165 3 discriminator 3
  1173 0112 A685     		mv	a1,s1
  1174 0114 2285     		mv	a0,s0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 27
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 27
 
 
  1175 0116 97000000 		call	read_bit
@@ -1618,7 +1618,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  1211              	.LBB215:
  1212              	.LBB216:
   12:lib/cs1237/src/cs1237.c **** }
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 28
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 28
 
 
  1213              		.loc 1 12 2
@@ -1678,7 +1678,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  1262              		.cfi_restore_state
  1263              	.LBB219:
  131:lib/cs1237/src/cs1237.c **** 	//Clk 28, change drdy to output
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 29
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 29
 
 
  1264              		.loc 1 131 38 is_stmt 1 discriminator 3
@@ -1738,7 +1738,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  1309              		.cfi_startproc
  1310              	.LVL150:
  181:lib/cs1237/src/cs1237.c ****     uint8_t config = 0x3C;
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 30
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 30
 
 
  1311              		.loc 1 181 5
@@ -1780,975 +1780,975 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 1
  1340              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
  1341              		.file 4 "lib/cs1237/include/cs1237_port.h"
  1342              		.file 5 "<built-in>"
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 31
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 31
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 cs1237.c
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:13     .text.clk:0000000000000000 clk
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:17     .text.clk:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:19     .text.clk:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:20     .text.clk:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:13     .text.clk:0000000000000000 clk
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:17     .text.clk:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:19     .text.clk:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:20     .text.clk:0000000000000000 .L0 
                             *COM*:0000000000000014 clock
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:26     .text.clk:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:33     .text.wait:0000000000000000 wait
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:36     .text.wait:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:37     .text.wait:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:38     .text.wait:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:40     .text.wait:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:47     .text.drdy_input:0000000000000000 drdy_input
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:50     .text.drdy_input:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:52     .text.drdy_input:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:54     .text.drdy_input:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:56     .text.drdy_input:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:57     .text.drdy_input:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:59     .text.drdy_input:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:64     .text.drdy_input:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:65     .text.drdy_input:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:66     .text.drdy_input:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:67     .text.drdy_input:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:69     .text.drdy_input:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:72     .text.drdy_input:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:74     .text.drdy_input:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:78     .text.drdy_input:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:81     .text.drdy_input:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:82     .text.drdy_input:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:83     .text.drdy_input:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:85     .text.drdy_input:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:88     .text.drdy_input:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:90     .text.drdy_input:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:93     .text.drdy_input:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:98     .text.drdy_input:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:101    .text.drdy_input:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:104    .text.drdy_input:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:107    .text.drdy_input:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:111    .text.drdy_input:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:115    .text.drdy_input:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:122    .text.drdy_output:0000000000000000 drdy_output
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:125    .text.drdy_output:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:127    .text.drdy_output:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:129    .text.drdy_output:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:131    .text.drdy_output:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:132    .text.drdy_output:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:134    .text.drdy_output:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:139    .text.drdy_output:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:140    .text.drdy_output:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:141    .text.drdy_output:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:142    .text.drdy_output:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:144    .text.drdy_output:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:147    .text.drdy_output:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:149    .text.drdy_output:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:153    .text.drdy_output:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:156    .text.drdy_output:0000000000000014 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 32
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:26     .text.clk:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:33     .text.wait:0000000000000000 wait
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:36     .text.wait:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:37     .text.wait:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:38     .text.wait:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:40     .text.wait:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:47     .text.drdy_input:0000000000000000 drdy_input
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:50     .text.drdy_input:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:52     .text.drdy_input:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:54     .text.drdy_input:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:56     .text.drdy_input:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:57     .text.drdy_input:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:59     .text.drdy_input:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:64     .text.drdy_input:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:65     .text.drdy_input:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:66     .text.drdy_input:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:67     .text.drdy_input:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:69     .text.drdy_input:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:72     .text.drdy_input:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:74     .text.drdy_input:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:78     .text.drdy_input:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:81     .text.drdy_input:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:82     .text.drdy_input:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:83     .text.drdy_input:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:85     .text.drdy_input:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:88     .text.drdy_input:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:90     .text.drdy_input:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:93     .text.drdy_input:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:98     .text.drdy_input:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:101    .text.drdy_input:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:104    .text.drdy_input:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:107    .text.drdy_input:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:111    .text.drdy_input:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:115    .text.drdy_input:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:122    .text.drdy_output:0000000000000000 drdy_output
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:125    .text.drdy_output:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:127    .text.drdy_output:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:129    .text.drdy_output:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:131    .text.drdy_output:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:132    .text.drdy_output:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:134    .text.drdy_output:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:139    .text.drdy_output:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:140    .text.drdy_output:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:141    .text.drdy_output:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:142    .text.drdy_output:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:144    .text.drdy_output:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:147    .text.drdy_output:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:149    .text.drdy_output:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:153    .text.drdy_output:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:156    .text.drdy_output:0000000000000014 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 32
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:157    .text.drdy_output:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:158    .text.drdy_output:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:160    .text.drdy_output:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:163    .text.drdy_output:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:165    .text.drdy_output:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:168    .text.drdy_output:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:173    .text.drdy_output:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:176    .text.drdy_output:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:179    .text.drdy_output:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:182    .text.drdy_output:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:186    .text.drdy_output:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:190    .text.drdy_output:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:197    .text.set_drdy:0000000000000000 set_drdy
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:200    .text.set_drdy:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:202    .text.set_drdy:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:204    .text.set_drdy:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:206    .text.set_drdy:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:207    .text.set_drdy:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:209    .text.set_drdy:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:215    .text.set_drdy:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:216    .text.set_drdy:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:217    .text.set_drdy:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:218    .text.set_drdy:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:219    .text.set_drdy:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:221    .text.set_drdy:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:225    .text.set_drdy:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:227    .text.set_drdy:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:231    .text.set_drdy:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:234    .text.set_drdy:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:235    .text.set_drdy:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:236    .text.set_drdy:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:238    .text.set_drdy:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:241    .text.set_drdy:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:243    .text.set_drdy:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:246    .text.set_drdy:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:249    .text.set_drdy:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:254    .text.set_drdy:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:257    .text.set_drdy:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:261    .text.set_drdy:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:264    .text.set_drdy:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:268    .text.set_drdy:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:272    .text.set_drdy:000000000000003e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:279    .text.read_bit:0000000000000000 read_bit
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:282    .text.read_bit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:284    .text.read_bit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:286    .text.read_bit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:288    .text.read_bit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:289    .text.read_bit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:291    .text.read_bit:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:296    .text.read_bit:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:297    .text.read_bit:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:298    .text.read_bit:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:299    .text.read_bit:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:301    .text.read_bit:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:304    .text.read_bit:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:308    .text.read_bit:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:311    .text.read_bit:0000000000000012 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 33
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:157    .text.drdy_output:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:158    .text.drdy_output:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:160    .text.drdy_output:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:163    .text.drdy_output:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:165    .text.drdy_output:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:168    .text.drdy_output:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:173    .text.drdy_output:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:176    .text.drdy_output:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:179    .text.drdy_output:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:182    .text.drdy_output:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:186    .text.drdy_output:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:190    .text.drdy_output:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:197    .text.set_drdy:0000000000000000 set_drdy
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:200    .text.set_drdy:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:202    .text.set_drdy:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:204    .text.set_drdy:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:206    .text.set_drdy:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:207    .text.set_drdy:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:209    .text.set_drdy:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:215    .text.set_drdy:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:216    .text.set_drdy:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:217    .text.set_drdy:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:218    .text.set_drdy:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:219    .text.set_drdy:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:221    .text.set_drdy:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:225    .text.set_drdy:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:227    .text.set_drdy:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:231    .text.set_drdy:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:234    .text.set_drdy:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:235    .text.set_drdy:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:236    .text.set_drdy:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:238    .text.set_drdy:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:241    .text.set_drdy:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:243    .text.set_drdy:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:246    .text.set_drdy:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:249    .text.set_drdy:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:254    .text.set_drdy:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:257    .text.set_drdy:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:261    .text.set_drdy:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:264    .text.set_drdy:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:268    .text.set_drdy:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:272    .text.set_drdy:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:279    .text.read_bit:0000000000000000 read_bit
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:282    .text.read_bit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:284    .text.read_bit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:286    .text.read_bit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:288    .text.read_bit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:289    .text.read_bit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:291    .text.read_bit:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:296    .text.read_bit:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:297    .text.read_bit:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:298    .text.read_bit:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:299    .text.read_bit:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:301    .text.read_bit:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:304    .text.read_bit:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:308    .text.read_bit:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:311    .text.read_bit:0000000000000012 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 33
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:312    .text.read_bit:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:313    .text.read_bit:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:315    .text.read_bit:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:317    .text.read_bit:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:320    .text.read_bit:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:323    .text.read_bit:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:328    .text.read_bit:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:331    .text.read_bit:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:332    .text.read_bit:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:334    .text.read_bit:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:339    .text.read_bit:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:341    .text.read_bit:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:343    .text.read_bit:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:345    .text.read_bit:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:347    .text.read_bit:0000000000000034 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:352    .text.read_bit:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:359    .text.cs1237_install_clock_pin:0000000000000000 cs1237_install_clock_pin
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:362    .text.cs1237_install_clock_pin:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:363    .text.cs1237_install_clock_pin:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:364    .text.cs1237_install_clock_pin:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:365    .text.cs1237_install_clock_pin:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:368    .text.cs1237_install_clock_pin:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:370    .text.cs1237_install_clock_pin:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:372    .text.cs1237_install_clock_pin:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:375    .text.cs1237_install_clock_pin:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:376    .text.cs1237_install_clock_pin:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:378    .text.cs1237_install_clock_pin:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:381    .text.cs1237_install_clock_pin:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:382    .text.cs1237_install_clock_pin:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:385    .text.cs1237_install_clock_pin:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:387    .text.cs1237_install_clock_pin:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:394    .text.cs1237_read:0000000000000000 cs1237_read
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:397    .text.cs1237_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:399    .text.cs1237_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:400    .text.cs1237_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:401    .text.cs1237_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:403    .text.cs1237_read:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:406    .text.cs1237_read:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:407    .text.cs1237_read:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:411    .text.cs1237_read:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:414    .text.cs1237_read:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:417    .text.cs1237_read:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:418    .text.cs1237_read:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:419    .text.cs1237_read:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:422    .text.cs1237_read:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:426    .text.cs1237_read:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:427    .text.cs1237_read:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:428    .text.cs1237_read:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:430    .text.cs1237_read:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:434    .text.cs1237_read:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:441    .text.cs1237_read:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:447    .text.cs1237_read:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:448    .text.cs1237_read:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:453    .text.cs1237_read:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:458    .text.cs1237_read:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:466    .text.cs1237_read:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:467    .text.cs1237_read:0000000000000052 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 34
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:312    .text.read_bit:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:313    .text.read_bit:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:315    .text.read_bit:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:317    .text.read_bit:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:320    .text.read_bit:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:323    .text.read_bit:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:328    .text.read_bit:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:331    .text.read_bit:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:332    .text.read_bit:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:334    .text.read_bit:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:339    .text.read_bit:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:341    .text.read_bit:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:343    .text.read_bit:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:345    .text.read_bit:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:347    .text.read_bit:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:352    .text.read_bit:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:359    .text.cs1237_install_clock_pin:0000000000000000 cs1237_install_clock_pin
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:362    .text.cs1237_install_clock_pin:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:363    .text.cs1237_install_clock_pin:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:364    .text.cs1237_install_clock_pin:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:365    .text.cs1237_install_clock_pin:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:368    .text.cs1237_install_clock_pin:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:370    .text.cs1237_install_clock_pin:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:372    .text.cs1237_install_clock_pin:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:375    .text.cs1237_install_clock_pin:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:376    .text.cs1237_install_clock_pin:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:378    .text.cs1237_install_clock_pin:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:381    .text.cs1237_install_clock_pin:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:382    .text.cs1237_install_clock_pin:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:385    .text.cs1237_install_clock_pin:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:387    .text.cs1237_install_clock_pin:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:394    .text.cs1237_read:0000000000000000 cs1237_read
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:397    .text.cs1237_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:399    .text.cs1237_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:400    .text.cs1237_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:401    .text.cs1237_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:403    .text.cs1237_read:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:406    .text.cs1237_read:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:407    .text.cs1237_read:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:411    .text.cs1237_read:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:414    .text.cs1237_read:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:417    .text.cs1237_read:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:418    .text.cs1237_read:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:419    .text.cs1237_read:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:422    .text.cs1237_read:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:426    .text.cs1237_read:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:427    .text.cs1237_read:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:428    .text.cs1237_read:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:430    .text.cs1237_read:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:434    .text.cs1237_read:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:441    .text.cs1237_read:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:447    .text.cs1237_read:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:448    .text.cs1237_read:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:453    .text.cs1237_read:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:458    .text.cs1237_read:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:466    .text.cs1237_read:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:467    .text.cs1237_read:0000000000000052 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 34
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:472    .text.cs1237_read:000000000000005a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:477    .text.cs1237_read:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:481    .text.cs1237_read:0000000000000062 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:485    .text.cs1237_read:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:488    .text.cs1237_read:0000000000000068 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:492    .text.cs1237_read:000000000000006c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:495    .text.cs1237_read:0000000000000070 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:496    .text.cs1237_read:0000000000000072 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:497    .text.cs1237_read:0000000000000072 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:499    .text.cs1237_read:0000000000000074 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:501    .text.cs1237_read:0000000000000076 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:503    .text.cs1237_read:0000000000000078 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:505    .text.cs1237_read:000000000000007a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:509    .text.cs1237_read:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:514    .text.cs1237_read:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:517    .text.cs1237_read:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:518    .text.cs1237_read:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:520    .text.cs1237_read:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:529    .text.cs1237_read:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:530    .text.cs1237_read:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:532    .text.cs1237_read:000000000000008a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:536    .text.cs1237_read:000000000000008e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:538    .text.cs1237_read:0000000000000090 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:545    .text.cs1237_read:0000000000000096 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:546    .text.cs1237_read:0000000000000096 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:548    .text.cs1237_read:0000000000000098 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:551    .text.cs1237_read:00000000000000a0 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:552    .text.cs1237_read:00000000000000a0 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:554    .text.cs1237_read:00000000000000a2 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:556    .text.cs1237_read:00000000000000a4 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:559    .text.cs1237_read:00000000000000a6 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:564    .text.cs1237_read:00000000000000ac .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:571    .text.cs1237_data_ready:0000000000000000 cs1237_data_ready
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:574    .text.cs1237_data_ready:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:576    .text.cs1237_data_ready:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:577    .text.cs1237_data_ready:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:579    .text.cs1237_data_ready:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:581    .text.cs1237_data_ready:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:582    .text.cs1237_data_ready:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:584    .text.cs1237_data_ready:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:590    .text.cs1237_data_ready:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:591    .text.cs1237_data_ready:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:592    .text.cs1237_data_ready:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:593    .text.cs1237_data_ready:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:594    .text.cs1237_data_ready:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:596    .text.cs1237_data_ready:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:599    .text.cs1237_data_ready:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:602    .text.cs1237_data_ready:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:605    .text.cs1237_data_ready:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:609    .text.cs1237_data_ready:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:612    .text.cs1237_data_ready:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:613    .text.cs1237_data_ready:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:614    .text.cs1237_data_ready:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:615    .text.cs1237_data_ready:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:617    .text.cs1237_data_ready:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:621    .text.cs1237_data_ready:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:623    .text.cs1237_data_ready:0000000000000022 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 35
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:472    .text.cs1237_read:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:477    .text.cs1237_read:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:481    .text.cs1237_read:0000000000000062 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:485    .text.cs1237_read:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:488    .text.cs1237_read:0000000000000068 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:492    .text.cs1237_read:000000000000006c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:495    .text.cs1237_read:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:496    .text.cs1237_read:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:497    .text.cs1237_read:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:499    .text.cs1237_read:0000000000000074 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:501    .text.cs1237_read:0000000000000076 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:503    .text.cs1237_read:0000000000000078 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:505    .text.cs1237_read:000000000000007a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:509    .text.cs1237_read:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:514    .text.cs1237_read:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:517    .text.cs1237_read:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:518    .text.cs1237_read:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:520    .text.cs1237_read:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:529    .text.cs1237_read:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:530    .text.cs1237_read:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:532    .text.cs1237_read:000000000000008a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:536    .text.cs1237_read:000000000000008e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:538    .text.cs1237_read:0000000000000090 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:545    .text.cs1237_read:0000000000000096 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:546    .text.cs1237_read:0000000000000096 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:548    .text.cs1237_read:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:551    .text.cs1237_read:00000000000000a0 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:552    .text.cs1237_read:00000000000000a0 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:554    .text.cs1237_read:00000000000000a2 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:556    .text.cs1237_read:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:559    .text.cs1237_read:00000000000000a6 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:564    .text.cs1237_read:00000000000000ac .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:571    .text.cs1237_data_ready:0000000000000000 cs1237_data_ready
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:574    .text.cs1237_data_ready:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:576    .text.cs1237_data_ready:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:577    .text.cs1237_data_ready:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:579    .text.cs1237_data_ready:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:581    .text.cs1237_data_ready:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:582    .text.cs1237_data_ready:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:584    .text.cs1237_data_ready:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:590    .text.cs1237_data_ready:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:591    .text.cs1237_data_ready:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:592    .text.cs1237_data_ready:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:593    .text.cs1237_data_ready:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:594    .text.cs1237_data_ready:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:596    .text.cs1237_data_ready:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:599    .text.cs1237_data_ready:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:602    .text.cs1237_data_ready:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:605    .text.cs1237_data_ready:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:609    .text.cs1237_data_ready:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:612    .text.cs1237_data_ready:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:613    .text.cs1237_data_ready:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:614    .text.cs1237_data_ready:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:615    .text.cs1237_data_ready:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:617    .text.cs1237_data_ready:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:621    .text.cs1237_data_ready:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:623    .text.cs1237_data_ready:0000000000000022 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 35
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:626    .text.cs1237_data_ready:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:629    .text.cs1237_data_ready:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:634    .text.cs1237_data_ready:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:637    .text.cs1237_data_ready:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:638    .text.cs1237_data_ready:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:644    .text.cs1237_data_ready:0000000000000038 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:647    .text.cs1237_data_ready:000000000000003c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:651    .text.cs1237_data_ready:000000000000003e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:655    .text.cs1237_data_ready:0000000000000042 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:662    .text.cs1237_configure:0000000000000000 cs1237_configure
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:665    .text.cs1237_configure:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:667    .text.cs1237_configure:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:668    .text.cs1237_configure:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:669    .text.cs1237_configure:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:670    .text.cs1237_configure:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:672    .text.cs1237_configure:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:674    .text.cs1237_configure:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:678    .text.cs1237_configure:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:680    .text.cs1237_configure:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:682    .text.cs1237_configure:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:684    .text.cs1237_configure:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:687    .text.cs1237_configure:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:690    .text.cs1237_configure:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:691    .text.cs1237_configure:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:692    .text.cs1237_configure:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:696    .text.cs1237_configure:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:697    .text.cs1237_configure:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:699    .text.cs1237_configure:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:702    .text.cs1237_configure:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:706    .text.cs1237_configure:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:711    .text.cs1237_configure:0000000000000038 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:719    .text.cs1237_configure:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:720    .text.cs1237_configure:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:725    .text.cs1237_configure:000000000000004e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:731    .text.cs1237_configure:0000000000000058 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:732    .text.cs1237_configure:0000000000000058 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:737    .text.cs1237_configure:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:743    .text.cs1237_configure:000000000000006a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:744    .text.cs1237_configure:000000000000006a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:749    .text.cs1237_configure:0000000000000072 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:755    .text.cs1237_configure:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:756    .text.cs1237_configure:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:762    .text.cs1237_configure:0000000000000086 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:766    .text.cs1237_configure:0000000000000086 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:767    .text.cs1237_configure:0000000000000086 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:769    .text.cs1237_configure:000000000000008a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:773    .text.cs1237_configure:000000000000008c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:777    .text.cs1237_configure:0000000000000096 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:778    .text.cs1237_configure:0000000000000096 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:780    .text.cs1237_configure:000000000000009a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:788    .text.cs1237_configure:00000000000000a8 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:789    .text.cs1237_configure:00000000000000a8 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:794    .text.cs1237_configure:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:802    .text.cs1237_configure:00000000000000bc .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:803    .text.cs1237_configure:00000000000000bc .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:808    .text.cs1237_configure:00000000000000c4 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:811    .text.cs1237_configure:00000000000000c8 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 36
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:626    .text.cs1237_data_ready:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:629    .text.cs1237_data_ready:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:634    .text.cs1237_data_ready:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:637    .text.cs1237_data_ready:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:638    .text.cs1237_data_ready:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:644    .text.cs1237_data_ready:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:647    .text.cs1237_data_ready:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:651    .text.cs1237_data_ready:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:655    .text.cs1237_data_ready:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:662    .text.cs1237_configure:0000000000000000 cs1237_configure
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:665    .text.cs1237_configure:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:667    .text.cs1237_configure:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:668    .text.cs1237_configure:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:669    .text.cs1237_configure:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:670    .text.cs1237_configure:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:672    .text.cs1237_configure:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:674    .text.cs1237_configure:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:678    .text.cs1237_configure:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:680    .text.cs1237_configure:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:682    .text.cs1237_configure:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:684    .text.cs1237_configure:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:687    .text.cs1237_configure:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:690    .text.cs1237_configure:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:691    .text.cs1237_configure:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:692    .text.cs1237_configure:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:696    .text.cs1237_configure:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:697    .text.cs1237_configure:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:699    .text.cs1237_configure:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:702    .text.cs1237_configure:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:706    .text.cs1237_configure:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:711    .text.cs1237_configure:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:719    .text.cs1237_configure:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:720    .text.cs1237_configure:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:725    .text.cs1237_configure:000000000000004e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:731    .text.cs1237_configure:0000000000000058 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:732    .text.cs1237_configure:0000000000000058 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:737    .text.cs1237_configure:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:743    .text.cs1237_configure:000000000000006a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:744    .text.cs1237_configure:000000000000006a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:749    .text.cs1237_configure:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:755    .text.cs1237_configure:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:756    .text.cs1237_configure:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:762    .text.cs1237_configure:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:766    .text.cs1237_configure:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:767    .text.cs1237_configure:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:769    .text.cs1237_configure:000000000000008a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:773    .text.cs1237_configure:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:777    .text.cs1237_configure:0000000000000096 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:778    .text.cs1237_configure:0000000000000096 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:780    .text.cs1237_configure:000000000000009a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:788    .text.cs1237_configure:00000000000000a8 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:789    .text.cs1237_configure:00000000000000a8 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:794    .text.cs1237_configure:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:802    .text.cs1237_configure:00000000000000bc .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:803    .text.cs1237_configure:00000000000000bc .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:808    .text.cs1237_configure:00000000000000c4 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:811    .text.cs1237_configure:00000000000000c8 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 36
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:817    .text.cs1237_configure:00000000000000d2 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:818    .text.cs1237_configure:00000000000000d2 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:823    .text.cs1237_configure:00000000000000da .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:829    .text.cs1237_configure:00000000000000e4 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:830    .text.cs1237_configure:00000000000000e4 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:837    .text.cs1237_configure:00000000000000ee .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:838    .text.cs1237_configure:00000000000000ee .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:839    .text.cs1237_configure:00000000000000ee .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:843    .text.cs1237_configure:00000000000000f0 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:847    .text.cs1237_configure:00000000000000fa .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:848    .text.cs1237_configure:00000000000000fa .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:850    .text.cs1237_configure:00000000000000fe .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:858    .text.cs1237_configure:000000000000010c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:859    .text.cs1237_configure:000000000000010c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:864    .text.cs1237_configure:0000000000000114 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:872    .text.cs1237_configure:0000000000000120 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:873    .text.cs1237_configure:0000000000000120 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:878    .text.cs1237_configure:0000000000000128 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:881    .text.cs1237_configure:000000000000012c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:886    .text.cs1237_configure:0000000000000138 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:892    .text.cs1237_configure:0000000000000142 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:893    .text.cs1237_configure:0000000000000142 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:898    .text.cs1237_configure:000000000000014a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:904    .text.cs1237_configure:0000000000000154 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:905    .text.cs1237_configure:0000000000000154 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:911    .text.cs1237_configure:000000000000015c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:912    .text.cs1237_configure:000000000000015c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:915    .text.cs1237_configure:000000000000015e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:919    .text.cs1237_configure:0000000000000160 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:924    .text.cs1237_configure:0000000000000164 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:925    .text.cs1237_configure:0000000000000166 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:926    .text.cs1237_configure:0000000000000166 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:928    .text.cs1237_configure:0000000000000168 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:930    .text.cs1237_configure:000000000000016a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:933    .text.cs1237_configure:000000000000016c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:935    .text.cs1237_configure:000000000000016e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:938    .text.cs1237_configure:0000000000000170 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:940    .text.cs1237_configure:0000000000000172 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:943    .text.cs1237_configure:0000000000000174 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:948    .text.cs1237_configure:0000000000000176 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:953    .text.cs1237_configure:0000000000000176 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:954    .text.cs1237_configure:0000000000000176 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:956    .text.cs1237_configure:000000000000017a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:963    .text.cs1237_configure:0000000000000180 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:970    .text.cs1237_get_configuration:0000000000000000 cs1237_get_configuration
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:973    .text.cs1237_get_configuration:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:975    .text.cs1237_get_configuration:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:976    .text.cs1237_get_configuration:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:977    .text.cs1237_get_configuration:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:978    .text.cs1237_get_configuration:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:979    .text.cs1237_get_configuration:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:981    .text.cs1237_get_configuration:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:983    .text.cs1237_get_configuration:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:991    .text.cs1237_get_configuration:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:992    .text.cs1237_get_configuration:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:993    .text.cs1237_get_configuration:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:994    .text.cs1237_get_configuration:0000000000000012 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 37
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:817    .text.cs1237_configure:00000000000000d2 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:818    .text.cs1237_configure:00000000000000d2 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:823    .text.cs1237_configure:00000000000000da .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:829    .text.cs1237_configure:00000000000000e4 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:830    .text.cs1237_configure:00000000000000e4 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:837    .text.cs1237_configure:00000000000000ee .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:838    .text.cs1237_configure:00000000000000ee .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:839    .text.cs1237_configure:00000000000000ee .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:843    .text.cs1237_configure:00000000000000f0 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:847    .text.cs1237_configure:00000000000000fa .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:848    .text.cs1237_configure:00000000000000fa .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:850    .text.cs1237_configure:00000000000000fe .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:858    .text.cs1237_configure:000000000000010c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:859    .text.cs1237_configure:000000000000010c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:864    .text.cs1237_configure:0000000000000114 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:872    .text.cs1237_configure:0000000000000120 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:873    .text.cs1237_configure:0000000000000120 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:878    .text.cs1237_configure:0000000000000128 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:881    .text.cs1237_configure:000000000000012c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:886    .text.cs1237_configure:0000000000000138 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:892    .text.cs1237_configure:0000000000000142 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:893    .text.cs1237_configure:0000000000000142 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:898    .text.cs1237_configure:000000000000014a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:904    .text.cs1237_configure:0000000000000154 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:905    .text.cs1237_configure:0000000000000154 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:911    .text.cs1237_configure:000000000000015c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:912    .text.cs1237_configure:000000000000015c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:915    .text.cs1237_configure:000000000000015e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:919    .text.cs1237_configure:0000000000000160 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:924    .text.cs1237_configure:0000000000000164 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:925    .text.cs1237_configure:0000000000000166 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:926    .text.cs1237_configure:0000000000000166 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:928    .text.cs1237_configure:0000000000000168 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:930    .text.cs1237_configure:000000000000016a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:933    .text.cs1237_configure:000000000000016c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:935    .text.cs1237_configure:000000000000016e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:938    .text.cs1237_configure:0000000000000170 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:940    .text.cs1237_configure:0000000000000172 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:943    .text.cs1237_configure:0000000000000174 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:948    .text.cs1237_configure:0000000000000176 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:953    .text.cs1237_configure:0000000000000176 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:954    .text.cs1237_configure:0000000000000176 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:956    .text.cs1237_configure:000000000000017a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:963    .text.cs1237_configure:0000000000000180 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:970    .text.cs1237_get_configuration:0000000000000000 cs1237_get_configuration
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:973    .text.cs1237_get_configuration:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:975    .text.cs1237_get_configuration:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:976    .text.cs1237_get_configuration:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:977    .text.cs1237_get_configuration:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:978    .text.cs1237_get_configuration:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:979    .text.cs1237_get_configuration:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:981    .text.cs1237_get_configuration:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:983    .text.cs1237_get_configuration:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:991    .text.cs1237_get_configuration:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:992    .text.cs1237_get_configuration:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:993    .text.cs1237_get_configuration:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:994    .text.cs1237_get_configuration:0000000000000012 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 37
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:995    .text.cs1237_get_configuration:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:996    .text.cs1237_get_configuration:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:998    .text.cs1237_get_configuration:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1001   .text.cs1237_get_configuration:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1005   .text.cs1237_get_configuration:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1006   .text.cs1237_get_configuration:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1007   .text.cs1237_get_configuration:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1009   .text.cs1237_get_configuration:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1013   .text.cs1237_get_configuration:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1016   .text.cs1237_get_configuration:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1020   .text.cs1237_get_configuration:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1025   .text.cs1237_get_configuration:000000000000003e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1033   .text.cs1237_get_configuration:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1034   .text.cs1237_get_configuration:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1039   .text.cs1237_get_configuration:0000000000000054 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1045   .text.cs1237_get_configuration:000000000000005e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1046   .text.cs1237_get_configuration:000000000000005e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1051   .text.cs1237_get_configuration:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1057   .text.cs1237_get_configuration:0000000000000070 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1058   .text.cs1237_get_configuration:0000000000000070 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1063   .text.cs1237_get_configuration:0000000000000078 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1069   .text.cs1237_get_configuration:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1070   .text.cs1237_get_configuration:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1077   .text.cs1237_get_configuration:000000000000008c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1078   .text.cs1237_get_configuration:000000000000008c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1079   .text.cs1237_get_configuration:000000000000008c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1081   .text.cs1237_get_configuration:0000000000000090 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1085   .text.cs1237_get_configuration:0000000000000092 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1089   .text.cs1237_get_configuration:000000000000009c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1090   .text.cs1237_get_configuration:000000000000009c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1092   .text.cs1237_get_configuration:00000000000000a0 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1100   .text.cs1237_get_configuration:00000000000000ae .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1101   .text.cs1237_get_configuration:00000000000000ae .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1106   .text.cs1237_get_configuration:00000000000000b6 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1114   .text.cs1237_get_configuration:00000000000000c2 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1115   .text.cs1237_get_configuration:00000000000000c2 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1120   .text.cs1237_get_configuration:00000000000000ca .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1123   .text.cs1237_get_configuration:00000000000000ce .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1129   .text.cs1237_get_configuration:00000000000000d8 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1130   .text.cs1237_get_configuration:00000000000000d8 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1135   .text.cs1237_get_configuration:00000000000000e0 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1141   .text.cs1237_get_configuration:00000000000000ea .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1142   .text.cs1237_get_configuration:00000000000000ea .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1147   .text.cs1237_get_configuration:00000000000000f2 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1153   .text.cs1237_get_configuration:00000000000000fe .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1155   .text.cs1237_get_configuration:00000000000000fe .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1156   .text.cs1237_get_configuration:00000000000000fe .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1161   .text.cs1237_get_configuration:0000000000000100 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1167   .text.cs1237_get_configuration:000000000000010a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1168   .text.cs1237_get_configuration:000000000000010a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1173   .text.cs1237_get_configuration:0000000000000112 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1178   .text.cs1237_get_configuration:000000000000011e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1186   .text.cs1237_get_configuration:000000000000012a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1187   .text.cs1237_get_configuration:000000000000012a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1192   .text.cs1237_get_configuration:0000000000000132 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1195   .text.cs1237_get_configuration:0000000000000136 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1201   .text.cs1237_get_configuration:0000000000000140 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 38
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:995    .text.cs1237_get_configuration:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:996    .text.cs1237_get_configuration:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:998    .text.cs1237_get_configuration:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1001   .text.cs1237_get_configuration:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1005   .text.cs1237_get_configuration:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1006   .text.cs1237_get_configuration:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1007   .text.cs1237_get_configuration:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1009   .text.cs1237_get_configuration:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1013   .text.cs1237_get_configuration:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1016   .text.cs1237_get_configuration:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1020   .text.cs1237_get_configuration:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1025   .text.cs1237_get_configuration:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1033   .text.cs1237_get_configuration:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1034   .text.cs1237_get_configuration:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1039   .text.cs1237_get_configuration:0000000000000054 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1045   .text.cs1237_get_configuration:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1046   .text.cs1237_get_configuration:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1051   .text.cs1237_get_configuration:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1057   .text.cs1237_get_configuration:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1058   .text.cs1237_get_configuration:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1063   .text.cs1237_get_configuration:0000000000000078 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1069   .text.cs1237_get_configuration:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1070   .text.cs1237_get_configuration:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1077   .text.cs1237_get_configuration:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1078   .text.cs1237_get_configuration:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1079   .text.cs1237_get_configuration:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1081   .text.cs1237_get_configuration:0000000000000090 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1085   .text.cs1237_get_configuration:0000000000000092 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1089   .text.cs1237_get_configuration:000000000000009c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1090   .text.cs1237_get_configuration:000000000000009c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1092   .text.cs1237_get_configuration:00000000000000a0 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1100   .text.cs1237_get_configuration:00000000000000ae .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1101   .text.cs1237_get_configuration:00000000000000ae .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1106   .text.cs1237_get_configuration:00000000000000b6 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1114   .text.cs1237_get_configuration:00000000000000c2 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1115   .text.cs1237_get_configuration:00000000000000c2 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1120   .text.cs1237_get_configuration:00000000000000ca .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1123   .text.cs1237_get_configuration:00000000000000ce .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1129   .text.cs1237_get_configuration:00000000000000d8 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1130   .text.cs1237_get_configuration:00000000000000d8 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1135   .text.cs1237_get_configuration:00000000000000e0 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1141   .text.cs1237_get_configuration:00000000000000ea .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1142   .text.cs1237_get_configuration:00000000000000ea .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1147   .text.cs1237_get_configuration:00000000000000f2 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1153   .text.cs1237_get_configuration:00000000000000fe .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1155   .text.cs1237_get_configuration:00000000000000fe .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1156   .text.cs1237_get_configuration:00000000000000fe .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1161   .text.cs1237_get_configuration:0000000000000100 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1167   .text.cs1237_get_configuration:000000000000010a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1168   .text.cs1237_get_configuration:000000000000010a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1173   .text.cs1237_get_configuration:0000000000000112 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1178   .text.cs1237_get_configuration:000000000000011e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1186   .text.cs1237_get_configuration:000000000000012a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1187   .text.cs1237_get_configuration:000000000000012a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1192   .text.cs1237_get_configuration:0000000000000132 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1195   .text.cs1237_get_configuration:0000000000000136 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1201   .text.cs1237_get_configuration:0000000000000140 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 38
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1202   .text.cs1237_get_configuration:0000000000000140 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1207   .text.cs1237_get_configuration:0000000000000148 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1213   .text.cs1237_get_configuration:0000000000000152 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1214   .text.cs1237_get_configuration:0000000000000152 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1220   .text.cs1237_get_configuration:000000000000015a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1221   .text.cs1237_get_configuration:000000000000015a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1222   .text.cs1237_get_configuration:000000000000015a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1224   .text.cs1237_get_configuration:000000000000015c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1228   .text.cs1237_get_configuration:000000000000015e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1232   .text.cs1237_get_configuration:0000000000000162 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1236   .text.cs1237_get_configuration:0000000000000164 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1239   .text.cs1237_get_configuration:0000000000000168 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1240   .text.cs1237_get_configuration:000000000000016a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1241   .text.cs1237_get_configuration:000000000000016a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1243   .text.cs1237_get_configuration:000000000000016c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1245   .text.cs1237_get_configuration:000000000000016e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1248   .text.cs1237_get_configuration:0000000000000170 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1250   .text.cs1237_get_configuration:0000000000000172 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1252   .text.cs1237_get_configuration:0000000000000174 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1254   .text.cs1237_get_configuration:0000000000000176 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1257   .text.cs1237_get_configuration:0000000000000178 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1262   .text.cs1237_get_configuration:000000000000017a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1265   .text.cs1237_get_configuration:000000000000017a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1266   .text.cs1237_get_configuration:000000000000017a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1268   .text.cs1237_get_configuration:000000000000017e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1277   .text.cs1237_get_configuration:0000000000000184 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1278   .text.cs1237_get_configuration:0000000000000184 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1280   .text.cs1237_get_configuration:0000000000000186 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1284   .text.cs1237_get_configuration:000000000000018a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1291   .text.cs1237_get_configuration:0000000000000190 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1292   .text.cs1237_get_configuration:0000000000000190 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1294   .text.cs1237_get_configuration:0000000000000194 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1299   .text.cs1237_get_configuration:000000000000019a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1306   .text.cs1237_sample_rate_and_gain:0000000000000000 cs1237_sample_rate_and_gain
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1309   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1311   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1312   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1313   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1314   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1315   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1318   .text.cs1237_sample_rate_and_gain:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1321   .text.cs1237_sample_rate_and_gain:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1323   .text.cs1237_sample_rate_and_gain:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1325   .text.cs1237_sample_rate_and_gain:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1327   .text.cs1237_sample_rate_and_gain:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1333   .text.cs1237_sample_rate_and_gain:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:29     .text.clk:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:43     .text.wait:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:118    .text.drdy_input:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:193    .text.drdy_output:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:275    .text.set_drdy:000000000000003e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:355    .text.read_bit:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:390    .text.cs1237_install_clock_pin:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:567    .text.cs1237_read:00000000000000ac .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:658    .text.cs1237_data_ready:0000000000000042 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:966    .text.cs1237_configure:0000000000000180 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1302   .text.cs1237_get_configuration:000000000000019a .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 39
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1202   .text.cs1237_get_configuration:0000000000000140 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1207   .text.cs1237_get_configuration:0000000000000148 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1213   .text.cs1237_get_configuration:0000000000000152 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1214   .text.cs1237_get_configuration:0000000000000152 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1220   .text.cs1237_get_configuration:000000000000015a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1221   .text.cs1237_get_configuration:000000000000015a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1222   .text.cs1237_get_configuration:000000000000015a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1224   .text.cs1237_get_configuration:000000000000015c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1228   .text.cs1237_get_configuration:000000000000015e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1232   .text.cs1237_get_configuration:0000000000000162 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1236   .text.cs1237_get_configuration:0000000000000164 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1239   .text.cs1237_get_configuration:0000000000000168 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1240   .text.cs1237_get_configuration:000000000000016a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1241   .text.cs1237_get_configuration:000000000000016a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1243   .text.cs1237_get_configuration:000000000000016c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1245   .text.cs1237_get_configuration:000000000000016e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1248   .text.cs1237_get_configuration:0000000000000170 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1250   .text.cs1237_get_configuration:0000000000000172 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1252   .text.cs1237_get_configuration:0000000000000174 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1254   .text.cs1237_get_configuration:0000000000000176 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1257   .text.cs1237_get_configuration:0000000000000178 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1262   .text.cs1237_get_configuration:000000000000017a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1265   .text.cs1237_get_configuration:000000000000017a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1266   .text.cs1237_get_configuration:000000000000017a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1268   .text.cs1237_get_configuration:000000000000017e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1277   .text.cs1237_get_configuration:0000000000000184 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1278   .text.cs1237_get_configuration:0000000000000184 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1280   .text.cs1237_get_configuration:0000000000000186 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1284   .text.cs1237_get_configuration:000000000000018a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1291   .text.cs1237_get_configuration:0000000000000190 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1292   .text.cs1237_get_configuration:0000000000000190 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1294   .text.cs1237_get_configuration:0000000000000194 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1299   .text.cs1237_get_configuration:000000000000019a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1306   .text.cs1237_sample_rate_and_gain:0000000000000000 cs1237_sample_rate_and_gain
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1309   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1311   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1312   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1313   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1314   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1315   .text.cs1237_sample_rate_and_gain:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1318   .text.cs1237_sample_rate_and_gain:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1321   .text.cs1237_sample_rate_and_gain:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1323   .text.cs1237_sample_rate_and_gain:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1325   .text.cs1237_sample_rate_and_gain:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1327   .text.cs1237_sample_rate_and_gain:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1333   .text.cs1237_sample_rate_and_gain:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:29     .text.clk:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:43     .text.wait:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:118    .text.drdy_input:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:193    .text.drdy_output:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:275    .text.set_drdy:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:355    .text.read_bit:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:390    .text.cs1237_install_clock_pin:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:567    .text.cs1237_read:00000000000000ac .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:658    .text.cs1237_data_ready:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:966    .text.cs1237_configure:0000000000000180 .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1302   .text.cs1237_get_configuration:000000000000019a .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 39
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1337   .text.cs1237_sample_rate_and_gain:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1337   .text.cs1237_sample_rate_and_gain:000000000000001c .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:96     .text.drdy_input:0000000000000020 .L5
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:76     .text.drdy_input:0000000000000010 .L4
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:171    .text.drdy_output:0000000000000020 .L9
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:151    .text.drdy_output:0000000000000010 .L8
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:252    .text.set_drdy:0000000000000026 .L13
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:229    .text.set_drdy:0000000000000014 .L12
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:326    .text.read_bit:000000000000001e .L17
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:306    .text.read_bit:000000000000000e .L16
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:512    .text.cs1237_read:000000000000007e .L23
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:437    .text.cs1237_read:0000000000000028 .L24
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:525    .text.cs1237_read:0000000000000088 .L26
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:541    .text.cs1237_read:0000000000000096 .L29
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:432    .text.cs1237_read:0000000000000022 .L22
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:478    .text.cs1237_read:0000000000000062 .L25
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:557    .text.cs1237_read:00000000000000a6 .L28
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:489    .text.cs1237_read:000000000000006c .L27
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:632    .text.cs1237_data_ready:0000000000000028 .L38
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:649    .text.cs1237_data_ready:000000000000003e .L37
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:607    .text.cs1237_data_ready:0000000000000014 .L36
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:771    .text.cs1237_configure:000000000000008c .L44
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:841    .text.cs1237_configure:00000000000000f0 .L45
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:946    .text.cs1237_configure:0000000000000176 .L47
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:917    .text.cs1237_configure:0000000000000160 .L46
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1260   .text.cs1237_get_configuration:000000000000017a .L53
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1083   .text.cs1237_get_configuration:0000000000000092 .L54
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1158   .text.cs1237_get_configuration:0000000000000100 .L55
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1273   .text.cs1237_get_configuration:0000000000000184 .L57
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1287   .text.cs1237_get_configuration:0000000000000190 .L59
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1011   .text.cs1237_get_configuration:0000000000000024 .L52
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1226   .text.cs1237_get_configuration:000000000000015e .L56
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1233   .text.cs1237_get_configuration:0000000000000164 .L58
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:3141   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5069   .debug_str:00000000000002c9 .LASF40
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5001   .debug_str:00000000000000d8 .LASF41
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4987   .debug_str:0000000000000019 .LASF42
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4859   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4983   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5077   .debug_str:000000000000036f .LASF0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4991   .debug_str:0000000000000096 .LASF4
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5011   .debug_str:000000000000011d .LASF1
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5067   .debug_str:00000000000002bf .LASF2
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5017   .debug_str:0000000000000146 .LASF3
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4995   .debug_str:00000000000000a6 .LASF5
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5073   .debug_str:000000000000035a .LASF6
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5025   .debug_str:000000000000017c .LASF7
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5015   .debug_str:0000000000000134 .LASF8
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5055   .debug_str:0000000000000272 .LASF9
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5037   .debug_str:00000000000001c6 .LASF10
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5033   .debug_str:00000000000001b3 .LASF11
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5039   .debug_str:00000000000001dd .LASF12
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5053   .debug_str:000000000000026a .LASF13
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5071   .debug_str:0000000000000351 .LASF14
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5061   .debug_str:0000000000000290 .LASF15
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4993   .debug_str:00000000000000a0 .LASF16
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5023   .debug_str:0000000000000175 .LASF17
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 40
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:96     .text.drdy_input:0000000000000020 .L5
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:76     .text.drdy_input:0000000000000010 .L4
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:171    .text.drdy_output:0000000000000020 .L9
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:151    .text.drdy_output:0000000000000010 .L8
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:252    .text.set_drdy:0000000000000026 .L13
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:229    .text.set_drdy:0000000000000014 .L12
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:326    .text.read_bit:000000000000001e .L17
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:306    .text.read_bit:000000000000000e .L16
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:512    .text.cs1237_read:000000000000007e .L23
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:437    .text.cs1237_read:0000000000000028 .L24
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:525    .text.cs1237_read:0000000000000088 .L26
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:541    .text.cs1237_read:0000000000000096 .L29
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:432    .text.cs1237_read:0000000000000022 .L22
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:478    .text.cs1237_read:0000000000000062 .L25
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:557    .text.cs1237_read:00000000000000a6 .L28
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:489    .text.cs1237_read:000000000000006c .L27
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:632    .text.cs1237_data_ready:0000000000000028 .L38
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:649    .text.cs1237_data_ready:000000000000003e .L37
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:607    .text.cs1237_data_ready:0000000000000014 .L36
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:771    .text.cs1237_configure:000000000000008c .L44
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:841    .text.cs1237_configure:00000000000000f0 .L45
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:946    .text.cs1237_configure:0000000000000176 .L47
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:917    .text.cs1237_configure:0000000000000160 .L46
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1260   .text.cs1237_get_configuration:000000000000017a .L53
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1083   .text.cs1237_get_configuration:0000000000000092 .L54
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1158   .text.cs1237_get_configuration:0000000000000100 .L55
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1273   .text.cs1237_get_configuration:0000000000000184 .L57
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1287   .text.cs1237_get_configuration:0000000000000190 .L59
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1011   .text.cs1237_get_configuration:0000000000000024 .L52
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1226   .text.cs1237_get_configuration:000000000000015e .L56
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1233   .text.cs1237_get_configuration:0000000000000164 .L58
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:3141   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5069   .debug_str:00000000000002c9 .LASF40
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5001   .debug_str:00000000000000d8 .LASF41
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4987   .debug_str:0000000000000019 .LASF42
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4859   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4983   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5077   .debug_str:000000000000036f .LASF0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4991   .debug_str:0000000000000096 .LASF4
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5011   .debug_str:000000000000011d .LASF1
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5067   .debug_str:00000000000002bf .LASF2
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5017   .debug_str:0000000000000146 .LASF3
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4995   .debug_str:00000000000000a6 .LASF5
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5073   .debug_str:000000000000035a .LASF6
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5025   .debug_str:000000000000017c .LASF7
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5015   .debug_str:0000000000000134 .LASF8
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5055   .debug_str:0000000000000272 .LASF9
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5037   .debug_str:00000000000001c6 .LASF10
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5033   .debug_str:00000000000001b3 .LASF11
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5039   .debug_str:00000000000001dd .LASF12
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5053   .debug_str:000000000000026a .LASF13
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5071   .debug_str:0000000000000351 .LASF14
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5061   .debug_str:0000000000000290 .LASF15
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4993   .debug_str:00000000000000a0 .LASF16
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5023   .debug_str:0000000000000175 .LASF17
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 40
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5005   .debug_str:00000000000000f5 .LASF18
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5029   .debug_str:00000000000001a1 .LASF43
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5047   .debug_str:000000000000021a .LASF29
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1307   .text.cs1237_sample_rate_and_gain:0000000000000000 .LFB11
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1334   .text.cs1237_sample_rate_and_gain:000000000000001c .LFE11
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5075   .debug_str:0000000000000363 .LASF19
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:3830   .debug_loc:0000000000000000 .LLST49
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5003   .debug_str:00000000000000f0 .LASF20
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:3844   .debug_loc:0000000000000021 .LLST50
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4997   .debug_str:00000000000000b0 .LASF21
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:3858   .debug_loc:0000000000000042 .LLST51
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5059   .debug_str:0000000000000287 .LASF22
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:3872   .debug_loc:0000000000000063 .LLST52
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:3886   .debug_loc:0000000000000084 .LLST53
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1332   .text.cs1237_sample_rate_and_gain:000000000000001c .LVL154
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4985   .debug_str:0000000000000000 .LASF25
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:971    .text.cs1237_get_configuration:0000000000000000 .LFB10
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1300   .text.cs1237_get_configuration:000000000000019a .LFE10
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:3946   .debug_loc:00000000000000da .LLST41
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:3969   .debug_loc:0000000000000112 .LLST42
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:3983   .debug_loc:0000000000000133 .LLST43
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4989   .debug_str:000000000000008d .LASF23
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4005   .debug_loc:000000000000016a .LLST44
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1076   .text.cs1237_get_configuration:000000000000008c .LBB198
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1121   .text.cs1237_get_configuration:00000000000000ce .LBE198
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4021   .debug_loc:0000000000000194 .LLST45
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1098   .text.cs1237_get_configuration:00000000000000ae .LBB199
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1104   .text.cs1237_get_configuration:00000000000000b6 .LBE199
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1102   .text.cs1237_get_configuration:00000000000000b6 .LVL121
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1112   .text.cs1237_get_configuration:00000000000000c2 .LBB201
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1118   .text.cs1237_get_configuration:00000000000000ca .LBE201
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1116   .text.cs1237_get_configuration:00000000000000ca .LVL124
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1087   .text.cs1237_get_configuration:000000000000009c .LVL119
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1096   .text.cs1237_get_configuration:00000000000000ae .LVL120
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1110   .text.cs1237_get_configuration:00000000000000c2 .LVL123
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4045   .debug_loc:00000000000001c6 .LLST46
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1165   .text.cs1237_get_configuration:000000000000010a .LBB208
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1171   .text.cs1237_get_configuration:0000000000000112 .LBE208
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1169   .text.cs1237_get_configuration:0000000000000112 .LVL132
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1184   .text.cs1237_get_configuration:000000000000012a .LBB210
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1190   .text.cs1237_get_configuration:0000000000000132 .LBE210
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1188   .text.cs1237_get_configuration:0000000000000132 .LVL136
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1163   .text.cs1237_get_configuration:000000000000010a .LVL131
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1176   .text.cs1237_get_configuration:000000000000011e .LVL133
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1182   .text.cs1237_get_configuration:000000000000012a .LVL135
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4069   .debug_loc:00000000000001f8 .LLST47
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4085   .debug_loc:0000000000000222 .LLST48
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1031   .text.cs1237_get_configuration:000000000000004c .LBB190
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1037   .text.cs1237_get_configuration:0000000000000054 .LBE190
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1035   .text.cs1237_get_configuration:0000000000000054 .LVL111
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1043   .text.cs1237_get_configuration:000000000000005e .LBB192
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1049   .text.cs1237_get_configuration:0000000000000066 .LBE192
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1047   .text.cs1237_get_configuration:0000000000000066 .LVL113
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1055   .text.cs1237_get_configuration:0000000000000070 .LBB194
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1061   .text.cs1237_get_configuration:0000000000000078 .LBE194
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1059   .text.cs1237_get_configuration:0000000000000078 .LVL115
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1067   .text.cs1237_get_configuration:0000000000000082 .LBB196
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 41
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5005   .debug_str:00000000000000f5 .LASF18
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5029   .debug_str:00000000000001a1 .LASF43
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5047   .debug_str:000000000000021a .LASF29
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1307   .text.cs1237_sample_rate_and_gain:0000000000000000 .LFB11
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1334   .text.cs1237_sample_rate_and_gain:000000000000001c .LFE11
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5075   .debug_str:0000000000000363 .LASF19
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:3830   .debug_loc:0000000000000000 .LLST49
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5003   .debug_str:00000000000000f0 .LASF20
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:3844   .debug_loc:0000000000000021 .LLST50
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4997   .debug_str:00000000000000b0 .LASF21
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:3858   .debug_loc:0000000000000042 .LLST51
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5059   .debug_str:0000000000000287 .LASF22
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:3872   .debug_loc:0000000000000063 .LLST52
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:3886   .debug_loc:0000000000000084 .LLST53
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1332   .text.cs1237_sample_rate_and_gain:000000000000001c .LVL154
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4985   .debug_str:0000000000000000 .LASF25
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:971    .text.cs1237_get_configuration:0000000000000000 .LFB10
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1300   .text.cs1237_get_configuration:000000000000019a .LFE10
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:3946   .debug_loc:00000000000000da .LLST41
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:3969   .debug_loc:0000000000000112 .LLST42
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:3983   .debug_loc:0000000000000133 .LLST43
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4989   .debug_str:000000000000008d .LASF23
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4005   .debug_loc:000000000000016a .LLST44
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1076   .text.cs1237_get_configuration:000000000000008c .LBB198
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1121   .text.cs1237_get_configuration:00000000000000ce .LBE198
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4021   .debug_loc:0000000000000194 .LLST45
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1098   .text.cs1237_get_configuration:00000000000000ae .LBB199
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1104   .text.cs1237_get_configuration:00000000000000b6 .LBE199
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1102   .text.cs1237_get_configuration:00000000000000b6 .LVL121
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1112   .text.cs1237_get_configuration:00000000000000c2 .LBB201
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1118   .text.cs1237_get_configuration:00000000000000ca .LBE201
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1116   .text.cs1237_get_configuration:00000000000000ca .LVL124
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1087   .text.cs1237_get_configuration:000000000000009c .LVL119
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1096   .text.cs1237_get_configuration:00000000000000ae .LVL120
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1110   .text.cs1237_get_configuration:00000000000000c2 .LVL123
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4045   .debug_loc:00000000000001c6 .LLST46
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1165   .text.cs1237_get_configuration:000000000000010a .LBB208
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1171   .text.cs1237_get_configuration:0000000000000112 .LBE208
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1169   .text.cs1237_get_configuration:0000000000000112 .LVL132
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1184   .text.cs1237_get_configuration:000000000000012a .LBB210
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1190   .text.cs1237_get_configuration:0000000000000132 .LBE210
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1188   .text.cs1237_get_configuration:0000000000000132 .LVL136
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1163   .text.cs1237_get_configuration:000000000000010a .LVL131
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1176   .text.cs1237_get_configuration:000000000000011e .LVL133
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1182   .text.cs1237_get_configuration:000000000000012a .LVL135
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4069   .debug_loc:00000000000001f8 .LLST47
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4085   .debug_loc:0000000000000222 .LLST48
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1031   .text.cs1237_get_configuration:000000000000004c .LBB190
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1037   .text.cs1237_get_configuration:0000000000000054 .LBE190
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1035   .text.cs1237_get_configuration:0000000000000054 .LVL111
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1043   .text.cs1237_get_configuration:000000000000005e .LBB192
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1049   .text.cs1237_get_configuration:0000000000000066 .LBE192
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1047   .text.cs1237_get_configuration:0000000000000066 .LVL113
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1055   .text.cs1237_get_configuration:0000000000000070 .LBB194
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1061   .text.cs1237_get_configuration:0000000000000078 .LBE194
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1059   .text.cs1237_get_configuration:0000000000000078 .LVL115
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1067   .text.cs1237_get_configuration:0000000000000082 .LBB196
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 41
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1074   .text.cs1237_get_configuration:000000000000008c .LBE196
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1072   .text.cs1237_get_configuration:000000000000008c .LVL117
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1127   .text.cs1237_get_configuration:00000000000000d8 .LBB203
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1133   .text.cs1237_get_configuration:00000000000000e0 .LBE203
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1131   .text.cs1237_get_configuration:00000000000000e0 .LVL126
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1139   .text.cs1237_get_configuration:00000000000000ea .LBB205
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1145   .text.cs1237_get_configuration:00000000000000f2 .LBE205
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1143   .text.cs1237_get_configuration:00000000000000f2 .LVL128
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1199   .text.cs1237_get_configuration:0000000000000140 .LBB213
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1205   .text.cs1237_get_configuration:0000000000000148 .LBE213
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1203   .text.cs1237_get_configuration:0000000000000148 .LVL138
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1211   .text.cs1237_get_configuration:0000000000000152 .LBB215
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1217   .text.cs1237_get_configuration:000000000000015a .LBE215
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1215   .text.cs1237_get_configuration:000000000000015a .LVL140
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1002   .text.cs1237_get_configuration:0000000000000020 .LVL106
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1018   .text.cs1237_get_configuration:0000000000000032 .LVL108
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1023   .text.cs1237_get_configuration:000000000000003e .LVL109
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1029   .text.cs1237_get_configuration:000000000000004c .LVL110
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1041   .text.cs1237_get_configuration:000000000000005e .LVL112
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1053   .text.cs1237_get_configuration:0000000000000070 .LVL114
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1065   .text.cs1237_get_configuration:0000000000000082 .LVL116
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1125   .text.cs1237_get_configuration:00000000000000d8 .LVL125
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1137   .text.cs1237_get_configuration:00000000000000ea .LVL127
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1150   .text.cs1237_get_configuration:00000000000000fe .LVL129
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1197   .text.cs1237_get_configuration:0000000000000140 .LVL137
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1209   .text.cs1237_get_configuration:0000000000000152 .LVL139
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5021   .debug_str:0000000000000164 .LASF44
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5041   .debug_str:00000000000001e5 .LASF24
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5007   .debug_str:0000000000000106 .LASF26
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:572    .text.cs1237_data_ready:0000000000000000 .LFB8
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:656    .text.cs1237_data_ready:0000000000000042 .LFE8
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4096   .debug_loc:0000000000000240 .LLST26
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4119   .debug_loc:0000000000000278 .LLST27
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4133   .debug_loc:0000000000000299 .LLST28
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5035   .debug_str:00000000000001c0 .LASF27
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4147   .debug_loc:00000000000002ba .LLST29
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4163   .debug_loc:00000000000002e4 .LLST30
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:642    .text.cs1237_data_ready:0000000000000038 .LVL59
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5065   .debug_str:00000000000002b3 .LASF28
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:395    .text.cs1237_read:0000000000000000 .LFB7
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:565    .text.cs1237_read:00000000000000ac .LFE7
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4179   .debug_loc:000000000000030e .LLST19
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4202   .debug_loc:0000000000000346 .LLST20
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4216   .debug_loc:0000000000000367 .LLST21
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4238   .debug_loc:000000000000039e .LLST22
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:439    .text.cs1237_read:0000000000000028 .LBB106
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:474    .text.cs1237_read:0000000000000060 .LBE106
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4254   .debug_loc:00000000000003c8 .LLST23
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:445    .text.cs1237_read:0000000000000032 .LBB107
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:451    .text.cs1237_read:000000000000003a .LBE107
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:449    .text.cs1237_read:000000000000003a .LVL39
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:464    .text.cs1237_read:0000000000000052 .LBB109
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:470    .text.cs1237_read:000000000000005a .LBE109
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:468    .text.cs1237_read:000000000000005a .LVL43
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:443    .text.cs1237_read:0000000000000032 .LVL38
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:456    .text.cs1237_read:0000000000000046 .LVL40
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:462    .text.cs1237_read:0000000000000052 .LVL42
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 42
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1074   .text.cs1237_get_configuration:000000000000008c .LBE196
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1072   .text.cs1237_get_configuration:000000000000008c .LVL117
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1127   .text.cs1237_get_configuration:00000000000000d8 .LBB203
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1133   .text.cs1237_get_configuration:00000000000000e0 .LBE203
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1131   .text.cs1237_get_configuration:00000000000000e0 .LVL126
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1139   .text.cs1237_get_configuration:00000000000000ea .LBB205
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1145   .text.cs1237_get_configuration:00000000000000f2 .LBE205
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1143   .text.cs1237_get_configuration:00000000000000f2 .LVL128
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1199   .text.cs1237_get_configuration:0000000000000140 .LBB213
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1205   .text.cs1237_get_configuration:0000000000000148 .LBE213
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1203   .text.cs1237_get_configuration:0000000000000148 .LVL138
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1211   .text.cs1237_get_configuration:0000000000000152 .LBB215
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1217   .text.cs1237_get_configuration:000000000000015a .LBE215
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1215   .text.cs1237_get_configuration:000000000000015a .LVL140
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1002   .text.cs1237_get_configuration:0000000000000020 .LVL106
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1018   .text.cs1237_get_configuration:0000000000000032 .LVL108
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1023   .text.cs1237_get_configuration:000000000000003e .LVL109
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1029   .text.cs1237_get_configuration:000000000000004c .LVL110
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1041   .text.cs1237_get_configuration:000000000000005e .LVL112
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1053   .text.cs1237_get_configuration:0000000000000070 .LVL114
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1065   .text.cs1237_get_configuration:0000000000000082 .LVL116
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1125   .text.cs1237_get_configuration:00000000000000d8 .LVL125
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1137   .text.cs1237_get_configuration:00000000000000ea .LVL127
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1150   .text.cs1237_get_configuration:00000000000000fe .LVL129
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1197   .text.cs1237_get_configuration:0000000000000140 .LVL137
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1209   .text.cs1237_get_configuration:0000000000000152 .LVL139
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5021   .debug_str:0000000000000164 .LASF44
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5041   .debug_str:00000000000001e5 .LASF24
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5007   .debug_str:0000000000000106 .LASF26
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:572    .text.cs1237_data_ready:0000000000000000 .LFB8
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:656    .text.cs1237_data_ready:0000000000000042 .LFE8
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4096   .debug_loc:0000000000000240 .LLST26
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4119   .debug_loc:0000000000000278 .LLST27
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4133   .debug_loc:0000000000000299 .LLST28
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5035   .debug_str:00000000000001c0 .LASF27
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4147   .debug_loc:00000000000002ba .LLST29
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4163   .debug_loc:00000000000002e4 .LLST30
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:642    .text.cs1237_data_ready:0000000000000038 .LVL59
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5065   .debug_str:00000000000002b3 .LASF28
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:395    .text.cs1237_read:0000000000000000 .LFB7
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:565    .text.cs1237_read:00000000000000ac .LFE7
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4179   .debug_loc:000000000000030e .LLST19
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4202   .debug_loc:0000000000000346 .LLST20
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4216   .debug_loc:0000000000000367 .LLST21
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4238   .debug_loc:000000000000039e .LLST22
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:439    .text.cs1237_read:0000000000000028 .LBB106
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:474    .text.cs1237_read:0000000000000060 .LBE106
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4254   .debug_loc:00000000000003c8 .LLST23
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:445    .text.cs1237_read:0000000000000032 .LBB107
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:451    .text.cs1237_read:000000000000003a .LBE107
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:449    .text.cs1237_read:000000000000003a .LVL39
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:464    .text.cs1237_read:0000000000000052 .LBB109
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:470    .text.cs1237_read:000000000000005a .LBE109
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:468    .text.cs1237_read:000000000000005a .LVL43
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:443    .text.cs1237_read:0000000000000032 .LVL38
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:456    .text.cs1237_read:0000000000000046 .LVL40
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:462    .text.cs1237_read:0000000000000052 .LVL42
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 42
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4273   .debug_loc:00000000000003ee .LLST24
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4284   .debug_loc:000000000000040c .LLST25
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:423    .text.cs1237_read:000000000000001e .LVL35
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5051   .debug_str:0000000000000251 .LASF30
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:360    .text.cs1237_install_clock_pin:0000000000000000 .LFB6
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:388    .text.cs1237_install_clock_pin:000000000000001e .LFE6
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4295   .debug_loc:000000000000042a .LLST18
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:379    .text.cs1237_install_clock_pin:0000000000000018 .LVL32
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5013   .debug_str:000000000000012b .LASF31
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:280    .text.read_bit:0000000000000000 .LFB5
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:353    .text.read_bit:000000000000003a .LFE5
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4313   .debug_loc:0000000000000456 .LLST14
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4336   .debug_loc:000000000000048e .LLST15
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4350   .debug_loc:00000000000004af .LLST16
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4364   .debug_loc:00000000000004d0 .LLST17
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:337    .text.read_bit:000000000000002c .LVL30
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5079   .debug_str:000000000000037b .LASF32
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:198    .text.set_drdy:0000000000000000 .LFB4
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:273    .text.set_drdy:000000000000003e .LFE4
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4380   .debug_loc:00000000000004fa .LLST9
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4403   .debug_loc:0000000000000532 .LLST10
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4417   .debug_loc:0000000000000553 .LLST11
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4439   .debug_loc:000000000000058a .LLST12
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4453   .debug_loc:00000000000005ab .LLST13
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:266    .text.set_drdy:000000000000003a .LVL24
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5031   .debug_str:00000000000001a7 .LASF33
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:123    .text.drdy_output:0000000000000000 .LFB3
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:191    .text.drdy_output:0000000000000036 .LFE3
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4479   .debug_loc:00000000000005ed .LLST5
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4502   .debug_loc:0000000000000625 .LLST6
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4516   .debug_loc:0000000000000646 .LLST7
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4530   .debug_loc:0000000000000667 .LLST8
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:184    .text.drdy_output:0000000000000032 .LVL16
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5019   .debug_str:0000000000000159 .LASF34
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:48     .text.drdy_input:0000000000000000 .LFB2
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:116    .text.drdy_input:0000000000000036 .LFE2
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4556   .debug_loc:00000000000006a9 .LLST1
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4579   .debug_loc:00000000000006e1 .LLST2
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4593   .debug_loc:0000000000000702 .LLST3
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4607   .debug_loc:0000000000000723 .LLST4
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:109    .text.drdy_input:0000000000000032 .LVL9
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5009   .debug_str:0000000000000118 .LASF45
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:14     .text.clk:0000000000000000 .LFB0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:27     .text.clk:0000000000000012 .LFE0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4633   .debug_loc:0000000000000765 .LLST0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:25     .text.clk:0000000000000012 .LVL2
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:34     .text.wait:0000000000000000 .LFB1
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:41     .text.wait:0000000000000008 .LFE1
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:39     .text.wait:0000000000000008 .LVL3
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:663    .text.cs1237_configure:0000000000000000 .LFB9
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:964    .text.cs1237_configure:0000000000000180 .LFE9
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4647   .debug_loc:0000000000000786 .LLST31
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4670   .debug_loc:00000000000007be .LLST32
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4684   .debug_loc:00000000000007df .LLST33
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4698   .debug_loc:0000000000000800 .LLST34
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:717    .text.cs1237_configure:0000000000000046 .LBB157
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:723    .text.cs1237_configure:000000000000004e .LBE157
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 43
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4273   .debug_loc:00000000000003ee .LLST24
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4284   .debug_loc:000000000000040c .LLST25
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:423    .text.cs1237_read:000000000000001e .LVL35
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5051   .debug_str:0000000000000251 .LASF30
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:360    .text.cs1237_install_clock_pin:0000000000000000 .LFB6
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:388    .text.cs1237_install_clock_pin:000000000000001e .LFE6
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4295   .debug_loc:000000000000042a .LLST18
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:379    .text.cs1237_install_clock_pin:0000000000000018 .LVL32
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5013   .debug_str:000000000000012b .LASF31
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:280    .text.read_bit:0000000000000000 .LFB5
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:353    .text.read_bit:000000000000003a .LFE5
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4313   .debug_loc:0000000000000456 .LLST14
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4336   .debug_loc:000000000000048e .LLST15
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4350   .debug_loc:00000000000004af .LLST16
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4364   .debug_loc:00000000000004d0 .LLST17
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:337    .text.read_bit:000000000000002c .LVL30
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5079   .debug_str:000000000000037b .LASF32
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:198    .text.set_drdy:0000000000000000 .LFB4
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:273    .text.set_drdy:000000000000003e .LFE4
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4380   .debug_loc:00000000000004fa .LLST9
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4403   .debug_loc:0000000000000532 .LLST10
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4417   .debug_loc:0000000000000553 .LLST11
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4439   .debug_loc:000000000000058a .LLST12
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4453   .debug_loc:00000000000005ab .LLST13
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:266    .text.set_drdy:000000000000003a .LVL24
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5031   .debug_str:00000000000001a7 .LASF33
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:123    .text.drdy_output:0000000000000000 .LFB3
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:191    .text.drdy_output:0000000000000036 .LFE3
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4479   .debug_loc:00000000000005ed .LLST5
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4502   .debug_loc:0000000000000625 .LLST6
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4516   .debug_loc:0000000000000646 .LLST7
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4530   .debug_loc:0000000000000667 .LLST8
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:184    .text.drdy_output:0000000000000032 .LVL16
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5019   .debug_str:0000000000000159 .LASF34
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:48     .text.drdy_input:0000000000000000 .LFB2
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:116    .text.drdy_input:0000000000000036 .LFE2
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4556   .debug_loc:00000000000006a9 .LLST1
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4579   .debug_loc:00000000000006e1 .LLST2
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4593   .debug_loc:0000000000000702 .LLST3
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4607   .debug_loc:0000000000000723 .LLST4
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:109    .text.drdy_input:0000000000000032 .LVL9
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5009   .debug_str:0000000000000118 .LASF45
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:14     .text.clk:0000000000000000 .LFB0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:27     .text.clk:0000000000000012 .LFE0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4633   .debug_loc:0000000000000765 .LLST0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:25     .text.clk:0000000000000012 .LVL2
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:34     .text.wait:0000000000000000 .LFB1
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:41     .text.wait:0000000000000008 .LFE1
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:39     .text.wait:0000000000000008 .LVL3
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:663    .text.cs1237_configure:0000000000000000 .LFB9
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:964    .text.cs1237_configure:0000000000000180 .LFE9
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4647   .debug_loc:0000000000000786 .LLST31
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4670   .debug_loc:00000000000007be .LLST32
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4684   .debug_loc:00000000000007df .LLST33
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4698   .debug_loc:0000000000000800 .LLST34
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:717    .text.cs1237_configure:0000000000000046 .LBB157
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:723    .text.cs1237_configure:000000000000004e .LBE157
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 43
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:721    .text.cs1237_configure:000000000000004e .LVL69
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:729    .text.cs1237_configure:0000000000000058 .LBB159
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:735    .text.cs1237_configure:0000000000000060 .LBE159
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:733    .text.cs1237_configure:0000000000000060 .LVL71
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:741    .text.cs1237_configure:000000000000006a .LBB161
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:747    .text.cs1237_configure:0000000000000072 .LBE161
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:745    .text.cs1237_configure:0000000000000072 .LVL73
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:753    .text.cs1237_configure:000000000000007c .LBB163
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:760    .text.cs1237_configure:0000000000000086 .LBE163
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:758    .text.cs1237_configure:0000000000000086 .LVL75
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:763    .text.cs1237_configure:0000000000000086 .LBB165
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4722   .debug_loc:0000000000000839 .LLST35
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4742   .debug_loc:0000000000000867 .LLST36
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4753   .debug_loc:0000000000000885 .LLST37
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:765    .text.cs1237_configure:0000000000000086 .LBB167
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:809    .text.cs1237_configure:00000000000000c8 .LBE167
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4764   .debug_loc:00000000000008a3 .LLST38
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:786    .text.cs1237_configure:00000000000000a8 .LBB168
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:792    .text.cs1237_configure:00000000000000b0 .LBE168
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:790    .text.cs1237_configure:00000000000000b0 .LVL79
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:800    .text.cs1237_configure:00000000000000bc .LBB170
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:806    .text.cs1237_configure:00000000000000c4 .LBE170
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:804    .text.cs1237_configure:00000000000000c4 .LVL82
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:775    .text.cs1237_configure:0000000000000096 .LVL77
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:784    .text.cs1237_configure:00000000000000a8 .LVL78
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:798    .text.cs1237_configure:00000000000000bc .LVL81
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:815    .text.cs1237_configure:00000000000000d2 .LBB172
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:821    .text.cs1237_configure:00000000000000da .LBE172
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:819    .text.cs1237_configure:00000000000000da .LVL84
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:827    .text.cs1237_configure:00000000000000e4 .LBB174
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:834    .text.cs1237_configure:00000000000000ee .LBE174
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:832    .text.cs1237_configure:00000000000000ee .LVL86
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:836    .text.cs1237_configure:00000000000000ee .LBB176
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:879    .text.cs1237_configure:000000000000012c .LBE176
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4788   .debug_loc:00000000000008d5 .LLST39
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:856    .text.cs1237_configure:000000000000010c .LBB177
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:862    .text.cs1237_configure:0000000000000114 .LBE177
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:860    .text.cs1237_configure:0000000000000114 .LVL90
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:870    .text.cs1237_configure:0000000000000120 .LBB179
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:876    .text.cs1237_configure:0000000000000128 .LBE179
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:874    .text.cs1237_configure:0000000000000128 .LVL93
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:845    .text.cs1237_configure:00000000000000fa .LVL88
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:854    .text.cs1237_configure:000000000000010c .LVL89
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:868    .text.cs1237_configure:0000000000000120 .LVL92
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:890    .text.cs1237_configure:0000000000000142 .LBB181
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:896    .text.cs1237_configure:000000000000014a .LBE181
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:894    .text.cs1237_configure:000000000000014a .LVL96
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:902    .text.cs1237_configure:0000000000000154 .LBB183
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:908    .text.cs1237_configure:000000000000015c .LBE183
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:906    .text.cs1237_configure:000000000000015c .LVL98
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4812   .debug_loc:0000000000000907 .LLST40
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:813    .text.cs1237_configure:00000000000000d2 .LVL83
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:825    .text.cs1237_configure:00000000000000e4 .LVL85
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:884    .text.cs1237_configure:0000000000000138 .LVL94
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:888    .text.cs1237_configure:0000000000000142 .LVL95
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:900    .text.cs1237_configure:0000000000000154 .LVL97
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:700    .text.cs1237_configure:0000000000000022 .LVL65
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 44
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:721    .text.cs1237_configure:000000000000004e .LVL69
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:729    .text.cs1237_configure:0000000000000058 .LBB159
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:735    .text.cs1237_configure:0000000000000060 .LBE159
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:733    .text.cs1237_configure:0000000000000060 .LVL71
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:741    .text.cs1237_configure:000000000000006a .LBB161
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:747    .text.cs1237_configure:0000000000000072 .LBE161
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:745    .text.cs1237_configure:0000000000000072 .LVL73
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:753    .text.cs1237_configure:000000000000007c .LBB163
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:760    .text.cs1237_configure:0000000000000086 .LBE163
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:758    .text.cs1237_configure:0000000000000086 .LVL75
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:763    .text.cs1237_configure:0000000000000086 .LBB165
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4722   .debug_loc:0000000000000839 .LLST35
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4742   .debug_loc:0000000000000867 .LLST36
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4753   .debug_loc:0000000000000885 .LLST37
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:765    .text.cs1237_configure:0000000000000086 .LBB167
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:809    .text.cs1237_configure:00000000000000c8 .LBE167
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4764   .debug_loc:00000000000008a3 .LLST38
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:786    .text.cs1237_configure:00000000000000a8 .LBB168
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:792    .text.cs1237_configure:00000000000000b0 .LBE168
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:790    .text.cs1237_configure:00000000000000b0 .LVL79
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:800    .text.cs1237_configure:00000000000000bc .LBB170
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:806    .text.cs1237_configure:00000000000000c4 .LBE170
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:804    .text.cs1237_configure:00000000000000c4 .LVL82
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:775    .text.cs1237_configure:0000000000000096 .LVL77
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:784    .text.cs1237_configure:00000000000000a8 .LVL78
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:798    .text.cs1237_configure:00000000000000bc .LVL81
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:815    .text.cs1237_configure:00000000000000d2 .LBB172
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:821    .text.cs1237_configure:00000000000000da .LBE172
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:819    .text.cs1237_configure:00000000000000da .LVL84
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:827    .text.cs1237_configure:00000000000000e4 .LBB174
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:834    .text.cs1237_configure:00000000000000ee .LBE174
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:832    .text.cs1237_configure:00000000000000ee .LVL86
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:836    .text.cs1237_configure:00000000000000ee .LBB176
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:879    .text.cs1237_configure:000000000000012c .LBE176
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4788   .debug_loc:00000000000008d5 .LLST39
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:856    .text.cs1237_configure:000000000000010c .LBB177
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:862    .text.cs1237_configure:0000000000000114 .LBE177
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:860    .text.cs1237_configure:0000000000000114 .LVL90
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:870    .text.cs1237_configure:0000000000000120 .LBB179
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:876    .text.cs1237_configure:0000000000000128 .LBE179
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:874    .text.cs1237_configure:0000000000000128 .LVL93
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:845    .text.cs1237_configure:00000000000000fa .LVL88
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:854    .text.cs1237_configure:000000000000010c .LVL89
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:868    .text.cs1237_configure:0000000000000120 .LVL92
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:890    .text.cs1237_configure:0000000000000142 .LBB181
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:896    .text.cs1237_configure:000000000000014a .LBE181
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:894    .text.cs1237_configure:000000000000014a .LVL96
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:902    .text.cs1237_configure:0000000000000154 .LBB183
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:908    .text.cs1237_configure:000000000000015c .LBE183
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:906    .text.cs1237_configure:000000000000015c .LVL98
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4812   .debug_loc:0000000000000907 .LLST40
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:813    .text.cs1237_configure:00000000000000d2 .LVL83
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:825    .text.cs1237_configure:00000000000000e4 .LVL85
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:884    .text.cs1237_configure:0000000000000138 .LVL94
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:888    .text.cs1237_configure:0000000000000142 .LVL95
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:900    .text.cs1237_configure:0000000000000154 .LVL97
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:700    .text.cs1237_configure:0000000000000022 .LVL65
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 44
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:704    .text.cs1237_configure:000000000000002c .LVL66
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:709    .text.cs1237_configure:0000000000000038 .LVL67
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:715    .text.cs1237_configure:0000000000000046 .LVL68
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:727    .text.cs1237_configure:0000000000000058 .LVL70
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:739    .text.cs1237_configure:000000000000006a .LVL72
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:751    .text.cs1237_configure:000000000000007c .LVL74
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5049   .debug_str:0000000000000236 .LASF35
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5043   .debug_str:00000000000001ef .LASF36
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5057   .debug_str:0000000000000280 .LASF46
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5045   .debug_str:0000000000000209 .LASF47
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5027   .debug_str:0000000000000187 .LASF37
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:5063   .debug_str:0000000000000295 .LASF38
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:4999   .debug_str:00000000000000bb .LASF39
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1310   .text.cs1237_sample_rate_and_gain:0000000000000000 .LVL150
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1319   .text.cs1237_sample_rate_and_gain:0000000000000004 .LVL152
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1316   .text.cs1237_sample_rate_and_gain:0000000000000002 .LVL151
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1328   .text.cs1237_sample_rate_and_gain:0000000000000010 .LVL153
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:980    .text.cs1237_get_configuration:0000000000000002 .LCFI23
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1256   .text.cs1237_get_configuration:0000000000000178 .LCFI24
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1261   .text.cs1237_get_configuration:000000000000017a .LCFI25
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:974    .text.cs1237_get_configuration:0000000000000000 .LVL105
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1246   .text.cs1237_get_configuration:000000000000016e .LVL143
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1259   .text.cs1237_get_configuration:000000000000017a .LVL144
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1010   .text.cs1237_get_configuration:0000000000000024 .LVL107
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1272   .text.cs1237_get_configuration:0000000000000184 .LVL146
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1082   .text.cs1237_get_configuration:0000000000000092 .LVL118
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1108   .text.cs1237_get_configuration:00000000000000ba .LVL122
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1157   .text.cs1237_get_configuration:0000000000000100 .LVL130
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1180   .text.cs1237_get_configuration:0000000000000122 .LVL134
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1225   .text.cs1237_get_configuration:000000000000015e .LVL141
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1234   .text.cs1237_get_configuration:0000000000000164 .LVL142
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1286   .text.cs1237_get_configuration:0000000000000190 .LVL148
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:583    .text.cs1237_data_ready:0000000000000002 .LCFI17
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:628    .text.cs1237_data_ready:0000000000000026 .LCFI18
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:633    .text.cs1237_data_ready:0000000000000028 .LCFI19
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:575    .text.cs1237_data_ready:0000000000000000 .LVL54
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:606    .text.cs1237_data_ready:0000000000000014 .LVL55
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:624    .text.cs1237_data_ready:0000000000000022 .LVL57
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:631    .text.cs1237_data_ready:0000000000000028 .LVL58
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:618    .text.cs1237_data_ready:000000000000001c .LVL56
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:402    .text.cs1237_read:0000000000000002 .LCFI14
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:508    .text.cs1237_read:000000000000007c .LCFI15
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:513    .text.cs1237_read:000000000000007e .LCFI16
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:398    .text.cs1237_read:0000000000000000 .LVL33
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:412    .text.cs1237_read:000000000000000c .LVL34
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:506    .text.cs1237_read:000000000000007a .LVL47
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:511    .text.cs1237_read:000000000000007e .LVL48
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:431    .text.cs1237_read:0000000000000022 .LVL36
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:436    .text.cs1237_read:0000000000000028 .LVL37
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:524    .text.cs1237_read:0000000000000088 .LVL50
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:460    .text.cs1237_read:000000000000004a .LVL41
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:479    .text.cs1237_read:0000000000000062 .LVL44
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:486    .text.cs1237_read:0000000000000068 .LVL45
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:540    .text.cs1237_read:0000000000000096 .LVL52
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:490    .text.cs1237_read:000000000000006c .LVL46
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:369    .text.cs1237_install_clock_pin:0000000000000008 .LCFI12
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:384    .text.cs1237_install_clock_pin:000000000000001c .LCFI13
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 45
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:704    .text.cs1237_configure:000000000000002c .LVL66
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:709    .text.cs1237_configure:0000000000000038 .LVL67
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:715    .text.cs1237_configure:0000000000000046 .LVL68
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:727    .text.cs1237_configure:0000000000000058 .LVL70
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:739    .text.cs1237_configure:000000000000006a .LVL72
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:751    .text.cs1237_configure:000000000000007c .LVL74
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5049   .debug_str:0000000000000236 .LASF35
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5043   .debug_str:00000000000001ef .LASF36
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5057   .debug_str:0000000000000280 .LASF46
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5045   .debug_str:0000000000000209 .LASF47
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5027   .debug_str:0000000000000187 .LASF37
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:5063   .debug_str:0000000000000295 .LASF38
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:4999   .debug_str:00000000000000bb .LASF39
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1310   .text.cs1237_sample_rate_and_gain:0000000000000000 .LVL150
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1319   .text.cs1237_sample_rate_and_gain:0000000000000004 .LVL152
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1316   .text.cs1237_sample_rate_and_gain:0000000000000002 .LVL151
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1328   .text.cs1237_sample_rate_and_gain:0000000000000010 .LVL153
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:980    .text.cs1237_get_configuration:0000000000000002 .LCFI23
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1256   .text.cs1237_get_configuration:0000000000000178 .LCFI24
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1261   .text.cs1237_get_configuration:000000000000017a .LCFI25
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:974    .text.cs1237_get_configuration:0000000000000000 .LVL105
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1246   .text.cs1237_get_configuration:000000000000016e .LVL143
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1259   .text.cs1237_get_configuration:000000000000017a .LVL144
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1010   .text.cs1237_get_configuration:0000000000000024 .LVL107
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1272   .text.cs1237_get_configuration:0000000000000184 .LVL146
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1082   .text.cs1237_get_configuration:0000000000000092 .LVL118
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1108   .text.cs1237_get_configuration:00000000000000ba .LVL122
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1157   .text.cs1237_get_configuration:0000000000000100 .LVL130
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1180   .text.cs1237_get_configuration:0000000000000122 .LVL134
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1225   .text.cs1237_get_configuration:000000000000015e .LVL141
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1234   .text.cs1237_get_configuration:0000000000000164 .LVL142
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1286   .text.cs1237_get_configuration:0000000000000190 .LVL148
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:583    .text.cs1237_data_ready:0000000000000002 .LCFI17
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:628    .text.cs1237_data_ready:0000000000000026 .LCFI18
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:633    .text.cs1237_data_ready:0000000000000028 .LCFI19
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:575    .text.cs1237_data_ready:0000000000000000 .LVL54
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:606    .text.cs1237_data_ready:0000000000000014 .LVL55
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:624    .text.cs1237_data_ready:0000000000000022 .LVL57
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:631    .text.cs1237_data_ready:0000000000000028 .LVL58
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:618    .text.cs1237_data_ready:000000000000001c .LVL56
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:402    .text.cs1237_read:0000000000000002 .LCFI14
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:508    .text.cs1237_read:000000000000007c .LCFI15
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:513    .text.cs1237_read:000000000000007e .LCFI16
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:398    .text.cs1237_read:0000000000000000 .LVL33
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:412    .text.cs1237_read:000000000000000c .LVL34
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:506    .text.cs1237_read:000000000000007a .LVL47
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:511    .text.cs1237_read:000000000000007e .LVL48
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:431    .text.cs1237_read:0000000000000022 .LVL36
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:436    .text.cs1237_read:0000000000000028 .LVL37
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:524    .text.cs1237_read:0000000000000088 .LVL50
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:460    .text.cs1237_read:000000000000004a .LVL41
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:479    .text.cs1237_read:0000000000000062 .LVL44
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:486    .text.cs1237_read:0000000000000068 .LVL45
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:540    .text.cs1237_read:0000000000000096 .LVL52
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:490    .text.cs1237_read:000000000000006c .LVL46
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:369    .text.cs1237_install_clock_pin:0000000000000008 .LCFI12
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:384    .text.cs1237_install_clock_pin:000000000000001c .LCFI13
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 45
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:290    .text.read_bit:0000000000000002 .LCFI9
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:322    .text.read_bit:000000000000001c .LCFI10
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:327    .text.read_bit:000000000000001e .LCFI11
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:283    .text.read_bit:0000000000000000 .LVL26
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:305    .text.read_bit:000000000000000e .LVL27
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:318    .text.read_bit:0000000000000018 .LVL28
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:325    .text.read_bit:000000000000001e .LVL29
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:208    .text.set_drdy:0000000000000002 .LCFI6
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:248    .text.set_drdy:0000000000000024 .LCFI7
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:253    .text.set_drdy:0000000000000026 .LCFI8
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:201    .text.set_drdy:0000000000000000 .LVL18
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:228    .text.set_drdy:0000000000000014 .LVL19
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:244    .text.set_drdy:0000000000000020 .LVL21
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:251    .text.set_drdy:0000000000000026 .LVL22
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:239    .text.set_drdy:000000000000001c .LVL20
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:262    .text.set_drdy:0000000000000030 .LVL23
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:269    .text.set_drdy:000000000000003c .LVL25
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:133    .text.drdy_output:0000000000000002 .LCFI3
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:167    .text.drdy_output:000000000000001e .LCFI4
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:172    .text.drdy_output:0000000000000020 .LCFI5
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:126    .text.drdy_output:0000000000000000 .LVL11
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:150    .text.drdy_output:0000000000000010 .LVL12
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:161    .text.drdy_output:0000000000000018 .LVL13
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:170    .text.drdy_output:0000000000000020 .LVL14
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:180    .text.drdy_output:0000000000000028 .LVL15
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:187    .text.drdy_output:0000000000000034 .LVL17
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:58     .text.drdy_input:0000000000000002 .LCFI0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:92     .text.drdy_input:000000000000001e .LCFI1
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:97     .text.drdy_input:0000000000000020 .LCFI2
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:51     .text.drdy_input:0000000000000000 .LVL4
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:75     .text.drdy_input:0000000000000010 .LVL5
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:86     .text.drdy_input:0000000000000018 .LVL6
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:95     .text.drdy_input:0000000000000020 .LVL7
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:105    .text.drdy_input:0000000000000028 .LVL8
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:112    .text.drdy_input:0000000000000034 .LVL10
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:18     .text.clk:0000000000000000 .LVL0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:22     .text.clk:0000000000000006 .LVL1
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:671    .text.cs1237_configure:0000000000000002 .LCFI20
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:942    .text.cs1237_configure:0000000000000174 .LCFI21
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:947    .text.cs1237_configure:0000000000000176 .LCFI22
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:666    .text.cs1237_configure:0000000000000000 .LVL62
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:685    .text.cs1237_configure:000000000000000e .LVL64
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:679    .text.cs1237_configure:000000000000000a .LVL63
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:913    .text.cs1237_configure:000000000000015e .LVL99
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:916    .text.cs1237_configure:0000000000000160 .LVL100
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:931    .text.cs1237_configure:000000000000016a .LVL101
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:945    .text.cs1237_configure:0000000000000176 .LVL103
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:936    .text.cs1237_configure:000000000000016e .LVL102
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:770    .text.cs1237_configure:000000000000008c .LVL76
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:796    .text.cs1237_configure:00000000000000b4 .LVL80
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:840    .text.cs1237_configure:00000000000000f0 .LVL87
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:866    .text.cs1237_configure:0000000000000118 .LVL91
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1344   .debug_info:0000000000000000 .Ldebug_info0
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:53     .text.drdy_input:0000000000000000 .LBB93
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:55     .text.drdy_input:0000000000000000 .LBE93
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:70     .text.drdy_input:000000000000000c .LBB94
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:79     .text.drdy_input:0000000000000014 .LBE94
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 46
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:290    .text.read_bit:0000000000000002 .LCFI9
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:322    .text.read_bit:000000000000001c .LCFI10
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:327    .text.read_bit:000000000000001e .LCFI11
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:283    .text.read_bit:0000000000000000 .LVL26
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:305    .text.read_bit:000000000000000e .LVL27
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:318    .text.read_bit:0000000000000018 .LVL28
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:325    .text.read_bit:000000000000001e .LVL29
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:208    .text.set_drdy:0000000000000002 .LCFI6
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:248    .text.set_drdy:0000000000000024 .LCFI7
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:253    .text.set_drdy:0000000000000026 .LCFI8
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:201    .text.set_drdy:0000000000000000 .LVL18
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:228    .text.set_drdy:0000000000000014 .LVL19
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:244    .text.set_drdy:0000000000000020 .LVL21
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:251    .text.set_drdy:0000000000000026 .LVL22
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:239    .text.set_drdy:000000000000001c .LVL20
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:262    .text.set_drdy:0000000000000030 .LVL23
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:269    .text.set_drdy:000000000000003c .LVL25
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:133    .text.drdy_output:0000000000000002 .LCFI3
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:167    .text.drdy_output:000000000000001e .LCFI4
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:172    .text.drdy_output:0000000000000020 .LCFI5
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:126    .text.drdy_output:0000000000000000 .LVL11
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:150    .text.drdy_output:0000000000000010 .LVL12
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:161    .text.drdy_output:0000000000000018 .LVL13
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:170    .text.drdy_output:0000000000000020 .LVL14
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:180    .text.drdy_output:0000000000000028 .LVL15
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:187    .text.drdy_output:0000000000000034 .LVL17
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:58     .text.drdy_input:0000000000000002 .LCFI0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:92     .text.drdy_input:000000000000001e .LCFI1
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:97     .text.drdy_input:0000000000000020 .LCFI2
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:51     .text.drdy_input:0000000000000000 .LVL4
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:75     .text.drdy_input:0000000000000010 .LVL5
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:86     .text.drdy_input:0000000000000018 .LVL6
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:95     .text.drdy_input:0000000000000020 .LVL7
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:105    .text.drdy_input:0000000000000028 .LVL8
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:112    .text.drdy_input:0000000000000034 .LVL10
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:18     .text.clk:0000000000000000 .LVL0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:22     .text.clk:0000000000000006 .LVL1
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:671    .text.cs1237_configure:0000000000000002 .LCFI20
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:942    .text.cs1237_configure:0000000000000174 .LCFI21
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:947    .text.cs1237_configure:0000000000000176 .LCFI22
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:666    .text.cs1237_configure:0000000000000000 .LVL62
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:685    .text.cs1237_configure:000000000000000e .LVL64
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:679    .text.cs1237_configure:000000000000000a .LVL63
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:913    .text.cs1237_configure:000000000000015e .LVL99
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:916    .text.cs1237_configure:0000000000000160 .LVL100
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:931    .text.cs1237_configure:000000000000016a .LVL101
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:945    .text.cs1237_configure:0000000000000176 .LVL103
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:936    .text.cs1237_configure:000000000000016e .LVL102
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:770    .text.cs1237_configure:000000000000008c .LVL76
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:796    .text.cs1237_configure:00000000000000b4 .LVL80
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:840    .text.cs1237_configure:00000000000000f0 .LVL87
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:866    .text.cs1237_configure:0000000000000118 .LVL91
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1344   .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:53     .text.drdy_input:0000000000000000 .LBB93
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:55     .text.drdy_input:0000000000000000 .LBE93
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:70     .text.drdy_input:000000000000000c .LBB94
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:79     .text.drdy_input:0000000000000014 .LBE94
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 46
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:99     .text.drdy_input:0000000000000020 .LBB95
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:114    .text.drdy_input:0000000000000036 .LBE95
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:128    .text.drdy_output:0000000000000000 .LBB96
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:130    .text.drdy_output:0000000000000000 .LBE96
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:145    .text.drdy_output:000000000000000c .LBB97
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:154    .text.drdy_output:0000000000000014 .LBE97
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:174    .text.drdy_output:0000000000000020 .LBB98
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:189    .text.drdy_output:0000000000000036 .LBE98
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:203    .text.set_drdy:0000000000000000 .LBB99
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:205    .text.set_drdy:0000000000000000 .LBE99
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:223    .text.set_drdy:0000000000000010 .LBB100
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:232    .text.set_drdy:0000000000000018 .LBE100
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:255    .text.set_drdy:0000000000000026 .LBB101
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:271    .text.set_drdy:000000000000003e .LBE101
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:285    .text.read_bit:0000000000000000 .LBB102
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:287    .text.read_bit:0000000000000000 .LBE102
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:302    .text.read_bit:000000000000000c .LBB103
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:309    .text.read_bit:0000000000000012 .LBE103
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:329    .text.read_bit:000000000000001e .LBB104
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:351    .text.read_bit:000000000000003a .LBE104
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:425    .text.cs1237_read:000000000000001e .LBB105
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:438    .text.cs1237_read:0000000000000028 .LBE105
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:515    .text.cs1237_read:000000000000007e .LBB113
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:526    .text.cs1237_read:0000000000000088 .LBE113
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:475    .text.cs1237_read:0000000000000060 .LBB111
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:482    .text.cs1237_read:0000000000000066 .LBE111
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:527    .text.cs1237_read:0000000000000088 .LBB114
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:542    .text.cs1237_read:0000000000000096 .LBE114
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:483    .text.cs1237_read:0000000000000066 .LBB112
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:493    .text.cs1237_read:0000000000000070 .LBE112
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:543    .text.cs1237_read:0000000000000096 .LBB115
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:563    .text.cs1237_read:00000000000000ac .LBE115
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:578    .text.cs1237_data_ready:0000000000000000 .LBB116
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:580    .text.cs1237_data_ready:0000000000000000 .LBE116
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:597    .text.cs1237_data_ready:000000000000000e .LBB117
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:600    .text.cs1237_data_ready:0000000000000010 .LBE117
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:603    .text.cs1237_data_ready:0000000000000012 .LBB118
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:610    .text.cs1237_data_ready:0000000000000018 .LBE118
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:635    .text.cs1237_data_ready:0000000000000028 .LBB119
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:654    .text.cs1237_data_ready:0000000000000042 .LBE119
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:922    .text.cs1237_configure:0000000000000164 .LBE165
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:949    .text.cs1237_configure:0000000000000176 .LBB188
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:962    .text.cs1237_configure:0000000000000180 .LBE188
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:910    .text.cs1237_configure:000000000000015c .LBB185
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:920    .text.cs1237_configure:0000000000000164 .LBE185
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:951    .text.cs1237_configure:0000000000000176 .LBB186
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:960    .text.cs1237_configure:0000000000000180 .LBE186
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1004   .text.cs1237_get_configuration:0000000000000020 .LBB189
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1014   .text.cs1237_get_configuration:0000000000000028 .LBE189
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1263   .text.cs1237_get_configuration:000000000000017a .LBB219
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1274   .text.cs1237_get_configuration:0000000000000184 .LBE219
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1152   .text.cs1237_get_configuration:00000000000000fe .LBB207
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1154   .text.cs1237_get_configuration:00000000000000fe .LBE207
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1159   .text.cs1237_get_configuration:0000000000000100 .LBB212
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1193   .text.cs1237_get_configuration:0000000000000136 .LBE212
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1219   .text.cs1237_get_configuration:000000000000015a .LBB217
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1229   .text.cs1237_get_configuration:0000000000000162 .LBE217
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s 			page 47
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:99     .text.drdy_input:0000000000000020 .LBB95
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:114    .text.drdy_input:0000000000000036 .LBE95
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:128    .text.drdy_output:0000000000000000 .LBB96
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:130    .text.drdy_output:0000000000000000 .LBE96
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:145    .text.drdy_output:000000000000000c .LBB97
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:154    .text.drdy_output:0000000000000014 .LBE97
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:174    .text.drdy_output:0000000000000020 .LBB98
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:189    .text.drdy_output:0000000000000036 .LBE98
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:203    .text.set_drdy:0000000000000000 .LBB99
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:205    .text.set_drdy:0000000000000000 .LBE99
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:223    .text.set_drdy:0000000000000010 .LBB100
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:232    .text.set_drdy:0000000000000018 .LBE100
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:255    .text.set_drdy:0000000000000026 .LBB101
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:271    .text.set_drdy:000000000000003e .LBE101
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:285    .text.read_bit:0000000000000000 .LBB102
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:287    .text.read_bit:0000000000000000 .LBE102
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:302    .text.read_bit:000000000000000c .LBB103
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:309    .text.read_bit:0000000000000012 .LBE103
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:329    .text.read_bit:000000000000001e .LBB104
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:351    .text.read_bit:000000000000003a .LBE104
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:425    .text.cs1237_read:000000000000001e .LBB105
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:438    .text.cs1237_read:0000000000000028 .LBE105
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:515    .text.cs1237_read:000000000000007e .LBB113
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:526    .text.cs1237_read:0000000000000088 .LBE113
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:475    .text.cs1237_read:0000000000000060 .LBB111
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:482    .text.cs1237_read:0000000000000066 .LBE111
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:527    .text.cs1237_read:0000000000000088 .LBB114
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:542    .text.cs1237_read:0000000000000096 .LBE114
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:483    .text.cs1237_read:0000000000000066 .LBB112
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:493    .text.cs1237_read:0000000000000070 .LBE112
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:543    .text.cs1237_read:0000000000000096 .LBB115
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:563    .text.cs1237_read:00000000000000ac .LBE115
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:578    .text.cs1237_data_ready:0000000000000000 .LBB116
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:580    .text.cs1237_data_ready:0000000000000000 .LBE116
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:597    .text.cs1237_data_ready:000000000000000e .LBB117
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:600    .text.cs1237_data_ready:0000000000000010 .LBE117
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:603    .text.cs1237_data_ready:0000000000000012 .LBB118
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:610    .text.cs1237_data_ready:0000000000000018 .LBE118
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:635    .text.cs1237_data_ready:0000000000000028 .LBB119
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:654    .text.cs1237_data_ready:0000000000000042 .LBE119
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:922    .text.cs1237_configure:0000000000000164 .LBE165
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:949    .text.cs1237_configure:0000000000000176 .LBB188
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:962    .text.cs1237_configure:0000000000000180 .LBE188
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:910    .text.cs1237_configure:000000000000015c .LBB185
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:920    .text.cs1237_configure:0000000000000164 .LBE185
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:951    .text.cs1237_configure:0000000000000176 .LBB186
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:960    .text.cs1237_configure:0000000000000180 .LBE186
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1004   .text.cs1237_get_configuration:0000000000000020 .LBB189
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1014   .text.cs1237_get_configuration:0000000000000028 .LBE189
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1263   .text.cs1237_get_configuration:000000000000017a .LBB219
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1274   .text.cs1237_get_configuration:0000000000000184 .LBE219
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1152   .text.cs1237_get_configuration:00000000000000fe .LBB207
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1154   .text.cs1237_get_configuration:00000000000000fe .LBE207
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1159   .text.cs1237_get_configuration:0000000000000100 .LBB212
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1193   .text.cs1237_get_configuration:0000000000000136 .LBE212
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1219   .text.cs1237_get_configuration:000000000000015a .LBB217
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1229   .text.cs1237_get_configuration:0000000000000162 .LBE217
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s 			page 47
 
 
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1275   .text.cs1237_get_configuration:0000000000000184 .LBB220
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1288   .text.cs1237_get_configuration:0000000000000190 .LBE220
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1230   .text.cs1237_get_configuration:0000000000000162 .LBB218
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1237   .text.cs1237_get_configuration:0000000000000168 .LBE218
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1289   .text.cs1237_get_configuration:0000000000000190 .LBB221
-C:\Users\marwz\AppData\Local\Temp\cc4hkZBa.s:1298   .text.cs1237_get_configuration:000000000000019a .LBE221
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1275   .text.cs1237_get_configuration:0000000000000184 .LBB220
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1288   .text.cs1237_get_configuration:0000000000000190 .LBE220
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1230   .text.cs1237_get_configuration:0000000000000162 .LBB218
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1237   .text.cs1237_get_configuration:0000000000000168 .LBE218
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1289   .text.cs1237_get_configuration:0000000000000190 .LBB221
+C:\Users\marwz\AppData\Local\Temp\cceP5cjp.s:1298   .text.cs1237_get_configuration:000000000000019a .LBE221
 
 UNDEFINED SYMBOLS
 cs1237_port_set_pin_value

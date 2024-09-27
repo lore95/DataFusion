@@ -64,7 +64,7 @@ int main(void)
     //Same for gain, gain is useful for getting the wider range available
     //1(0dB), 2(6dB), 64(36dB), 128(42dB) gain available
     //Refer to datasheet for how each setting affects accuracy
-    cs1237_sample_rate_and_gain(CS1237_40SPS, CS1237_GAIN1, N_ADCS, data_pins);
+    cs1237_sample_rate_and_gain(CS1237_40SPS, CS1237_GAIN128, N_ADCS, data_pins);
     while(1){
         //Wait for new data to be available, polled
         while(!cs1237_data_ready(N_ADCS, data_pins));

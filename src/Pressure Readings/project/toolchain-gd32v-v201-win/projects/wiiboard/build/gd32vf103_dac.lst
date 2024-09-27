@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 1
 
 
    1              		.file	"gd32vf103_dac.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** #define DH_8BIT_OFFSET            ((uint32_t)8U)
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** /*!
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 2
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \brief      deinitialize DAC
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
   57:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[in]  dac_periph: DACx(x = 0,1)
   58:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
   59:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 3
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 3
 
 
   60:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
   78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
   88              		.loc 1 78 5
   89              		.loc 1 78 7 is_stmt 0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 4
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 4
 
 
   90 0000 09E9     		bne	a0,zero,.L8
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
   96:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         DAC_CTL |= DAC_CTL_DDMAEN1;
  128              		.loc 1 96 9 is_stmt 1
  129              		.loc 1 96 17 is_stmt 0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 5
 
 
  130 000c B7060010 		li	a3,268435456
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  169              		.globl	dac_output_buffer_enable
  171              	dac_output_buffer_enable:
  172              	.LFB7:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 6
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 6
 
 
  114:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** 
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  137:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
  206              		.loc 1 137 1 is_stmt 1
  207              		.cfi_startproc
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 7
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 7
 
 
  208              	.LVL7:
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  156:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         data = (uint16_t)DAC0_DO;
  243              		.loc 1 156 26 is_stmt 0
  244 0000 B7770040 		li	a5,1073770496
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 8
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 8
 
 
  154:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  277              	.LVL13:
  178:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
  278              		.loc 1 178 5
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 9
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 9
 
 
  179:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         switch(dac_align){
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  314 0036 8947     		li	a5,2
  315 0038 638DF500 		beq	a1,a5,.L37
  316 003c 8280     		ret
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 10
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 10
 
 
  317              	.L36:
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  222:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
  348              		.loc 1 222 1 is_stmt 1
  349              		.cfi_startproc
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 11
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 11
 
 
  350              	.LVL14:
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  386              		.loc 1 239 9 is_stmt 1
  387              		.loc 1 239 17 is_stmt 0
  388 0002 37770040 		li	a4,1073770496
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 12
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 12
 
 
  389 0006 83270740 		lw	a5,1024(a4)
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  419 0004 03A70740 		lw	a4,1024(a5)
  263:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
  420              		.loc 1 263 7
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 13
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 13
 
 
  421 0008 19E9     		bne	a0,zero,.L46
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  278:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** */
  279:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_software_trigger_enable(uint32_t dac_periph)
  280:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 14
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 14
 
 
  460              		.loc 1 280 1 is_stmt 1
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  496 0000 37770040 		li	a4,1073770496
  497 0004 83274740 		lw	a5,1028(a4)
  296:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     if(DAC0 == dac_periph){
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 15
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 15
 
 
  498              		.loc 1 296 7
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  530 0008 19E9     		bne	a0,zero,.L58
  531              		.loc 1 318 9 is_stmt 1
  532              		.loc 1 318 17 is_stmt 0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 16
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 16
 
 
  533 000a 1377F7F3 		andi	a4,a4,-193
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  334:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_3: bit width of the wave signal is 3
  335:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_4: bit width of the wave signal is 4
  336:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_5: bit width of the wave signal is 5
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 17
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 17
 
 
  337:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_6: bit width of the wave signal is 6
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  598 0022 B70600F1 		li	a3,-251658240
  599 0026 FD16     		addi	a3,a3,-1
  600 0028 758F     		and	a4,a4,a3
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 18
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 18
 
 
  601 002a 23A0E740 		sw	a4,1024(a5)
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  375:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS10_0: unmask the LFSR bits[10:0]
  376:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****       \arg        DAC_LFSR_BITS11_0: unmask the LFSR bits[11:0]
  377:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \param[out] none
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 19
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 19
 
 
  378:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     \retval     none
@@ -1138,7 +1138,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  432:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_concurrent_enable(void)
  433:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
  640              		.loc 1 433 1 is_stmt 1
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 20
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 20
 
 
  641              		.cfi_startproc
@@ -1198,7 +1198,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  680              	.LFE21:
  682              		.section	.text.dac_concurrent_software_trigger_enable,"ax",@progbits
  683              		.align	1
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 21
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 21
 
 
  684              		.globl	dac_concurrent_software_trigger_enable
@@ -1258,7 +1258,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  716              		.loc 1 475 13 is_stmt 0
  717 0000 37770040 		li	a4,1073770496
  718 0004 83274740 		lw	a5,1028(a4)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 22
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 22
 
 
  719 0008 F19B     		andi	a5,a5,-4
@@ -1318,7 +1318,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  497:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** void dac_concurrent_output_buffer_disable(void)
  498:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** {
  756              		.loc 1 498 1 is_stmt 1
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 23
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 23
 
 
  757              		.cfi_startproc
@@ -1378,7 +1378,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  520:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     /* data right 12b alignment */
  521:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     case DAC_ALIGN_12B_R:
  522:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         data = ((uint32_t)data1 << DH_12BIT_OFFSET) | data0;
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 24
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 24
 
 
  792              		.loc 1 522 9
@@ -1438,7 +1438,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  535:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     default:
  536:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****         break;
  537:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c ****     }
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 25
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 25
 
 
  538:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_dac.c **** }
@@ -1452,588 +1452,588 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 1
  842              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
  843              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
  844              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 26
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 26
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_dac.c
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:13     .text.dac_deinit:0000000000000000 dac_deinit
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:17     .text.dac_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:18     .text.dac_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:19     .text.dac_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:20     .text.dac_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:22     .text.dac_deinit:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:24     .text.dac_deinit:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:26     .text.dac_deinit:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:27     .text.dac_deinit:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:29     .text.dac_deinit:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:32     .text.dac_deinit:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:33     .text.dac_deinit:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:34     .text.dac_deinit:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:36     .text.dac_deinit:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:38     .text.dac_deinit:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:40     .text.dac_deinit:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:42     .text.dac_deinit:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:44     .text.dac_deinit:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:51     .text.dac_enable:0000000000000000 dac_enable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:54     .text.dac_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:56     .text.dac_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:57     .text.dac_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:58     .text.dac_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:61     .text.dac_enable:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:63     .text.dac_enable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:64     .text.dac_enable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:67     .text.dac_enable:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:69     .text.dac_enable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:72     .text.dac_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:73     .text.dac_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:76     .text.dac_enable:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:83     .text.dac_disable:0000000000000000 dac_disable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:86     .text.dac_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:88     .text.dac_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:89     .text.dac_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:90     .text.dac_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:92     .text.dac_disable:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:93     .text.dac_disable:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:100    .text.dac_disable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:101    .text.dac_disable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:108    .text.dac_disable:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:109    .text.dac_disable:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:116    .text.dac_dma_enable:0000000000000000 dac_dma_enable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:119    .text.dac_dma_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:121    .text.dac_dma_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:122    .text.dac_dma_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:123    .text.dac_dma_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:127    .text.dac_dma_enable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:129    .text.dac_dma_enable:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:130    .text.dac_dma_enable:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:135    .text.dac_dma_enable:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:136    .text.dac_dma_enable:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:143    .text.dac_dma_disable:0000000000000000 dac_dma_disable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:146    .text.dac_dma_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:148    .text.dac_dma_disable:0000000000000000 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 27
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:13     .text.dac_deinit:0000000000000000 dac_deinit
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:17     .text.dac_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:18     .text.dac_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:19     .text.dac_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:20     .text.dac_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:22     .text.dac_deinit:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:24     .text.dac_deinit:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:26     .text.dac_deinit:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:27     .text.dac_deinit:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:29     .text.dac_deinit:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:32     .text.dac_deinit:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:33     .text.dac_deinit:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:34     .text.dac_deinit:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:36     .text.dac_deinit:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:38     .text.dac_deinit:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:40     .text.dac_deinit:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:42     .text.dac_deinit:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:44     .text.dac_deinit:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:51     .text.dac_enable:0000000000000000 dac_enable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:54     .text.dac_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:56     .text.dac_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:57     .text.dac_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:58     .text.dac_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:61     .text.dac_enable:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:63     .text.dac_enable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:64     .text.dac_enable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:67     .text.dac_enable:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:69     .text.dac_enable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:72     .text.dac_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:73     .text.dac_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:76     .text.dac_enable:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:83     .text.dac_disable:0000000000000000 dac_disable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:86     .text.dac_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:88     .text.dac_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:89     .text.dac_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:90     .text.dac_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:92     .text.dac_disable:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:93     .text.dac_disable:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:100    .text.dac_disable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:101    .text.dac_disable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:108    .text.dac_disable:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:109    .text.dac_disable:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:116    .text.dac_dma_enable:0000000000000000 dac_dma_enable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:119    .text.dac_dma_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:121    .text.dac_dma_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:122    .text.dac_dma_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:123    .text.dac_dma_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:127    .text.dac_dma_enable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:129    .text.dac_dma_enable:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:130    .text.dac_dma_enable:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:135    .text.dac_dma_enable:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:136    .text.dac_dma_enable:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:143    .text.dac_dma_disable:0000000000000000 dac_dma_disable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:146    .text.dac_dma_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:148    .text.dac_dma_disable:0000000000000000 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 27
 
 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:149    .text.dac_dma_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:150    .text.dac_dma_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:154    .text.dac_dma_disable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:156    .text.dac_dma_disable:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:157    .text.dac_dma_disable:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:163    .text.dac_dma_disable:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:164    .text.dac_dma_disable:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:171    .text.dac_output_buffer_enable:0000000000000000 dac_output_buffer_enable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:174    .text.dac_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:176    .text.dac_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:177    .text.dac_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:178    .text.dac_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:180    .text.dac_output_buffer_enable:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:181    .text.dac_output_buffer_enable:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:188    .text.dac_output_buffer_enable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:189    .text.dac_output_buffer_enable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:196    .text.dac_output_buffer_enable:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:197    .text.dac_output_buffer_enable:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:204    .text.dac_output_buffer_disable:0000000000000000 dac_output_buffer_disable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:207    .text.dac_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:209    .text.dac_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:210    .text.dac_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:211    .text.dac_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:214    .text.dac_output_buffer_disable:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:216    .text.dac_output_buffer_disable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:217    .text.dac_output_buffer_disable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:220    .text.dac_output_buffer_disable:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:222    .text.dac_output_buffer_disable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:225    .text.dac_output_buffer_disable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:226    .text.dac_output_buffer_disable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:229    .text.dac_output_buffer_disable:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:236    .text.dac_output_value_get:0000000000000000 dac_output_value_get
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:239    .text.dac_output_value_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:241    .text.dac_output_value_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:242    .text.dac_output_value_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:243    .text.dac_output_value_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:244    .text.dac_output_value_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:246    .text.dac_output_value_get:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:248    .text.dac_output_value_get:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:249    .text.dac_output_value_get:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:253    .text.dac_output_value_get:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:257    .text.dac_output_value_get:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:258    .text.dac_output_value_get:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:262    .text.dac_output_value_get:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:263    .text.dac_output_value_get:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:266    .text.dac_output_value_get:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:273    .text.dac_data_set:0000000000000000 dac_data_set
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:276    .text.dac_data_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:278    .text.dac_data_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:279    .text.dac_data_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:280    .text.dac_data_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:282    .text.dac_data_set:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:284    .text.dac_data_set:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:291    .text.dac_data_set:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:292    .text.dac_data_set:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:295    .text.dac_data_set:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:298    .text.dac_data_set:000000000000001c .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 28
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:149    .text.dac_dma_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:150    .text.dac_dma_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:154    .text.dac_dma_disable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:156    .text.dac_dma_disable:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:157    .text.dac_dma_disable:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:163    .text.dac_dma_disable:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:164    .text.dac_dma_disable:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:171    .text.dac_output_buffer_enable:0000000000000000 dac_output_buffer_enable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:174    .text.dac_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:176    .text.dac_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:177    .text.dac_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:178    .text.dac_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:180    .text.dac_output_buffer_enable:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:181    .text.dac_output_buffer_enable:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:188    .text.dac_output_buffer_enable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:189    .text.dac_output_buffer_enable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:196    .text.dac_output_buffer_enable:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:197    .text.dac_output_buffer_enable:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:204    .text.dac_output_buffer_disable:0000000000000000 dac_output_buffer_disable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:207    .text.dac_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:209    .text.dac_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:210    .text.dac_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:211    .text.dac_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:214    .text.dac_output_buffer_disable:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:216    .text.dac_output_buffer_disable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:217    .text.dac_output_buffer_disable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:220    .text.dac_output_buffer_disable:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:222    .text.dac_output_buffer_disable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:225    .text.dac_output_buffer_disable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:226    .text.dac_output_buffer_disable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:229    .text.dac_output_buffer_disable:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:236    .text.dac_output_value_get:0000000000000000 dac_output_value_get
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:239    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:241    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:242    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:243    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:244    .text.dac_output_value_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:246    .text.dac_output_value_get:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:248    .text.dac_output_value_get:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:249    .text.dac_output_value_get:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:253    .text.dac_output_value_get:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:257    .text.dac_output_value_get:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:258    .text.dac_output_value_get:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:262    .text.dac_output_value_get:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:263    .text.dac_output_value_get:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:266    .text.dac_output_value_get:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:273    .text.dac_data_set:0000000000000000 dac_data_set
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:276    .text.dac_data_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:278    .text.dac_data_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:279    .text.dac_data_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:280    .text.dac_data_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:282    .text.dac_data_set:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:284    .text.dac_data_set:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:291    .text.dac_data_set:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:292    .text.dac_data_set:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:295    .text.dac_data_set:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:298    .text.dac_data_set:000000000000001c .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 28
 
 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:299    .text.dac_data_set:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:302    .text.dac_data_set:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:305    .text.dac_data_set:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:306    .text.dac_data_set:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:309    .text.dac_data_set:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:312    .text.dac_data_set:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:319    .text.dac_data_set:000000000000003e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:320    .text.dac_data_set:000000000000003e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:323    .text.dac_data_set:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:326    .text.dac_data_set:0000000000000048 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:327    .text.dac_data_set:0000000000000048 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:330    .text.dac_data_set:0000000000000050 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:333    .text.dac_data_set:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:334    .text.dac_data_set:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:337    .text.dac_data_set:000000000000005a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:338    .text.dac_data_set:000000000000005a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:339    .text.dac_data_set:000000000000005c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:346    .text.dac_trigger_enable:0000000000000000 dac_trigger_enable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:349    .text.dac_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:351    .text.dac_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:352    .text.dac_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:353    .text.dac_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:356    .text.dac_trigger_enable:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:358    .text.dac_trigger_enable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:359    .text.dac_trigger_enable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:362    .text.dac_trigger_enable:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:364    .text.dac_trigger_enable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:367    .text.dac_trigger_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:368    .text.dac_trigger_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:371    .text.dac_trigger_enable:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:378    .text.dac_trigger_disable:0000000000000000 dac_trigger_disable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:381    .text.dac_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:383    .text.dac_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:384    .text.dac_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:385    .text.dac_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:387    .text.dac_trigger_disable:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:388    .text.dac_trigger_disable:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:395    .text.dac_trigger_disable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:396    .text.dac_trigger_disable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:403    .text.dac_trigger_disable:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:404    .text.dac_trigger_disable:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:411    .text.dac_trigger_source_config:0000000000000000 dac_trigger_source_config
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:414    .text.dac_trigger_source_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:416    .text.dac_trigger_source_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:417    .text.dac_trigger_source_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:418    .text.dac_trigger_source_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:421    .text.dac_trigger_source_config:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:423    .text.dac_trigger_source_config:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:424    .text.dac_trigger_source_config:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:427    .text.dac_trigger_source_config:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:428    .text.dac_trigger_source_config:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:432    .text.dac_trigger_source_config:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:435    .text.dac_trigger_source_config:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:439    .text.dac_trigger_source_config:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:440    .text.dac_trigger_source_config:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:445    .text.dac_trigger_source_config:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:446    .text.dac_trigger_source_config:000000000000002a .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 29
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:299    .text.dac_data_set:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:302    .text.dac_data_set:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:305    .text.dac_data_set:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:306    .text.dac_data_set:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:309    .text.dac_data_set:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:312    .text.dac_data_set:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:319    .text.dac_data_set:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:320    .text.dac_data_set:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:323    .text.dac_data_set:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:326    .text.dac_data_set:0000000000000048 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:327    .text.dac_data_set:0000000000000048 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:330    .text.dac_data_set:0000000000000050 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:333    .text.dac_data_set:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:334    .text.dac_data_set:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:337    .text.dac_data_set:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:338    .text.dac_data_set:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:339    .text.dac_data_set:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:346    .text.dac_trigger_enable:0000000000000000 dac_trigger_enable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:349    .text.dac_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:351    .text.dac_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:352    .text.dac_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:353    .text.dac_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:356    .text.dac_trigger_enable:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:358    .text.dac_trigger_enable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:359    .text.dac_trigger_enable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:362    .text.dac_trigger_enable:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:364    .text.dac_trigger_enable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:367    .text.dac_trigger_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:368    .text.dac_trigger_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:371    .text.dac_trigger_enable:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:378    .text.dac_trigger_disable:0000000000000000 dac_trigger_disable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:381    .text.dac_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:383    .text.dac_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:384    .text.dac_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:385    .text.dac_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:387    .text.dac_trigger_disable:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:388    .text.dac_trigger_disable:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:395    .text.dac_trigger_disable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:396    .text.dac_trigger_disable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:403    .text.dac_trigger_disable:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:404    .text.dac_trigger_disable:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:411    .text.dac_trigger_source_config:0000000000000000 dac_trigger_source_config
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:414    .text.dac_trigger_source_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:416    .text.dac_trigger_source_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:417    .text.dac_trigger_source_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:418    .text.dac_trigger_source_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:421    .text.dac_trigger_source_config:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:423    .text.dac_trigger_source_config:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:424    .text.dac_trigger_source_config:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:427    .text.dac_trigger_source_config:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:428    .text.dac_trigger_source_config:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:432    .text.dac_trigger_source_config:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:435    .text.dac_trigger_source_config:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:439    .text.dac_trigger_source_config:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:440    .text.dac_trigger_source_config:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:445    .text.dac_trigger_source_config:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:446    .text.dac_trigger_source_config:000000000000002a .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 29
 
 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:448    .text.dac_trigger_source_config:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:451    .text.dac_trigger_source_config:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:458    .text.dac_software_trigger_enable:0000000000000000 dac_software_trigger_enable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:461    .text.dac_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:463    .text.dac_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:464    .text.dac_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:465    .text.dac_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:468    .text.dac_software_trigger_enable:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:470    .text.dac_software_trigger_enable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:471    .text.dac_software_trigger_enable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:474    .text.dac_software_trigger_enable:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:476    .text.dac_software_trigger_enable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:479    .text.dac_software_trigger_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:480    .text.dac_software_trigger_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:482    .text.dac_software_trigger_enable:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:489    .text.dac_software_trigger_disable:0000000000000000 dac_software_trigger_disable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:492    .text.dac_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:494    .text.dac_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:495    .text.dac_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:496    .text.dac_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:499    .text.dac_software_trigger_disable:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:501    .text.dac_software_trigger_disable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:502    .text.dac_software_trigger_disable:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:505    .text.dac_software_trigger_disable:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:507    .text.dac_software_trigger_disable:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:510    .text.dac_software_trigger_disable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:511    .text.dac_software_trigger_disable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:513    .text.dac_software_trigger_disable:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:520    .text.dac_wave_mode_config:0000000000000000 dac_wave_mode_config
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:523    .text.dac_wave_mode_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:525    .text.dac_wave_mode_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:526    .text.dac_wave_mode_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:527    .text.dac_wave_mode_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:530    .text.dac_wave_mode_config:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:532    .text.dac_wave_mode_config:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:533    .text.dac_wave_mode_config:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:536    .text.dac_wave_mode_config:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:537    .text.dac_wave_mode_config:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:541    .text.dac_wave_mode_config:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:544    .text.dac_wave_mode_config:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:548    .text.dac_wave_mode_config:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:549    .text.dac_wave_mode_config:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:554    .text.dac_wave_mode_config:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:555    .text.dac_wave_mode_config:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:557    .text.dac_wave_mode_config:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:560    .text.dac_wave_mode_config:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:567    .text.dac_wave_bit_width_config:0000000000000000 dac_wave_bit_width_config
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:570    .text.dac_wave_bit_width_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:572    .text.dac_wave_bit_width_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:573    .text.dac_wave_bit_width_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:574    .text.dac_wave_bit_width_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:577    .text.dac_wave_bit_width_config:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:579    .text.dac_wave_bit_width_config:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:580    .text.dac_wave_bit_width_config:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:585    .text.dac_wave_bit_width_config:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:586    .text.dac_wave_bit_width_config:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:590    .text.dac_wave_bit_width_config:000000000000001a .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 30
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:448    .text.dac_trigger_source_config:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:451    .text.dac_trigger_source_config:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:458    .text.dac_software_trigger_enable:0000000000000000 dac_software_trigger_enable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:461    .text.dac_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:463    .text.dac_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:464    .text.dac_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:465    .text.dac_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:468    .text.dac_software_trigger_enable:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:470    .text.dac_software_trigger_enable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:471    .text.dac_software_trigger_enable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:474    .text.dac_software_trigger_enable:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:476    .text.dac_software_trigger_enable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:479    .text.dac_software_trigger_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:480    .text.dac_software_trigger_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:482    .text.dac_software_trigger_enable:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:489    .text.dac_software_trigger_disable:0000000000000000 dac_software_trigger_disable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:492    .text.dac_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:494    .text.dac_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:495    .text.dac_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:496    .text.dac_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:499    .text.dac_software_trigger_disable:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:501    .text.dac_software_trigger_disable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:502    .text.dac_software_trigger_disable:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:505    .text.dac_software_trigger_disable:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:507    .text.dac_software_trigger_disable:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:510    .text.dac_software_trigger_disable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:511    .text.dac_software_trigger_disable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:513    .text.dac_software_trigger_disable:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:520    .text.dac_wave_mode_config:0000000000000000 dac_wave_mode_config
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:523    .text.dac_wave_mode_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:525    .text.dac_wave_mode_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:526    .text.dac_wave_mode_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:527    .text.dac_wave_mode_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:530    .text.dac_wave_mode_config:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:532    .text.dac_wave_mode_config:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:533    .text.dac_wave_mode_config:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:536    .text.dac_wave_mode_config:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:537    .text.dac_wave_mode_config:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:541    .text.dac_wave_mode_config:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:544    .text.dac_wave_mode_config:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:548    .text.dac_wave_mode_config:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:549    .text.dac_wave_mode_config:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:554    .text.dac_wave_mode_config:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:555    .text.dac_wave_mode_config:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:557    .text.dac_wave_mode_config:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:560    .text.dac_wave_mode_config:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:567    .text.dac_wave_bit_width_config:0000000000000000 dac_wave_bit_width_config
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:570    .text.dac_wave_bit_width_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:572    .text.dac_wave_bit_width_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:573    .text.dac_wave_bit_width_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:574    .text.dac_wave_bit_width_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:577    .text.dac_wave_bit_width_config:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:579    .text.dac_wave_bit_width_config:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:580    .text.dac_wave_bit_width_config:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:585    .text.dac_wave_bit_width_config:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:586    .text.dac_wave_bit_width_config:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:590    .text.dac_wave_bit_width_config:000000000000001a .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 30
 
 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:593    .text.dac_wave_bit_width_config:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:597    .text.dac_wave_bit_width_config:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:598    .text.dac_wave_bit_width_config:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:603    .text.dac_wave_bit_width_config:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:604    .text.dac_wave_bit_width_config:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:606    .text.dac_wave_bit_width_config:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:609    .text.dac_wave_bit_width_config:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:616    .text.dac_lfsr_noise_config:0000000000000000 dac_lfsr_noise_config
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:618    .text.dac_lfsr_noise_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:620    .text.dac_lfsr_noise_config:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:627    .text.dac_triangle_noise_config:0000000000000000 dac_triangle_noise_config
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:629    .text.dac_triangle_noise_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:631    .text.dac_triangle_noise_config:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:638    .text.dac_concurrent_enable:0000000000000000 dac_concurrent_enable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:641    .text.dac_concurrent_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:642    .text.dac_concurrent_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:644    .text.dac_concurrent_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:645    .text.dac_concurrent_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:646    .text.dac_concurrent_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:647    .text.dac_concurrent_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:654    .text.dac_concurrent_enable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:655    .text.dac_concurrent_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:662    .text.dac_concurrent_disable:0000000000000000 dac_concurrent_disable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:665    .text.dac_concurrent_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:666    .text.dac_concurrent_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:668    .text.dac_concurrent_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:669    .text.dac_concurrent_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:670    .text.dac_concurrent_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:671    .text.dac_concurrent_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:678    .text.dac_concurrent_disable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:679    .text.dac_concurrent_disable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:686    .text.dac_concurrent_software_trigger_enable:0000000000000000 dac_concurrent_software_trigger_enable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:689    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:690    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:692    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:693    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:694    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:695    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:700    .text.dac_concurrent_software_trigger_enable:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:701    .text.dac_concurrent_software_trigger_enable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:708    .text.dac_concurrent_software_trigger_disable:0000000000000000 dac_concurrent_software_trigger_disable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:711    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:712    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:714    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:715    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:716    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:717    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:722    .text.dac_concurrent_software_trigger_disable:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:723    .text.dac_concurrent_software_trigger_disable:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:730    .text.dac_concurrent_output_buffer_enable:0000000000000000 dac_concurrent_output_buffer_enable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:733    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:734    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:736    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:737    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:738    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:739    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:746    .text.dac_concurrent_output_buffer_enable:0000000000000012 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 31
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:593    .text.dac_wave_bit_width_config:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:597    .text.dac_wave_bit_width_config:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:598    .text.dac_wave_bit_width_config:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:603    .text.dac_wave_bit_width_config:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:604    .text.dac_wave_bit_width_config:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:606    .text.dac_wave_bit_width_config:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:609    .text.dac_wave_bit_width_config:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:616    .text.dac_lfsr_noise_config:0000000000000000 dac_lfsr_noise_config
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:618    .text.dac_lfsr_noise_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:620    .text.dac_lfsr_noise_config:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:627    .text.dac_triangle_noise_config:0000000000000000 dac_triangle_noise_config
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:629    .text.dac_triangle_noise_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:631    .text.dac_triangle_noise_config:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:638    .text.dac_concurrent_enable:0000000000000000 dac_concurrent_enable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:641    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:642    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:644    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:645    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:646    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:647    .text.dac_concurrent_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:654    .text.dac_concurrent_enable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:655    .text.dac_concurrent_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:662    .text.dac_concurrent_disable:0000000000000000 dac_concurrent_disable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:665    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:666    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:668    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:669    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:670    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:671    .text.dac_concurrent_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:678    .text.dac_concurrent_disable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:679    .text.dac_concurrent_disable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:686    .text.dac_concurrent_software_trigger_enable:0000000000000000 dac_concurrent_software_trigger_enable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:689    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:690    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:692    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:693    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:694    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:695    .text.dac_concurrent_software_trigger_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:700    .text.dac_concurrent_software_trigger_enable:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:701    .text.dac_concurrent_software_trigger_enable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:708    .text.dac_concurrent_software_trigger_disable:0000000000000000 dac_concurrent_software_trigger_disable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:711    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:712    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:714    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:715    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:716    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:717    .text.dac_concurrent_software_trigger_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:722    .text.dac_concurrent_software_trigger_disable:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:723    .text.dac_concurrent_software_trigger_disable:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:730    .text.dac_concurrent_output_buffer_enable:0000000000000000 dac_concurrent_output_buffer_enable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:733    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:734    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:736    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:737    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:738    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:739    .text.dac_concurrent_output_buffer_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:746    .text.dac_concurrent_output_buffer_enable:0000000000000012 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 31
 
 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:747    .text.dac_concurrent_output_buffer_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:754    .text.dac_concurrent_output_buffer_disable:0000000000000000 dac_concurrent_output_buffer_disable
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:757    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:758    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:760    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:761    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:762    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:763    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:770    .text.dac_concurrent_output_buffer_disable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:771    .text.dac_concurrent_output_buffer_disable:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:778    .text.dac_concurrent_data_set:0000000000000000 dac_concurrent_data_set
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:781    .text.dac_concurrent_data_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:783    .text.dac_concurrent_data_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:784    .text.dac_concurrent_data_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:785    .text.dac_concurrent_data_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:793    .text.dac_concurrent_data_set:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:794    .text.dac_concurrent_data_set:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:797    .text.dac_concurrent_data_set:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:800    .text.dac_concurrent_data_set:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:801    .text.dac_concurrent_data_set:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:804    .text.dac_concurrent_data_set:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:808    .text.dac_concurrent_data_set:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:809    .text.dac_concurrent_data_set:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:812    .text.dac_concurrent_data_set:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:815    .text.dac_concurrent_data_set:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:816    .text.dac_concurrent_data_set:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:819    .text.dac_concurrent_data_set:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:823    .text.dac_concurrent_data_set:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:824    .text.dac_concurrent_data_set:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:827    .text.dac_concurrent_data_set:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:830    .text.dac_concurrent_data_set:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:831    .text.dac_concurrent_data_set:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:834    .text.dac_concurrent_data_set:0000000000000038 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:835    .text.dac_concurrent_data_set:0000000000000038 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:836    .text.dac_concurrent_data_set:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:47     .text.dac_deinit:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:79     .text.dac_enable:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:112    .text.dac_disable:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:139    .text.dac_dma_enable:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:167    .text.dac_dma_disable:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:200    .text.dac_output_buffer_enable:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:232    .text.dac_output_buffer_disable:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:269    .text.dac_output_value_get:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:342    .text.dac_data_set:000000000000005c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:374    .text.dac_trigger_enable:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:407    .text.dac_trigger_disable:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:454    .text.dac_trigger_source_config:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:485    .text.dac_software_trigger_enable:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:516    .text.dac_software_trigger_disable:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:563    .text.dac_wave_mode_config:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:612    .text.dac_wave_bit_width_config:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:658    .text.dac_concurrent_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:682    .text.dac_concurrent_disable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:704    .text.dac_concurrent_software_trigger_enable:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:726    .text.dac_concurrent_software_trigger_disable:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:750    .text.dac_concurrent_output_buffer_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:774    .text.dac_concurrent_output_buffer_disable:0000000000000016 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 32
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:747    .text.dac_concurrent_output_buffer_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:754    .text.dac_concurrent_output_buffer_disable:0000000000000000 dac_concurrent_output_buffer_disable
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:757    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:758    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:760    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:761    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:762    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:763    .text.dac_concurrent_output_buffer_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:770    .text.dac_concurrent_output_buffer_disable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:771    .text.dac_concurrent_output_buffer_disable:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:778    .text.dac_concurrent_data_set:0000000000000000 dac_concurrent_data_set
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:781    .text.dac_concurrent_data_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:783    .text.dac_concurrent_data_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:784    .text.dac_concurrent_data_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:785    .text.dac_concurrent_data_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:793    .text.dac_concurrent_data_set:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:794    .text.dac_concurrent_data_set:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:797    .text.dac_concurrent_data_set:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:800    .text.dac_concurrent_data_set:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:801    .text.dac_concurrent_data_set:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:804    .text.dac_concurrent_data_set:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:808    .text.dac_concurrent_data_set:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:809    .text.dac_concurrent_data_set:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:812    .text.dac_concurrent_data_set:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:815    .text.dac_concurrent_data_set:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:816    .text.dac_concurrent_data_set:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:819    .text.dac_concurrent_data_set:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:823    .text.dac_concurrent_data_set:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:824    .text.dac_concurrent_data_set:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:827    .text.dac_concurrent_data_set:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:830    .text.dac_concurrent_data_set:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:831    .text.dac_concurrent_data_set:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:834    .text.dac_concurrent_data_set:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:835    .text.dac_concurrent_data_set:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:836    .text.dac_concurrent_data_set:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:47     .text.dac_deinit:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:79     .text.dac_enable:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:112    .text.dac_disable:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:139    .text.dac_dma_enable:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:167    .text.dac_dma_disable:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:200    .text.dac_output_buffer_enable:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:232    .text.dac_output_buffer_disable:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:269    .text.dac_output_value_get:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:342    .text.dac_data_set:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:374    .text.dac_trigger_enable:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:407    .text.dac_trigger_disable:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:454    .text.dac_trigger_source_config:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:485    .text.dac_software_trigger_enable:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:516    .text.dac_software_trigger_disable:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:563    .text.dac_wave_mode_config:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:612    .text.dac_wave_bit_width_config:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:658    .text.dac_concurrent_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:682    .text.dac_concurrent_disable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:704    .text.dac_concurrent_software_trigger_enable:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:726    .text.dac_concurrent_software_trigger_disable:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:750    .text.dac_concurrent_output_buffer_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:774    .text.dac_concurrent_output_buffer_disable:0000000000000016 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 32
 
 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:839    .text.dac_concurrent_data_set:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:839    .text.dac_concurrent_data_set:000000000000003a .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:70     .text.dac_enable:0000000000000014 .L4
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:65     .text.dac_enable:000000000000000e .L6
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:98     .text.dac_disable:0000000000000012 .L8
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:131    .text.dac_dma_enable:0000000000000010 .L13
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:158    .text.dac_dma_disable:0000000000000010 .L17
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:186    .text.dac_output_buffer_enable:0000000000000012 .L19
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:223    .text.dac_output_buffer_disable:0000000000000014 .L22
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:218    .text.dac_output_buffer_disable:000000000000000e .L24
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:260    .text.dac_output_value_get:0000000000000010 .L26
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:251    .text.dac_output_value_get:000000000000000a .L28
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:310    .text.dac_data_set:0000000000000030 .L30
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:296    .text.dac_data_set:000000000000001c .L31
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:289    .text.dac_data_set:0000000000000012 .L32
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:303    .text.dac_data_set:0000000000000026 .L33
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:324    .text.dac_data_set:0000000000000048 .L35
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:317    .text.dac_data_set:000000000000003e .L36
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:331    .text.dac_data_set:0000000000000052 .L37
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:365    .text.dac_trigger_enable:0000000000000014 .L39
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:360    .text.dac_trigger_enable:000000000000000e .L41
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:393    .text.dac_trigger_disable:0000000000000012 .L43
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:437    .text.dac_trigger_source_config:000000000000001e .L46
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:430    .text.dac_trigger_source_config:0000000000000016 .L48
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:477    .text.dac_software_trigger_enable:0000000000000014 .L50
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:472    .text.dac_software_trigger_enable:000000000000000e .L52
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:508    .text.dac_software_trigger_disable:0000000000000012 .L54
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:503    .text.dac_software_trigger_disable:000000000000000c .L56
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:546    .text.dac_wave_mode_config:000000000000001e .L58
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:539    .text.dac_wave_mode_config:0000000000000016 .L60
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:595    .text.dac_wave_bit_width_config:0000000000000022 .L62
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:588    .text.dac_wave_bit_width_config:000000000000001a .L64
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:806    .text.dac_concurrent_data_set:000000000000001e .L74
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:791    .text.dac_concurrent_data_set:0000000000000010 .L75
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:821    .text.dac_concurrent_data_set:000000000000002c .L76
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:1702   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2453   .debug_str:000000000000000e .LASF82
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2493   .debug_str:00000000000001d4 .LASF83
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2513   .debug_str:0000000000000291 .LASF84
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2399   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2449   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2541   .debug_str:00000000000003c6 .LASF0
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2529   .debug_str:0000000000000376 .LASF1
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2515   .debug_str:0000000000000305 .LASF2
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2467   .debug_str:00000000000000e2 .LASF3
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2483   .debug_str:0000000000000175 .LASF6
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2549   .debug_str:00000000000003f5 .LASF4
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2501   .debug_str:0000000000000241 .LASF5
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2463   .debug_str:00000000000000c9 .LASF7
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2571   .debug_str:00000000000004c0 .LASF8
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2499   .debug_str:0000000000000233 .LASF9
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2533   .debug_str:000000000000038d .LASF10
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2543   .debug_str:00000000000003d3 .LASF11
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2537   .debug_str:00000000000003b1 .LASF12
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2563   .debug_str:0000000000000487 .LASF85
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2455   .debug_str:0000000000000096 .LASF13
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2557   .debug_str:0000000000000455 .LASF14
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 33
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:70     .text.dac_enable:0000000000000014 .L4
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:65     .text.dac_enable:000000000000000e .L6
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:98     .text.dac_disable:0000000000000012 .L8
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:131    .text.dac_dma_enable:0000000000000010 .L13
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:158    .text.dac_dma_disable:0000000000000010 .L17
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:186    .text.dac_output_buffer_enable:0000000000000012 .L19
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:223    .text.dac_output_buffer_disable:0000000000000014 .L22
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:218    .text.dac_output_buffer_disable:000000000000000e .L24
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:260    .text.dac_output_value_get:0000000000000010 .L26
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:251    .text.dac_output_value_get:000000000000000a .L28
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:310    .text.dac_data_set:0000000000000030 .L30
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:296    .text.dac_data_set:000000000000001c .L31
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:289    .text.dac_data_set:0000000000000012 .L32
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:303    .text.dac_data_set:0000000000000026 .L33
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:324    .text.dac_data_set:0000000000000048 .L35
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:317    .text.dac_data_set:000000000000003e .L36
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:331    .text.dac_data_set:0000000000000052 .L37
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:365    .text.dac_trigger_enable:0000000000000014 .L39
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:360    .text.dac_trigger_enable:000000000000000e .L41
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:393    .text.dac_trigger_disable:0000000000000012 .L43
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:437    .text.dac_trigger_source_config:000000000000001e .L46
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:430    .text.dac_trigger_source_config:0000000000000016 .L48
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:477    .text.dac_software_trigger_enable:0000000000000014 .L50
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:472    .text.dac_software_trigger_enable:000000000000000e .L52
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:508    .text.dac_software_trigger_disable:0000000000000012 .L54
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:503    .text.dac_software_trigger_disable:000000000000000c .L56
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:546    .text.dac_wave_mode_config:000000000000001e .L58
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:539    .text.dac_wave_mode_config:0000000000000016 .L60
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:595    .text.dac_wave_bit_width_config:0000000000000022 .L62
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:588    .text.dac_wave_bit_width_config:000000000000001a .L64
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:806    .text.dac_concurrent_data_set:000000000000001e .L74
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:791    .text.dac_concurrent_data_set:0000000000000010 .L75
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:821    .text.dac_concurrent_data_set:000000000000002c .L76
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:1702   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2453   .debug_str:000000000000000e .LASF82
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2493   .debug_str:00000000000001d4 .LASF83
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2513   .debug_str:0000000000000291 .LASF84
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2399   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2449   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2541   .debug_str:00000000000003c6 .LASF0
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2529   .debug_str:0000000000000376 .LASF1
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2515   .debug_str:0000000000000305 .LASF2
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2467   .debug_str:00000000000000e2 .LASF3
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2483   .debug_str:0000000000000175 .LASF6
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2549   .debug_str:00000000000003f5 .LASF4
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2501   .debug_str:0000000000000241 .LASF5
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2463   .debug_str:00000000000000c9 .LASF7
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2571   .debug_str:00000000000004c0 .LASF8
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2499   .debug_str:0000000000000233 .LASF9
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2533   .debug_str:000000000000038d .LASF10
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2543   .debug_str:00000000000003d3 .LASF11
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2537   .debug_str:00000000000003b1 .LASF12
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2563   .debug_str:0000000000000487 .LASF85
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2455   .debug_str:0000000000000096 .LASF13
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2557   .debug_str:0000000000000455 .LASF14
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 33
 
 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2599   .debug_str:000000000000059a .LASF15
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2481   .debug_str:0000000000000167 .LASF16
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2509   .debug_str:000000000000026a .LASF17
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2561   .debug_str:0000000000000479 .LASF18
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2609   .debug_str:00000000000005d8 .LASF19
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2623   .debug_str:0000000000000671 .LASF20
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2475   .debug_str:0000000000000137 .LASF21
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2503   .debug_str:000000000000024a .LASF22
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2567   .debug_str:000000000000049c .LASF23
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2621   .debug_str:0000000000000663 .LASF24
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2579   .debug_str:000000000000050e .LASF25
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2457   .debug_str:00000000000000a3 .LASF26
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2585   .debug_str:0000000000000532 .LASF27
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2581   .debug_str:000000000000051b .LASF28
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2461   .debug_str:00000000000000bd .LASF29
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2497   .debug_str:0000000000000227 .LASF30
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2471   .debug_str:0000000000000106 .LASF31
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2583   .debug_str:0000000000000527 .LASF32
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2531   .debug_str:0000000000000382 .LASF33
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2523   .debug_str:0000000000000340 .LASF34
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2535   .debug_str:00000000000003a4 .LASF35
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2575   .debug_str:00000000000004ec .LASF36
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2459   .debug_str:00000000000000b0 .LASF37
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2495   .debug_str:000000000000021a .LASF38
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2545   .debug_str:00000000000003dc .LASF39
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2547   .debug_str:00000000000003e9 .LASF40
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2589   .debug_str:0000000000000558 .LASF41
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2451   .debug_str:0000000000000000 .LASF42
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2595   .debug_str:0000000000000579 .LASF43
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2517   .debug_str:0000000000000313 .LASF44
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2519   .debug_str:0000000000000321 .LASF45
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2487   .debug_str:00000000000001a7 .LASF49
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:779    .text.dac_concurrent_data_set:0000000000000000 .LFB26
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:837    .text.dac_concurrent_data_set:000000000000003a .LFE26
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2505   .debug_str:0000000000000256 .LASF46
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2601   .debug_str:00000000000005a8 .LASF47
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2603   .debug_str:00000000000005ae .LASF48
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2141   .debug_loc:0000000000000000 .LLST6
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2565   .debug_str:0000000000000497 .LASF51
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2177   .debug_loc:0000000000000053 .LLST7
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2473   .debug_str:0000000000000112 .LASF50
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:755    .text.dac_concurrent_output_buffer_disable:0000000000000000 .LFB25
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:772    .text.dac_concurrent_output_buffer_disable:0000000000000016 .LFE25
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2611   .debug_str:00000000000005e6 .LASF52
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:731    .text.dac_concurrent_output_buffer_enable:0000000000000000 .LFB24
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:748    .text.dac_concurrent_output_buffer_enable:0000000000000014 .LFE24
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2615   .debug_str:000000000000061a .LASF53
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:709    .text.dac_concurrent_software_trigger_disable:0000000000000000 .LFB23
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:724    .text.dac_concurrent_software_trigger_disable:0000000000000010 .LFE23
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2485   .debug_str:0000000000000180 .LASF54
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:687    .text.dac_concurrent_software_trigger_enable:0000000000000000 .LFB22
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:702    .text.dac_concurrent_software_trigger_enable:0000000000000012 .LFE22
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2555   .debug_str:000000000000043e .LASF55
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:663    .text.dac_concurrent_disable:0000000000000000 .LFB21
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:680    .text.dac_concurrent_disable:0000000000000014 .LFE21
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2559   .debug_str:0000000000000463 .LASF56
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:639    .text.dac_concurrent_enable:0000000000000000 .LFB20
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 34
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2599   .debug_str:000000000000059a .LASF15
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2481   .debug_str:0000000000000167 .LASF16
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2509   .debug_str:000000000000026a .LASF17
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2561   .debug_str:0000000000000479 .LASF18
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2609   .debug_str:00000000000005d8 .LASF19
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2623   .debug_str:0000000000000671 .LASF20
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2475   .debug_str:0000000000000137 .LASF21
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2503   .debug_str:000000000000024a .LASF22
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2567   .debug_str:000000000000049c .LASF23
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2621   .debug_str:0000000000000663 .LASF24
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2579   .debug_str:000000000000050e .LASF25
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2457   .debug_str:00000000000000a3 .LASF26
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2585   .debug_str:0000000000000532 .LASF27
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2581   .debug_str:000000000000051b .LASF28
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2461   .debug_str:00000000000000bd .LASF29
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2497   .debug_str:0000000000000227 .LASF30
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2471   .debug_str:0000000000000106 .LASF31
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2583   .debug_str:0000000000000527 .LASF32
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2531   .debug_str:0000000000000382 .LASF33
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2523   .debug_str:0000000000000340 .LASF34
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2535   .debug_str:00000000000003a4 .LASF35
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2575   .debug_str:00000000000004ec .LASF36
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2459   .debug_str:00000000000000b0 .LASF37
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2495   .debug_str:000000000000021a .LASF38
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2545   .debug_str:00000000000003dc .LASF39
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2547   .debug_str:00000000000003e9 .LASF40
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2589   .debug_str:0000000000000558 .LASF41
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2451   .debug_str:0000000000000000 .LASF42
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2595   .debug_str:0000000000000579 .LASF43
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2517   .debug_str:0000000000000313 .LASF44
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2519   .debug_str:0000000000000321 .LASF45
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2487   .debug_str:00000000000001a7 .LASF49
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:779    .text.dac_concurrent_data_set:0000000000000000 .LFB26
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:837    .text.dac_concurrent_data_set:000000000000003a .LFE26
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2505   .debug_str:0000000000000256 .LASF46
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2601   .debug_str:00000000000005a8 .LASF47
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2603   .debug_str:00000000000005ae .LASF48
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2141   .debug_loc:0000000000000000 .LLST6
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2565   .debug_str:0000000000000497 .LASF51
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2177   .debug_loc:0000000000000053 .LLST7
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2473   .debug_str:0000000000000112 .LASF50
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:755    .text.dac_concurrent_output_buffer_disable:0000000000000000 .LFB25
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:772    .text.dac_concurrent_output_buffer_disable:0000000000000016 .LFE25
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2611   .debug_str:00000000000005e6 .LASF52
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:731    .text.dac_concurrent_output_buffer_enable:0000000000000000 .LFB24
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:748    .text.dac_concurrent_output_buffer_enable:0000000000000014 .LFE24
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2615   .debug_str:000000000000061a .LASF53
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:709    .text.dac_concurrent_software_trigger_disable:0000000000000000 .LFB23
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:724    .text.dac_concurrent_software_trigger_disable:0000000000000010 .LFE23
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2485   .debug_str:0000000000000180 .LASF54
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:687    .text.dac_concurrent_software_trigger_enable:0000000000000000 .LFB22
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:702    .text.dac_concurrent_software_trigger_enable:0000000000000012 .LFE22
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2555   .debug_str:000000000000043e .LASF55
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:663    .text.dac_concurrent_disable:0000000000000000 .LFB21
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:680    .text.dac_concurrent_disable:0000000000000014 .LFE21
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2559   .debug_str:0000000000000463 .LASF56
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:639    .text.dac_concurrent_enable:0000000000000000 .LFB20
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 34
 
 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:656    .text.dac_concurrent_enable:0000000000000014 .LFE20
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2587   .debug_str:000000000000053e .LASF59
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2491   .debug_str:00000000000001c9 .LASF57
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2507   .debug_str:0000000000000260 .LASF58
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2569   .debug_str:00000000000004aa .LASF60
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2605   .debug_str:00000000000005b4 .LASF61
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2553   .debug_str:0000000000000424 .LASF62
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:568    .text.dac_wave_bit_width_config:0000000000000000 .LFB17
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:610    .text.dac_wave_bit_width_config:0000000000000036 .LFE17
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2489   .debug_str:00000000000001bf .LASF63
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2207   .debug_loc:00000000000000a0 .LLST5
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2577   .debug_str:00000000000004f9 .LASF64
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:521    .text.dac_wave_mode_config:0000000000000000 .LFB16
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:561    .text.dac_wave_mode_config:0000000000000032 .LFE16
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2593   .debug_str:000000000000056f .LASF65
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2232   .debug_loc:00000000000000da .LLST4
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2527   .debug_str:0000000000000359 .LASF66
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:490    .text.dac_software_trigger_disable:0000000000000000 .LFB15
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:514    .text.dac_software_trigger_disable:0000000000000016 .LFE15
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2551   .debug_str:0000000000000408 .LASF67
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:459    .text.dac_software_trigger_enable:0000000000000000 .LFB14
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:483    .text.dac_software_trigger_enable:000000000000001a .LFE14
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2573   .debug_str:00000000000004d2 .LASF68
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:412    .text.dac_trigger_source_config:0000000000000000 .LFB13
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:452    .text.dac_trigger_source_config:0000000000000032 .LFE13
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2465   .debug_str:00000000000000d4 .LASF69
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2257   .debug_loc:0000000000000114 .LLST3
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2619   .debug_str:000000000000064f .LASF70
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:379    .text.dac_trigger_disable:0000000000000000 .LFB12
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:405    .text.dac_trigger_disable:0000000000000028 .LFE12
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2521   .debug_str:000000000000032d .LASF71
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:347    .text.dac_trigger_enable:0000000000000000 .LFB11
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:372    .text.dac_trigger_enable:000000000000001c .LFE11
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2617   .debug_str:0000000000000642 .LASF72
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:274    .text.dac_data_set:0000000000000000 .LFB10
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:340    .text.dac_data_set:000000000000005c .LFE10
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2597   .debug_str:0000000000000585 .LASF86
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:237    .text.dac_output_value_get:0000000000000000 .LFB9
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:267    .text.dac_output_value_get:0000000000000016 .LFE9
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2282   .debug_loc:000000000000014e .LLST1
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2307   .debug_loc:0000000000000188 .LLST2
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2469   .debug_str:00000000000000ec .LASF73
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:205    .text.dac_output_buffer_disable:0000000000000000 .LFB8
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:230    .text.dac_output_buffer_disable:000000000000001c .LFE8
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2511   .debug_str:0000000000000278 .LASF74
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:172    .text.dac_output_buffer_enable:0000000000000000 .LFB7
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:198    .text.dac_output_buffer_enable:0000000000000026 .LFE7
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2613   .debug_str:000000000000060a .LASF75
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:144    .text.dac_dma_disable:0000000000000000 .LFB6
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:165    .text.dac_dma_disable:000000000000001a .LFE6
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2525   .debug_str:000000000000034a .LASF76
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:117    .text.dac_dma_enable:0000000000000000 .LFB5
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:137    .text.dac_dma_enable:0000000000000018 .LFE5
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2539   .debug_str:00000000000003ba .LASF77
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:84     .text.dac_disable:0000000000000000 .LFB4
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:110    .text.dac_disable:0000000000000026 .LFE4
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2591   .debug_str:0000000000000564 .LASF78
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s 			page 35
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:656    .text.dac_concurrent_enable:0000000000000014 .LFE20
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2587   .debug_str:000000000000053e .LASF59
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2491   .debug_str:00000000000001c9 .LASF57
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2507   .debug_str:0000000000000260 .LASF58
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2569   .debug_str:00000000000004aa .LASF60
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2605   .debug_str:00000000000005b4 .LASF61
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2553   .debug_str:0000000000000424 .LASF62
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:568    .text.dac_wave_bit_width_config:0000000000000000 .LFB17
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:610    .text.dac_wave_bit_width_config:0000000000000036 .LFE17
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2489   .debug_str:00000000000001bf .LASF63
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2207   .debug_loc:00000000000000a0 .LLST5
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2577   .debug_str:00000000000004f9 .LASF64
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:521    .text.dac_wave_mode_config:0000000000000000 .LFB16
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:561    .text.dac_wave_mode_config:0000000000000032 .LFE16
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2593   .debug_str:000000000000056f .LASF65
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2232   .debug_loc:00000000000000da .LLST4
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2527   .debug_str:0000000000000359 .LASF66
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:490    .text.dac_software_trigger_disable:0000000000000000 .LFB15
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:514    .text.dac_software_trigger_disable:0000000000000016 .LFE15
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2551   .debug_str:0000000000000408 .LASF67
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:459    .text.dac_software_trigger_enable:0000000000000000 .LFB14
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:483    .text.dac_software_trigger_enable:000000000000001a .LFE14
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2573   .debug_str:00000000000004d2 .LASF68
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:412    .text.dac_trigger_source_config:0000000000000000 .LFB13
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:452    .text.dac_trigger_source_config:0000000000000032 .LFE13
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2465   .debug_str:00000000000000d4 .LASF69
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2257   .debug_loc:0000000000000114 .LLST3
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2619   .debug_str:000000000000064f .LASF70
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:379    .text.dac_trigger_disable:0000000000000000 .LFB12
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:405    .text.dac_trigger_disable:0000000000000028 .LFE12
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2521   .debug_str:000000000000032d .LASF71
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:347    .text.dac_trigger_enable:0000000000000000 .LFB11
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:372    .text.dac_trigger_enable:000000000000001c .LFE11
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2617   .debug_str:0000000000000642 .LASF72
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:274    .text.dac_data_set:0000000000000000 .LFB10
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:340    .text.dac_data_set:000000000000005c .LFE10
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2597   .debug_str:0000000000000585 .LASF86
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:237    .text.dac_output_value_get:0000000000000000 .LFB9
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:267    .text.dac_output_value_get:0000000000000016 .LFE9
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2282   .debug_loc:000000000000014e .LLST1
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2307   .debug_loc:0000000000000188 .LLST2
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2469   .debug_str:00000000000000ec .LASF73
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:205    .text.dac_output_buffer_disable:0000000000000000 .LFB8
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:230    .text.dac_output_buffer_disable:000000000000001c .LFE8
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2511   .debug_str:0000000000000278 .LASF74
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:172    .text.dac_output_buffer_enable:0000000000000000 .LFB7
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:198    .text.dac_output_buffer_enable:0000000000000026 .LFE7
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2613   .debug_str:000000000000060a .LASF75
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:144    .text.dac_dma_disable:0000000000000000 .LFB6
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:165    .text.dac_dma_disable:000000000000001a .LFE6
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2525   .debug_str:000000000000034a .LASF76
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:117    .text.dac_dma_enable:0000000000000000 .LFB5
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:137    .text.dac_dma_enable:0000000000000018 .LFE5
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2539   .debug_str:00000000000003ba .LASF77
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:84     .text.dac_disable:0000000000000000 .LFB4
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:110    .text.dac_disable:0000000000000026 .LFE4
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2591   .debug_str:0000000000000564 .LASF78
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s 			page 35
 
 
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:52     .text.dac_enable:0000000000000000 .LFB3
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:77     .text.dac_enable:000000000000001a .LFE3
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2479   .debug_str:000000000000015c .LASF79
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:14     .text.dac_deinit:0000000000000000 .LFB2
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:45     .text.dac_deinit:0000000000000020 .LFE2
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2324   .debug_loc:00000000000001b3 .LLST0
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:30     .text.dac_deinit:0000000000000010 .LVL0
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:43     .text.dac_deinit:0000000000000020 .LVL1
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2607   .debug_str:00000000000005c0 .LASF80
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:2477   .debug_str:0000000000000143 .LASF81
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:782    .text.dac_concurrent_data_set:0000000000000000 .LVL36
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:795    .text.dac_concurrent_data_set:0000000000000012 .LVL37
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:805    .text.dac_concurrent_data_set:000000000000001e .LVL39
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:810    .text.dac_concurrent_data_set:0000000000000020 .LVL40
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:820    .text.dac_concurrent_data_set:000000000000002c .LVL42
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:825    .text.dac_concurrent_data_set:000000000000002e .LVL43
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:798    .text.dac_concurrent_data_set:0000000000000014 .LVL38
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:813    .text.dac_concurrent_data_set:0000000000000022 .LVL41
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:828    .text.dac_concurrent_data_set:0000000000000030 .LVL44
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:571    .text.dac_wave_bit_width_config:0000000000000000 .LVL26
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:587    .text.dac_wave_bit_width_config:000000000000001a .LVL27
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:594    .text.dac_wave_bit_width_config:0000000000000022 .LVL28
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:607    .text.dac_wave_bit_width_config:0000000000000034 .LVL29
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:524    .text.dac_wave_mode_config:0000000000000000 .LVL22
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:538    .text.dac_wave_mode_config:0000000000000016 .LVL23
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:545    .text.dac_wave_mode_config:000000000000001e .LVL24
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:558    .text.dac_wave_mode_config:0000000000000030 .LVL25
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:415    .text.dac_trigger_source_config:0000000000000000 .LVL16
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:429    .text.dac_trigger_source_config:0000000000000016 .LVL17
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:436    .text.dac_trigger_source_config:000000000000001e .LVL18
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:449    .text.dac_trigger_source_config:0000000000000030 .LVL19
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:240    .text.dac_output_value_get:0000000000000000 .LVL8
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:250    .text.dac_output_value_get:000000000000000a .LVL9
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:259    .text.dac_output_value_get:0000000000000010 .LVL11
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:264    .text.dac_output_value_get:0000000000000014 .LVL12
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:255    .text.dac_output_value_get:000000000000000e .LVL10
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:21     .text.dac_deinit:0000000000000002 .LCFI0
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:39     .text.dac_deinit:0000000000000018 .LCFI1
-C:\Users\marwz\AppData\Local\Temp\cciHg2YB.s:846    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:52     .text.dac_enable:0000000000000000 .LFB3
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:77     .text.dac_enable:000000000000001a .LFE3
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2479   .debug_str:000000000000015c .LASF79
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:14     .text.dac_deinit:0000000000000000 .LFB2
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:45     .text.dac_deinit:0000000000000020 .LFE2
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2324   .debug_loc:00000000000001b3 .LLST0
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:30     .text.dac_deinit:0000000000000010 .LVL0
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:43     .text.dac_deinit:0000000000000020 .LVL1
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2607   .debug_str:00000000000005c0 .LASF80
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:2477   .debug_str:0000000000000143 .LASF81
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:782    .text.dac_concurrent_data_set:0000000000000000 .LVL36
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:795    .text.dac_concurrent_data_set:0000000000000012 .LVL37
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:805    .text.dac_concurrent_data_set:000000000000001e .LVL39
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:810    .text.dac_concurrent_data_set:0000000000000020 .LVL40
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:820    .text.dac_concurrent_data_set:000000000000002c .LVL42
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:825    .text.dac_concurrent_data_set:000000000000002e .LVL43
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:798    .text.dac_concurrent_data_set:0000000000000014 .LVL38
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:813    .text.dac_concurrent_data_set:0000000000000022 .LVL41
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:828    .text.dac_concurrent_data_set:0000000000000030 .LVL44
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:571    .text.dac_wave_bit_width_config:0000000000000000 .LVL26
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:587    .text.dac_wave_bit_width_config:000000000000001a .LVL27
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:594    .text.dac_wave_bit_width_config:0000000000000022 .LVL28
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:607    .text.dac_wave_bit_width_config:0000000000000034 .LVL29
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:524    .text.dac_wave_mode_config:0000000000000000 .LVL22
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:538    .text.dac_wave_mode_config:0000000000000016 .LVL23
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:545    .text.dac_wave_mode_config:000000000000001e .LVL24
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:558    .text.dac_wave_mode_config:0000000000000030 .LVL25
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:415    .text.dac_trigger_source_config:0000000000000000 .LVL16
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:429    .text.dac_trigger_source_config:0000000000000016 .LVL17
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:436    .text.dac_trigger_source_config:000000000000001e .LVL18
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:449    .text.dac_trigger_source_config:0000000000000030 .LVL19
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:240    .text.dac_output_value_get:0000000000000000 .LVL8
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:250    .text.dac_output_value_get:000000000000000a .LVL9
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:259    .text.dac_output_value_get:0000000000000010 .LVL11
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:264    .text.dac_output_value_get:0000000000000014 .LVL12
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:255    .text.dac_output_value_get:000000000000000e .LVL10
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:21     .text.dac_deinit:0000000000000002 .LCFI0
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:39     .text.dac_deinit:0000000000000018 .LCFI1
+C:\Users\marwz\AppData\Local\Temp\cc9f0c0E.s:846    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

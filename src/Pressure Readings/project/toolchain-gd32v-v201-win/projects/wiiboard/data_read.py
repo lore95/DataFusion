@@ -56,7 +56,7 @@ def save_data_to_json(t, v1, v2, v3, v4):
 
         # Lecture du fichier existant ou création s'il n'existe pas
         try:
-            with open(file_name, 'r') as file:
+            with open(file_name + '.json', 'r') as file:
                 data_list = json.load(file)  # Charger les données existantes
         except (FileNotFoundError, json.JSONDecodeError):
             data_list = []  # Si le fichier n'existe pas ou est vide
@@ -65,7 +65,7 @@ def save_data_to_json(t, v1, v2, v3, v4):
         data_list.extend(data)
 
         # Écriture dans le fichier JSON (avec indentation pour lisibilité)
-        with open(file_name, 'w') as file:
+        with open(file_name + '.json', 'w') as file:
             json.dump(data_list, file, indent=4)
 
     except Exception as e:
@@ -74,7 +74,7 @@ def save_data_to_json(t, v1, v2, v3, v4):
 
 def init():
     ax.set_xlim(0, 100)  # Set x-axis limit (number of data points)
-    ax.set_ylim(-12500, 0)  # Set y-axis limit (adjust as needed)
+    ax.set_ylim(-1000000, 1000)  # Set y-axis limit (adjust as needed)
     ax.set_xlabel('Sample Number')
     ax.set_ylabel('Values')
     ax.legend(loc='upper left')
@@ -86,6 +86,7 @@ def update(frame):
     if match:
         t, v1, v2, v3, v4 = map(int, match.groups())
         print(f'Time:{t/24000000}')
+        # print(f'V1, V2, V3, V4:{v1, v2, v3, v4}')
         t_data.append(t)
         v1_data.append(v1)
         v2_data.append(v2)
@@ -105,7 +106,8 @@ def update(frame):
         return line1, line2, line3, line4
 
 # Set up animation
-ani = animation.FuncAnimation(fig, update, init_func=init, blit=True, interval=0.026)
+ani = animation.FuncAnimation(fig, update, init_func=init, blit=True, interval=0.025)
+
 
 plt.show()
 
