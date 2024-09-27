@@ -155,4 +155,4 @@ def main(json_file, variable, output_file, weight, polynomial_degree=None):
         print(f"Polynomial fit coefficients: {coefficients}")
 
 
-main('experiment/V1_40_1_32.json', 'V1', 'V1_40_1.json', weight=32, polynomial_degree=None)
+main('experiment/V1_40_128_32.json', 'V1', 'V1_40_128.json', weight=32, polynomial_degree=None)
