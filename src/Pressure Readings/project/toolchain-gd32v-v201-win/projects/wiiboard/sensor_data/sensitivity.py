@@ -155,5 +155,5 @@ def main(json_file, variable, output_file, weight, polynomial_degree=None):
         print(f"Polynomial fit coefficients: {coefficients}")
 
 
-for w in [6, 10, 16, 28, 32]:
-    main('experiment/V1_40_128_w.json', 'V1', 'V1_40_128.json', weight=w, polynomial_degree=None)
+for w in [6, 10, 16, 20, 28, 32]:
+    main('V3_640_128_w.json', 'V3', 'V3_640_128.json', weight=w, polynomial_degree=None)
