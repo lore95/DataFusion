@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s 			page 1
 
 
    1              		.file	"gd32vf103_eclic.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c **** 
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c **** /*!
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c ****     \brief      enable the global interrupt
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 2
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c ****     \param[in]  none
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 1
   64              	}
   51              		csrrc a5, mstatus, 8
   52              	# 0 "" 2
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 3
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s 			page 3
 
 
   53              	.LVL1:
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 1
   91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c **** {
   83              		.loc 1 91 1
   84              		.cfi_startproc
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 4
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s 			page 4
 
 
   85              	.LVL4:
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 1
  129              		.align	1
  130              		.globl	eclic_irq_disable
  132              	eclic_irq_disable:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s 			page 5
 
 
  133              	.LFB6:
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 1
  166              		.section	.text.eclic_send_event,"ax",@progbits
  167              		.align	1
  168              		.globl	eclic_send_event
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 6
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s 			page 6
 
 
  170              	eclic_send_event:
@@ -340,170 +340,170 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 1
  195              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
  196              		.file 4 "./../../firmware/RISCV/drivers/n200_func.h"
  197              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 7
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_eclic.c
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:13     .text.eclic_global_interrupt_enable:0000000000000000 eclic_global_interrupt_enable
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:17     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:18     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:20     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:21     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:22     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:13     .text.eclic_global_interrupt_enable:0000000000000000 eclic_global_interrupt_enable
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:17     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:18     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:20     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:21     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:22     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c:51     .text.eclic_global_interrupt_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:31     .text.eclic_global_interrupt_enable:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:32     .text.eclic_global_interrupt_enable:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:33     .text.eclic_global_interrupt_enable:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:40     .text.eclic_global_interrupt_disable:0000000000000000 eclic_global_interrupt_disable
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:43     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:44     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:46     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:47     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:48     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:31     .text.eclic_global_interrupt_enable:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:32     .text.eclic_global_interrupt_enable:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:33     .text.eclic_global_interrupt_enable:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:40     .text.eclic_global_interrupt_disable:0000000000000000 eclic_global_interrupt_disable
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:43     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:44     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:46     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:47     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:48     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c:63     .text.eclic_global_interrupt_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:57     .text.eclic_global_interrupt_disable:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:58     .text.eclic_global_interrupt_disable:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:59     .text.eclic_global_interrupt_disable:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:66     .text.eclic_priority_group_set:0000000000000000 eclic_priority_group_set
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:69     .text.eclic_priority_group_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:71     .text.eclic_priority_group_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:72     .text.eclic_priority_group_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:74     .text.eclic_priority_group_set:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:81     .text.eclic_irq_enable:0000000000000000 eclic_irq_enable
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:84     .text.eclic_irq_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:86     .text.eclic_irq_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:87     .text.eclic_irq_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:88     .text.eclic_irq_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:90     .text.eclic_irq_enable:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:93     .text.eclic_irq_enable:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:94     .text.eclic_irq_enable:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:96     .text.eclic_irq_enable:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:100    .text.eclic_irq_enable:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:103    .text.eclic_irq_enable:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:108    .text.eclic_irq_enable:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:111    .text.eclic_irq_enable:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:112    .text.eclic_irq_enable:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:115    .text.eclic_irq_enable:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:117    .text.eclic_irq_enable:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:119    .text.eclic_irq_enable:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:121    .text.eclic_irq_enable:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:123    .text.eclic_irq_enable:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:125    .text.eclic_irq_enable:0000000000000034 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:132    .text.eclic_irq_disable:0000000000000000 eclic_irq_disable
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:135    .text.eclic_irq_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:137    .text.eclic_irq_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:138    .text.eclic_irq_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:140    .text.eclic_irq_disable:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:147    .text.eclic_system_reset:0000000000000000 eclic_system_reset
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:150    .text.eclic_system_reset:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:151    .text.eclic_system_reset:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:152    .text.eclic_system_reset:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:153    .text.eclic_system_reset:0000000000000000 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 8
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:57     .text.eclic_global_interrupt_disable:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:58     .text.eclic_global_interrupt_disable:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:59     .text.eclic_global_interrupt_disable:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:66     .text.eclic_priority_group_set:0000000000000000 eclic_priority_group_set
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:69     .text.eclic_priority_group_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:71     .text.eclic_priority_group_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:72     .text.eclic_priority_group_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:74     .text.eclic_priority_group_set:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:81     .text.eclic_irq_enable:0000000000000000 eclic_irq_enable
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:84     .text.eclic_irq_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:86     .text.eclic_irq_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:87     .text.eclic_irq_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:88     .text.eclic_irq_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:90     .text.eclic_irq_enable:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:93     .text.eclic_irq_enable:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:94     .text.eclic_irq_enable:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:96     .text.eclic_irq_enable:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:100    .text.eclic_irq_enable:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:103    .text.eclic_irq_enable:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:108    .text.eclic_irq_enable:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:111    .text.eclic_irq_enable:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:112    .text.eclic_irq_enable:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:115    .text.eclic_irq_enable:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:117    .text.eclic_irq_enable:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:119    .text.eclic_irq_enable:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:121    .text.eclic_irq_enable:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:123    .text.eclic_irq_enable:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:125    .text.eclic_irq_enable:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:132    .text.eclic_irq_disable:0000000000000000 eclic_irq_disable
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:135    .text.eclic_irq_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:137    .text.eclic_irq_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:138    .text.eclic_irq_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:140    .text.eclic_irq_disable:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:147    .text.eclic_system_reset:0000000000000000 eclic_system_reset
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:150    .text.eclic_system_reset:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:151    .text.eclic_system_reset:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:152    .text.eclic_system_reset:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:153    .text.eclic_system_reset:0000000000000000 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s 			page 8
 
 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:158    .text.eclic_system_reset:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:159    .text.eclic_system_reset:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:162    .text.eclic_system_reset:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:163    .text.eclic_system_reset:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:170    .text.eclic_send_event:0000000000000000 eclic_send_event
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:173    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:174    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:176    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:177    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:178    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:158    .text.eclic_system_reset:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:159    .text.eclic_system_reset:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:162    .text.eclic_system_reset:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:163    .text.eclic_system_reset:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:170    .text.eclic_send_event:0000000000000000 eclic_send_event
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:173    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:174    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:176    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:177    .text.eclic_send_event:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:178    .text.eclic_send_event:0000000000000000 .L0 
 ./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_eclic.c:128    .text.eclic_send_event:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:187    .text.eclic_send_event:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:188    .text.eclic_send_event:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:189    .text.eclic_send_event:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:36     .text.eclic_global_interrupt_enable:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:62     .text.eclic_global_interrupt_disable:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:77     .text.eclic_priority_group_set:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:128    .text.eclic_irq_enable:0000000000000034 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:143    .text.eclic_irq_disable:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:166    .text.eclic_system_reset:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:192    .text.eclic_send_event:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:187    .text.eclic_send_event:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:188    .text.eclic_send_event:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:189    .text.eclic_send_event:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:36     .text.eclic_global_interrupt_enable:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:62     .text.eclic_global_interrupt_disable:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:77     .text.eclic_priority_group_set:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:128    .text.eclic_irq_enable:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:143    .text.eclic_irq_disable:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:166    .text.eclic_system_reset:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:192    .text.eclic_send_event:0000000000000006 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:563    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1020   .debug_str:0000000000000222 .LASF30
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1026   .debug_str:00000000000002bc .LASF31
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:968    .debug_str:000000000000000e .LASF32
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:946    .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:964    .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:998    .debug_str:000000000000016c .LASF0
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1030   .debug_str:0000000000000310 .LASF1
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:972    .debug_str:00000000000000a0 .LASF6
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:984    .debug_str:000000000000010e .LASF2
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1014   .debug_str:00000000000001f0 .LASF3
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:988    .debug_str:000000000000012e .LASF4
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1024   .debug_str:00000000000002b3 .LASF5
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:996    .debug_str:0000000000000161 .LASF7
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:986    .debug_str:000000000000011c .LASF8
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:966    .debug_str:0000000000000000 .LASF9
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1002   .debug_str:0000000000000191 .LASF10
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1004   .debug_str:00000000000001a8 .LASF11
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1022   .debug_str:00000000000002aa .LASF12
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1010   .debug_str:00000000000001c7 .LASF33
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1028   .debug_str:0000000000000304 .LASF13
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1006   .debug_str:00000000000001b0 .LASF14
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:171    .text.eclic_send_event:0000000000000000 .LFB8
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:190    .text.eclic_send_event:0000000000000006 .LFE8
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:175    .text.eclic_send_event:0000000000000000 .LBB4
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:186    .text.eclic_send_event:0000000000000004 .LBE4
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:994    .debug_str:000000000000015b .LASF23
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:974    .debug_str:00000000000000aa .LASF34
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:148    .text.eclic_system_reset:0000000000000000 .LFB7
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:164    .text.eclic_system_reset:0000000000000014 .LFE7
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:980    .debug_str:00000000000000f3 .LASF15
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:133    .text.eclic_irq_disable:0000000000000000 .LFB6
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:141    .text.eclic_irq_disable:0000000000000008 .LFE6
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1032   .debug_str:000000000000031c .LASF17
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:825    .debug_loc:0000000000000000 .LLST5
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s 			page 9
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:563    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1020   .debug_str:0000000000000222 .LASF30
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1026   .debug_str:00000000000002bc .LASF31
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:968    .debug_str:000000000000000e .LASF32
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:946    .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:964    .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:998    .debug_str:000000000000016c .LASF0
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1030   .debug_str:0000000000000310 .LASF1
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:972    .debug_str:00000000000000a0 .LASF6
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:984    .debug_str:000000000000010e .LASF2
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1014   .debug_str:00000000000001f0 .LASF3
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:988    .debug_str:000000000000012e .LASF4
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1024   .debug_str:00000000000002b3 .LASF5
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:996    .debug_str:0000000000000161 .LASF7
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:986    .debug_str:000000000000011c .LASF8
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:966    .debug_str:0000000000000000 .LASF9
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1002   .debug_str:0000000000000191 .LASF10
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1004   .debug_str:00000000000001a8 .LASF11
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1022   .debug_str:00000000000002aa .LASF12
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1010   .debug_str:00000000000001c7 .LASF33
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1028   .debug_str:0000000000000304 .LASF13
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1006   .debug_str:00000000000001b0 .LASF14
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:171    .text.eclic_send_event:0000000000000000 .LFB8
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:190    .text.eclic_send_event:0000000000000006 .LFE8
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:175    .text.eclic_send_event:0000000000000000 .LBB4
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:186    .text.eclic_send_event:0000000000000004 .LBE4
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:994    .debug_str:000000000000015b .LASF23
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:974    .debug_str:00000000000000aa .LASF34
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:148    .text.eclic_system_reset:0000000000000000 .LFB7
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:164    .text.eclic_system_reset:0000000000000014 .LFE7
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:980    .debug_str:00000000000000f3 .LASF15
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:133    .text.eclic_irq_disable:0000000000000000 .LFB6
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:141    .text.eclic_irq_disable:0000000000000008 .LFE6
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1032   .debug_str:000000000000031c .LASF17
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:825    .debug_loc:0000000000000000 .LLST5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s 			page 9
 
 
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:139    .text.eclic_irq_disable:0000000000000008 .LVL10
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:992    .debug_str:000000000000014a .LASF16
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:82     .text.eclic_irq_enable:0000000000000000 .LFB5
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:126    .text.eclic_irq_enable:0000000000000034 .LFE5
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:839    .debug_loc:0000000000000021 .LLST1
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:857    .debug_loc:000000000000004d .LLST2
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1008   .debug_str:00000000000001c1 .LASF18
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:879    .debug_loc:0000000000000084 .LLST3
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:990    .debug_str:0000000000000141 .LASF19
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:893    .debug_loc:00000000000000a5 .LLST4
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:101    .text.eclic_irq_enable:0000000000000014 .LVL5
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:106    .text.eclic_irq_enable:0000000000000020 .LVL6
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:124    .text.eclic_irq_enable:0000000000000034 .LVL8
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1012   .debug_str:00000000000001d7 .LASF20
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:67     .text.eclic_priority_group_set:0000000000000000 .LFB4
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:75     .text.eclic_priority_group_set:0000000000000008 .LFE4
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:982    .debug_str:0000000000000105 .LASF21
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:907    .debug_loc:00000000000000c6 .LLST0
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:73     .text.eclic_priority_group_set:0000000000000008 .LVL3
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:978    .debug_str:00000000000000d4 .LASF22
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:41     .text.eclic_global_interrupt_disable:0000000000000000 .LFB3
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:60     .text.eclic_global_interrupt_disable:0000000000000006 .LFE3
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:45     .text.eclic_global_interrupt_disable:0000000000000000 .LBB3
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:56     .text.eclic_global_interrupt_disable:0000000000000004 .LBE3
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:970    .debug_str:0000000000000082 .LASF24
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:14     .text.eclic_global_interrupt_enable:0000000000000000 .LFB2
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:34     .text.eclic_global_interrupt_enable:0000000000000006 .LFE2
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:19     .text.eclic_global_interrupt_enable:0000000000000000 .LBB2
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:30     .text.eclic_global_interrupt_enable:0000000000000004 .LBE2
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1000   .debug_str:0000000000000179 .LASF25
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:976    .debug_str:00000000000000bd .LASF26
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1034   .debug_str:0000000000000323 .LASF27
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1016   .debug_str:00000000000001fa .LASF28
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:1018   .debug_str:0000000000000211 .LASF29
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:136    .text.eclic_irq_disable:0000000000000000 .LVL9
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:89     .text.eclic_irq_enable:0000000000000002 .LCFI0
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:120    .text.eclic_irq_enable:000000000000002c .LCFI1
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:85     .text.eclic_irq_enable:0000000000000000 .LVL4
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:113    .text.eclic_irq_enable:0000000000000026 .LVL7
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:70     .text.eclic_priority_group_set:0000000000000000 .LVL2
-C:\Users\marwz\AppData\Local\Temp\ccLUc1fn.s:199    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:139    .text.eclic_irq_disable:0000000000000008 .LVL10
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:992    .debug_str:000000000000014a .LASF16
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:82     .text.eclic_irq_enable:0000000000000000 .LFB5
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:126    .text.eclic_irq_enable:0000000000000034 .LFE5
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:839    .debug_loc:0000000000000021 .LLST1
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:857    .debug_loc:000000000000004d .LLST2
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1008   .debug_str:00000000000001c1 .LASF18
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:879    .debug_loc:0000000000000084 .LLST3
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:990    .debug_str:0000000000000141 .LASF19
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:893    .debug_loc:00000000000000a5 .LLST4
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:101    .text.eclic_irq_enable:0000000000000014 .LVL5
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:106    .text.eclic_irq_enable:0000000000000020 .LVL6
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:124    .text.eclic_irq_enable:0000000000000034 .LVL8
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1012   .debug_str:00000000000001d7 .LASF20
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:67     .text.eclic_priority_group_set:0000000000000000 .LFB4
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:75     .text.eclic_priority_group_set:0000000000000008 .LFE4
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:982    .debug_str:0000000000000105 .LASF21
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:907    .debug_loc:00000000000000c6 .LLST0
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:73     .text.eclic_priority_group_set:0000000000000008 .LVL3
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:978    .debug_str:00000000000000d4 .LASF22
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:41     .text.eclic_global_interrupt_disable:0000000000000000 .LFB3
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:60     .text.eclic_global_interrupt_disable:0000000000000006 .LFE3
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:45     .text.eclic_global_interrupt_disable:0000000000000000 .LBB3
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:56     .text.eclic_global_interrupt_disable:0000000000000004 .LBE3
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:970    .debug_str:0000000000000082 .LASF24
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:14     .text.eclic_global_interrupt_enable:0000000000000000 .LFB2
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:34     .text.eclic_global_interrupt_enable:0000000000000006 .LFE2
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:19     .text.eclic_global_interrupt_enable:0000000000000000 .LBB2
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:30     .text.eclic_global_interrupt_enable:0000000000000004 .LBE2
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1000   .debug_str:0000000000000179 .LASF25
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:976    .debug_str:00000000000000bd .LASF26
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1034   .debug_str:0000000000000323 .LASF27
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1016   .debug_str:00000000000001fa .LASF28
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:1018   .debug_str:0000000000000211 .LASF29
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:136    .text.eclic_irq_disable:0000000000000000 .LVL9
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:89     .text.eclic_irq_enable:0000000000000002 .LCFI0
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:120    .text.eclic_irq_enable:000000000000002c .LCFI1
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:85     .text.eclic_irq_enable:0000000000000000 .LVL4
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:113    .text.eclic_irq_enable:0000000000000026 .LVL7
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:70     .text.eclic_priority_group_set:0000000000000000 .LVL2
+C:\Users\marwz\AppData\Local\Temp\ccI0HSwe.s:199    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 eclic_set_nlbits

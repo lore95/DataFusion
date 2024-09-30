@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 1
 
 
    1              		.file	"drv_usb_core.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
   41:lib/usbcdc/src/drv_usb_core.c ****     \param[out] none
   42:lib/usbcdc/src/drv_usb_core.c ****     \retval     none
   43:lib/usbcdc/src/drv_usb_core.c **** */
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 2
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 2
 
 
   44:lib/usbcdc/src/drv_usb_core.c **** static void usb_core_reset (usb_core_regs *usb_regs)
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
   37 000e A300F500 		sb	a5,1(a0)
   75:lib/usbcdc/src/drv_usb_core.c **** 
   76:lib/usbcdc/src/drv_usb_core.c ****     usb_basic->core_enum = usb_core;
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 3
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 3
 
 
   38              		.loc 1 76 5 is_stmt 1
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  120:lib/usbcdc/src/drv_usb_core.c ****     *usb_regs = (usb_core_regs) {
  121:lib/usbcdc/src/drv_usb_core.c ****         .gr          = (usb_gr*) (reg_base + USB_REG_OFFSET_CORE),
  122:lib/usbcdc/src/drv_usb_core.c ****         .hr          = (usb_hr*) (reg_base + USB_REG_OFFSET_HOST),
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 4
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 4
 
 
  123:lib/usbcdc/src/drv_usb_core.c ****         .dr          = (usb_dr*) (reg_base + USB_REG_OFFSET_DEV),
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
   72 0030 1947     		li	a4,6
   73 0032 A301E500 		sb	a4,3(a0)
   91:lib/usbcdc/src/drv_usb_core.c **** #endif /* USB_ULPI_PHY_ENABLED */
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 5
 
 
   74              		.loc 1 91 9 is_stmt 1
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  113 006c 93860444 		addi	a3,s1,1088
  120:lib/usbcdc/src/drv_usb_core.c ****         .gr          = (usb_gr*) (reg_base + USB_REG_OFFSET_CORE),
  114              		.loc 1 120 15
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 6
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 6
 
 
  115 0070 34DD     		sw	a3,120(a0)
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  100:lib/usbcdc/src/drv_usb_core.c **** 
  157              		.loc 1 100 9 is_stmt 1
  103:lib/usbcdc/src/drv_usb_core.c **** 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 7
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 7
 
 
  158              		.loc 1 103 9
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  195              		.loc 1 143 9 is_stmt 1 discriminator 3
  143:lib/usbcdc/src/drv_usb_core.c ****             (reg_base + USB_DATA_FIFO_OFFSET + (i * USB_DATA_FIFO_SIZE));
  196              		.loc 1 143 28 is_stmt 0 discriminator 3
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 8
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 8
 
 
  197 00da A4C3     		sw	s1,64(a5)
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  233 000e 22CC     		sw	s0,24(sp)
  163:lib/usbcdc/src/drv_usb_core.c **** 
  234              		.loc 1 163 26
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 9
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 9
 
 
  235 0010 799B     		andi	a4,a4,-2
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  268              		.loc 1 182 30 is_stmt 0
  269 0036 D847     		lw	a4,12(a5)
  270 0038 B706F0FF 		li	a3,-1048576
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 10
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 10
 
 
  271 003c FD16     		addi	a3,a3,-1
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  200:lib/usbcdc/src/drv_usb_core.c ****         /* enable SOF output */
  201:lib/usbcdc/src/drv_usb_core.c ****         if (usb_basic.sof_enable) {
  202:lib/usbcdc/src/drv_usb_core.c ****             reg_value |= GCCFG_SOFOEN;
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 11
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 11
 
 
  203:lib/usbcdc/src/drv_usb_core.c ****         }
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  325              		.cfi_remember_state
  326              		.cfi_restore 1
  327 007e 6244     		lw	s0,24(sp)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 12
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 12
 
 
  328              		.cfi_restore 8
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  370 00a8 97000000 		call	usb_udelay
  370      E7800000 
  371              	.LVL26:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 13
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 13
 
 
  372              	.LBE9:
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  242:lib/usbcdc/src/drv_usb_core.c ****                              uint8_t *src_buf, 
  243:lib/usbcdc/src/drv_usb_core.c ****                              uint8_t  fifo_num, 
  244:lib/usbcdc/src/drv_usb_core.c ****                              uint16_t byte_count)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 14
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 14
 
 
  245:lib/usbcdc/src/drv_usb_core.c **** {
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  255:lib/usbcdc/src/drv_usb_core.c ****     }
  441              		.loc 1 255 17 is_stmt 0
  442 0020 9105     		addi	a1,a1,4
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 15
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 15
 
 
  443              	.LVL36:
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  479              		.loc 1 274 20
  480 0004 785D     		lw	a4,124(a0)
  481              	.LVL41:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 16
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 16
 
 
  275:lib/usbcdc/src/drv_usb_core.c **** 
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  513 0022 93D60701 		srli	a3,a5,16
  281:lib/usbcdc/src/drv_usb_core.c **** 
  514              		.loc 1 281 29
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 17
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 17
 
 
  515 0026 E183     		srli	a5,a5,24
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  299:lib/usbcdc/src/drv_usb_core.c **** 
  300:lib/usbcdc/src/drv_usb_core.c ****     /* wait for Tx FIFO flush bit is set */
  301:lib/usbcdc/src/drv_usb_core.c ****     while (usb_regs->gr->GRSTCTL & GRSTCTL_TXFF);
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 18
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 18
 
 
  554              		.loc 1 301 5 is_stmt 1
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  592              		.loc 1 316 1
  593 0002 4111     		addi	sp,sp,-16
  594              	.LCFI8:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 19
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 19
 
 
  595              		.cfi_def_cfa_offset 16
@@ -1131,572 +1131,572 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 1
  633              		.file 6 "lib/usbcdc/include/drv_usb_core.h"
  634              		.file 7 "lib/usbcdc/include/drv_usb_hw.h"
  635              		.file 8 "<built-in>"
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 20
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 drv_usb_core.c
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:13     .text.usb_basic_init:0000000000000000 usb_basic_init
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:17     .text.usb_basic_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:19     .text.usb_basic_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:20     .text.usb_basic_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:21     .text.usb_basic_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:22     .text.usb_basic_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:24     .text.usb_basic_init:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:28     .text.usb_basic_init:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:29     .text.usb_basic_init:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:30     .text.usb_basic_init:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:32     .text.usb_basic_init:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:34     .text.usb_basic_init:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:36     .text.usb_basic_init:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:37     .text.usb_basic_init:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:39     .text.usb_basic_init:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:40     .text.usb_basic_init:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:42     .text.usb_basic_init:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:46     .text.usb_basic_init:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:50     .text.usb_basic_init:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:51     .text.usb_basic_init:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:52     .text.usb_basic_init:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:54     .text.usb_basic_init:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:56     .text.usb_basic_init:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:59     .text.usb_basic_init:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:64     .text.usb_basic_init:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:66     .text.usb_basic_init:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:67     .text.usb_basic_init:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:68     .text.usb_basic_init:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:71     .text.usb_basic_init:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:72     .text.usb_basic_init:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:75     .text.usb_basic_init:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:76     .text.usb_basic_init:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:78     .text.usb_basic_init:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:79     .text.usb_basic_init:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:84     .text.usb_basic_init:0000000000000040 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:87     .text.usb_basic_init:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:91     .text.usb_basic_init:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:92     .text.usb_basic_init:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:93     .text.usb_basic_init:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:94     .text.usb_basic_init:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:103    .text.usb_basic_init:000000000000005c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:107    .text.usb_basic_init:0000000000000064 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:109    .text.usb_basic_init:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:111    .text.usb_basic_init:000000000000006a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:113    .text.usb_basic_init:000000000000006c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:115    .text.usb_basic_init:0000000000000070 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:117    .text.usb_basic_init:0000000000000072 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:120    .text.usb_basic_init:0000000000000078 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:122    .text.usb_basic_init:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:123    .text.usb_basic_init:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:125    .text.usb_basic_init:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:128    .text.usb_basic_init:0000000000000086 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:132    .text.usb_basic_init:000000000000008e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:136    .text.usb_basic_init:0000000000000090 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:138    .text.usb_basic_init:0000000000000094 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 21
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:13     .text.usb_basic_init:0000000000000000 usb_basic_init
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:17     .text.usb_basic_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:19     .text.usb_basic_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:20     .text.usb_basic_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:21     .text.usb_basic_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:22     .text.usb_basic_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:24     .text.usb_basic_init:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:28     .text.usb_basic_init:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:29     .text.usb_basic_init:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:30     .text.usb_basic_init:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:32     .text.usb_basic_init:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:34     .text.usb_basic_init:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:36     .text.usb_basic_init:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:37     .text.usb_basic_init:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:39     .text.usb_basic_init:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:40     .text.usb_basic_init:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:42     .text.usb_basic_init:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:46     .text.usb_basic_init:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:50     .text.usb_basic_init:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:51     .text.usb_basic_init:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:52     .text.usb_basic_init:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:54     .text.usb_basic_init:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:56     .text.usb_basic_init:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:59     .text.usb_basic_init:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:64     .text.usb_basic_init:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:66     .text.usb_basic_init:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:67     .text.usb_basic_init:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:68     .text.usb_basic_init:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:71     .text.usb_basic_init:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:72     .text.usb_basic_init:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:75     .text.usb_basic_init:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:76     .text.usb_basic_init:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:78     .text.usb_basic_init:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:79     .text.usb_basic_init:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:84     .text.usb_basic_init:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:87     .text.usb_basic_init:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:91     .text.usb_basic_init:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:92     .text.usb_basic_init:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:93     .text.usb_basic_init:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:94     .text.usb_basic_init:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:103    .text.usb_basic_init:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:107    .text.usb_basic_init:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:109    .text.usb_basic_init:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:111    .text.usb_basic_init:000000000000006a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:113    .text.usb_basic_init:000000000000006c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:115    .text.usb_basic_init:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:117    .text.usb_basic_init:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:120    .text.usb_basic_init:0000000000000078 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:122    .text.usb_basic_init:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:123    .text.usb_basic_init:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:125    .text.usb_basic_init:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:128    .text.usb_basic_init:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:132    .text.usb_basic_init:000000000000008e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:136    .text.usb_basic_init:0000000000000090 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:138    .text.usb_basic_init:0000000000000094 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 21
 
 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:147    .text.usb_basic_init:00000000000000a6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:151    .text.usb_basic_init:00000000000000a8 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:153    .text.usb_basic_init:00000000000000ac .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:158    .text.usb_basic_init:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:159    .text.usb_basic_init:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:160    .text.usb_basic_init:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:163    .text.usb_basic_init:00000000000000b6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:164    .text.usb_basic_init:00000000000000b6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:167    .text.usb_basic_init:00000000000000bc .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:168    .text.usb_basic_init:00000000000000bc .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:170    .text.usb_basic_init:00000000000000c0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:171    .text.usb_basic_init:00000000000000c0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:173    .text.usb_basic_init:00000000000000c4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:177    .text.usb_basic_init:00000000000000c6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:178    .text.usb_basic_init:00000000000000c6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:180    .text.usb_basic_init:00000000000000ca .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:182    .text.usb_basic_init:00000000000000cc .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:183    .text.usb_basic_init:00000000000000cc .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:185    .text.usb_basic_init:00000000000000ce .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:193    .text.usb_basic_init:00000000000000d8 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:194    .text.usb_basic_init:00000000000000d8 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:196    .text.usb_basic_init:00000000000000da .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:197    .text.usb_basic_init:00000000000000da .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:199    .text.usb_basic_init:00000000000000dc .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:205    .text.usb_basic_init:00000000000000e8 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:212    .text.usb_core_init:0000000000000000 usb_core_init
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:215    .text.usb_core_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:217    .text.usb_core_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:218    .text.usb_core_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:219    .text.usb_core_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:221    .text.usb_core_init:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:223    .text.usb_core_init:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:226    .text.usb_core_init:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:228    .text.usb_core_init:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:229    .text.usb_core_init:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:231    .text.usb_core_init:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:233    .text.usb_core_init:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:235    .text.usb_core_init:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:237    .text.usb_core_init:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:239    .text.usb_core_init:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:240    .text.usb_core_init:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:241    .text.usb_core_init:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:243    .text.usb_core_init:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:245    .text.usb_core_init:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:246    .text.usb_core_init:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:248    .text.usb_core_init:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:250    .text.usb_core_init:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:252    .text.usb_core_init:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:255    .text.usb_core_init:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:256    .text.usb_core_init:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:257    .text.usb_core_init:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:258    .text.usb_core_init:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:261    .text.usb_core_init:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:262    .text.usb_core_init:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:268    .text.usb_core_init:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:269    .text.usb_core_init:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:278    .text.usb_core_init:0000000000000042 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 22
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:147    .text.usb_basic_init:00000000000000a6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:151    .text.usb_basic_init:00000000000000a8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:153    .text.usb_basic_init:00000000000000ac .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:158    .text.usb_basic_init:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:159    .text.usb_basic_init:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:160    .text.usb_basic_init:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:163    .text.usb_basic_init:00000000000000b6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:164    .text.usb_basic_init:00000000000000b6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:167    .text.usb_basic_init:00000000000000bc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:168    .text.usb_basic_init:00000000000000bc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:170    .text.usb_basic_init:00000000000000c0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:171    .text.usb_basic_init:00000000000000c0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:173    .text.usb_basic_init:00000000000000c4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:177    .text.usb_basic_init:00000000000000c6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:178    .text.usb_basic_init:00000000000000c6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:180    .text.usb_basic_init:00000000000000ca .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:182    .text.usb_basic_init:00000000000000cc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:183    .text.usb_basic_init:00000000000000cc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:185    .text.usb_basic_init:00000000000000ce .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:193    .text.usb_basic_init:00000000000000d8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:194    .text.usb_basic_init:00000000000000d8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:196    .text.usb_basic_init:00000000000000da .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:197    .text.usb_basic_init:00000000000000da .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:199    .text.usb_basic_init:00000000000000dc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:205    .text.usb_basic_init:00000000000000e8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:212    .text.usb_core_init:0000000000000000 usb_core_init
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:215    .text.usb_core_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:217    .text.usb_core_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:218    .text.usb_core_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:219    .text.usb_core_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:221    .text.usb_core_init:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:223    .text.usb_core_init:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:226    .text.usb_core_init:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:228    .text.usb_core_init:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:229    .text.usb_core_init:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:231    .text.usb_core_init:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:233    .text.usb_core_init:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:235    .text.usb_core_init:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:237    .text.usb_core_init:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:239    .text.usb_core_init:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:240    .text.usb_core_init:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:241    .text.usb_core_init:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:243    .text.usb_core_init:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:245    .text.usb_core_init:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:246    .text.usb_core_init:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:248    .text.usb_core_init:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:250    .text.usb_core_init:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:252    .text.usb_core_init:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:255    .text.usb_core_init:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:256    .text.usb_core_init:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:257    .text.usb_core_init:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:258    .text.usb_core_init:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:261    .text.usb_core_init:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:262    .text.usb_core_init:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:268    .text.usb_core_init:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:269    .text.usb_core_init:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:278    .text.usb_core_init:0000000000000042 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 22
 
 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:279    .text.usb_core_init:0000000000000042 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:280    .text.usb_core_init:0000000000000042 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:285    .text.usb_core_init:000000000000004a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:286    .text.usb_core_init:000000000000004a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:287    .text.usb_core_init:000000000000004a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:289    .text.usb_core_init:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:291    .text.usb_core_init:000000000000004e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:293    .text.usb_core_init:0000000000000050 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:300    .text.usb_core_init:000000000000005a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:301    .text.usb_core_init:000000000000005a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:305    .text.usb_core_init:0000000000000064 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:306    .text.usb_core_init:0000000000000064 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:308    .text.usb_core_init:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:312    .text.usb_core_init:000000000000006e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:313    .text.usb_core_init:000000000000006e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:317    .text.usb_core_init:0000000000000074 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:318    .text.usb_core_init:0000000000000074 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:323    .text.usb_core_init:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:324    .text.usb_core_init:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:325    .text.usb_core_init:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:326    .text.usb_core_init:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:328    .text.usb_core_init:0000000000000080 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:331    .text.usb_core_init:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:335    .text.usb_core_init:0000000000000086 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:341    .text.usb_core_init:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:343    .text.usb_core_init:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:347    .text.usb_core_init:0000000000000092 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:348    .text.usb_core_init:0000000000000092 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:354    .text.usb_core_init:0000000000000098 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:355    .text.usb_core_init:0000000000000098 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:356    .text.usb_core_init:0000000000000098 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:361    .text.usb_core_init:00000000000000a0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:362    .text.usb_core_init:00000000000000a0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:363    .text.usb_core_init:00000000000000a0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:365    .text.usb_core_init:00000000000000a2 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:367    .text.usb_core_init:00000000000000a4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:369    .text.usb_core_init:00000000000000a6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:375    .text.usb_core_init:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:376    .text.usb_core_init:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:377    .text.usb_core_init:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:378    .text.usb_core_init:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:380    .text.usb_core_init:00000000000000b4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:382    .text.usb_core_init:00000000000000b6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:386    .text.usb_core_init:00000000000000ba .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:387    .text.usb_core_init:00000000000000ba .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:389    .text.usb_core_init:00000000000000bc .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:391    .text.usb_core_init:00000000000000be .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:393    .text.usb_core_init:00000000000000c0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:396    .text.usb_core_init:00000000000000ca .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:403    .text.usb_txfifo_write:0000000000000000 usb_txfifo_write
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:406    .text.usb_txfifo_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:408    .text.usb_txfifo_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:409    .text.usb_txfifo_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:410    .text.usb_txfifo_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:411    .text.usb_txfifo_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:412    .text.usb_txfifo_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:417    .text.usb_txfifo_write:0000000000000006 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 23
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:279    .text.usb_core_init:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:280    .text.usb_core_init:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:285    .text.usb_core_init:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:286    .text.usb_core_init:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:287    .text.usb_core_init:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:289    .text.usb_core_init:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:291    .text.usb_core_init:000000000000004e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:293    .text.usb_core_init:0000000000000050 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:300    .text.usb_core_init:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:301    .text.usb_core_init:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:305    .text.usb_core_init:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:306    .text.usb_core_init:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:308    .text.usb_core_init:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:312    .text.usb_core_init:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:313    .text.usb_core_init:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:317    .text.usb_core_init:0000000000000074 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:318    .text.usb_core_init:0000000000000074 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:323    .text.usb_core_init:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:324    .text.usb_core_init:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:325    .text.usb_core_init:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:326    .text.usb_core_init:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:328    .text.usb_core_init:0000000000000080 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:331    .text.usb_core_init:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:335    .text.usb_core_init:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:341    .text.usb_core_init:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:343    .text.usb_core_init:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:347    .text.usb_core_init:0000000000000092 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:348    .text.usb_core_init:0000000000000092 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:354    .text.usb_core_init:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:355    .text.usb_core_init:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:356    .text.usb_core_init:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:361    .text.usb_core_init:00000000000000a0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:362    .text.usb_core_init:00000000000000a0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:363    .text.usb_core_init:00000000000000a0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:365    .text.usb_core_init:00000000000000a2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:367    .text.usb_core_init:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:369    .text.usb_core_init:00000000000000a6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:375    .text.usb_core_init:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:376    .text.usb_core_init:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:377    .text.usb_core_init:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:378    .text.usb_core_init:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:380    .text.usb_core_init:00000000000000b4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:382    .text.usb_core_init:00000000000000b6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:386    .text.usb_core_init:00000000000000ba .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:387    .text.usb_core_init:00000000000000ba .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:389    .text.usb_core_init:00000000000000bc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:391    .text.usb_core_init:00000000000000be .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:393    .text.usb_core_init:00000000000000c0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:396    .text.usb_core_init:00000000000000ca .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:403    .text.usb_txfifo_write:0000000000000000 usb_txfifo_write
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:406    .text.usb_txfifo_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:408    .text.usb_txfifo_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:409    .text.usb_txfifo_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:410    .text.usb_txfifo_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:411    .text.usb_txfifo_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:412    .text.usb_txfifo_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:417    .text.usb_txfifo_write:0000000000000006 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 23
 
 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:420    .text.usb_txfifo_write:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:422    .text.usb_txfifo_write:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:425    .text.usb_txfifo_write:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:430    .text.usb_txfifo_write:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:432    .text.usb_txfifo_write:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:433    .text.usb_txfifo_write:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:439    .text.usb_txfifo_write:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:442    .text.usb_txfifo_write:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:454    .text.usb_txfifo_write:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:455    .text.usb_txfifo_write:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:458    .text.usb_txfifo_write:0000000000000038 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:459    .text.usb_txfifo_write:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:466    .text.usb_rxfifo_read:0000000000000000 usb_rxfifo_read
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:469    .text.usb_rxfifo_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:471    .text.usb_rxfifo_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:472    .text.usb_rxfifo_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:473    .text.usb_rxfifo_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:474    .text.usb_rxfifo_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:475    .text.usb_rxfifo_read:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:478    .text.usb_rxfifo_read:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:480    .text.usb_rxfifo_read:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:483    .text.usb_rxfifo_read:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:488    .text.usb_rxfifo_read:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:490    .text.usb_rxfifo_read:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:491    .text.usb_rxfifo_read:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:497    .text.usb_rxfifo_read:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:498    .text.usb_rxfifo_read:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:501    .text.usb_rxfifo_read:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:502    .text.usb_rxfifo_read:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:505    .text.usb_rxfifo_read:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:507    .text.usb_rxfifo_read:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:509    .text.usb_rxfifo_read:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:510    .text.usb_rxfifo_read:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:512    .text.usb_rxfifo_read:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:513    .text.usb_rxfifo_read:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:515    .text.usb_rxfifo_read:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:518    .text.usb_rxfifo_read:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:520    .text.usb_rxfifo_read:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:521    .text.usb_rxfifo_read:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:524    .text.usb_rxfifo_read:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:525    .text.usb_rxfifo_read:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:532    .text.usb_txfifo_flush:0000000000000000 usb_txfifo_flush
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:535    .text.usb_txfifo_flush:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:537    .text.usb_txfifo_flush:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:538    .text.usb_txfifo_flush:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:539    .text.usb_txfifo_flush:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:541    .text.usb_txfifo_flush:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:543    .text.usb_txfifo_flush:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:545    .text.usb_txfifo_flush:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:548    .text.usb_txfifo_flush:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:549    .text.usb_txfifo_flush:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:551    .text.usb_txfifo_flush:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:553    .text.usb_txfifo_flush:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:556    .text.usb_txfifo_flush:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:557    .text.usb_txfifo_flush:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:558    .text.usb_txfifo_flush:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:560    .text.usb_txfifo_flush:0000000000000010 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 24
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:420    .text.usb_txfifo_write:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:422    .text.usb_txfifo_write:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:425    .text.usb_txfifo_write:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:430    .text.usb_txfifo_write:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:432    .text.usb_txfifo_write:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:433    .text.usb_txfifo_write:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:439    .text.usb_txfifo_write:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:442    .text.usb_txfifo_write:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:454    .text.usb_txfifo_write:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:455    .text.usb_txfifo_write:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:458    .text.usb_txfifo_write:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:459    .text.usb_txfifo_write:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:466    .text.usb_rxfifo_read:0000000000000000 usb_rxfifo_read
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:469    .text.usb_rxfifo_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:471    .text.usb_rxfifo_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:472    .text.usb_rxfifo_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:473    .text.usb_rxfifo_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:474    .text.usb_rxfifo_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:475    .text.usb_rxfifo_read:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:478    .text.usb_rxfifo_read:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:480    .text.usb_rxfifo_read:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:483    .text.usb_rxfifo_read:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:488    .text.usb_rxfifo_read:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:490    .text.usb_rxfifo_read:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:491    .text.usb_rxfifo_read:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:497    .text.usb_rxfifo_read:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:498    .text.usb_rxfifo_read:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:501    .text.usb_rxfifo_read:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:502    .text.usb_rxfifo_read:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:505    .text.usb_rxfifo_read:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:507    .text.usb_rxfifo_read:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:509    .text.usb_rxfifo_read:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:510    .text.usb_rxfifo_read:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:512    .text.usb_rxfifo_read:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:513    .text.usb_rxfifo_read:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:515    .text.usb_rxfifo_read:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:518    .text.usb_rxfifo_read:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:520    .text.usb_rxfifo_read:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:521    .text.usb_rxfifo_read:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:524    .text.usb_rxfifo_read:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:525    .text.usb_rxfifo_read:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:532    .text.usb_txfifo_flush:0000000000000000 usb_txfifo_flush
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:535    .text.usb_txfifo_flush:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:537    .text.usb_txfifo_flush:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:538    .text.usb_txfifo_flush:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:539    .text.usb_txfifo_flush:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:541    .text.usb_txfifo_flush:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:543    .text.usb_txfifo_flush:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:545    .text.usb_txfifo_flush:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:548    .text.usb_txfifo_flush:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:549    .text.usb_txfifo_flush:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:551    .text.usb_txfifo_flush:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:553    .text.usb_txfifo_flush:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:556    .text.usb_txfifo_flush:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:557    .text.usb_txfifo_flush:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:558    .text.usb_txfifo_flush:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:560    .text.usb_txfifo_flush:0000000000000010 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 24
 
 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:562    .text.usb_txfifo_flush:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:564    .text.usb_txfifo_flush:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:569    .text.usb_txfifo_flush:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:570    .text.usb_txfifo_flush:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:571    .text.usb_txfifo_flush:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:575    .text.usb_txfifo_flush:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:577    .text.usb_txfifo_flush:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:584    .text.usb_rxfifo_flush:0000000000000000 usb_rxfifo_flush
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:587    .text.usb_rxfifo_flush:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:589    .text.usb_rxfifo_flush:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:590    .text.usb_rxfifo_flush:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:591    .text.usb_rxfifo_flush:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:593    .text.usb_rxfifo_flush:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:595    .text.usb_rxfifo_flush:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:597    .text.usb_rxfifo_flush:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:599    .text.usb_rxfifo_flush:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:603    .text.usb_rxfifo_flush:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:604    .text.usb_rxfifo_flush:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:605    .text.usb_rxfifo_flush:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:607    .text.usb_rxfifo_flush:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:609    .text.usb_rxfifo_flush:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:611    .text.usb_rxfifo_flush:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:616    .text.usb_rxfifo_flush:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:617    .text.usb_rxfifo_flush:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:618    .text.usb_rxfifo_flush:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:622    .text.usb_rxfifo_flush:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:624    .text.usb_rxfifo_flush:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:208    .text.usb_basic_init:00000000000000e8 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:399    .text.usb_core_init:00000000000000ca .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:462    .text.usb_txfifo_write:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:528    .text.usb_rxfifo_read:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:580    .text.usb_txfifo_flush:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:627    .text.usb_rxfifo_flush:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:562    .text.usb_txfifo_flush:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:564    .text.usb_txfifo_flush:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:569    .text.usb_txfifo_flush:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:570    .text.usb_txfifo_flush:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:571    .text.usb_txfifo_flush:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:575    .text.usb_txfifo_flush:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:577    .text.usb_txfifo_flush:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:584    .text.usb_rxfifo_flush:0000000000000000 usb_rxfifo_flush
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:587    .text.usb_rxfifo_flush:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:589    .text.usb_rxfifo_flush:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:590    .text.usb_rxfifo_flush:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:591    .text.usb_rxfifo_flush:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:593    .text.usb_rxfifo_flush:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:595    .text.usb_rxfifo_flush:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:597    .text.usb_rxfifo_flush:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:599    .text.usb_rxfifo_flush:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:603    .text.usb_rxfifo_flush:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:604    .text.usb_rxfifo_flush:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:605    .text.usb_rxfifo_flush:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:607    .text.usb_rxfifo_flush:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:609    .text.usb_rxfifo_flush:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:611    .text.usb_rxfifo_flush:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:616    .text.usb_rxfifo_flush:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:617    .text.usb_rxfifo_flush:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:618    .text.usb_rxfifo_flush:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:622    .text.usb_rxfifo_flush:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:624    .text.usb_rxfifo_flush:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:208    .text.usb_basic_init:00000000000000e8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:399    .text.usb_core_init:00000000000000ca .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:462    .text.usb_txfifo_write:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:528    .text.usb_rxfifo_read:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:580    .text.usb_txfifo_flush:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:627    .text.usb_rxfifo_flush:0000000000000022 .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:62     .text.usb_basic_init:000000000000002a .L2
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:156    .text.usb_basic_init:00000000000000b0 .L3
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:175    .text.usb_basic_init:00000000000000c6 .L7
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:191    .text.usb_basic_init:00000000000000d8 .L9
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:48     .text.usb_basic_init:0000000000000020 .L1
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:81     .text.usb_basic_init:000000000000003e .L5
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:134    .text.usb_basic_init:0000000000000090 .L6
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:149    .text.usb_basic_init:00000000000000a8 .L8
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:339    .text.usb_core_init:0000000000000088 .L12
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:284    .text.usb_core_init:000000000000004a .L13
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:321    .text.usb_core_init:000000000000007c .L17
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:360    .text.usb_core_init:00000000000000a0 .L15
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:383    .text.usb_core_init:00000000000000ba .L16
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:296    .text.usb_core_init:000000000000005a .L14
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:437    .text.usb_txfifo_write:0000000000000018 .L25
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:428    .text.usb_txfifo_write:0000000000000010 .L24
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:495    .text.usb_rxfifo_read:0000000000000012 .L28
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:486    .text.usb_rxfifo_read:000000000000000a .L27
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:555    .text.usb_txfifo_flush:000000000000000e .L30
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:602    .text.usb_rxfifo_flush:000000000000000a .L34
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:2201   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3746   .debug_str:00000000000005d9 .LASF142
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3590   .debug_str:000000000000026b .LASF143
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 25
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:62     .text.usb_basic_init:000000000000002a .L2
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:156    .text.usb_basic_init:00000000000000b0 .L3
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:175    .text.usb_basic_init:00000000000000c6 .L7
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:191    .text.usb_basic_init:00000000000000d8 .L9
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:48     .text.usb_basic_init:0000000000000020 .L1
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:81     .text.usb_basic_init:000000000000003e .L5
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:134    .text.usb_basic_init:0000000000000090 .L6
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:149    .text.usb_basic_init:00000000000000a8 .L8
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:339    .text.usb_core_init:0000000000000088 .L12
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:284    .text.usb_core_init:000000000000004a .L13
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:321    .text.usb_core_init:000000000000007c .L17
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:360    .text.usb_core_init:00000000000000a0 .L15
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:383    .text.usb_core_init:00000000000000ba .L16
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:296    .text.usb_core_init:000000000000005a .L14
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:437    .text.usb_txfifo_write:0000000000000018 .L25
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:428    .text.usb_txfifo_write:0000000000000010 .L24
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:495    .text.usb_rxfifo_read:0000000000000012 .L28
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:486    .text.usb_rxfifo_read:000000000000000a .L27
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:555    .text.usb_txfifo_flush:000000000000000e .L30
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:602    .text.usb_rxfifo_flush:000000000000000a .L34
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:2201   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3746   .debug_str:00000000000005d9 .LASF142
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3590   .debug_str:000000000000026b .LASF143
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 25
 
 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3504   .debug_str:0000000000000000 .LASF144
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3486   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3502   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3602   .debug_str:00000000000002be .LASF0
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3542   .debug_str:000000000000014f .LASF1
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3512   .debug_str:0000000000000097 .LASF4
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3684   .debug_str:0000000000000497 .LASF2
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3692   .debug_str:00000000000004c4 .LASF3
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3730   .debug_str:000000000000057f .LASF5
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3750   .debug_str:0000000000000668 .LASF6
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3558   .debug_str:00000000000001bb .LASF7
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3594   .debug_str:0000000000000295 .LASF8
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3612   .debug_str:00000000000002f8 .LASF9
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3540   .debug_str:0000000000000141 .LASF10
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3546   .debug_str:000000000000016f .LASF11
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3776   .debug_str:00000000000006eb .LASF12
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3576   .debug_str:000000000000022e .LASF13
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3716   .debug_str:0000000000000537 .LASF14
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3606   .debug_str:00000000000002d5 .LASF100
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3724   .debug_str:0000000000000564 .LASF15
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3622   .debug_str:0000000000000345 .LASF16
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3536   .debug_str:0000000000000120 .LASF17
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3640   .debug_str:00000000000003ac .LASF18
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3676   .debug_str:0000000000000476 .LASF102
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3656   .debug_str:000000000000040d .LASF19
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3568   .debug_str:00000000000001fd .LASF20
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3618   .debug_str:000000000000031b .LASF21
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3784   .debug_str:0000000000000710 .LASF22
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3734   .debug_str:0000000000000599 .LASF23
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3654   .debug_str:00000000000003f9 .LASF24
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3528   .debug_str:00000000000000f3 .LASF25
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3544   .debug_str:000000000000015b .LASF26
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3620   .debug_str:000000000000032d .LASF27
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3566   .debug_str:00000000000001e4 .LASF28
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3790   .debug_str:0000000000000733 .LASF29
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3794   .debug_str:0000000000000749 .LASF30
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3616   .debug_str:0000000000000314 .LASF31
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3712   .debug_str:0000000000000529 .LASF32
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3630   .debug_str:0000000000000375 .LASF33
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3530   .debug_str:0000000000000105 .LASF34
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3714   .debug_str:0000000000000530 .LASF35
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3740   .debug_str:00000000000005be .LASF36
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3738   .debug_str:00000000000005b6 .LASF37
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3708   .debug_str:0000000000000518 .LASF38
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3526   .debug_str:00000000000000df .LASF39
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3672   .debug_str:0000000000000461 .LASF40
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3666   .debug_str:0000000000000447 .LASF41
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3788   .debug_str:000000000000072d .LASF42
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3700   .debug_str:00000000000004eb .LASF43
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3798   .debug_str:0000000000000759 .LASF44
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3674   .debug_str:000000000000046c .LASF45
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3680   .debug_str:000000000000048a .LASF46
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3678   .debug_str:0000000000000485 .LASF47
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3720   .debug_str:0000000000000551 .LASF48
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3688   .debug_str:00000000000004b0 .LASF49
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3702   .debug_str:00000000000004f6 .LASF50
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3726   .debug_str:0000000000000570 .LASF51
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 26
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3504   .debug_str:0000000000000000 .LASF144
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3486   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3502   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3602   .debug_str:00000000000002be .LASF0
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3542   .debug_str:000000000000014f .LASF1
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3512   .debug_str:0000000000000097 .LASF4
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3684   .debug_str:0000000000000497 .LASF2
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3692   .debug_str:00000000000004c4 .LASF3
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3730   .debug_str:000000000000057f .LASF5
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3750   .debug_str:0000000000000668 .LASF6
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3558   .debug_str:00000000000001bb .LASF7
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3594   .debug_str:0000000000000295 .LASF8
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3612   .debug_str:00000000000002f8 .LASF9
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3540   .debug_str:0000000000000141 .LASF10
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3546   .debug_str:000000000000016f .LASF11
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3776   .debug_str:00000000000006eb .LASF12
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3576   .debug_str:000000000000022e .LASF13
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3716   .debug_str:0000000000000537 .LASF14
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3606   .debug_str:00000000000002d5 .LASF100
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3724   .debug_str:0000000000000564 .LASF15
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3622   .debug_str:0000000000000345 .LASF16
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3536   .debug_str:0000000000000120 .LASF17
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3640   .debug_str:00000000000003ac .LASF18
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3676   .debug_str:0000000000000476 .LASF102
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3656   .debug_str:000000000000040d .LASF19
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3568   .debug_str:00000000000001fd .LASF20
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3618   .debug_str:000000000000031b .LASF21
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3784   .debug_str:0000000000000710 .LASF22
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3734   .debug_str:0000000000000599 .LASF23
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3654   .debug_str:00000000000003f9 .LASF24
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3528   .debug_str:00000000000000f3 .LASF25
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3544   .debug_str:000000000000015b .LASF26
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3620   .debug_str:000000000000032d .LASF27
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3566   .debug_str:00000000000001e4 .LASF28
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3790   .debug_str:0000000000000733 .LASF29
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3794   .debug_str:0000000000000749 .LASF30
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3616   .debug_str:0000000000000314 .LASF31
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3712   .debug_str:0000000000000529 .LASF32
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3630   .debug_str:0000000000000375 .LASF33
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3530   .debug_str:0000000000000105 .LASF34
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3714   .debug_str:0000000000000530 .LASF35
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3740   .debug_str:00000000000005be .LASF36
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3738   .debug_str:00000000000005b6 .LASF37
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3708   .debug_str:0000000000000518 .LASF38
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3526   .debug_str:00000000000000df .LASF39
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3672   .debug_str:0000000000000461 .LASF40
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3666   .debug_str:0000000000000447 .LASF41
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3788   .debug_str:000000000000072d .LASF42
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3700   .debug_str:00000000000004eb .LASF43
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3798   .debug_str:0000000000000759 .LASF44
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3674   .debug_str:000000000000046c .LASF45
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3680   .debug_str:000000000000048a .LASF46
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3678   .debug_str:0000000000000485 .LASF47
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3720   .debug_str:0000000000000551 .LASF48
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3688   .debug_str:00000000000004b0 .LASF49
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3702   .debug_str:00000000000004f6 .LASF50
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3726   .debug_str:0000000000000570 .LASF51
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 26
 
 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3650   .debug_str:00000000000003e7 .LASF52
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3728   .debug_str:0000000000000578 .LASF53
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3736   .debug_str:00000000000005af .LASF54
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3658   .debug_str:0000000000000421 .LASF55
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3774   .debug_str:00000000000006e3 .LASF56
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3642   .debug_str:00000000000003ba .LASF57
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3556   .debug_str:00000000000001b4 .LASF58
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3580   .debug_str:000000000000023d .LASF59
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3516   .debug_str:00000000000000a6 .LASF60
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3748   .debug_str:0000000000000661 .LASF61
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3570   .debug_str:0000000000000210 .LASF62
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3752   .debug_str:000000000000067b .LASF63
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3670   .debug_str:000000000000045b .LASF64
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3560   .debug_str:00000000000001c4 .LASF65
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3614   .debug_str:000000000000030a .LASF66
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3660   .debug_str:000000000000042a .LASF67
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3690   .debug_str:00000000000004bc .LASF68
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3644   .debug_str:00000000000003c3 .LASF69
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3760   .debug_str:000000000000069e .LASF70
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3634   .debug_str:0000000000000385 .LASF71
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3772   .debug_str:00000000000006db .LASF72
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3608   .debug_str:00000000000002e5 .LASF73
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3632   .debug_str:000000000000037d .LASF74
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3506   .debug_str:0000000000000074 .LASF75
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3696   .debug_str:00000000000004d9 .LASF76
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3628   .debug_str:000000000000036b .LASF77
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3564   .debug_str:00000000000001d9 .LASF78
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3624   .debug_str:0000000000000356 .LASF79
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3586   .debug_str:0000000000000258 .LASF80
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3582   .debug_str:0000000000000248 .LASF81
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3652   .debug_str:00000000000003f1 .LASF82
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3550   .debug_str:0000000000000197 .LASF83
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3520   .debug_str:00000000000000c0 .LASF84
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3786   .debug_str:0000000000000725 .LASF85
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3508   .debug_str:0000000000000080 .LASF86
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3510   .debug_str:000000000000008c .LASF87
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3584   .debug_str:000000000000024f .LASF88
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3764   .debug_str:00000000000006b3 .LASF89
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3554   .debug_str:00000000000001ab .LASF90
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3588   .debug_str:0000000000000263 .LASF91
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3722   .debug_str:0000000000000558 .LASF92
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3562   .debug_str:00000000000001cf .LASF93
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3572   .debug_str:0000000000000215 .LASF145
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3578   .debug_str:0000000000000237 .LASF94
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3754   .debug_str:0000000000000680 .LASF95
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3514   .debug_str:00000000000000a1 .LASF96
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3682   .debug_str:0000000000000491 .LASF97
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3698   .debug_str:00000000000004e1 .LASF98
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3744   .debug_str:00000000000005cb .LASF99
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3710   .debug_str:000000000000051f .LASF101
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3626   .debug_str:0000000000000361 .LASF103
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3766   .debug_str:00000000000006bb .LASF104
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3756   .debug_str:0000000000000687 .LASF105
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3792   .debug_str:000000000000073a .LASF106
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3574   .debug_str:000000000000021f .LASF107
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3770   .debug_str:00000000000006d4 .LASF108
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3704   .debug_str:0000000000000500 .LASF109
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 27
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3650   .debug_str:00000000000003e7 .LASF52
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3728   .debug_str:0000000000000578 .LASF53
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3736   .debug_str:00000000000005af .LASF54
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3658   .debug_str:0000000000000421 .LASF55
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3774   .debug_str:00000000000006e3 .LASF56
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3642   .debug_str:00000000000003ba .LASF57
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3556   .debug_str:00000000000001b4 .LASF58
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3580   .debug_str:000000000000023d .LASF59
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3516   .debug_str:00000000000000a6 .LASF60
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3748   .debug_str:0000000000000661 .LASF61
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3570   .debug_str:0000000000000210 .LASF62
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3752   .debug_str:000000000000067b .LASF63
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3670   .debug_str:000000000000045b .LASF64
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3560   .debug_str:00000000000001c4 .LASF65
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3614   .debug_str:000000000000030a .LASF66
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3660   .debug_str:000000000000042a .LASF67
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3690   .debug_str:00000000000004bc .LASF68
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3644   .debug_str:00000000000003c3 .LASF69
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3760   .debug_str:000000000000069e .LASF70
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3634   .debug_str:0000000000000385 .LASF71
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3772   .debug_str:00000000000006db .LASF72
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3608   .debug_str:00000000000002e5 .LASF73
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3632   .debug_str:000000000000037d .LASF74
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3506   .debug_str:0000000000000074 .LASF75
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3696   .debug_str:00000000000004d9 .LASF76
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3628   .debug_str:000000000000036b .LASF77
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3564   .debug_str:00000000000001d9 .LASF78
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3624   .debug_str:0000000000000356 .LASF79
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3586   .debug_str:0000000000000258 .LASF80
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3582   .debug_str:0000000000000248 .LASF81
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3652   .debug_str:00000000000003f1 .LASF82
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3550   .debug_str:0000000000000197 .LASF83
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3520   .debug_str:00000000000000c0 .LASF84
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3786   .debug_str:0000000000000725 .LASF85
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3508   .debug_str:0000000000000080 .LASF86
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3510   .debug_str:000000000000008c .LASF87
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3584   .debug_str:000000000000024f .LASF88
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3764   .debug_str:00000000000006b3 .LASF89
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3554   .debug_str:00000000000001ab .LASF90
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3588   .debug_str:0000000000000263 .LASF91
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3722   .debug_str:0000000000000558 .LASF92
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3562   .debug_str:00000000000001cf .LASF93
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3572   .debug_str:0000000000000215 .LASF145
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3578   .debug_str:0000000000000237 .LASF94
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3754   .debug_str:0000000000000680 .LASF95
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3514   .debug_str:00000000000000a1 .LASF96
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3682   .debug_str:0000000000000491 .LASF97
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3698   .debug_str:00000000000004e1 .LASF98
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3744   .debug_str:00000000000005cb .LASF99
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3710   .debug_str:000000000000051f .LASF101
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3626   .debug_str:0000000000000361 .LASF103
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3766   .debug_str:00000000000006bb .LASF104
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3756   .debug_str:0000000000000687 .LASF105
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3792   .debug_str:000000000000073a .LASF106
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3574   .debug_str:000000000000021f .LASF107
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3770   .debug_str:00000000000006d4 .LASF108
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3704   .debug_str:0000000000000500 .LASF109
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 27
 
 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3694   .debug_str:00000000000004ce .LASF110
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3596   .debug_str:00000000000002a0 .LASF111
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3592   .debug_str:0000000000000289 .LASF112
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3532   .debug_str:000000000000010b .LASF113
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3522   .debug_str:00000000000000c9 .LASF114
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3598   .debug_str:00000000000002ad .LASF115
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3796   .debug_str:0000000000000752 .LASF116
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3636   .debug_str:0000000000000390 .LASF117
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3600   .debug_str:00000000000002b6 .LASF118
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3524   .debug_str:00000000000000d4 .LASF119
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3800   .debug_str:0000000000000761 .LASF120
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3732   .debug_str:000000000000058a .LASF121
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3718   .debug_str:0000000000000540 .LASF122
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:585    .text.usb_rxfifo_flush:0000000000000000 .LFB9
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:625    .text.usb_rxfifo_flush:0000000000000022 .LFE9
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:2874   .debug_loc:0000000000000000 .LLST24
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3782   .debug_str:0000000000000707 .LASF124
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:2892   .debug_loc:000000000000002c .LLST25
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:614    .text.usb_rxfifo_flush:000000000000001a .LVL55
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3548   .debug_str:0000000000000186 .LASF123
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:533    .text.usb_txfifo_flush:0000000000000000 .LFB8
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:578    .text.usb_txfifo_flush:0000000000000028 .LFE8
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:2906   .debug_loc:000000000000004d .LLST21
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:2924   .debug_loc:0000000000000079 .LLST22
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3758   .debug_str:0000000000000695 .LASF125
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:2938   .debug_loc:000000000000009a .LLST23
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:567    .text.usb_txfifo_flush:0000000000000020 .LVL52
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3538   .debug_str:0000000000000131 .LASF126
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:467    .text.usb_rxfifo_read:0000000000000000 .LFB7
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:526    .text.usb_rxfifo_read:0000000000000032 .LFE7
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:2952   .debug_loc:00000000000000bb .LLST16
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3646   .debug_str:00000000000003cd .LASF127
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:2970   .debug_loc:00000000000000e7 .LLST17
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3686   .debug_str:00000000000004a5 .LASF128
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:2987   .debug_loc:0000000000000112 .LLST18
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3610   .debug_str:00000000000002ed .LASF129
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3001   .debug_loc:0000000000000133 .LLST19
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3742   .debug_str:00000000000005c6 .LASF130
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3031   .debug_loc:0000000000000166 .LLST20
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3778   .debug_str:00000000000006f3 .LASF131
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3648   .debug_str:00000000000003d6 .LASF132
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:404    .text.usb_txfifo_write:0000000000000000 .LFB6
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:460    .text.usb_txfifo_write:000000000000003a .LFE6
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3038   .debug_loc:0000000000000179 .LLST11
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3662   .debug_str:0000000000000434 .LASF133
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3056   .debug_loc:00000000000001a5 .LLST12
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3073   .debug_loc:00000000000001d0 .LLST13
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3087   .debug_loc:00000000000001f1 .LLST14
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3101   .debug_loc:0000000000000212 .LLST15
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3638   .debug_str:000000000000039e .LASF134
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:213    .text.usb_core_init:0000000000000000 .LFB5
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:397    .text.usb_core_init:00000000000000ca .LFE5
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3131   .debug_loc:0000000000000245 .LLST6
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3762   .debug_str:00000000000006a9 .LASF135
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3154   .debug_loc:000000000000027d .LLST7
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3218   .debug_loc:00000000000002e5 .LLST8
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3604   .debug_str:00000000000002cb .LASF136
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 28
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3694   .debug_str:00000000000004ce .LASF110
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3596   .debug_str:00000000000002a0 .LASF111
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3592   .debug_str:0000000000000289 .LASF112
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3532   .debug_str:000000000000010b .LASF113
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3522   .debug_str:00000000000000c9 .LASF114
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3598   .debug_str:00000000000002ad .LASF115
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3796   .debug_str:0000000000000752 .LASF116
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3636   .debug_str:0000000000000390 .LASF117
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3600   .debug_str:00000000000002b6 .LASF118
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3524   .debug_str:00000000000000d4 .LASF119
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3800   .debug_str:0000000000000761 .LASF120
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3732   .debug_str:000000000000058a .LASF121
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3718   .debug_str:0000000000000540 .LASF122
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:585    .text.usb_rxfifo_flush:0000000000000000 .LFB9
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:625    .text.usb_rxfifo_flush:0000000000000022 .LFE9
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:2874   .debug_loc:0000000000000000 .LLST24
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3782   .debug_str:0000000000000707 .LASF124
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:2892   .debug_loc:000000000000002c .LLST25
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:614    .text.usb_rxfifo_flush:000000000000001a .LVL55
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3548   .debug_str:0000000000000186 .LASF123
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:533    .text.usb_txfifo_flush:0000000000000000 .LFB8
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:578    .text.usb_txfifo_flush:0000000000000028 .LFE8
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:2906   .debug_loc:000000000000004d .LLST21
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:2924   .debug_loc:0000000000000079 .LLST22
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3758   .debug_str:0000000000000695 .LASF125
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:2938   .debug_loc:000000000000009a .LLST23
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:567    .text.usb_txfifo_flush:0000000000000020 .LVL52
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3538   .debug_str:0000000000000131 .LASF126
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:467    .text.usb_rxfifo_read:0000000000000000 .LFB7
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:526    .text.usb_rxfifo_read:0000000000000032 .LFE7
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:2952   .debug_loc:00000000000000bb .LLST16
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3646   .debug_str:00000000000003cd .LASF127
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:2970   .debug_loc:00000000000000e7 .LLST17
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3686   .debug_str:00000000000004a5 .LASF128
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:2987   .debug_loc:0000000000000112 .LLST18
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3610   .debug_str:00000000000002ed .LASF129
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3001   .debug_loc:0000000000000133 .LLST19
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3742   .debug_str:00000000000005c6 .LASF130
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3031   .debug_loc:0000000000000166 .LLST20
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3778   .debug_str:00000000000006f3 .LASF131
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3648   .debug_str:00000000000003d6 .LASF132
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:404    .text.usb_txfifo_write:0000000000000000 .LFB6
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:460    .text.usb_txfifo_write:000000000000003a .LFE6
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3038   .debug_loc:0000000000000179 .LLST11
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3662   .debug_str:0000000000000434 .LASF133
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3056   .debug_loc:00000000000001a5 .LLST12
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3073   .debug_loc:00000000000001d0 .LLST13
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3087   .debug_loc:00000000000001f1 .LLST14
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3101   .debug_loc:0000000000000212 .LLST15
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3638   .debug_str:000000000000039e .LASF134
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:213    .text.usb_core_init:0000000000000000 .LFB5
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:397    .text.usb_core_init:00000000000000ca .LFE5
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3131   .debug_loc:0000000000000245 .LLST6
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3762   .debug_str:00000000000006a9 .LASF135
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3154   .debug_loc:000000000000027d .LLST7
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3218   .debug_loc:00000000000002e5 .LLST8
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3604   .debug_str:00000000000002cb .LASF136
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 28
 
 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3240   .debug_loc:000000000000031c .LLST9
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:276    .text.usb_core_init:0000000000000042 .LBB6
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:298    .text.usb_core_init:000000000000005a .LBE6
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3255   .debug_loc:000000000000033e .LLST10
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:295    .text.usb_core_init:000000000000005a .LVL21
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:352    .text.usb_core_init:0000000000000098 .LBB8
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:373    .text.usb_core_init:00000000000000b0 .LBE8
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:371    .text.usb_core_init:00000000000000b0 .LVL26
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:394    .text.usb_core_init:00000000000000c8 .LVL28
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3706   .debug_str:0000000000000509 .LASF137
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:14     .text.usb_basic_init:0000000000000000 .LFB4
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:206    .text.usb_basic_init:00000000000000e8 .LFE4
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3266   .debug_loc:000000000000035c .LLST0
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3289   .debug_loc:0000000000000394 .LLST1
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3319   .debug_loc:00000000000003e1 .LLST2
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3552   .debug_str:00000000000001a2 .LASF138
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3359   .debug_loc:000000000000043f .LLST3
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3395   .debug_loc:0000000000000492 .LLST4
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3668   .debug_str:0000000000000452 .LASF139
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3429   .debug_loc:00000000000004ea .LLST5
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:101    .text.usb_basic_init:000000000000005c .LVL8
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3780   .debug_str:00000000000006f8 .LASF146
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3534   .debug_str:0000000000000115 .LASF140
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3664   .debug_str:000000000000043c .LASF141
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3768   .debug_str:00000000000006cd .LASF147
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:3518   .debug_str:00000000000000af .LASF148
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:594    .text.usb_rxfifo_flush:0000000000000004 .LCFI8
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:621    .text.usb_rxfifo_flush:0000000000000020 .LCFI9
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:588    .text.usb_rxfifo_flush:0000000000000000 .LVL53
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:612    .text.usb_rxfifo_flush:0000000000000012 .LVL54
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:542    .text.usb_txfifo_flush:0000000000000004 .LCFI6
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:574    .text.usb_txfifo_flush:0000000000000026 .LCFI7
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:536    .text.usb_txfifo_flush:0000000000000000 .LVL49
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:565    .text.usb_txfifo_flush:0000000000000018 .LVL51
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:546    .text.usb_txfifo_flush:0000000000000006 .LVL50
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:470    .text.usb_rxfifo_read:0000000000000000 .LVL39
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:492    .text.usb_rxfifo_read:0000000000000010 .LVL43
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:494    .text.usb_rxfifo_read:0000000000000012 .LVL44
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:503    .text.usb_rxfifo_read:0000000000000016 .LVL46
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:523    .text.usb_rxfifo_read:0000000000000030 .LVL48
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:476    .text.usb_rxfifo_read:0000000000000002 .LVL40
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:485    .text.usb_rxfifo_read:000000000000000a .LVL42
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:499    .text.usb_rxfifo_read:0000000000000014 .LVL45
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:516    .text.usb_rxfifo_read:0000000000000028 .LVL47
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:407    .text.usb_txfifo_write:0000000000000000 .LVL29
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:434    .text.usb_txfifo_write:0000000000000016 .LVL34
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:436    .text.usb_txfifo_write:0000000000000018 .LVL35
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:443    .text.usb_txfifo_write:0000000000000022 .LVL36
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:457    .text.usb_txfifo_write:0000000000000038 .LVL38
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:413    .text.usb_txfifo_write:0000000000000002 .LVL30
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:418    .text.usb_txfifo_write:0000000000000008 .LVL31
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:427    .text.usb_txfifo_write:0000000000000010 .LVL33
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:222    .text.usb_core_init:0000000000000004 .LCFI3
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:334    .text.usb_core_init:0000000000000086 .LCFI4
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:340    .text.usb_core_init:0000000000000088 .LCFI5
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:216    .text.usb_core_init:0000000000000000 .LVL18
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:336    .text.usb_core_init:0000000000000086 .LVL23
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s 			page 29
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3240   .debug_loc:000000000000031c .LLST9
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:276    .text.usb_core_init:0000000000000042 .LBB6
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:298    .text.usb_core_init:000000000000005a .LBE6
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3255   .debug_loc:000000000000033e .LLST10
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:295    .text.usb_core_init:000000000000005a .LVL21
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:352    .text.usb_core_init:0000000000000098 .LBB8
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:373    .text.usb_core_init:00000000000000b0 .LBE8
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:371    .text.usb_core_init:00000000000000b0 .LVL26
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:394    .text.usb_core_init:00000000000000c8 .LVL28
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3706   .debug_str:0000000000000509 .LASF137
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:14     .text.usb_basic_init:0000000000000000 .LFB4
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:206    .text.usb_basic_init:00000000000000e8 .LFE4
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3266   .debug_loc:000000000000035c .LLST0
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3289   .debug_loc:0000000000000394 .LLST1
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3319   .debug_loc:00000000000003e1 .LLST2
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3552   .debug_str:00000000000001a2 .LASF138
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3359   .debug_loc:000000000000043f .LLST3
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3395   .debug_loc:0000000000000492 .LLST4
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3668   .debug_str:0000000000000452 .LASF139
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3429   .debug_loc:00000000000004ea .LLST5
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:101    .text.usb_basic_init:000000000000005c .LVL8
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3780   .debug_str:00000000000006f8 .LASF146
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3534   .debug_str:0000000000000115 .LASF140
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3664   .debug_str:000000000000043c .LASF141
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3768   .debug_str:00000000000006cd .LASF147
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:3518   .debug_str:00000000000000af .LASF148
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:594    .text.usb_rxfifo_flush:0000000000000004 .LCFI8
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:621    .text.usb_rxfifo_flush:0000000000000020 .LCFI9
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:588    .text.usb_rxfifo_flush:0000000000000000 .LVL53
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:612    .text.usb_rxfifo_flush:0000000000000012 .LVL54
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:542    .text.usb_txfifo_flush:0000000000000004 .LCFI6
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:574    .text.usb_txfifo_flush:0000000000000026 .LCFI7
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:536    .text.usb_txfifo_flush:0000000000000000 .LVL49
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:565    .text.usb_txfifo_flush:0000000000000018 .LVL51
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:546    .text.usb_txfifo_flush:0000000000000006 .LVL50
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:470    .text.usb_rxfifo_read:0000000000000000 .LVL39
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:492    .text.usb_rxfifo_read:0000000000000010 .LVL43
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:494    .text.usb_rxfifo_read:0000000000000012 .LVL44
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:503    .text.usb_rxfifo_read:0000000000000016 .LVL46
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:523    .text.usb_rxfifo_read:0000000000000030 .LVL48
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:476    .text.usb_rxfifo_read:0000000000000002 .LVL40
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:485    .text.usb_rxfifo_read:000000000000000a .LVL42
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:499    .text.usb_rxfifo_read:0000000000000014 .LVL45
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:516    .text.usb_rxfifo_read:0000000000000028 .LVL47
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:407    .text.usb_txfifo_write:0000000000000000 .LVL29
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:434    .text.usb_txfifo_write:0000000000000016 .LVL34
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:436    .text.usb_txfifo_write:0000000000000018 .LVL35
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:443    .text.usb_txfifo_write:0000000000000022 .LVL36
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:457    .text.usb_txfifo_write:0000000000000038 .LVL38
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:413    .text.usb_txfifo_write:0000000000000002 .LVL30
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:418    .text.usb_txfifo_write:0000000000000008 .LVL31
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:427    .text.usb_txfifo_write:0000000000000010 .LVL33
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:222    .text.usb_core_init:0000000000000004 .LCFI3
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:334    .text.usb_core_init:0000000000000086 .LCFI4
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:340    .text.usb_core_init:0000000000000088 .LCFI5
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:216    .text.usb_core_init:0000000000000000 .LVL18
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:336    .text.usb_core_init:0000000000000086 .LVL23
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s 			page 29
 
 
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:338    .text.usb_core_init:0000000000000088 .LVL24
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:329    .text.usb_core_init:0000000000000080 .LVL22
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:384    .text.usb_core_init:00000000000000ba .LVL27
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:275    .text.usb_core_init:0000000000000042 .LVL20
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:23     .text.usb_basic_init:0000000000000002 .LCFI0
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:58     .text.usb_basic_init:0000000000000028 .LCFI1
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:63     .text.usb_basic_init:000000000000002a .LCFI2
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:18     .text.usb_basic_init:0000000000000000 .LVL0
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:47     .text.usb_basic_init:0000000000000020 .LVL1
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:61     .text.usb_basic_init:000000000000002a .LVL2
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:99     .text.usb_basic_init:0000000000000054 .LVL7
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:155    .text.usb_basic_init:00000000000000b0 .LVL13
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:174    .text.usb_basic_init:00000000000000c6 .LVL14
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:97     .text.usb_basic_init:0000000000000052 .LVL6
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:95     .text.usb_basic_init:0000000000000050 .LVL5
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:133    .text.usb_basic_init:0000000000000090 .LVL9
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:139    .text.usb_basic_init:0000000000000098 .LVL10
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:148    .text.usb_basic_init:00000000000000a8 .LVL12
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:190    .text.usb_basic_init:00000000000000d8 .LVL16
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:80     .text.usb_basic_init:000000000000003e .LVL3
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:89     .text.usb_basic_init:000000000000004c .LVL4
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:144    .text.usb_basic_init:00000000000000a4 .LVL11
-C:\Users\marwz\AppData\Local\Temp\ccP9wqHQ.s:637    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:338    .text.usb_core_init:0000000000000088 .LVL24
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:329    .text.usb_core_init:0000000000000080 .LVL22
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:384    .text.usb_core_init:00000000000000ba .LVL27
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:275    .text.usb_core_init:0000000000000042 .LVL20
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:23     .text.usb_basic_init:0000000000000002 .LCFI0
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:58     .text.usb_basic_init:0000000000000028 .LCFI1
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:63     .text.usb_basic_init:000000000000002a .LCFI2
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:18     .text.usb_basic_init:0000000000000000 .LVL0
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:47     .text.usb_basic_init:0000000000000020 .LVL1
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:61     .text.usb_basic_init:000000000000002a .LVL2
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:99     .text.usb_basic_init:0000000000000054 .LVL7
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:155    .text.usb_basic_init:00000000000000b0 .LVL13
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:174    .text.usb_basic_init:00000000000000c6 .LVL14
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:97     .text.usb_basic_init:0000000000000052 .LVL6
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:95     .text.usb_basic_init:0000000000000050 .LVL5
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:133    .text.usb_basic_init:0000000000000090 .LVL9
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:139    .text.usb_basic_init:0000000000000098 .LVL10
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:148    .text.usb_basic_init:00000000000000a8 .LVL12
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:190    .text.usb_basic_init:00000000000000d8 .LVL16
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:80     .text.usb_basic_init:000000000000003e .LVL3
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:89     .text.usb_basic_init:000000000000004c .LVL4
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:144    .text.usb_basic_init:00000000000000a4 .LVL11
+C:\Users\marwz\AppData\Local\Temp\ccObdDNd.s:637    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 memset
