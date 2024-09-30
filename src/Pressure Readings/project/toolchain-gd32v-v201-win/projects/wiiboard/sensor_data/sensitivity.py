@@ -26,6 +26,7 @@ def load_data(json_file, values_name):
         times.append(times[-1] + data[i]['T'] / 24000000)
     # Extract times and V1 values
     values = [entry[values_name] for entry in data]
+    print(times[-1])
     
     return times, values
 
@@ -121,7 +122,7 @@ def fit_polynomial(output_file, degree):
     plt.scatter(weights, avg_v1_values, label='Data Points')
     plt.plot(x_values, polynomial(x_values), color='green', label=f'Polynomial Fit (Degree {degree})')
     plt.xlabel('Weight')
-    plt.ylabel('Average V1')
+    plt.ylabel('Average ')
     plt.title('Polynomial Fit')
     plt.legend()
     plt.show()
@@ -156,4 +157,9 @@ def main(json_file, variable, output_file, weight, polynomial_degree=None):
 
 
 for w in [6, 10, 16, 20, 28, 32]:
+<<<<<<< Updated upstream
     main('V3_640_128_w.json', 'V3', 'V3_640_128.json', weight=w, polynomial_degree=None)
+=======
+    main('V2_640_128_w.json', 'V2', 'V2_640_128.json', weight=w, polynomial_degree=None)
+
+>>>>>>> Stashed changes

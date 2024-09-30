@@ -81,7 +81,7 @@ def init():
 
 def update(frame):
     line = ser.readline().decode('utf-8').strip()
-    t0 = time.time()
+    # t0 = time.time()
     match = re.match(r'Time:(-?\d+),V1:(-?\d+),V2:(-?\d+),V3:(-?\d+),V4:(-?\d+)', line)
     if match:
         t, v1, v2, v3, v4 = map(int, match.groups())
@@ -103,9 +103,10 @@ def update(frame):
         line4.set_data(x, v4_data)
 
         ax.set_xlim(max(0, len(v1_data) - 100), len(v1_data))
-        t1 = time.time()
+        # t1 = time.time()
         # print(f'Time:{t1-t0}')
         return line1, line2, line3, line4
+
 
 # Set up animation
 ani = animation.FuncAnimation(fig, update, init_func=init, blit=True, interval=0.001)
