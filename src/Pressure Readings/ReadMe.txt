@@ -1,74 +1,95 @@
-# Project Title
+# Project Title: Wii Balance Board Data Reading
 
-This section will be used for the code implemented for the reading of data from pressure boards
+This project contains code for connecting and reading data from the Wii Balance Board using RISC-V based microcontroller boards.
 
 ## Description
 
-In this folder, you will be able to connect the Wii Balance Board with your laptop
+In this repository, you will find tools to connect the Wii Balance Board to your laptop, capture sensor data, and analyze it. The project includes code for setting up the board, reading sensor data, and processing the data for visualization and analysis.
 
 ## Getting Started
 
+### Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+- A Windows-based laptop
+- RISC-V toolchain installed (Instructions below)
+- PowerShell
+
 ### Dependencies
 
-*For this project, you need to connect the Wii Balance Board with your laptop. For this some dependencies are required
+For proper functionality, the Wii Balance Board must be connected to your laptop via USB. The following dependencies are required:
 
+- RISC-V toolchain setup for development
+- PowerShell for running commands
 
-### Installing the drivers
+### Installing the Drivers
 
-* This link will help you to install the development environment for the RISC-V based microcontroller boards used https://canvas.kth.se/courses/19538/pages/install-development-environment
-* When you arrive to step 3, you can open /toolchain-gd32v/projects/wiiboard
-* You need to compile main.c following the step 5 instruction and then you're done with connecting the chips to your laptop!
+Follow these steps to install the required drivers and development environment:
 
+1. Install the RISC-V based microcontroller toolchain by following the instructions provided here: [KTH Development Environment Setup](https://canvas.kth.se/courses/19538/pages/install-development-environment)
+2. After reaching step 3 in the instructions, navigate to `/toolchain-gd32v/projects/wiiboard`.
+3. Compile the `main.c` file by following step 5 in the guide.
+4. This process will complete the connection setup between the Wii Balance Board and your laptop.
 
+### PowerShell Setup (For Windows Users)
 
-*These instructions are for Windows users
-* You can go in your PowerShell and write these instructions
-* Disconnect USB wire
-* Write [System.IO.Ports.SerialPort]::getportnames()
-* Connect USB wire
-* Write [System.IO.Ports.SerialPort]::getportnames()
-* Then you can see there is one more COM, remember its name
-* These above instructions can be done once instead you know the COM Port name of your board
+Once the drivers are installed, use the following PowerShell commands to verify the correct COM port and read data from the Wii Balance Board:
 
-* Compile these following instructions one by one
-* $portName = "COM6"
-* $baudRate = 9600
-* $serialPort = New-Object System.IO.Ports.SerialPort $portName, $baudRate, None, 8, One
-* $serialPort.Open()
-* try {
->>     while ($true) {
->>         if ($serialPort.BytesToRead -gt 0) {
->>             $data = $serialPort.ReadLine()
->>             Write-Host $data
->>         }
->>         Start-Sleep -Milliseconds 100  # Delay to avoid excessive CPU usage
->>     }
->> } catch {
->>     Write-Error "An error occurred: $_"
->> } finally {
->>     # Close the COM port when done
->>     $serialPort.Close()
->>     Write-Host "COM port closed."
->> }
+1. Open PowerShell.
+2. Run the following commands to detect the COM port:
+   - Disconnect the USB cable.
+   - Run:
+     ```powershell
+     [System.IO.Ports.SerialPort]::getportnames()
+     ```
+   - Reconnect the USB cable and run the command again. The new COM port listed is your board’s port name.
+3. Note the COM port name (e.g., "COM6").
 
-* If you can see values, so the installation is working
+To start reading data from the board:
 
-### Executing program
+1. Open PowerShell and run these commands one by one:
+    ```powershell
+    $portName = "COM6"
+    $baudRate = 9600
+    $serialPort = New-Object System.IO.Ports.SerialPort $portName, $baudRate, None, 8, One
+    $serialPort.Open()
+    try {
+        while ($true) {
+            if ($serialPort.BytesToRead -gt 0) {
+                $data = $serialPort.ReadLine()
+                Write-Host $data
+            }
+            Start-Sleep -Milliseconds 100  # Delay to avoid excessive CPU usage
+        }
+    } catch {
+        Write-Error "An error occurred: $_"
+    } finally {
+        $serialPort.Close()
+        Write-Host "COM port closed."
+    }
+    ```
+2. If data is displayed, the setup is successful.
 
-*/toolchain-gd32v/projects/wiiboard/data_read.py enables you to plot the datas and save them into a json file
-*/toolchain-gd32v/projects/wiiboard/sensor_data/sensitivity.py enables you to find the relationship between the values and the weight put on the sensors
+### Executing the Program
 
+You can use the following scripts to process and analyze the data:
 
+- `/toolchain-gd32v/projects/wiiboard/data_read.py`: This script reads and plots sensor data, saving the output to a JSON file.
+- `/toolchain-gd32v/projects/wiiboard/sensor_data/sensitivity.py`: This script calculates the relationship between the sensor readings and the weight applied to the Wii Balance Board sensors.
 
+## Common Issues
 
-## Help
+If you encounter problems:
 
-Any advise for common problems or issues, please contact Marwan Zarouf
+1. **COM Port Not Detected:** Ensure the USB connection is secure and verify that you are using the correct COM port.
+2. **No Data Output:** Check the power to the board and verify that the PowerShell commands are running without errors.
+
+## Contact
+
+For help or advice, please reach out to the contributors.
 
 ## Authors
 
-Contributors names and contact info
-
 Marwan Zarouf
-mail address: zarouf@kth.se
 
