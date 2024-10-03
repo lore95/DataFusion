@@ -157,9 +157,4 @@ def main(json_file, variable, output_file, weight, polynomial_degree=None):
 
 
 for w in [6, 10, 16, 20, 28, 32]:
-<<<<<<< Updated upstream
     main('V3_640_128_w.json', 'V3', 'V3_640_128.json', weight=w, polynomial_degree=None)
-=======
-    main('V2_640_128_w.json', 'V2', 'V2_640_128.json', weight=w, polynomial_degree=None)
-
->>>>>>> Stashed changes

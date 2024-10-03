@@ -27,17 +27,20 @@ def perform_linear_regression(output_file):
 
     print(f"Linear Regression: slope = {slope}, intercept = {intercept}, R^2 = {r_value**2}")
 
-perform_linear_regression('V1_40_1.json')
-perform_linear_regression('V2_40_1.json')
-perform_linear_regression('V3_40_1.json')
-perform_linear_regression('V4_40_1.json')
+# SPS=40 Gain=1
+# perform_linear_regression('V1_40_1.json')
+# perform_linear_regression('V2_40_1.json')
+# perform_linear_regression('V3_40_1.json')
+# perform_linear_regression('V4_40_1.json')
 
-perform_linear_regression('V1_640_128.json')
-perform_linear_regression('V2_640_128.json')
+# SPS=640 Gain=128
+# perform_linear_regression('V1_640_128.json')
+# perform_linear_regression('V2_640_128.json')
 # perform_linear_regression('V3_640_128.json')
-perform_linear_regression('V4_640_128.json')
+# perform_linear_regression('V4_640_128.json')
 
-perform_linear_regression('V1_40_128.json')
+# SPS=40 Gain=128
+# perform_linear_regression('V1_40_128.json')
 # perform_linear_regression('V2_40_128.json')
-perform_linear_regression('V3_40_128.json')
-perform_linear_regression('V4_40_128.json')
+# perform_linear_regression('V3_40_128.json')
+# perform_linear_regression('V4_40_128.json')
