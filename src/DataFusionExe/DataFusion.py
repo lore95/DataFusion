@@ -1,5 +1,5 @@
 
-from PressureReadings.project.toolchain-gd32v-v201-win.projects.wiiboard.sensor_data.data_read import update
+from PressureReadings.project.toolchain.projects.wiiboard.sensor_data.data_read import update
 import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
@@ -14,7 +14,7 @@ from IPython.display import display
 
 annotatedFrames = []
 i=0
-def startVideoTracking(startingTime):
+def startVideoTracking():
         
     # Load the YOLOv8 model
     model = YOLO('yolov8m-pose.pt')
@@ -37,8 +37,7 @@ def startVideoTracking(startingTime):
     #     # Visualize the results on the frame
         annotated_frame = results[0].plot()
         
-        displaycv2.imshow("YOLOv8 Tracking", annotatedFrames[i])
-
+        cv2.imshow("YOLOv8 Tracking", annotated_frame)
         print(update(time))
 
         cv2.imshow("YOLOv8 Tracking", annotated_frame)
@@ -49,6 +48,7 @@ def startVideoTracking(startingTime):
             #break
 
     # # Release the video capture object and close windows
+    startVideoTracking()
     cam.release()
     out.release()
     cv2.destroyAllWindows()
