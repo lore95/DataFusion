@@ -1,0 +1,1846 @@
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 1
+
+
+   1              		.file	"usbd_transc.c"
+   2              		.option nopic
+   3              		.attribute arch, "rv32i2p0_m2p0_a2p0_c2p0"
+   4              		.attribute unaligned_access, 0
+   5              		.attribute stack_align, 16
+   6              		.text
+   7              	.Ltext0:
+   8              		.cfi_sections	.debug_frame
+   9              		.section	.text.usbd_ctl_send,"ax",@progbits
+  10              		.align	1
+  11              		.globl	usbd_ctl_send
+  13              	usbd_ctl_send:
+  14              	.LFB3:
+  15              		.file 1 "lib/usbcdc/src/usbd_transc.c"
+   1:lib/usbcdc/src/usbd_transc.c **** /*!
+   2:lib/usbcdc/src/usbd_transc.c ****     \file  usbd_transc.c
+   3:lib/usbcdc/src/usbd_transc.c ****     \brief USB transaction core functions
+   4:lib/usbcdc/src/usbd_transc.c **** 
+   5:lib/usbcdc/src/usbd_transc.c ****     \version 2019-6-5, V1.0.0, firmware for GD32 USBFS&USBHS
+   6:lib/usbcdc/src/usbd_transc.c **** */
+   7:lib/usbcdc/src/usbd_transc.c **** 
+   8:lib/usbcdc/src/usbd_transc.c **** /*
+   9:lib/usbcdc/src/usbd_transc.c ****     Copyright (c) 2019, GigaDevice Semiconductor Inc.
+  10:lib/usbcdc/src/usbd_transc.c **** 
+  11:lib/usbcdc/src/usbd_transc.c ****     Redistribution and use in source and binary forms, with or without modification, 
+  12:lib/usbcdc/src/usbd_transc.c **** are permitted provided that the following conditions are met:
+  13:lib/usbcdc/src/usbd_transc.c **** 
+  14:lib/usbcdc/src/usbd_transc.c ****     1. Redistributions of source code must retain the above copyright notice, this 
+  15:lib/usbcdc/src/usbd_transc.c ****        list of conditions and the following disclaimer.
+  16:lib/usbcdc/src/usbd_transc.c ****     2. Redistributions in binary form must reproduce the above copyright notice, 
+  17:lib/usbcdc/src/usbd_transc.c ****        this list of conditions and the following disclaimer in the documentation 
+  18:lib/usbcdc/src/usbd_transc.c ****        and/or other materials provided with the distribution.
+  19:lib/usbcdc/src/usbd_transc.c ****     3. Neither the name of the copyright holder nor the names of its contributors 
+  20:lib/usbcdc/src/usbd_transc.c ****        may be used to endorse or promote products derived from this software without 
+  21:lib/usbcdc/src/usbd_transc.c ****        specific prior written permission.
+  22:lib/usbcdc/src/usbd_transc.c **** 
+  23:lib/usbcdc/src/usbd_transc.c ****     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+  24:lib/usbcdc/src/usbd_transc.c **** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  25:lib/usbcdc/src/usbd_transc.c **** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+  26:lib/usbcdc/src/usbd_transc.c **** IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+  27:lib/usbcdc/src/usbd_transc.c **** INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT 
+  28:lib/usbcdc/src/usbd_transc.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+  29:lib/usbcdc/src/usbd_transc.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+  30:lib/usbcdc/src/usbd_transc.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+  31:lib/usbcdc/src/usbd_transc.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
+  32:lib/usbcdc/src/usbd_transc.c **** OF SUCH DAMAGE.
+  33:lib/usbcdc/src/usbd_transc.c **** */
+  34:lib/usbcdc/src/usbd_transc.c **** 
+  35:lib/usbcdc/src/usbd_transc.c **** #include "usbd_enum.h"
+  36:lib/usbcdc/src/usbd_transc.c **** #include "usbd_transc.h"
+  37:lib/usbcdc/src/usbd_transc.c **** 
+  38:lib/usbcdc/src/usbd_transc.c **** /*!
+  39:lib/usbcdc/src/usbd_transc.c ****     \brief      USB send data in the control transaction
+  40:lib/usbcdc/src/usbd_transc.c ****     \param[in]  udev: pointer to USB device instance
+  41:lib/usbcdc/src/usbd_transc.c ****     \param[out] none
+  42:lib/usbcdc/src/usbd_transc.c ****     \retval     USB device operation cur_status
+  43:lib/usbcdc/src/usbd_transc.c **** */
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 2
+
+
+  44:lib/usbcdc/src/usbd_transc.c **** usbd_status usbd_ctl_send (usb_core_driver *udev)
+  45:lib/usbcdc/src/usbd_transc.c **** {
+  16              		.loc 1 45 1
+  17              		.cfi_startproc
+  18              	.LVL0:
+  46:lib/usbcdc/src/usbd_transc.c ****     usb_transc *transc = &udev->dev.transc_in[0];
+  19              		.loc 1 46 5
+  47:lib/usbcdc/src/usbd_transc.c **** 
+  48:lib/usbcdc/src/usbd_transc.c ****     usbd_ep_send(udev, 0U, transc->xfer_buf, transc->remain_len);
+  20              		.loc 1 48 5
+  21 0000 8356C50D 		lhu	a3,220(a0)
+  22 0004 0326050D 		lw	a2,208(a0)
+  45:lib/usbcdc/src/usbd_transc.c ****     usb_transc *transc = &udev->dev.transc_in[0];
+  23              		.loc 1 45 1 is_stmt 0
+  24 0008 4111     		addi	sp,sp,-16
+  25              	.LCFI0:
+  26              		.cfi_def_cfa_offset 16
+  27              		.loc 1 48 5
+  28 000a 8145     		li	a1,0
+  45:lib/usbcdc/src/usbd_transc.c ****     usb_transc *transc = &udev->dev.transc_in[0];
+  29              		.loc 1 45 1
+  30 000c 22C4     		sw	s0,8(sp)
+  31 000e 06C6     		sw	ra,12(sp)
+  32              		.cfi_offset 8, -8
+  33              		.cfi_offset 1, -4
+  45:lib/usbcdc/src/usbd_transc.c ****     usb_transc *transc = &udev->dev.transc_in[0];
+  34              		.loc 1 45 1
+  35 0010 2A84     		mv	s0,a0
+  36              		.loc 1 48 5
+  37 0012 97000000 		call	usbd_ep_send
+  37      E7800000 
+  38              	.LVL1:
+  49:lib/usbcdc/src/usbd_transc.c **** 
+  50:lib/usbcdc/src/usbd_transc.c ****     if (transc->remain_len > transc->max_len) {
+  39              		.loc 1 50 5 is_stmt 1
+  40              		.loc 1 50 28 is_stmt 0
+  41 001a 0357C40C 		lhu	a4,204(s0)
+  42              		.loc 1 50 8
+  43 001e 8326C40D 		lw	a3,220(s0)
+  51:lib/usbcdc/src/usbd_transc.c ****         udev->dev.control.ctl_state = USB_CTL_DATA_IN;
+  52:lib/usbcdc/src/usbd_transc.c ****     } else {
+  53:lib/usbcdc/src/usbd_transc.c ****         udev->dev.control.ctl_state = USB_CTL_LAST_DATA_IN;
+  44              		.loc 1 53 37
+  45 0022 8947     		li	a5,2
+  50:lib/usbcdc/src/usbd_transc.c ****         udev->dev.control.ctl_state = USB_CTL_DATA_IN;
+  46              		.loc 1 50 8
+  47 0024 6373D700 		bleu	a3,a4,.L2
+  48 0028 8547     		li	a5,1
+  49              	.L2:
+  50 002a 2306F442 		sb	a5,1068(s0)
+  54:lib/usbcdc/src/usbd_transc.c ****     }
+  55:lib/usbcdc/src/usbd_transc.c **** 
+  56:lib/usbcdc/src/usbd_transc.c ****     return USBD_OK;
+  51              		.loc 1 56 5 is_stmt 1
+  57:lib/usbcdc/src/usbd_transc.c **** }
+  52              		.loc 1 57 1 is_stmt 0
+  53 002e B240     		lw	ra,12(sp)
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 3
+
+
+  54              		.cfi_restore 1
+  55 0030 2244     		lw	s0,8(sp)
+  56              		.cfi_restore 8
+  57              	.LVL2:
+  58 0032 0145     		li	a0,0
+  59 0034 4101     		addi	sp,sp,16
+  60              	.LCFI1:
+  61              		.cfi_def_cfa_offset 0
+  62 0036 8280     		jr	ra
+  63              		.cfi_endproc
+  64              	.LFE3:
+  66              		.section	.text.usbd_ctl_recev,"ax",@progbits
+  67              		.align	1
+  68              		.globl	usbd_ctl_recev
+  70              	usbd_ctl_recev:
+  71              	.LFB4:
+  58:lib/usbcdc/src/usbd_transc.c **** 
+  59:lib/usbcdc/src/usbd_transc.c **** /*!
+  60:lib/usbcdc/src/usbd_transc.c ****     \brief      USB receive data in control transaction
+  61:lib/usbcdc/src/usbd_transc.c ****     \param[in]  udev: pointer to USB device instance
+  62:lib/usbcdc/src/usbd_transc.c ****     \param[out] none
+  63:lib/usbcdc/src/usbd_transc.c ****     \retval     USB device operation cur_status
+  64:lib/usbcdc/src/usbd_transc.c **** */
+  65:lib/usbcdc/src/usbd_transc.c **** usbd_status  usbd_ctl_recev (usb_core_driver *udev)
+  66:lib/usbcdc/src/usbd_transc.c **** {
+  72              		.loc 1 66 1 is_stmt 1
+  73              		.cfi_startproc
+  74              	.LVL3:
+  67:lib/usbcdc/src/usbd_transc.c ****     usb_transc *transc = &udev->dev.transc_out[0];
+  75              		.loc 1 67 5
+  68:lib/usbcdc/src/usbd_transc.c **** 
+  69:lib/usbcdc/src/usbd_transc.c ****     usbd_ep_recev (udev, 0U, transc->xfer_buf, transc->remain_len);
+  76              		.loc 1 69 5
+  77 0000 83560528 		lhu	a3,640(a0)
+  78 0004 03264527 		lw	a2,628(a0)
+  66:lib/usbcdc/src/usbd_transc.c ****     usb_transc *transc = &udev->dev.transc_out[0];
+  79              		.loc 1 66 1 is_stmt 0
+  80 0008 4111     		addi	sp,sp,-16
+  81              	.LCFI2:
+  82              		.cfi_def_cfa_offset 16
+  83              		.loc 1 69 5
+  84 000a 8145     		li	a1,0
+  66:lib/usbcdc/src/usbd_transc.c ****     usb_transc *transc = &udev->dev.transc_out[0];
+  85              		.loc 1 66 1
+  86 000c 22C4     		sw	s0,8(sp)
+  87 000e 06C6     		sw	ra,12(sp)
+  88              		.cfi_offset 8, -8
+  89              		.cfi_offset 1, -4
+  66:lib/usbcdc/src/usbd_transc.c ****     usb_transc *transc = &udev->dev.transc_out[0];
+  90              		.loc 1 66 1
+  91 0010 2A84     		mv	s0,a0
+  92              		.loc 1 69 5
+  93 0012 97000000 		call	usbd_ep_recev
+  93      E7800000 
+  94              	.LVL4:
+  70:lib/usbcdc/src/usbd_transc.c **** 
+  71:lib/usbcdc/src/usbd_transc.c ****     if (transc->remain_len > transc->max_len) {
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 4
+
+
+  95              		.loc 1 71 5 is_stmt 1
+  96              		.loc 1 71 28 is_stmt 0
+  97 001a 03570427 		lhu	a4,624(s0)
+  98              		.loc 1 71 8
+  99 001e 83260428 		lw	a3,640(s0)
+  72:lib/usbcdc/src/usbd_transc.c ****         udev->dev.control.ctl_state = USB_CTL_DATA_OUT;
+  73:lib/usbcdc/src/usbd_transc.c ****     } else {
+  74:lib/usbcdc/src/usbd_transc.c ****         udev->dev.control.ctl_state = USB_CTL_LAST_DATA_OUT;
+ 100              		.loc 1 74 37
+ 101 0022 9147     		li	a5,4
+  71:lib/usbcdc/src/usbd_transc.c ****         udev->dev.control.ctl_state = USB_CTL_DATA_OUT;
+ 102              		.loc 1 71 8
+ 103 0024 6373D700 		bleu	a3,a4,.L7
+ 104 0028 8D47     		li	a5,3
+ 105              	.L7:
+ 106 002a 2306F442 		sb	a5,1068(s0)
+  75:lib/usbcdc/src/usbd_transc.c ****     }
+  76:lib/usbcdc/src/usbd_transc.c **** 
+  77:lib/usbcdc/src/usbd_transc.c ****     return USBD_OK;
+ 107              		.loc 1 77 5 is_stmt 1
+  78:lib/usbcdc/src/usbd_transc.c **** }
+ 108              		.loc 1 78 1 is_stmt 0
+ 109 002e B240     		lw	ra,12(sp)
+ 110              		.cfi_restore 1
+ 111 0030 2244     		lw	s0,8(sp)
+ 112              		.cfi_restore 8
+ 113              	.LVL5:
+ 114 0032 0145     		li	a0,0
+ 115 0034 4101     		addi	sp,sp,16
+ 116              	.LCFI3:
+ 117              		.cfi_def_cfa_offset 0
+ 118 0036 8280     		jr	ra
+ 119              		.cfi_endproc
+ 120              	.LFE4:
+ 122              		.section	.text.usbd_ctl_status_send,"ax",@progbits
+ 123              		.align	1
+ 124              		.globl	usbd_ctl_status_send
+ 126              	usbd_ctl_status_send:
+ 127              	.LFB5:
+  79:lib/usbcdc/src/usbd_transc.c **** 
+  80:lib/usbcdc/src/usbd_transc.c **** /*!
+  81:lib/usbcdc/src/usbd_transc.c ****     \brief      USB send control transaction status
+  82:lib/usbcdc/src/usbd_transc.c ****     \param[in]  udev: pointer to USB device instance
+  83:lib/usbcdc/src/usbd_transc.c ****     \param[out] none
+  84:lib/usbcdc/src/usbd_transc.c ****     \retval     USB device operation cur_status
+  85:lib/usbcdc/src/usbd_transc.c **** */
+  86:lib/usbcdc/src/usbd_transc.c **** usbd_status  usbd_ctl_status_send (usb_core_driver *udev)
+  87:lib/usbcdc/src/usbd_transc.c **** {
+ 128              		.loc 1 87 1 is_stmt 1
+ 129              		.cfi_startproc
+ 130              	.LVL6:
+  88:lib/usbcdc/src/usbd_transc.c ****     udev->dev.control.ctl_state = USB_CTL_STATUS_IN;
+ 131              		.loc 1 88 5
+  87:lib/usbcdc/src/usbd_transc.c ****     udev->dev.control.ctl_state = USB_CTL_STATUS_IN;
+ 132              		.loc 1 87 1 is_stmt 0
+ 133 0000 4111     		addi	sp,sp,-16
+ 134              	.LCFI4:
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 5
+
+
+ 135              		.cfi_def_cfa_offset 16
+ 136 0002 06C6     		sw	ra,12(sp)
+ 137 0004 22C4     		sw	s0,8(sp)
+ 138              		.cfi_offset 1, -4
+ 139              		.cfi_offset 8, -8
+ 140              		.loc 1 88 33
+ 141 0006 9547     		li	a5,5
+ 142 0008 2306F542 		sb	a5,1068(a0)
+  89:lib/usbcdc/src/usbd_transc.c **** 
+  90:lib/usbcdc/src/usbd_transc.c ****     usbd_ep_send (udev, 0U, NULL, 0U);
+ 143              		.loc 1 90 5 is_stmt 1
+ 144 000c 8146     		li	a3,0
+ 145 000e 0146     		li	a2,0
+ 146 0010 8145     		li	a1,0
+  87:lib/usbcdc/src/usbd_transc.c ****     udev->dev.control.ctl_state = USB_CTL_STATUS_IN;
+ 147              		.loc 1 87 1 is_stmt 0
+ 148 0012 2A84     		mv	s0,a0
+ 149              		.loc 1 90 5
+ 150 0014 97000000 		call	usbd_ep_send
+ 150      E7800000 
+ 151              	.LVL7:
+  91:lib/usbcdc/src/usbd_transc.c **** 
+  92:lib/usbcdc/src/usbd_transc.c ****     usb_ctlep_startout(udev);
+ 152              		.loc 1 92 5 is_stmt 1
+ 153 001c 2285     		mv	a0,s0
+ 154 001e 97000000 		call	usb_ctlep_startout
+ 154      E7800000 
+ 155              	.LVL8:
+  93:lib/usbcdc/src/usbd_transc.c **** 
+  94:lib/usbcdc/src/usbd_transc.c ****     return USBD_OK;
+ 156              		.loc 1 94 5
+  95:lib/usbcdc/src/usbd_transc.c **** }
+ 157              		.loc 1 95 1 is_stmt 0
+ 158 0026 B240     		lw	ra,12(sp)
+ 159              		.cfi_restore 1
+ 160 0028 2244     		lw	s0,8(sp)
+ 161              		.cfi_restore 8
+ 162              	.LVL9:
+ 163 002a 0145     		li	a0,0
+ 164 002c 4101     		addi	sp,sp,16
+ 165              	.LCFI5:
+ 166              		.cfi_def_cfa_offset 0
+ 167 002e 8280     		jr	ra
+ 168              		.cfi_endproc
+ 169              	.LFE5:
+ 171              		.section	.text.usbd_ctl_status_recev,"ax",@progbits
+ 172              		.align	1
+ 173              		.globl	usbd_ctl_status_recev
+ 175              	usbd_ctl_status_recev:
+ 176              	.LFB6:
+  96:lib/usbcdc/src/usbd_transc.c **** 
+  97:lib/usbcdc/src/usbd_transc.c **** /*!
+  98:lib/usbcdc/src/usbd_transc.c ****     \brief      USB control receive status
+  99:lib/usbcdc/src/usbd_transc.c ****     \param[in]  udev: pointer to USB device instance
+ 100:lib/usbcdc/src/usbd_transc.c ****     \param[out] none
+ 101:lib/usbcdc/src/usbd_transc.c ****     \retval     USB device operation cur_status
+ 102:lib/usbcdc/src/usbd_transc.c **** */
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 6
+
+
+ 103:lib/usbcdc/src/usbd_transc.c **** usbd_status usbd_ctl_status_recev (usb_core_driver *udev)
+ 104:lib/usbcdc/src/usbd_transc.c **** {
+ 177              		.loc 1 104 1 is_stmt 1
+ 178              		.cfi_startproc
+ 179              	.LVL10:
+ 105:lib/usbcdc/src/usbd_transc.c ****     udev->dev.control.ctl_state = USB_CTL_STATUS_OUT;
+ 180              		.loc 1 105 5
+ 104:lib/usbcdc/src/usbd_transc.c ****     udev->dev.control.ctl_state = USB_CTL_STATUS_OUT;
+ 181              		.loc 1 104 1 is_stmt 0
+ 182 0000 4111     		addi	sp,sp,-16
+ 183              	.LCFI6:
+ 184              		.cfi_def_cfa_offset 16
+ 185 0002 06C6     		sw	ra,12(sp)
+ 186 0004 22C4     		sw	s0,8(sp)
+ 187              		.cfi_offset 1, -4
+ 188              		.cfi_offset 8, -8
+ 189              		.loc 1 105 33
+ 190 0006 9947     		li	a5,6
+ 191 0008 2306F542 		sb	a5,1068(a0)
+ 106:lib/usbcdc/src/usbd_transc.c **** 
+ 107:lib/usbcdc/src/usbd_transc.c ****     usbd_ep_recev (udev, 0, NULL, 0);
+ 192              		.loc 1 107 5 is_stmt 1
+ 193 000c 8146     		li	a3,0
+ 194 000e 0146     		li	a2,0
+ 195 0010 8145     		li	a1,0
+ 104:lib/usbcdc/src/usbd_transc.c ****     udev->dev.control.ctl_state = USB_CTL_STATUS_OUT;
+ 196              		.loc 1 104 1 is_stmt 0
+ 197 0012 2A84     		mv	s0,a0
+ 198              		.loc 1 107 5
+ 199 0014 97000000 		call	usbd_ep_recev
+ 199      E7800000 
+ 200              	.LVL11:
+ 108:lib/usbcdc/src/usbd_transc.c **** 
+ 109:lib/usbcdc/src/usbd_transc.c ****     usb_ctlep_startout(udev);
+ 201              		.loc 1 109 5 is_stmt 1
+ 202 001c 2285     		mv	a0,s0
+ 203 001e 97000000 		call	usb_ctlep_startout
+ 203      E7800000 
+ 204              	.LVL12:
+ 110:lib/usbcdc/src/usbd_transc.c **** 
+ 111:lib/usbcdc/src/usbd_transc.c ****     return USBD_OK;
+ 205              		.loc 1 111 5
+ 112:lib/usbcdc/src/usbd_transc.c **** }
+ 206              		.loc 1 112 1 is_stmt 0
+ 207 0026 B240     		lw	ra,12(sp)
+ 208              		.cfi_restore 1
+ 209 0028 2244     		lw	s0,8(sp)
+ 210              		.cfi_restore 8
+ 211              	.LVL13:
+ 212 002a 0145     		li	a0,0
+ 213 002c 4101     		addi	sp,sp,16
+ 214              	.LCFI7:
+ 215              		.cfi_def_cfa_offset 0
+ 216 002e 8280     		jr	ra
+ 217              		.cfi_endproc
+ 218              	.LFE6:
+ 220              		.section	.text.usbd_setup_transc,"ax",@progbits
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 7
+
+
+ 221              		.align	1
+ 222              		.globl	usbd_setup_transc
+ 224              	usbd_setup_transc:
+ 225              	.LFB7:
+ 113:lib/usbcdc/src/usbd_transc.c **** 
+ 114:lib/usbcdc/src/usbd_transc.c **** /*!
+ 115:lib/usbcdc/src/usbd_transc.c ****     \brief      USB setup stage processing
+ 116:lib/usbcdc/src/usbd_transc.c ****     \param[in]  udev: pointer to USB device instance
+ 117:lib/usbcdc/src/usbd_transc.c ****     \param[out] none
+ 118:lib/usbcdc/src/usbd_transc.c ****     \retval     USB device operation cur_status
+ 119:lib/usbcdc/src/usbd_transc.c **** */
+ 120:lib/usbcdc/src/usbd_transc.c **** uint8_t usbd_setup_transc (usb_core_driver *udev)
+ 121:lib/usbcdc/src/usbd_transc.c **** {
+ 226              		.loc 1 121 1 is_stmt 1
+ 227              		.cfi_startproc
+ 228              	.LVL14:
+ 122:lib/usbcdc/src/usbd_transc.c ****     usb_reqsta reqstat = REQ_NOTSUPP;
+ 229              		.loc 1 122 5
+ 123:lib/usbcdc/src/usbd_transc.c **** 
+ 124:lib/usbcdc/src/usbd_transc.c ****     usb_req req = udev->dev.control.req;
+ 230              		.loc 1 124 5
+ 231              		.loc 1 124 13 is_stmt 0
+ 232 0000 83274542 		lw	a5,1060(a0)
+ 233 0004 03278542 		lw	a4,1064(a0)
+ 121:lib/usbcdc/src/usbd_transc.c ****     usb_reqsta reqstat = REQ_NOTSUPP;
+ 234              		.loc 1 121 1
+ 235 0008 0111     		addi	sp,sp,-32
+ 236              	.LCFI8:
+ 237              		.cfi_def_cfa_offset 32
+ 238 000a 22CC     		sw	s0,24(sp)
+ 239              		.loc 1 124 13
+ 240 000c 3EC4     		sw	a5,8(sp)
+ 241 000e 3AC6     		sw	a4,12(sp)
+ 125:lib/usbcdc/src/usbd_transc.c **** 
+ 126:lib/usbcdc/src/usbd_transc.c ****     switch (req.bmRequestType & USB_REQTYPE_MASK) {
+ 242              		.loc 1 126 5 is_stmt 1
+ 121:lib/usbcdc/src/usbd_transc.c ****     usb_reqsta reqstat = REQ_NOTSUPP;
+ 243              		.loc 1 121 1 is_stmt 0
+ 244 0010 06CE     		sw	ra,28(sp)
+ 245              		.cfi_offset 8, -8
+ 246              		.cfi_offset 1, -4
+ 247 0012 93F70706 		andi	a5,a5,96
+ 248              		.loc 1 126 5
+ 249 0016 13070002 		li	a4,32
+ 121:lib/usbcdc/src/usbd_transc.c ****     usb_reqsta reqstat = REQ_NOTSUPP;
+ 250              		.loc 1 121 1
+ 251 001a 2A84     		mv	s0,a0
+ 252              		.loc 1 126 5
+ 253 001c 638AE702 		beq	a5,a4,.L16
+ 254 0020 13070004 		li	a4,64
+ 255 0024 638CE702 		beq	a5,a4,.L17
+ 256 0028 B9EF     		bne	a5,zero,.L18
+ 127:lib/usbcdc/src/usbd_transc.c ****     /* standard device request */
+ 128:lib/usbcdc/src/usbd_transc.c ****     case USB_REQTYPE_STRD:
+ 129:lib/usbcdc/src/usbd_transc.c ****         reqstat = usbd_standard_request (udev, &req);
+ 257              		.loc 1 129 9 is_stmt 1
+ 258              		.loc 1 129 19 is_stmt 0
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 8
+
+
+ 259 002a 2C00     		addi	a1,sp,8
+ 260 002c 97000000 		call	usbd_standard_request
+ 260      E7800000 
+ 261              	.LVL15:
+ 130:lib/usbcdc/src/usbd_transc.c ****         break;
+ 262              		.loc 1 130 9 is_stmt 1
+ 263              	.L19:
+ 131:lib/usbcdc/src/usbd_transc.c **** 
+ 132:lib/usbcdc/src/usbd_transc.c ****     /* device class request */
+ 133:lib/usbcdc/src/usbd_transc.c ****     case USB_REQTYPE_CLASS:
+ 134:lib/usbcdc/src/usbd_transc.c ****         reqstat = usbd_class_request (udev, &req);
+ 135:lib/usbcdc/src/usbd_transc.c ****         break;
+ 136:lib/usbcdc/src/usbd_transc.c **** 
+ 137:lib/usbcdc/src/usbd_transc.c ****     /* vendor defined request */
+ 138:lib/usbcdc/src/usbd_transc.c ****     case USB_REQTYPE_VENDOR:
+ 139:lib/usbcdc/src/usbd_transc.c ****         reqstat = usbd_vendor_request (udev, &req);
+ 140:lib/usbcdc/src/usbd_transc.c ****         break;
+ 141:lib/usbcdc/src/usbd_transc.c **** 
+ 142:lib/usbcdc/src/usbd_transc.c ****     default:
+ 143:lib/usbcdc/src/usbd_transc.c ****         break;
+ 144:lib/usbcdc/src/usbd_transc.c ****     }
+ 145:lib/usbcdc/src/usbd_transc.c **** 
+ 146:lib/usbcdc/src/usbd_transc.c ****     if (REQ_SUPP == reqstat) {
+ 264              		.loc 1 146 5
+ 265              		.loc 1 146 8 is_stmt 0
+ 266 0034 29E9     		bne	a0,zero,.L18
+ 147:lib/usbcdc/src/usbd_transc.c ****         if (req.wLength == 0) {
+ 267              		.loc 1 147 9 is_stmt 1
+ 268              		.loc 1 147 12 is_stmt 0
+ 269 0036 8357E100 		lhu	a5,14(sp)
+ 270 003a 9DE7     		bne	a5,zero,.L20
+ 148:lib/usbcdc/src/usbd_transc.c ****             usbd_ctl_status_send (udev);
+ 271              		.loc 1 148 13 is_stmt 1
+ 272 003c 2285     		mv	a0,s0
+ 273              	.LVL16:
+ 274 003e 97000000 		call	usbd_ctl_status_send
+ 274      E7800000 
+ 275              	.LVL17:
+ 276              	.L21:
+ 149:lib/usbcdc/src/usbd_transc.c ****         } else {
+ 150:lib/usbcdc/src/usbd_transc.c ****             if (req.bmRequestType & 0x80) {
+ 151:lib/usbcdc/src/usbd_transc.c ****                 usbd_ctl_send (udev);
+ 152:lib/usbcdc/src/usbd_transc.c ****             } else {
+ 153:lib/usbcdc/src/usbd_transc.c ****                 usbd_ctl_recev (udev);
+ 154:lib/usbcdc/src/usbd_transc.c ****             }
+ 155:lib/usbcdc/src/usbd_transc.c ****         }
+ 156:lib/usbcdc/src/usbd_transc.c ****     } else {
+ 157:lib/usbcdc/src/usbd_transc.c ****         usbd_enum_error (udev, &req);
+ 158:lib/usbcdc/src/usbd_transc.c ****     }
+ 159:lib/usbcdc/src/usbd_transc.c **** 
+ 160:lib/usbcdc/src/usbd_transc.c ****     return USBD_OK;
+ 277              		.loc 1 160 5
+ 161:lib/usbcdc/src/usbd_transc.c **** }
+ 278              		.loc 1 161 1 is_stmt 0
+ 279 0046 F240     		lw	ra,28(sp)
+ 280              		.cfi_remember_state
+ 281              		.cfi_restore 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 9
+
+
+ 282 0048 6244     		lw	s0,24(sp)
+ 283              		.cfi_restore 8
+ 284              	.LVL18:
+ 285 004a 0145     		li	a0,0
+ 286 004c 0561     		addi	sp,sp,32
+ 287              	.LCFI9:
+ 288              		.cfi_def_cfa_offset 0
+ 289 004e 8280     		jr	ra
+ 290              	.LVL19:
+ 291              	.L16:
+ 292              	.LCFI10:
+ 293              		.cfi_restore_state
+ 134:lib/usbcdc/src/usbd_transc.c ****         break;
+ 294              		.loc 1 134 9 is_stmt 1
+ 134:lib/usbcdc/src/usbd_transc.c ****         break;
+ 295              		.loc 1 134 19 is_stmt 0
+ 296 0050 2C00     		addi	a1,sp,8
+ 297 0052 97000000 		call	usbd_class_request
+ 297      E7800000 
+ 298              	.LVL20:
+ 135:lib/usbcdc/src/usbd_transc.c **** 
+ 299              		.loc 1 135 9 is_stmt 1
+ 300 005a E9BF     		j	.L19
+ 301              	.LVL21:
+ 302              	.L17:
+ 139:lib/usbcdc/src/usbd_transc.c ****         break;
+ 303              		.loc 1 139 9
+ 139:lib/usbcdc/src/usbd_transc.c ****         break;
+ 304              		.loc 1 139 19 is_stmt 0
+ 305 005c 2C00     		addi	a1,sp,8
+ 306 005e 97000000 		call	usbd_vendor_request
+ 306      E7800000 
+ 307              	.LVL22:
+ 140:lib/usbcdc/src/usbd_transc.c **** 
+ 308              		.loc 1 140 9 is_stmt 1
+ 309 0066 F9B7     		j	.L19
+ 310              	.L20:
+ 150:lib/usbcdc/src/usbd_transc.c ****                 usbd_ctl_send (udev);
+ 311              		.loc 1 150 13
+ 150:lib/usbcdc/src/usbd_transc.c ****                 usbd_ctl_send (udev);
+ 312              		.loc 1 150 16 is_stmt 0
+ 313 0068 83078100 		lb	a5,8(sp)
+ 151:lib/usbcdc/src/usbd_transc.c ****             } else {
+ 314              		.loc 1 151 17
+ 315 006c 2285     		mv	a0,s0
+ 316              	.LVL23:
+ 150:lib/usbcdc/src/usbd_transc.c ****                 usbd_ctl_send (udev);
+ 317              		.loc 1 150 16
+ 318 006e 63D70700 		bge	a5,zero,.L22
+ 151:lib/usbcdc/src/usbd_transc.c ****             } else {
+ 319              		.loc 1 151 17 is_stmt 1
+ 320 0072 97000000 		call	usbd_ctl_send
+ 320      E7800000 
+ 321              	.LVL24:
+ 322 007a F1B7     		j	.L21
+ 323              	.L22:
+ 153:lib/usbcdc/src/usbd_transc.c ****             }
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 10
+
+
+ 324              		.loc 1 153 17
+ 325 007c 97000000 		call	usbd_ctl_recev
+ 325      E7800000 
+ 326              	.LVL25:
+ 327 0084 C9B7     		j	.L21
+ 328              	.L18:
+ 157:lib/usbcdc/src/usbd_transc.c ****     }
+ 329              		.loc 1 157 9
+ 330 0086 2C00     		addi	a1,sp,8
+ 331 0088 2285     		mv	a0,s0
+ 332 008a 97000000 		call	usbd_enum_error
+ 332      E7800000 
+ 333              	.LVL26:
+ 334 0092 55BF     		j	.L21
+ 335              		.cfi_endproc
+ 336              	.LFE7:
+ 338              		.section	.text.usbd_out_transc,"ax",@progbits
+ 339              		.align	1
+ 340              		.globl	usbd_out_transc
+ 342              	usbd_out_transc:
+ 343              	.LFB8:
+ 162:lib/usbcdc/src/usbd_transc.c **** 
+ 163:lib/usbcdc/src/usbd_transc.c **** /*!
+ 164:lib/usbcdc/src/usbd_transc.c ****     \brief      data out stage processing
+ 165:lib/usbcdc/src/usbd_transc.c ****     \param[in]  udev: pointer to USB device instance
+ 166:lib/usbcdc/src/usbd_transc.c ****     \param[in]  ep_num: endpoint identifier(0..7)
+ 167:lib/usbcdc/src/usbd_transc.c ****     \param[out] none
+ 168:lib/usbcdc/src/usbd_transc.c ****     \retval     USB device operation cur_status
+ 169:lib/usbcdc/src/usbd_transc.c **** */
+ 170:lib/usbcdc/src/usbd_transc.c **** uint8_t usbd_out_transc (usb_core_driver *udev, uint8_t ep_num)
+ 171:lib/usbcdc/src/usbd_transc.c **** {
+ 344              		.loc 1 171 1
+ 345              		.cfi_startproc
+ 346              	.LVL27:
+ 347 0000 7971     		addi	sp,sp,-48
+ 348              	.LCFI11:
+ 349              		.cfi_def_cfa_offset 48
+ 350 0002 06D6     		sw	ra,44(sp)
+ 351 0004 22D4     		sw	s0,40(sp)
+ 352              		.cfi_offset 1, -4
+ 353              		.cfi_offset 8, -8
+ 354 0006 0018     		addi	s0,sp,48
+ 355              	.LCFI12:
+ 356              		.cfi_def_cfa 8, 0
+ 357 0008 232EA4FC 		sw	a0,-36(s0)
+ 358 000c AE87     		mv	a5,a1
+ 359 000e A30DF4FC 		sb	a5,-37(s0)
+ 172:lib/usbcdc/src/usbd_transc.c ****     if (ep_num == 0) {
+ 360              		.loc 1 172 5
+ 361              		.loc 1 172 8 is_stmt 0
+ 362 0012 8347B4FD 		lbu	a5,-37(s0)
+ 363 0016 C1EB     		bne	a5,zero,.L25
+ 364              	.LBB2:
+ 173:lib/usbcdc/src/usbd_transc.c ****         usb_transc *transc = &udev->dev.transc_out[0];
+ 365              		.loc 1 173 9 is_stmt 1
+ 366              		.loc 1 173 21 is_stmt 0
+ 367 0018 8327C4FD 		lw	a5,-36(s0)
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 11
+
+
+ 368 001c 9387C726 		addi	a5,a5,620
+ 369 0020 2326F4FE 		sw	a5,-20(s0)
+ 370              	.LVL28:
+ 174:lib/usbcdc/src/usbd_transc.c **** 
+ 175:lib/usbcdc/src/usbd_transc.c ****         switch (udev->dev.control.ctl_state) {
+ 371              		.loc 1 175 9 is_stmt 1
+ 372              		.loc 1 175 34 is_stmt 0
+ 373 0024 8327C4FD 		lw	a5,-36(s0)
+ 374              	.LVL29:
+ 375 0028 83C7C742 		lbu	a5,1068(a5)
+ 376              		.loc 1 175 9
+ 377 002c 0D47     		li	a4,3
+ 378 002e 6386E700 		beq	a5,a4,.L26
+ 379 0032 1147     		li	a4,4
+ 380 0034 6386E702 		beq	a5,a4,.L27
+ 176:lib/usbcdc/src/usbd_transc.c ****         case USB_CTL_DATA_OUT:
+ 177:lib/usbcdc/src/usbd_transc.c ****             /* update transfer length */
+ 178:lib/usbcdc/src/usbd_transc.c ****             transc->remain_len -= transc->max_len;
+ 179:lib/usbcdc/src/usbd_transc.c **** 
+ 180:lib/usbcdc/src/usbd_transc.c ****             usbd_ctl_recev (udev);
+ 181:lib/usbcdc/src/usbd_transc.c ****             break;
+ 182:lib/usbcdc/src/usbd_transc.c **** 
+ 183:lib/usbcdc/src/usbd_transc.c ****         case USB_CTL_LAST_DATA_OUT:
+ 184:lib/usbcdc/src/usbd_transc.c ****             if (udev->dev.cur_status == USBD_CONFIGURED) {
+ 185:lib/usbcdc/src/usbd_transc.c ****                 if (udev->dev.class_core->data_out != NULL) {
+ 186:lib/usbcdc/src/usbd_transc.c ****                     udev->dev.class_core->data_out (udev, 0U);
+ 187:lib/usbcdc/src/usbd_transc.c ****                 }
+ 188:lib/usbcdc/src/usbd_transc.c ****             }
+ 189:lib/usbcdc/src/usbd_transc.c **** 
+ 190:lib/usbcdc/src/usbd_transc.c ****             transc->remain_len = 0U;
+ 191:lib/usbcdc/src/usbd_transc.c **** 
+ 192:lib/usbcdc/src/usbd_transc.c ****             usbd_ctl_status_send (udev);
+ 193:lib/usbcdc/src/usbd_transc.c ****             break;
+ 194:lib/usbcdc/src/usbd_transc.c **** 
+ 195:lib/usbcdc/src/usbd_transc.c ****         default:
+ 196:lib/usbcdc/src/usbd_transc.c ****             break;
+ 381              		.loc 1 196 13
+ 382 0038 4DA0     		j	.L31
+ 383              	.L26:
+ 178:lib/usbcdc/src/usbd_transc.c **** 
+ 384              		.loc 1 178 13 is_stmt 1
+ 178:lib/usbcdc/src/usbd_transc.c **** 
+ 385              		.loc 1 178 32 is_stmt 0
+ 386 003a 8327C4FE 		lw	a5,-20(s0)
+ 387 003e DC4B     		lw	a5,20(a5)
+ 178:lib/usbcdc/src/usbd_transc.c **** 
+ 388              		.loc 1 178 41
+ 389 0040 0327C4FE 		lw	a4,-20(s0)
+ 390 0044 03574700 		lhu	a4,4(a4)
+ 178:lib/usbcdc/src/usbd_transc.c **** 
+ 391              		.loc 1 178 32
+ 392 0048 3387E740 		sub	a4,a5,a4
+ 393 004c 8327C4FE 		lw	a5,-20(s0)
+ 394 0050 D8CB     		sw	a4,20(a5)
+ 180:lib/usbcdc/src/usbd_transc.c ****             break;
+ 395              		.loc 1 180 13 is_stmt 1
+ 396 0052 0325C4FD 		lw	a0,-36(s0)
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 12
+
+
+ 397              	.LVL30:
+ 398 0056 97000000 		call	usbd_ctl_recev
+ 398      E7800000 
+ 399              	.LVL31:
+ 181:lib/usbcdc/src/usbd_transc.c **** 
+ 400              		.loc 1 181 13
+ 401 005e B5A8     		j	.L31
+ 402              	.LVL32:
+ 403              	.L27:
+ 184:lib/usbcdc/src/usbd_transc.c ****                 if (udev->dev.class_core->data_out != NULL) {
+ 404              		.loc 1 184 13
+ 184:lib/usbcdc/src/usbd_transc.c ****                 if (udev->dev.class_core->data_out != NULL) {
+ 405              		.loc 1 184 26 is_stmt 0
+ 406 0060 8327C4FD 		lw	a5,-36(s0)
+ 407 0064 83C7670C 		lbu	a5,198(a5)
+ 408 0068 13F7F70F 		andi	a4,a5,0xff
+ 184:lib/usbcdc/src/usbd_transc.c ****                 if (udev->dev.class_core->data_out != NULL) {
+ 409              		.loc 1 184 16
+ 410 006c 8D47     		li	a5,3
+ 411 006e 6311F702 		bne	a4,a5,.L30
+ 185:lib/usbcdc/src/usbd_transc.c ****                     udev->dev.class_core->data_out (udev, 0U);
+ 412              		.loc 1 185 17 is_stmt 1
+ 185:lib/usbcdc/src/usbd_transc.c ****                     udev->dev.class_core->data_out (udev, 0U);
+ 413              		.loc 1 185 30 is_stmt 0
+ 414 0072 8327C4FD 		lw	a5,-36(s0)
+ 415 0076 83A70743 		lw	a5,1072(a5)
+ 185:lib/usbcdc/src/usbd_transc.c ****                     udev->dev.class_core->data_out (udev, 0U);
+ 416              		.loc 1 185 41
+ 417 007a DC4B     		lw	a5,20(a5)
+ 185:lib/usbcdc/src/usbd_transc.c ****                     udev->dev.class_core->data_out (udev, 0U);
+ 418              		.loc 1 185 20
+ 419 007c 91CB     		beq	a5,zero,.L30
+ 186:lib/usbcdc/src/usbd_transc.c ****                 }
+ 420              		.loc 1 186 21 is_stmt 1
+ 186:lib/usbcdc/src/usbd_transc.c ****                 }
+ 421              		.loc 1 186 30 is_stmt 0
+ 422 007e 8327C4FD 		lw	a5,-36(s0)
+ 423 0082 83A70743 		lw	a5,1072(a5)
+ 186:lib/usbcdc/src/usbd_transc.c ****                 }
+ 424              		.loc 1 186 41
+ 425 0086 DC4B     		lw	a5,20(a5)
+ 186:lib/usbcdc/src/usbd_transc.c ****                 }
+ 426              		.loc 1 186 21
+ 427 0088 8145     		li	a1,0
+ 428              	.LVL33:
+ 429 008a 0325C4FD 		lw	a0,-36(s0)
+ 430              	.LVL34:
+ 431 008e 8297     		jalr	a5
+ 432              	.LVL35:
+ 433              	.L30:
+ 190:lib/usbcdc/src/usbd_transc.c **** 
+ 434              		.loc 1 190 13 is_stmt 1
+ 190:lib/usbcdc/src/usbd_transc.c **** 
+ 435              		.loc 1 190 32 is_stmt 0
+ 436 0090 8327C4FE 		lw	a5,-20(s0)
+ 437 0094 23AA0700 		sw	zero,20(a5)
+ 192:lib/usbcdc/src/usbd_transc.c ****             break;
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 13
+
+
+ 438              		.loc 1 192 13 is_stmt 1
+ 439 0098 0325C4FD 		lw	a0,-36(s0)
+ 440 009c 97000000 		call	usbd_ctl_status_send
+ 440      E7800000 
+ 441              	.LVL36:
+ 193:lib/usbcdc/src/usbd_transc.c **** 
+ 442              		.loc 1 193 13
+ 443 00a4 1DA8     		j	.L31
+ 444              	.LVL37:
+ 445              	.L25:
+ 446              	.LBE2:
+ 197:lib/usbcdc/src/usbd_transc.c ****         }
+ 198:lib/usbcdc/src/usbd_transc.c ****     } else if ((udev->dev.class_core->data_out != NULL) && (udev->dev.cur_status == USBD_CONFIGURED
+ 447              		.loc 1 198 12
+ 448              		.loc 1 198 26 is_stmt 0
+ 449 00a6 8327C4FD 		lw	a5,-36(s0)
+ 450 00aa 83A70743 		lw	a5,1072(a5)
+ 451              		.loc 1 198 37
+ 452 00ae DC4B     		lw	a5,20(a5)
+ 453              		.loc 1 198 15
+ 454 00b0 8DC7     		beq	a5,zero,.L31
+ 455              		.loc 1 198 70 discriminator 1
+ 456 00b2 8327C4FD 		lw	a5,-36(s0)
+ 457 00b6 83C7670C 		lbu	a5,198(a5)
+ 458 00ba 13F7F70F 		andi	a4,a5,0xff
+ 459              		.loc 1 198 57 discriminator 1
+ 460 00be 8D47     		li	a5,3
+ 461 00c0 631DF700 		bne	a4,a5,.L31
+ 199:lib/usbcdc/src/usbd_transc.c ****         udev->dev.class_core->data_out (udev, ep_num);
+ 462              		.loc 1 199 9 is_stmt 1
+ 463              		.loc 1 199 18 is_stmt 0
+ 464 00c4 8327C4FD 		lw	a5,-36(s0)
+ 465 00c8 83A70743 		lw	a5,1072(a5)
+ 466              		.loc 1 199 29
+ 467 00cc D84B     		lw	a4,20(a5)
+ 468              		.loc 1 199 9
+ 469 00ce 8347B4FD 		lbu	a5,-37(s0)
+ 470 00d2 BE85     		mv	a1,a5
+ 471              	.LVL38:
+ 472 00d4 0325C4FD 		lw	a0,-36(s0)
+ 473              	.LVL39:
+ 474 00d8 0297     		jalr	a4
+ 475              	.LVL40:
+ 476              	.L31:
+ 200:lib/usbcdc/src/usbd_transc.c ****     }
+ 201:lib/usbcdc/src/usbd_transc.c **** 
+ 202:lib/usbcdc/src/usbd_transc.c ****     return USBD_OK;
+ 477              		.loc 1 202 5 is_stmt 1
+ 478              		.loc 1 202 12 is_stmt 0
+ 479 00da 8147     		li	a5,0
+ 203:lib/usbcdc/src/usbd_transc.c **** }
+ 480              		.loc 1 203 1
+ 481 00dc 3E85     		mv	a0,a5
+ 482 00de B250     		lw	ra,44(sp)
+ 483              		.cfi_restore 1
+ 484 00e0 2254     		lw	s0,40(sp)
+ 485              	.LCFI13:
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 14
+
+
+ 486              		.cfi_restore 8
+ 487              		.cfi_def_cfa 2, 48
+ 488              	.LVL41:
+ 489 00e2 4561     		addi	sp,sp,48
+ 490              	.LCFI14:
+ 491              		.cfi_def_cfa_offset 0
+ 492              	.LVL42:
+ 493 00e4 8280     		jr	ra
+ 494              		.cfi_endproc
+ 495              	.LFE8:
+ 497              		.section	.text.usbd_in_transc,"ax",@progbits
+ 498              		.align	1
+ 499              		.globl	usbd_in_transc
+ 501              	usbd_in_transc:
+ 502              	.LFB9:
+ 204:lib/usbcdc/src/usbd_transc.c **** 
+ 205:lib/usbcdc/src/usbd_transc.c **** /*!
+ 206:lib/usbcdc/src/usbd_transc.c ****     \brief      data in stage processing
+ 207:lib/usbcdc/src/usbd_transc.c ****     \param[in]  udev: pointer to USB device instance
+ 208:lib/usbcdc/src/usbd_transc.c ****     \param[in]  ep_num: endpoint identifier(0..7)
+ 209:lib/usbcdc/src/usbd_transc.c ****     \param[out] none
+ 210:lib/usbcdc/src/usbd_transc.c ****     \retval     USB device operation cur_status
+ 211:lib/usbcdc/src/usbd_transc.c **** */
+ 212:lib/usbcdc/src/usbd_transc.c **** uint8_t usbd_in_transc (usb_core_driver *udev, uint8_t ep_num)
+ 213:lib/usbcdc/src/usbd_transc.c **** {
+ 503              		.loc 1 213 1 is_stmt 1
+ 504              		.cfi_startproc
+ 505              	.LVL43:
+ 506 0000 7971     		addi	sp,sp,-48
+ 507              	.LCFI15:
+ 508              		.cfi_def_cfa_offset 48
+ 509 0002 06D6     		sw	ra,44(sp)
+ 510 0004 22D4     		sw	s0,40(sp)
+ 511              		.cfi_offset 1, -4
+ 512              		.cfi_offset 8, -8
+ 513 0006 0018     		addi	s0,sp,48
+ 514              	.LCFI16:
+ 515              		.cfi_def_cfa 8, 0
+ 516 0008 232EA4FC 		sw	a0,-36(s0)
+ 517 000c AE87     		mv	a5,a1
+ 518 000e A30DF4FC 		sb	a5,-37(s0)
+ 214:lib/usbcdc/src/usbd_transc.c ****     if (0U == ep_num) {
+ 519              		.loc 1 214 5
+ 520              		.loc 1 214 8 is_stmt 0
+ 521 0012 8347B4FD 		lbu	a5,-37(s0)
+ 522 0016 DDEB     		bne	a5,zero,.L34
+ 523              	.LBB3:
+ 215:lib/usbcdc/src/usbd_transc.c ****         usb_transc *transc = &udev->dev.transc_in[0];
+ 524              		.loc 1 215 9 is_stmt 1
+ 525              		.loc 1 215 21 is_stmt 0
+ 526 0018 8327C4FD 		lw	a5,-36(s0)
+ 527 001c 9387870C 		addi	a5,a5,200
+ 528 0020 2326F4FE 		sw	a5,-20(s0)
+ 529              	.LVL44:
+ 216:lib/usbcdc/src/usbd_transc.c **** 
+ 217:lib/usbcdc/src/usbd_transc.c ****         switch (udev->dev.control.ctl_state) {
+ 530              		.loc 1 217 9 is_stmt 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 15
+
+
+ 531              		.loc 1 217 34 is_stmt 0
+ 532 0024 8327C4FD 		lw	a5,-36(s0)
+ 533              	.LVL45:
+ 534 0028 83C7C742 		lbu	a5,1068(a5)
+ 535              		.loc 1 217 9
+ 536 002c 0547     		li	a4,1
+ 537 002e 6386E700 		beq	a5,a4,.L35
+ 538 0032 0947     		li	a4,2
+ 539 0034 6386E702 		beq	a5,a4,.L36
+ 218:lib/usbcdc/src/usbd_transc.c ****         case USB_CTL_DATA_IN:
+ 219:lib/usbcdc/src/usbd_transc.c ****             /* update transfer length */
+ 220:lib/usbcdc/src/usbd_transc.c ****             transc->remain_len -= transc->max_len;
+ 221:lib/usbcdc/src/usbd_transc.c **** 
+ 222:lib/usbcdc/src/usbd_transc.c ****             usbd_ctl_send (udev);
+ 223:lib/usbcdc/src/usbd_transc.c ****             break;
+ 224:lib/usbcdc/src/usbd_transc.c **** 
+ 225:lib/usbcdc/src/usbd_transc.c ****         case USB_CTL_LAST_DATA_IN:
+ 226:lib/usbcdc/src/usbd_transc.c ****             /* last packet is MPS multiple, so send ZLP packet */
+ 227:lib/usbcdc/src/usbd_transc.c ****             if (udev->dev.control.ctl_zlp) {
+ 228:lib/usbcdc/src/usbd_transc.c ****                 usbd_ep_send (udev, 0U, NULL, 0U);
+ 229:lib/usbcdc/src/usbd_transc.c **** 
+ 230:lib/usbcdc/src/usbd_transc.c ****                 udev->dev.control.ctl_zlp = 0U;
+ 231:lib/usbcdc/src/usbd_transc.c ****             } else {
+ 232:lib/usbcdc/src/usbd_transc.c ****                 if (udev->dev.cur_status == USBD_CONFIGURED) {
+ 233:lib/usbcdc/src/usbd_transc.c ****                     if (udev->dev.class_core->data_in != NULL) {
+ 234:lib/usbcdc/src/usbd_transc.c ****                         udev->dev.class_core->data_in (udev, 0U);
+ 235:lib/usbcdc/src/usbd_transc.c ****                     }
+ 236:lib/usbcdc/src/usbd_transc.c ****                 }
+ 237:lib/usbcdc/src/usbd_transc.c **** 
+ 238:lib/usbcdc/src/usbd_transc.c ****                 transc->remain_len = 0U;
+ 239:lib/usbcdc/src/usbd_transc.c **** 
+ 240:lib/usbcdc/src/usbd_transc.c ****                 usbd_ctl_status_recev (udev);
+ 241:lib/usbcdc/src/usbd_transc.c ****             }
+ 242:lib/usbcdc/src/usbd_transc.c ****             break;
+ 243:lib/usbcdc/src/usbd_transc.c **** 
+ 244:lib/usbcdc/src/usbd_transc.c ****         default:
+ 245:lib/usbcdc/src/usbd_transc.c ****             break;
+ 540              		.loc 1 245 13
+ 541 0038 E1A0     		j	.L42
+ 542              	.L35:
+ 220:lib/usbcdc/src/usbd_transc.c **** 
+ 543              		.loc 1 220 13 is_stmt 1
+ 220:lib/usbcdc/src/usbd_transc.c **** 
+ 544              		.loc 1 220 32 is_stmt 0
+ 545 003a 8327C4FE 		lw	a5,-20(s0)
+ 546 003e DC4B     		lw	a5,20(a5)
+ 220:lib/usbcdc/src/usbd_transc.c **** 
+ 547              		.loc 1 220 41
+ 548 0040 0327C4FE 		lw	a4,-20(s0)
+ 549 0044 03574700 		lhu	a4,4(a4)
+ 220:lib/usbcdc/src/usbd_transc.c **** 
+ 550              		.loc 1 220 32
+ 551 0048 3387E740 		sub	a4,a5,a4
+ 552 004c 8327C4FE 		lw	a5,-20(s0)
+ 553 0050 D8CB     		sw	a4,20(a5)
+ 222:lib/usbcdc/src/usbd_transc.c ****             break;
+ 554              		.loc 1 222 13 is_stmt 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 16
+
+
+ 555 0052 0325C4FD 		lw	a0,-36(s0)
+ 556              	.LVL46:
+ 557 0056 97000000 		call	usbd_ctl_send
+ 557      E7800000 
+ 558              	.LVL47:
+ 223:lib/usbcdc/src/usbd_transc.c **** 
+ 559              		.loc 1 223 13
+ 560 005e 4DA0     		j	.L42
+ 561              	.LVL48:
+ 562              	.L36:
+ 227:lib/usbcdc/src/usbd_transc.c ****                 usbd_ep_send (udev, 0U, NULL, 0U);
+ 563              		.loc 1 227 13
+ 227:lib/usbcdc/src/usbd_transc.c ****                 usbd_ep_send (udev, 0U, NULL, 0U);
+ 564              		.loc 1 227 34 is_stmt 0
+ 565 0060 8327C4FD 		lw	a5,-36(s0)
+ 566 0064 83C7D742 		lbu	a5,1069(a5)
+ 227:lib/usbcdc/src/usbd_transc.c ****                 usbd_ep_send (udev, 0U, NULL, 0U);
+ 567              		.loc 1 227 16
+ 568 0068 99CF     		beq	a5,zero,.L39
+ 228:lib/usbcdc/src/usbd_transc.c **** 
+ 569              		.loc 1 228 17 is_stmt 1
+ 570 006a 8146     		li	a3,0
+ 571 006c 0146     		li	a2,0
+ 572 006e 8145     		li	a1,0
+ 573              	.LVL49:
+ 574 0070 0325C4FD 		lw	a0,-36(s0)
+ 575              	.LVL50:
+ 576 0074 97000000 		call	usbd_ep_send
+ 576      E7800000 
+ 577              	.LVL51:
+ 230:lib/usbcdc/src/usbd_transc.c ****             } else {
+ 578              		.loc 1 230 17
+ 230:lib/usbcdc/src/usbd_transc.c ****             } else {
+ 579              		.loc 1 230 43 is_stmt 0
+ 580 007c 8327C4FD 		lw	a5,-36(s0)
+ 581 0080 A3860742 		sb	zero,1069(a5)
+ 242:lib/usbcdc/src/usbd_transc.c **** 
+ 582              		.loc 1 242 13
+ 583 0084 B5A8     		j	.L42
+ 584              	.LVL52:
+ 585              	.L39:
+ 232:lib/usbcdc/src/usbd_transc.c ****                     if (udev->dev.class_core->data_in != NULL) {
+ 586              		.loc 1 232 17 is_stmt 1
+ 232:lib/usbcdc/src/usbd_transc.c ****                     if (udev->dev.class_core->data_in != NULL) {
+ 587              		.loc 1 232 30 is_stmt 0
+ 588 0086 8327C4FD 		lw	a5,-36(s0)
+ 589 008a 83C7670C 		lbu	a5,198(a5)
+ 590 008e 13F7F70F 		andi	a4,a5,0xff
+ 232:lib/usbcdc/src/usbd_transc.c ****                     if (udev->dev.class_core->data_in != NULL) {
+ 591              		.loc 1 232 20
+ 592 0092 8D47     		li	a5,3
+ 593 0094 6311F702 		bne	a4,a5,.L41
+ 233:lib/usbcdc/src/usbd_transc.c ****                         udev->dev.class_core->data_in (udev, 0U);
+ 594              		.loc 1 233 21 is_stmt 1
+ 233:lib/usbcdc/src/usbd_transc.c ****                         udev->dev.class_core->data_in (udev, 0U);
+ 595              		.loc 1 233 34 is_stmt 0
+ 596 0098 8327C4FD 		lw	a5,-36(s0)
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 17
+
+
+ 597 009c 83A70743 		lw	a5,1072(a5)
+ 233:lib/usbcdc/src/usbd_transc.c ****                         udev->dev.class_core->data_in (udev, 0U);
+ 598              		.loc 1 233 45
+ 599 00a0 9C4B     		lw	a5,16(a5)
+ 233:lib/usbcdc/src/usbd_transc.c ****                         udev->dev.class_core->data_in (udev, 0U);
+ 600              		.loc 1 233 24
+ 601 00a2 91CB     		beq	a5,zero,.L41
+ 234:lib/usbcdc/src/usbd_transc.c ****                     }
+ 602              		.loc 1 234 25 is_stmt 1
+ 234:lib/usbcdc/src/usbd_transc.c ****                     }
+ 603              		.loc 1 234 34 is_stmt 0
+ 604 00a4 8327C4FD 		lw	a5,-36(s0)
+ 605 00a8 83A70743 		lw	a5,1072(a5)
+ 234:lib/usbcdc/src/usbd_transc.c ****                     }
+ 606              		.loc 1 234 45
+ 607 00ac 9C4B     		lw	a5,16(a5)
+ 234:lib/usbcdc/src/usbd_transc.c ****                     }
+ 608              		.loc 1 234 25
+ 609 00ae 8145     		li	a1,0
+ 610              	.LVL53:
+ 611 00b0 0325C4FD 		lw	a0,-36(s0)
+ 612              	.LVL54:
+ 613 00b4 8297     		jalr	a5
+ 614              	.LVL55:
+ 615              	.L41:
+ 238:lib/usbcdc/src/usbd_transc.c **** 
+ 616              		.loc 1 238 17 is_stmt 1
+ 238:lib/usbcdc/src/usbd_transc.c **** 
+ 617              		.loc 1 238 36 is_stmt 0
+ 618 00b6 8327C4FE 		lw	a5,-20(s0)
+ 619 00ba 23AA0700 		sw	zero,20(a5)
+ 240:lib/usbcdc/src/usbd_transc.c ****             }
+ 620              		.loc 1 240 17 is_stmt 1
+ 621 00be 0325C4FD 		lw	a0,-36(s0)
+ 622 00c2 97000000 		call	usbd_ctl_status_recev
+ 622      E7800000 
+ 623              	.LVL56:
+ 242:lib/usbcdc/src/usbd_transc.c **** 
+ 624              		.loc 1 242 13
+ 625 00ca 1DA8     		j	.L42
+ 626              	.LVL57:
+ 627              	.L34:
+ 628              	.LBE3:
+ 246:lib/usbcdc/src/usbd_transc.c ****         }
+ 247:lib/usbcdc/src/usbd_transc.c ****     } else {
+ 248:lib/usbcdc/src/usbd_transc.c ****         if ((udev->dev.cur_status == USBD_CONFIGURED) && (udev->dev.class_core->data_in != NULL)) {
+ 629              		.loc 1 248 9
+ 630              		.loc 1 248 23 is_stmt 0
+ 631 00cc 8327C4FD 		lw	a5,-36(s0)
+ 632 00d0 83C7670C 		lbu	a5,198(a5)
+ 633 00d4 13F7F70F 		andi	a4,a5,0xff
+ 634              		.loc 1 248 12
+ 635 00d8 8D47     		li	a5,3
+ 636 00da 6313F702 		bne	a4,a5,.L42
+ 637              		.loc 1 248 68 discriminator 1
+ 638 00de 8327C4FD 		lw	a5,-36(s0)
+ 639 00e2 83A70743 		lw	a5,1072(a5)
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 18
+
+
+ 640              		.loc 1 248 79 discriminator 1
+ 641 00e6 9C4B     		lw	a5,16(a5)
+ 642              		.loc 1 248 55 discriminator 1
+ 643 00e8 81CF     		beq	a5,zero,.L42
+ 249:lib/usbcdc/src/usbd_transc.c ****             udev->dev.class_core->data_in (udev, ep_num);
+ 644              		.loc 1 249 13 is_stmt 1
+ 645              		.loc 1 249 22 is_stmt 0
+ 646 00ea 8327C4FD 		lw	a5,-36(s0)
+ 647 00ee 83A70743 		lw	a5,1072(a5)
+ 648              		.loc 1 249 33
+ 649 00f2 984B     		lw	a4,16(a5)
+ 650              		.loc 1 249 13
+ 651 00f4 8347B4FD 		lbu	a5,-37(s0)
+ 652 00f8 BE85     		mv	a1,a5
+ 653              	.LVL58:
+ 654 00fa 0325C4FD 		lw	a0,-36(s0)
+ 655              	.LVL59:
+ 656 00fe 0297     		jalr	a4
+ 657              	.LVL60:
+ 658              	.L42:
+ 250:lib/usbcdc/src/usbd_transc.c ****         }
+ 251:lib/usbcdc/src/usbd_transc.c ****     }
+ 252:lib/usbcdc/src/usbd_transc.c **** 
+ 253:lib/usbcdc/src/usbd_transc.c ****     return USBD_OK;
+ 659              		.loc 1 253 5 is_stmt 1
+ 660              		.loc 1 253 12 is_stmt 0
+ 661 0100 8147     		li	a5,0
+ 254:lib/usbcdc/src/usbd_transc.c **** }
+ 662              		.loc 1 254 1
+ 663 0102 3E85     		mv	a0,a5
+ 664 0104 B250     		lw	ra,44(sp)
+ 665              		.cfi_restore 1
+ 666 0106 2254     		lw	s0,40(sp)
+ 667              	.LCFI17:
+ 668              		.cfi_restore 8
+ 669              		.cfi_def_cfa 2, 48
+ 670              	.LVL61:
+ 671 0108 4561     		addi	sp,sp,48
+ 672              	.LCFI18:
+ 673              		.cfi_def_cfa_offset 0
+ 674              	.LVL62:
+ 675 010a 8280     		jr	ra
+ 676              		.cfi_endproc
+ 677              	.LFE9:
+ 679              		.text
+ 680              	.Letext0:
+ 681              		.file 2 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
+ 682              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
+ 683              		.file 4 "lib/usbcdc/include/drv_usb_regs.h"
+ 684              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
+ 685              		.file 6 "lib/usbcdc/include/usb_ch9_std.h"
+ 686              		.file 7 "lib/usbcdc/include/drv_usb_core.h"
+ 687              		.file 8 "lib/usbcdc/include/drv_usb_dev.h"
+ 688              		.file 9 "lib/usbcdc/include/usbd_core.h"
+ 689              		.file 10 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
+ 690              		.file 11 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
+ 691              		.file 12 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 19
+
+
+ 692              		.file 13 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
+ 693              		.file 14 "lib/usbcdc/include/usbd_enum.h"
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usbd_transc.c
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:13     .text.usbd_ctl_send:0000000000000000 usbd_ctl_send
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:17     .text.usbd_ctl_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:19     .text.usbd_ctl_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:20     .text.usbd_ctl_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:21     .text.usbd_ctl_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:24     .text.usbd_ctl_send:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:26     .text.usbd_ctl_send:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:28     .text.usbd_ctl_send:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:30     .text.usbd_ctl_send:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:32     .text.usbd_ctl_send:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:33     .text.usbd_ctl_send:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:35     .text.usbd_ctl_send:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:37     .text.usbd_ctl_send:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:40     .text.usbd_ctl_send:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:41     .text.usbd_ctl_send:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:43     .text.usbd_ctl_send:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:45     .text.usbd_ctl_send:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:47     .text.usbd_ctl_send:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:52     .text.usbd_ctl_send:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:53     .text.usbd_ctl_send:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:54     .text.usbd_ctl_send:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:56     .text.usbd_ctl_send:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:61     .text.usbd_ctl_send:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:63     .text.usbd_ctl_send:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:70     .text.usbd_ctl_recev:0000000000000000 usbd_ctl_recev
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:73     .text.usbd_ctl_recev:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:75     .text.usbd_ctl_recev:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:76     .text.usbd_ctl_recev:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:77     .text.usbd_ctl_recev:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:80     .text.usbd_ctl_recev:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:82     .text.usbd_ctl_recev:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:84     .text.usbd_ctl_recev:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:86     .text.usbd_ctl_recev:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:88     .text.usbd_ctl_recev:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:89     .text.usbd_ctl_recev:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:91     .text.usbd_ctl_recev:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:93     .text.usbd_ctl_recev:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:96     .text.usbd_ctl_recev:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:97     .text.usbd_ctl_recev:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:99     .text.usbd_ctl_recev:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:101    .text.usbd_ctl_recev:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:103    .text.usbd_ctl_recev:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:108    .text.usbd_ctl_recev:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:109    .text.usbd_ctl_recev:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:110    .text.usbd_ctl_recev:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:112    .text.usbd_ctl_recev:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:117    .text.usbd_ctl_recev:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:119    .text.usbd_ctl_recev:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:126    .text.usbd_ctl_status_send:0000000000000000 usbd_ctl_status_send
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:129    .text.usbd_ctl_status_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:131    .text.usbd_ctl_status_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:132    .text.usbd_ctl_status_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:133    .text.usbd_ctl_status_send:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:135    .text.usbd_ctl_status_send:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:138    .text.usbd_ctl_status_send:0000000000000006 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 21
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:139    .text.usbd_ctl_status_send:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:141    .text.usbd_ctl_status_send:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:144    .text.usbd_ctl_status_send:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:148    .text.usbd_ctl_status_send:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:150    .text.usbd_ctl_status_send:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:153    .text.usbd_ctl_status_send:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:157    .text.usbd_ctl_status_send:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:158    .text.usbd_ctl_status_send:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:159    .text.usbd_ctl_status_send:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:161    .text.usbd_ctl_status_send:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:166    .text.usbd_ctl_status_send:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:168    .text.usbd_ctl_status_send:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:175    .text.usbd_ctl_status_recev:0000000000000000 usbd_ctl_status_recev
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:178    .text.usbd_ctl_status_recev:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:180    .text.usbd_ctl_status_recev:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:181    .text.usbd_ctl_status_recev:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:182    .text.usbd_ctl_status_recev:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:184    .text.usbd_ctl_status_recev:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:187    .text.usbd_ctl_status_recev:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:188    .text.usbd_ctl_status_recev:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:190    .text.usbd_ctl_status_recev:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:193    .text.usbd_ctl_status_recev:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:197    .text.usbd_ctl_status_recev:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:199    .text.usbd_ctl_status_recev:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:202    .text.usbd_ctl_status_recev:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:206    .text.usbd_ctl_status_recev:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:207    .text.usbd_ctl_status_recev:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:208    .text.usbd_ctl_status_recev:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:210    .text.usbd_ctl_status_recev:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:215    .text.usbd_ctl_status_recev:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:217    .text.usbd_ctl_status_recev:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:224    .text.usbd_setup_transc:0000000000000000 usbd_setup_transc
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:227    .text.usbd_setup_transc:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:229    .text.usbd_setup_transc:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:230    .text.usbd_setup_transc:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:231    .text.usbd_setup_transc:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:232    .text.usbd_setup_transc:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:235    .text.usbd_setup_transc:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:237    .text.usbd_setup_transc:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:240    .text.usbd_setup_transc:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:243    .text.usbd_setup_transc:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:244    .text.usbd_setup_transc:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:245    .text.usbd_setup_transc:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:246    .text.usbd_setup_transc:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:249    .text.usbd_setup_transc:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:251    .text.usbd_setup_transc:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:253    .text.usbd_setup_transc:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:258    .text.usbd_setup_transc:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:259    .text.usbd_setup_transc:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:264    .text.usbd_setup_transc:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:265    .text.usbd_setup_transc:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:266    .text.usbd_setup_transc:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:268    .text.usbd_setup_transc:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:269    .text.usbd_setup_transc:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:272    .text.usbd_setup_transc:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:278    .text.usbd_setup_transc:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:279    .text.usbd_setup_transc:0000000000000046 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 22
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:280    .text.usbd_setup_transc:0000000000000048 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:281    .text.usbd_setup_transc:0000000000000048 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:283    .text.usbd_setup_transc:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:288    .text.usbd_setup_transc:000000000000004e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:293    .text.usbd_setup_transc:0000000000000050 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:295    .text.usbd_setup_transc:0000000000000050 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:296    .text.usbd_setup_transc:0000000000000050 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:300    .text.usbd_setup_transc:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:304    .text.usbd_setup_transc:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:305    .text.usbd_setup_transc:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:309    .text.usbd_setup_transc:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:312    .text.usbd_setup_transc:0000000000000068 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:313    .text.usbd_setup_transc:0000000000000068 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:315    .text.usbd_setup_transc:000000000000006c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:318    .text.usbd_setup_transc:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:320    .text.usbd_setup_transc:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:325    .text.usbd_setup_transc:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:330    .text.usbd_setup_transc:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:335    .text.usbd_setup_transc:0000000000000094 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:342    .text.usbd_out_transc:0000000000000000 usbd_out_transc
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:345    .text.usbd_out_transc:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:347    .text.usbd_out_transc:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:349    .text.usbd_out_transc:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:352    .text.usbd_out_transc:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:353    .text.usbd_out_transc:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:356    .text.usbd_out_transc:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:361    .text.usbd_out_transc:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:362    .text.usbd_out_transc:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:366    .text.usbd_out_transc:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:367    .text.usbd_out_transc:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:372    .text.usbd_out_transc:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:373    .text.usbd_out_transc:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:377    .text.usbd_out_transc:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:382    .text.usbd_out_transc:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:385    .text.usbd_out_transc:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:386    .text.usbd_out_transc:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:389    .text.usbd_out_transc:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:392    .text.usbd_out_transc:0000000000000048 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:396    .text.usbd_out_transc:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:401    .text.usbd_out_transc:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:405    .text.usbd_out_transc:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:406    .text.usbd_out_transc:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:410    .text.usbd_out_transc:000000000000006c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:413    .text.usbd_out_transc:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:414    .text.usbd_out_transc:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:417    .text.usbd_out_transc:000000000000007a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:419    .text.usbd_out_transc:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:421    .text.usbd_out_transc:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:422    .text.usbd_out_transc:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:425    .text.usbd_out_transc:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:427    .text.usbd_out_transc:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:435    .text.usbd_out_transc:0000000000000090 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:436    .text.usbd_out_transc:0000000000000090 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:439    .text.usbd_out_transc:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:443    .text.usbd_out_transc:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:448    .text.usbd_out_transc:00000000000000a6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:449    .text.usbd_out_transc:00000000000000a6 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 23
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:452    .text.usbd_out_transc:00000000000000ae .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:454    .text.usbd_out_transc:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:456    .text.usbd_out_transc:00000000000000b2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:460    .text.usbd_out_transc:00000000000000be .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:463    .text.usbd_out_transc:00000000000000c4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:464    .text.usbd_out_transc:00000000000000c4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:467    .text.usbd_out_transc:00000000000000cc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:469    .text.usbd_out_transc:00000000000000ce .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:478    .text.usbd_out_transc:00000000000000da .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:479    .text.usbd_out_transc:00000000000000da .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:481    .text.usbd_out_transc:00000000000000dc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:483    .text.usbd_out_transc:00000000000000e0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:486    .text.usbd_out_transc:00000000000000e2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:487    .text.usbd_out_transc:00000000000000e2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:491    .text.usbd_out_transc:00000000000000e4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:494    .text.usbd_out_transc:00000000000000e6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:501    .text.usbd_in_transc:0000000000000000 usbd_in_transc
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:504    .text.usbd_in_transc:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:506    .text.usbd_in_transc:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:508    .text.usbd_in_transc:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:511    .text.usbd_in_transc:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:512    .text.usbd_in_transc:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:515    .text.usbd_in_transc:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:520    .text.usbd_in_transc:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:521    .text.usbd_in_transc:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:525    .text.usbd_in_transc:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:526    .text.usbd_in_transc:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:531    .text.usbd_in_transc:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:532    .text.usbd_in_transc:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:536    .text.usbd_in_transc:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:541    .text.usbd_in_transc:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:544    .text.usbd_in_transc:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:545    .text.usbd_in_transc:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:548    .text.usbd_in_transc:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:551    .text.usbd_in_transc:0000000000000048 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:555    .text.usbd_in_transc:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:560    .text.usbd_in_transc:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:564    .text.usbd_in_transc:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:565    .text.usbd_in_transc:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:568    .text.usbd_in_transc:0000000000000068 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:570    .text.usbd_in_transc:000000000000006a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:579    .text.usbd_in_transc:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:580    .text.usbd_in_transc:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:583    .text.usbd_in_transc:0000000000000084 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:587    .text.usbd_in_transc:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:588    .text.usbd_in_transc:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:592    .text.usbd_in_transc:0000000000000092 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:595    .text.usbd_in_transc:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:596    .text.usbd_in_transc:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:599    .text.usbd_in_transc:00000000000000a0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:601    .text.usbd_in_transc:00000000000000a2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:603    .text.usbd_in_transc:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:604    .text.usbd_in_transc:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:607    .text.usbd_in_transc:00000000000000ac .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:609    .text.usbd_in_transc:00000000000000ae .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:617    .text.usbd_in_transc:00000000000000b6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:618    .text.usbd_in_transc:00000000000000b6 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 24
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:621    .text.usbd_in_transc:00000000000000be .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:625    .text.usbd_in_transc:00000000000000ca .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:630    .text.usbd_in_transc:00000000000000cc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:631    .text.usbd_in_transc:00000000000000cc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:635    .text.usbd_in_transc:00000000000000d8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:638    .text.usbd_in_transc:00000000000000de .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:641    .text.usbd_in_transc:00000000000000e6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:643    .text.usbd_in_transc:00000000000000e8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:645    .text.usbd_in_transc:00000000000000ea .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:646    .text.usbd_in_transc:00000000000000ea .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:649    .text.usbd_in_transc:00000000000000f2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:651    .text.usbd_in_transc:00000000000000f4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:660    .text.usbd_in_transc:0000000000000100 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:661    .text.usbd_in_transc:0000000000000100 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:663    .text.usbd_in_transc:0000000000000102 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:665    .text.usbd_in_transc:0000000000000106 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:668    .text.usbd_in_transc:0000000000000108 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:669    .text.usbd_in_transc:0000000000000108 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:673    .text.usbd_in_transc:000000000000010a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:676    .text.usbd_in_transc:000000000000010c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:66     .text.usbd_ctl_send:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:122    .text.usbd_ctl_recev:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:171    .text.usbd_ctl_status_send:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:220    .text.usbd_ctl_status_recev:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:338    .text.usbd_setup_transc:0000000000000094 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:497    .text.usbd_out_transc:00000000000000e6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:679    .text.usbd_in_transc:000000000000010c .L0 
+                     .debug_frame:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:49     .text.usbd_ctl_send:000000000000002a .L2
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:105    .text.usbd_ctl_recev:000000000000002a .L7
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:291    .text.usbd_setup_transc:0000000000000050 .L16
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:302    .text.usbd_setup_transc:000000000000005c .L17
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:328    .text.usbd_setup_transc:0000000000000086 .L18
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:310    .text.usbd_setup_transc:0000000000000068 .L20
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:263    .text.usbd_setup_transc:0000000000000034 .L19
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:323    .text.usbd_setup_transc:000000000000007c .L22
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:276    .text.usbd_setup_transc:0000000000000046 .L21
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:445    .text.usbd_out_transc:00000000000000a6 .L25
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:383    .text.usbd_out_transc:000000000000003a .L26
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:403    .text.usbd_out_transc:0000000000000060 .L27
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:476    .text.usbd_out_transc:00000000000000da .L31
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:433    .text.usbd_out_transc:0000000000000090 .L30
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:627    .text.usbd_in_transc:00000000000000cc .L34
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:542    .text.usbd_in_transc:000000000000003a .L35
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:562    .text.usbd_in_transc:0000000000000060 .L36
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:658    .text.usbd_in_transc:0000000000000100 .L42
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:585    .text.usbd_in_transc:0000000000000086 .L39
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:615    .text.usbd_in_transc:00000000000000b6 .L41
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:4428   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5733   .debug_str:0000000000000148 .LASF308
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6033   .debug_str:0000000000000841 .LASF309
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5941   .debug_str:00000000000005e6 .LASF310
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5643   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5661   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5985   .debug_str:0000000000000725 .LASF0
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5807   .debug_str:0000000000000343 .LASF1
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5753   .debug_str:0000000000000233 .LASF4
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 25
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5811   .debug_str:0000000000000357 .LASF2
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6175   .debug_str:0000000000000b13 .LASF3
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5855   .debug_str:0000000000000431 .LASF5
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6243   .debug_str:0000000000000c5b .LASF6
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5773   .debug_str:000000000000029b .LASF7
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5947   .debug_str:000000000000066b .LASF8
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5907   .debug_str:000000000000052a .LASF9
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5951   .debug_str:0000000000000681 .LASF10
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6077   .debug_str:0000000000000932 .LASF11
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5809   .debug_str:000000000000034f .LASF12
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6085   .debug_str:0000000000000966 .LASF13
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6221   .debug_str:0000000000000bf3 .LASF14
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5917   .debug_str:000000000000056d .LASF87
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6045   .debug_str:0000000000000896 .LASF15
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5819   .debug_str:0000000000000386 .LASF16
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5953   .debug_str:000000000000068f .LASF17
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5867   .debug_str:0000000000000469 .LASF18
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6161   .debug_str:0000000000000ad4 .LASF19
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5879   .debug_str:00000000000004a3 .LASF20
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6259   .debug_str:0000000000000cc7 .LASF21
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6179   .debug_str:0000000000000b2c .LASF22
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6267   .debug_str:0000000000000cf1 .LASF23
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6265   .debug_str:0000000000000ce9 .LASF24
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6151   .debug_str:0000000000000aa9 .LASF25
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6263   .debug_str:0000000000000cd5 .LASF26
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6233   .debug_str:0000000000000c32 .LASF27
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5871   .debug_str:0000000000000479 .LASF28
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5829   .debug_str:00000000000003a8 .LASF29
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5891   .debug_str:00000000000004dc .LASF30
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6261   .debug_str:0000000000000ccd .LASF31
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5739   .debug_str:00000000000001dd .LASF32
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6255   .debug_str:0000000000000caf .LASF33
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6107   .debug_str:00000000000009d7 .LASF34
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5803   .debug_str:000000000000032f .LASF35
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6055   .debug_str:00000000000008c4 .LASF36
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6227   .debug_str:0000000000000c15 .LASF37
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6143   .debug_str:0000000000000a88 .LASF38
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6253   .debug_str:0000000000000ca5 .LASF39
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6275   .debug_str:0000000000000d29 .LASF40
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5903   .debug_str:000000000000051e .LASF41
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5865   .debug_str:0000000000000460 .LASF42
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6239   .debug_str:0000000000000c49 .LASF43
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6157   .debug_str:0000000000000ac6 .LASF44
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6105   .debug_str:00000000000009d0 .LASF45
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5791   .debug_str:00000000000002f9 .LASF46
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5995   .debug_str:0000000000000764 .LASF47
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5821   .debug_str:000000000000038d .LASF48
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5825   .debug_str:000000000000039b .LASF49
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6093   .debug_str:0000000000000995 .LASF50
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5717   .debug_str:0000000000000105 .LASF51
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5837   .debug_str:00000000000003cd .LASF52
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5935   .debug_str:00000000000005cc .LASF53
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5853   .debug_str:0000000000000427 .LASF54
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6277   .debug_str:0000000000000d30 .LASF55
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5699   .debug_str:00000000000000b0 .LASF56
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5859   .debug_str:0000000000000443 .LASF57
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5861   .debug_str:000000000000044e .LASF58
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 26
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6195   .debug_str:0000000000000b81 .LASF59
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5827   .debug_str:00000000000003a0 .LASF60
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5767   .debug_str:000000000000027b .LASF61
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5677   .debug_str:0000000000000043 .LASF62
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6101   .debug_str:00000000000009b3 .LASF63
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5769   .debug_str:0000000000000283 .LASF64
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6059   .debug_str:00000000000008d6 .LASF65
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5895   .debug_str:00000000000004ef .LASF66
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6283   .debug_str:0000000000000d4e .LASF67
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6191   .debug_str:0000000000000b70 .LASF68
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6199   .debug_str:0000000000000b98 .LASF69
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5835   .debug_str:00000000000003c2 .LASF70
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5693   .debug_str:0000000000000088 .LASF71
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5793   .debug_str:0000000000000304 .LASF72
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5815   .debug_str:0000000000000373 .LASF73
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5697   .debug_str:00000000000000a5 .LASF74
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5929   .debug_str:00000000000005b0 .LASF75
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5799   .debug_str:000000000000031f .LASF76
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5869   .debug_str:0000000000000470 .LASF77
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5969   .debug_str:00000000000006df .LASF78
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6181   .debug_str:0000000000000b33 .LASF79
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5785   .debug_str:00000000000002d9 .LASF80
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5873   .debug_str:0000000000000484 .LASF89
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5777   .debug_str:00000000000002b0 .LASF81
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6163   .debug_str:0000000000000adb .LASF82
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6159   .debug_str:0000000000000acf .LASF83
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5923   .debug_str:0000000000000597 .LASF84
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5741   .debug_str:00000000000001e7 .LASF85
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6063   .debug_str:00000000000008e7 .LASF86
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6155   .debug_str:0000000000000abc .LASF88
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5883   .debug_str:00000000000004b0 .LASF90
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5813   .debug_str:0000000000000365 .LASF91
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6017   .debug_str:00000000000007de .LASF92
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5823   .debug_str:0000000000000394 .LASF93
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6081   .debug_str:0000000000000957 .LASF94
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5713   .debug_str:00000000000000f3 .LASF95
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5939   .debug_str:00000000000005de .LASF96
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6241   .debug_str:0000000000000c51 .LASF97
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5931   .debug_str:00000000000005b9 .LASF98
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6173   .debug_str:0000000000000b0a .LASF99
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5789   .debug_str:00000000000002f2 .LASF100
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5665   .debug_str:000000000000000c .LASF101
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5997   .debug_str:000000000000076d .LASF102
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6183   .debug_str:0000000000000b3f .LASF103
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6201   .debug_str:0000000000000ba0 .LASF104
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6035   .debug_str:000000000000085e .LASF105
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6177   .debug_str:0000000000000b1d .LASF170
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6037   .debug_str:000000000000086d .LASF106
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6031   .debug_str:0000000000000831 .LASF107
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6003   .debug_str:0000000000000794 .LASF108
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5711   .debug_str:00000000000000e2 .LASF109
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6115   .debug_str:00000000000009f9 .LASF110
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6249   .debug_str:0000000000000c82 .LASF111
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6285   .debug_str:0000000000000d59 .LASF112
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6069   .debug_str:0000000000000904 .LASF113
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6125   .debug_str:0000000000000a39 .LASF114
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5705   .debug_str:00000000000000c7 .LASF115
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 27
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6167   .debug_str:0000000000000aea .LASF116
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5763   .debug_str:0000000000000260 .LASF117
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6053   .debug_str:00000000000008bb .LASF118
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5675   .debug_str:000000000000003b .LASF119
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5959   .debug_str:00000000000006a7 .LASF120
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6169   .debug_str:0000000000000af3 .LASF121
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6223   .debug_str:0000000000000bfc .LASF122
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5749   .debug_str:0000000000000219 .LASF123
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5817   .debug_str:000000000000037f .LASF124
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5965   .debug_str:00000000000006c3 .LASF125
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6025   .debug_str:000000000000080c .LASF126
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5945   .debug_str:0000000000000663 .LASF127
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5663   .debug_str:0000000000000000 .LASF128
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6165   .debug_str:0000000000000ae2 .LASF129
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5681   .debug_str:0000000000000054 .LASF130
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6073   .debug_str:000000000000091c .LASF131
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5839   .debug_str:00000000000003d8 .LASF132
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5919   .debug_str:000000000000057d .LASF133
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5731   .debug_str:000000000000013f .LASF134
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5991   .debug_str:000000000000074c .LASF135
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6231   .debug_str:0000000000000c27 .LASF136
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5833   .debug_str:00000000000003b7 .LASF137
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5723   .debug_str:0000000000000121 .LASF138
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5885   .debug_str:00000000000004b9 .LASF139
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6051   .debug_str:00000000000008b3 .LASF140
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6251   .debug_str:0000000000000c94 .LASF141
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6137   .debug_str:0000000000000a76 .LASF142
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6133   .debug_str:0000000000000a61 .LASF143
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6083   .debug_str:000000000000095e .LASF144
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5797   .debug_str:0000000000000315 .LASF145
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6149   .debug_str:0000000000000aa4 .LASF146
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5863   .debug_str:0000000000000459 .LASF147
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5755   .debug_str:000000000000023d .LASF148
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5745   .debug_str:0000000000000201 .LASF149
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5831   .debug_str:00000000000003ae .LASF150
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5843   .debug_str:00000000000003f1 .LASF151
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5999   .debug_str:0000000000000775 .LASF152
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6127   .debug_str:0000000000000a42 .LASF153
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5889   .debug_str:00000000000004ce .LASF154
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5725   .debug_str:000000000000012a .LASF155
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5981   .debug_str:000000000000070b .LASF156
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5989   .debug_str:0000000000000741 .LASF157
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6079   .debug_str:0000000000000949 .LASF158
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6113   .debug_str:00000000000009ef .LASF159
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6121   .debug_str:0000000000000a27 .LASF160
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6131   .debug_str:0000000000000a5c .LASF161
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5979   .debug_str:0000000000000703 .LASF162
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6001   .debug_str:0000000000000789 .LASF163
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6189   .debug_str:0000000000000b63 .LASF164
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5747   .debug_str:0000000000000209 .LASF165
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5691   .debug_str:0000000000000080 .LASF166
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5847   .debug_str:0000000000000409 .LASF167
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6245   .debug_str:0000000000000c6e .LASF168
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6153   .debug_str:0000000000000ab0 .LASF169
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5877   .debug_str:0000000000000496 .LASF171
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6043   .debug_str:0000000000000889 .LASF172
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6197   .debug_str:0000000000000b89 .LASF173
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 28
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6209   .debug_str:0000000000000bbd .LASF174
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5841   .debug_str:00000000000003e2 .LASF175
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6139   .debug_str:0000000000000a7b .LASF176
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6235   .debug_str:0000000000000c3d .LASF177
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6065   .debug_str:00000000000008f5 .LASF178
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5669   .debug_str:000000000000001f .LASF179
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5761   .debug_str:000000000000025a .LASF180
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6067   .debug_str:00000000000008fd .LASF181
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6027   .debug_str:0000000000000816 .LASF182
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5673   .debug_str:0000000000000033 .LASF183
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6129   .debug_str:0000000000000a51 .LASF184
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6219   .debug_str:0000000000000beb .LASF185
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5921   .debug_str:0000000000000585 .LASF186
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6119   .debug_str:0000000000000a1e .LASF187
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5933   .debug_str:00000000000005c4 .LASF188
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6141   .debug_str:0000000000000a82 .LASF189
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5937   .debug_str:00000000000005d6 .LASF190
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5977   .debug_str:00000000000006fd .LASF191
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5881   .debug_str:00000000000004ab .LASF192
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5703   .debug_str:00000000000000c2 .LASF193
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5709   .debug_str:00000000000000d9 .LASF194
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6279   .debug_str:0000000000000d38 .LASF195
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6247   .debug_str:0000000000000c78 .LASF196
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5899   .debug_str:0000000000000502 .LASF197
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5795   .debug_str:000000000000030c .LASF198
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6193   .debug_str:0000000000000b77 .LASF199
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6041   .debug_str:000000000000087f .LASF200
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6049   .debug_str:00000000000008a9 .LASF201
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6269   .debug_str:0000000000000cf9 .LASF202
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5759   .debug_str:000000000000024c .LASF203
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5727   .debug_str:0000000000000131 .LASF204
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6089   .debug_str:000000000000097d .LASF205
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6187   .debug_str:0000000000000b5a .LASF206
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6213   .debug_str:0000000000000bd4 .LASF207
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6023   .debug_str:0000000000000804 .LASF208
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6207   .debug_str:0000000000000bb8 .LASF209
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5845   .debug_str:0000000000000404 .LASF210
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6211   .debug_str:0000000000000bcd .LASF211
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6109   .debug_str:00000000000009dc .LASF212
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5783   .debug_str:00000000000002d3 .LASF213
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5911   .debug_str:0000000000000552 .LASF214
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6019   .debug_str:00000000000007e7 .LASF215
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5757   .debug_str:0000000000000246 .LASF216
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6203   .debug_str:0000000000000baa .LASF217
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5875   .debug_str:000000000000048e .LASF218
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5683   .debug_str:000000000000005c .LASF219
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5687   .debug_str:000000000000006c .LASF220
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6061   .debug_str:00000000000008e1 .LASF221
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6047   .debug_str:00000000000008a2 .LASF222
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6007   .debug_str:00000000000007ae .LASF223
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5707   .debug_str:00000000000000d3 .LASF224
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6099   .debug_str:00000000000009aa .LASF225
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5893   .debug_str:00000000000004e7 .LASF226
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6145   .debug_str:0000000000000a90 .LASF227
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5729   .debug_str:0000000000000139 .LASF228
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6013   .debug_str:00000000000007ca .LASF229
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5915   .debug_str:0000000000000565 .LASF230
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 29
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5737   .debug_str:00000000000001d6 .LASF231
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5925   .debug_str:000000000000059d .LASF232
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5857   .debug_str:000000000000043c .LASF233
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6097   .debug_str:00000000000009a2 .LASF234
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6009   .debug_str:00000000000007b4 .LASF235
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6205   .debug_str:0000000000000bb3 .LASF236
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5949   .debug_str:0000000000000676 .LASF237
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6271   .debug_str:0000000000000d04 .LASF238
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6217   .debug_str:0000000000000be3 .LASF239
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5913   .debug_str:000000000000055a .LASF240
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5685   .debug_str:0000000000000062 .LASF241
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6229   .debug_str:0000000000000c1f .LASF242
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5781   .debug_str:00000000000002c9 .LASF243
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5905   .debug_str:0000000000000525 .LASF244
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5971   .debug_str:00000000000006e7 .LASF245
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5801   .debug_str:0000000000000327 .LASF246
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5897   .debug_str:00000000000004fa .LASF247
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6005   .debug_str:00000000000007a9 .LASF248
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5943   .debug_str:000000000000065a .LASF249
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5887   .debug_str:00000000000004c4 .LASF250
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5961   .debug_str:00000000000006b2 .LASF251
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5679   .debug_str:000000000000004f .LASF252
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6039   .debug_str:000000000000087a .LASF253
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6123   .debug_str:0000000000000a32 .LASF254
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5975   .debug_str:00000000000006f7 .LASF255
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5957   .debug_str:00000000000006a0 .LASF256
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5973   .debug_str:00000000000006f1 .LASF257
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6095   .debug_str:000000000000099a .LASF258
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6057   .debug_str:00000000000008d0 .LASF259
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5735   .debug_str:00000000000001d0 .LASF260
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6237   .debug_str:0000000000000c44 .LASF261
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5805   .debug_str:0000000000000336 .LASF262
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6111   .debug_str:00000000000009e2 .LASF263
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5689   .debug_str:0000000000000073 .LASF264
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5787   .debug_str:00000000000002e3 .LASF265
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5967   .debug_str:00000000000006d0 .LASF266
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6015   .debug_str:00000000000007d3 .LASF267
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6135   .debug_str:0000000000000a71 .LASF268
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6171   .debug_str:0000000000000afd .LASF269
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6071   .debug_str:000000000000090e .LASF270
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6011   .debug_str:00000000000007bc .LASF271
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5715   .debug_str:00000000000000fb .LASF272
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5927   .debug_str:00000000000005a4 .LASF273
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6281   .debug_str:0000000000000d41 .LASF274
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5771   .debug_str:000000000000028d .LASF275
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6117   .debug_str:0000000000000a0f .LASF276
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6257   .debug_str:0000000000000cb6 .LASF277
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5993   .debug_str:0000000000000755 .LASF278
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5983   .debug_str:0000000000000714 .LASF279
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5851   .debug_str:000000000000041e .LASF280
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6215   .debug_str:0000000000000bdc .LASF281
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5963   .debug_str:00000000000006ba .LASF282
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5701   .debug_str:00000000000000ba .LASF283
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5671   .debug_str:0000000000000028 .LASF311
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5775   .debug_str:00000000000002a4 .LASF284
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6029   .debug_str:000000000000081e .LASF285
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6091   .debug_str:0000000000000989 .LASF286
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 30
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5751   .debug_str:000000000000022a .LASF287
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6273   .debug_str:0000000000000d1d .LASF288
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5849   .debug_str:0000000000000413 .LASF289
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5987   .debug_str:0000000000000732 .LASF292
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:502    .text.usbd_in_transc:0000000000000000 .LFB9
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:677    .text.usbd_in_transc:000000000000010c .LFE9
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5099   .debug_loc:0000000000000000 .LLST17
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5667   .debug_str:000000000000001a .LASF290
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5127   .debug_loc:0000000000000044 .LLST18
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6225   .debug_str:0000000000000c0e .LASF291
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5176   .debug_loc:00000000000000c0 .LLST19
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:523    .text.usbd_in_transc:0000000000000018 .LBB3
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:628    .text.usbd_in_transc:00000000000000cc .LBE3
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5721   .debug_str:000000000000011a .LASF294
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5223   .debug_loc:000000000000012c .LLST20
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:558    .text.usbd_in_transc:000000000000005e .LVL47
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:577    .text.usbd_in_transc:000000000000007c .LVL51
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:614    .text.usbd_in_transc:00000000000000b6 .LVL55
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:623    .text.usbd_in_transc:00000000000000ca .LVL56
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:657    .text.usbd_in_transc:0000000000000100 .LVL60
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6185   .debug_str:0000000000000b4a .LASF293
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:343    .text.usbd_out_transc:0000000000000000 .LFB8
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:495    .text.usbd_out_transc:00000000000000e6 .LFE8
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5235   .debug_loc:000000000000014b .LLST13
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5263   .debug_loc:000000000000018f .LLST14
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5303   .debug_loc:00000000000001f4 .LLST15
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:364    .text.usbd_out_transc:0000000000000018 .LBB2
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:446    .text.usbd_out_transc:00000000000000a6 .LBE2
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5339   .debug_loc:0000000000000247 .LLST16
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:399    .text.usbd_out_transc:000000000000005e .LVL31
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:432    .text.usbd_out_transc:0000000000000090 .LVL35
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:441    .text.usbd_out_transc:00000000000000a4 .LVL36
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:475    .text.usbd_out_transc:00000000000000da .LVL40
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5901   .debug_str:000000000000050c .LASF295
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:225    .text.usbd_setup_transc:0000000000000000 .LFB7
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:336    .text.usbd_setup_transc:0000000000000094 .LFE7
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5351   .debug_loc:0000000000000266 .LLST10
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5374   .debug_loc:000000000000029e .LLST11
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5955   .debug_str:0000000000000698 .LASF296
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5396   .debug_loc:00000000000002d5 .LLST12
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:261    .text.usbd_setup_transc:0000000000000034 .LVL15
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:275    .text.usbd_setup_transc:0000000000000046 .LVL17
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:298    .text.usbd_setup_transc:000000000000005a .LVL20
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:307    .text.usbd_setup_transc:0000000000000066 .LVL22
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:321    .text.usbd_setup_transc:000000000000007a .LVL24
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:326    .text.usbd_setup_transc:0000000000000084 .LVL25
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:333    .text.usbd_setup_transc:0000000000000092 .LVL26
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6021   .debug_str:00000000000007ee .LASF297
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:176    .text.usbd_ctl_status_recev:0000000000000000 .LFB6
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:218    .text.usbd_ctl_status_recev:0000000000000030 .LFE6
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5426   .debug_loc:0000000000000322 .LLST8
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5444   .debug_loc:000000000000034e .LLST9
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:200    .text.usbd_ctl_status_recev:000000000000001c .LVL11
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:204    .text.usbd_ctl_status_recev:0000000000000026 .LVL12
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6103   .debug_str:00000000000009bb .LASF298
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:127    .text.usbd_ctl_status_send:0000000000000000 .LFB5
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:169    .text.usbd_ctl_status_send:0000000000000030 .LFE5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 31
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5462   .debug_loc:000000000000037a .LLST6
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5480   .debug_loc:00000000000003a6 .LLST7
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:151    .text.usbd_ctl_status_send:000000000000001c .LVL7
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:155    .text.usbd_ctl_status_send:0000000000000026 .LVL8
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5719   .debug_str:000000000000010b .LASF299
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:71     .text.usbd_ctl_recev:0000000000000000 .LFB4
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:120    .text.usbd_ctl_recev:0000000000000038 .LFE4
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5498   .debug_loc:00000000000003d2 .LLST3
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5516   .debug_loc:00000000000003fe .LLST4
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5534   .debug_loc:000000000000042a .LLST5
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:94     .text.usbd_ctl_recev:000000000000001a .LVL4
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6087   .debug_str:000000000000096f .LASF300
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:14     .text.usbd_ctl_send:0000000000000000 .LFB3
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:64     .text.usbd_ctl_send:0000000000000038 .LFE3
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5558   .debug_loc:000000000000045f .LLST0
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5576   .debug_loc:000000000000048b .LLST1
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5594   .debug_loc:00000000000004b7 .LLST2
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:38     .text.usbd_ctl_send:000000000000001a .LVL1
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6075   .debug_str:0000000000000925 .LASF301
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5909   .debug_str:000000000000053c .LASF302
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5765   .debug_str:0000000000000268 .LASF303
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5695   .debug_str:0000000000000091 .LASF304
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5743   .debug_str:00000000000001f1 .LASF305
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:6147   .debug_str:0000000000000a96 .LASF306
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:5779   .debug_str:00000000000002b6 .LASF307
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:507    .text.usbd_in_transc:0000000000000002 .LCFI15
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:514    .text.usbd_in_transc:0000000000000008 .LCFI16
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:667    .text.usbd_in_transc:0000000000000108 .LCFI17
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:672    .text.usbd_in_transc:000000000000010a .LCFI18
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:505    .text.usbd_in_transc:0000000000000000 .LVL43
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:556    .text.usbd_in_transc:0000000000000056 .LVL46
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:561    .text.usbd_in_transc:0000000000000060 .LVL48
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:575    .text.usbd_in_transc:0000000000000074 .LVL50
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:584    .text.usbd_in_transc:0000000000000086 .LVL52
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:612    .text.usbd_in_transc:00000000000000b4 .LVL54
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:626    .text.usbd_in_transc:00000000000000cc .LVL57
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:655    .text.usbd_in_transc:00000000000000fe .LVL59
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:670    .text.usbd_in_transc:0000000000000108 .LVL61
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:674    .text.usbd_in_transc:000000000000010a .LVL62
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:573    .text.usbd_in_transc:0000000000000070 .LVL49
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:610    .text.usbd_in_transc:00000000000000b0 .LVL53
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:653    .text.usbd_in_transc:00000000000000fa .LVL58
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:529    .text.usbd_in_transc:0000000000000024 .LVL44
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:533    .text.usbd_in_transc:0000000000000028 .LVL45
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:348    .text.usbd_out_transc:0000000000000002 .LCFI11
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:355    .text.usbd_out_transc:0000000000000008 .LCFI12
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:485    .text.usbd_out_transc:00000000000000e2 .LCFI13
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:490    .text.usbd_out_transc:00000000000000e4 .LCFI14
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:346    .text.usbd_out_transc:0000000000000000 .LVL27
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:397    .text.usbd_out_transc:0000000000000056 .LVL30
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:402    .text.usbd_out_transc:0000000000000060 .LVL32
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:430    .text.usbd_out_transc:000000000000008e .LVL34
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:444    .text.usbd_out_transc:00000000000000a6 .LVL37
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:473    .text.usbd_out_transc:00000000000000d8 .LVL39
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:488    .text.usbd_out_transc:00000000000000e2 .LVL41
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:492    .text.usbd_out_transc:00000000000000e4 .LVL42
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:428    .text.usbd_out_transc:000000000000008a .LVL33
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s 			page 32
+
+
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:471    .text.usbd_out_transc:00000000000000d4 .LVL38
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:370    .text.usbd_out_transc:0000000000000024 .LVL28
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:374    .text.usbd_out_transc:0000000000000028 .LVL29
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:236    .text.usbd_setup_transc:000000000000000a .LCFI8
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:287    .text.usbd_setup_transc:000000000000004e .LCFI9
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:292    .text.usbd_setup_transc:0000000000000050 .LCFI10
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:228    .text.usbd_setup_transc:0000000000000000 .LVL14
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:284    .text.usbd_setup_transc:000000000000004a .LVL18
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:290    .text.usbd_setup_transc:0000000000000050 .LVL19
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:273    .text.usbd_setup_transc:000000000000003e .LVL16
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:301    .text.usbd_setup_transc:000000000000005c .LVL21
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:316    .text.usbd_setup_transc:000000000000006e .LVL23
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:183    .text.usbd_ctl_status_recev:0000000000000002 .LCFI6
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:214    .text.usbd_ctl_status_recev:000000000000002e .LCFI7
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:179    .text.usbd_ctl_status_recev:0000000000000000 .LVL10
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:211    .text.usbd_ctl_status_recev:000000000000002a .LVL13
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:134    .text.usbd_ctl_status_send:0000000000000002 .LCFI4
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:165    .text.usbd_ctl_status_send:000000000000002e .LCFI5
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:130    .text.usbd_ctl_status_send:0000000000000000 .LVL6
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:162    .text.usbd_ctl_status_send:000000000000002a .LVL9
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:81     .text.usbd_ctl_recev:000000000000000a .LCFI2
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:116    .text.usbd_ctl_recev:0000000000000036 .LCFI3
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:74     .text.usbd_ctl_recev:0000000000000000 .LVL3
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:113    .text.usbd_ctl_recev:0000000000000032 .LVL5
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:25     .text.usbd_ctl_send:000000000000000a .LCFI0
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:60     .text.usbd_ctl_send:0000000000000036 .LCFI1
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:18     .text.usbd_ctl_send:0000000000000000 .LVL0
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:57     .text.usbd_ctl_send:0000000000000032 .LVL2
+C:\Users\marwz\AppData\Local\Temp\ccpq5f4a.s:695    .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+usbd_ep_send
+usbd_ep_recev
+usb_ctlep_startout
+usbd_standard_request
+usbd_class_request
+usbd_vendor_request
+usbd_enum_error
