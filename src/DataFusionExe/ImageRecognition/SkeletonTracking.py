@@ -34,11 +34,10 @@ def startVideoTracking(startingTime):
 
     #     # Visualize the results on the frame
         annotated_frame = results[0].plot()
-        annotatedFrames.Append(annotated_frame,time.time())
         
-        if(startingTime>time.time())
-            cv2.imshow("YOLOv8 Tracking", annotatedFrames[i])
-            i=i+1
+        displaycv2.imshow("YOLOv8 Tracking", annotatedFrames[i])
+
+        print(update(time))
         # Display the annotated frame
         
         # Break the loop if 'q' is pressed
