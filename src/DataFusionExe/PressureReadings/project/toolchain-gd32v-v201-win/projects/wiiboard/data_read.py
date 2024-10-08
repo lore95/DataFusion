@@ -34,11 +34,11 @@ line4, = ax.plot([], [], 'y-', label='V4')
 
 
 # Fonction pour enregistrer les données en JSON après avoir collecté toutes les valeurs
-def save_data_to_json(t, v1, v2, v3, v4):
+def save_data_to_json(t, v1, v2, v3, v4, timestamp):
     try:
         file_name = input("Veuillez entrer le nom du fichier (par défaut: sensor_data.json) : ")
         # Ajoute un horodatage pour chaque enregistrement
-        timestamps = [datetime.now().strftime('%Y-%m-%d %H:%M:%S') for _ in range(len(t))]
+        timestamps = [datetime.now() for _ in range(len(t))]
 
         # Crée une liste de dictionnaires pour chaque entrée de données
         data = [
@@ -105,7 +105,7 @@ def update(frame):
         ax.set_xlim(max(0, len(v1_data) - 100), len(v1_data))
         # t1 = time.time()
         # print(f'Time:{t1-t0}')
-        return line1, line2, line3, line4
+        return line1, line2, line3, line4 #timestamp
 
 
 # Set up animation
