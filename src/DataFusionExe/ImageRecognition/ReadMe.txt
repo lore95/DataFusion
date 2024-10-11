@@ -1,1 +1,3 @@
-This section will be used for the code implemented for creating an image recognition app
+IMAGE RECOGNITION APP
+
+This section contains the code for developing the image recognition app used in this project. The app leverages machine learning models to detect and track specific body movements, contributing to the analysis of post-surgery knee rehabilitation. The image recognition system is designed to provide accurate and real-time data on the patient's movement, which is integrated with force sensor data for a comprehensive evaluation.
