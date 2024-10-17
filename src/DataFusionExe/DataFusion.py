@@ -27,14 +27,14 @@ from IPython.display import display
 annotatedFrames = []
 i=0
 
-V1Slope = 0
-V2Slope= 0
-V3Slope= 0
-V4Slope = 0
-V1Intercept = 0
-V2Intercept = 0
-V3Intercept = 0
-V4Intercept= 0
+V1Slope = -8.226448100017724e-05
+V2Slope= -7.85434320639826e-05
+V3Slope= -7.504432096582489e-05
+V4Slope = -9.164715106267143e-05
+V1Intercept = -23.411751479096818
+V2Intercept = -18.091090200637336
+V3Intercept = -6.4262804226066095
+V4Intercept= -14.855359018962712
 
 # Configure the serial connection
 ser = serial.Serial(
@@ -46,8 +46,8 @@ ser = serial.Serial(
     timeout=1            # Timeout for reading (in seconds)
 )
 
-vmin=-1000000
-vmax=0
+vmin=0
+vmax=50
 
 # Set up the plot
 plt.ion()  # Turn on interactive mode
@@ -58,9 +58,9 @@ plt.colorbar(heatmap)
 
 
 # Labels for each sensor
-# sensor_labels = ['V1', 'V2', 'V3', 'V4']
-# for i, label in enumerate(sensor_labels):
-#     ax.text(i % 2, i // 2, label, ha='center', va='center', color='white')
+sensor_labels = ['V1', 'V2', 'V3', 'V4']
+for i, label in enumerate(sensor_labels):
+    ax.text(i % 2, i // 2, label, ha='center', va='center', color='white')
 
 def update_heatmap(v1, v2, v3, v4):
     # Create a 2x2 array with the sensor values
@@ -115,7 +115,7 @@ def getPressureFaster():
         print("Serial communication error:", e)
     return None
 
-def getWeight(v1,v2,v3,v4 ):
+def getWeight(v1,v2,v3,v4):
     weightedV1 = V1Slope * v1 + V1Intercept
     weightedV2 = V2Slope * v2 + V2Intercept
     weightedV3 = V3Slope * v3 + V3Intercept
