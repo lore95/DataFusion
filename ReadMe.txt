@@ -19,4 +19,9 @@ CONTRIBUTING
 We welcome contributions! Please feel free to submit a pull request or raise an issue to discuss improvements or report bugs.
 
 
+INSTALLATION AND EXECUTION
+In order to to run the program go to src/DataFusionExe folder and install the packages on the requirements.txt
+After which launch DataFusion.py from command line.
+
 The project communication channel: https://app.clickup.com/9012214187/v/b/s/90121097948
+
