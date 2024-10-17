@@ -22,6 +22,7 @@ import time
 
 # Some modules to display an animation using imageio.
 from IPython.display import display
+# ser_buffer = ""
 
 annotatedFrames = []
 i=0
@@ -34,8 +35,10 @@ ser = serial.Serial(
     bytesize=serial.EIGHTBITS,
     timeout=1            # Timeout for reading (in seconds)
 )
-vmin=-1e6
+
+vmin=-1000000
 vmax=0
+
 # Set up the plot
 plt.ion()  # Turn on interactive mode
 fig, ax = plt.subplots()
@@ -63,6 +66,43 @@ def update_heatmap(v1, v2, v3, v4):
     # Redraw the figure
     fig.canvas.draw()
     fig.canvas.flush_events()
+
+def update_heatmap_blit(v1, v2, v3, v4, fig, heatmap, ax):
+    data = np.array([[v1, v2], [v3, v4]])
+    heatmap.set_array(data)
+    heatmap.set_clim(vmin=vmin, vmax=vmax)
+    
+    # Redraw only the heatmap
+    ax.draw_artist(heatmap)
+    fig.canvas.blit(ax.bbox)  # Efficiently update only the portion of the canvas
+    fig.canvas.flush_events()  # Ensure the canvas updates
+
+
+
+def getPressureFaster():
+    try:
+        ser_buffer = ""
+        # Read available bytes from the serial buffer
+        ser_bytes = ser.read(ser.in_waiting or 1)  # Read what's in the buffer, or at least 1 byte
+        
+        # Accumulate the bytes in a buffer
+        ser_buffer += ser_bytes.decode('utf-8')
+        
+        # Check for a complete line in the buffer
+        if '\n' in ser_buffer:
+            # Split the buffer at the newline character
+            lines = ser_buffer.split('\n')
+            complete_line = lines[0].strip()  # Get the first complete line
+            ser_buffer = '\n'.join(lines[1:])  # Keep the rest in the buffer
+            
+            # Process the complete line
+            match = re.match(r'Time:(-?\d+),V1:(-?\d+),V2:(-?\d+),V3:(-?\d+),V4:(-?\d+)', complete_line)
+            if match:
+                _, v1, v2, v3, v4 = map(int, match.groups())
+                return v1, v2, v3, v4
+    except serial.SerialException as e:
+        print("Serial communication error:", e)
+    return None
 
 
 
@@ -95,9 +135,9 @@ while cam.isOpened():
 
 #     # Visualize the results on the frame
     annotated_frame = results[0].plot()
-    v1, v2, v3, v4 = getPressure()
+    v1, v2, v3, v4 = getPressureFaster()
     cv2.imshow("YOLOv8 Tracking", annotated_frame)
-    update_heatmap(v1, v2, v3, v4)
+    update_heatmap_blit(v1, v2, v3, v4, fig, heatmap, ax)
     
     
     # Break the loop if 'q' is pressed
