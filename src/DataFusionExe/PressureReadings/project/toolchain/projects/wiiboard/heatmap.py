@@ -5,6 +5,7 @@ import re
 import numpy as np
 from scipy.ndimage import zoom
 from collections import deque
+import datetime
 import os
 
 
@@ -20,7 +21,7 @@ ser = serial.Serial(
 
 # Create a figure and axis for the heatmap
 fig, ax = plt.subplots()
-vmin = -5000
+vmin = -1000000
 vmax=0
 # Initialize the 2x2 matrix for the heatmap (this represents the four sensor values)
 heatmap_data = np.zeros((2, 2))
@@ -54,13 +55,13 @@ def update(frame):
     if match:
         v1, v2, v3, v4 = map(int, match.groups())
 
-
+        print(datetime.now())
         # Clamp values to the range (vmin to 10000) to avoid extreme values affecting the plot
         v1 = np.clip(v1, vmin, vmax)
         v2 = np.clip(v2, vmin, vmax)
         v3 = np.clip(v3, vmin, vmax)
         v4 = np.clip(v4, vmin, vmax)
-                # Add the new values to the history deque
+        # Add the new values to the history deque
         v1_history.append(v1)
         v2_history.append(v2)
         v3_history.append(v3)
@@ -90,8 +91,10 @@ def update(frame):
 
         # Update the heatmap display
         heatmap.set_data(smoothed_heatmap)
-        return [heatmap]
+        print(datetime.now())
 
+        return [heatmap]
+        
 # Set up animation to continuously update the heatmap
 ani = animation.FuncAnimation(fig, update, init_func=init, blit=True, interval=0.1)
 

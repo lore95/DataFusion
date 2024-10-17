@@ -79,6 +79,14 @@ def init():
     ax.legend(loc='upper left')
     return line1, line2, line3, line4
 
+def getPressure():
+    line = ser.readline().decode('utf-8').strip()
+    match = re.match(r'Time:(-?\d+),V1:(-?\d+),V2:(-?\d+),V3:(-?\d+),V4:(-?\d+)', line)
+    if match:
+        _, v1, v2, v3, v4 = map(int, match.groups())
+        return (v1, v2, v3, v4)
+
+
 def update(frame):
     line = ser.readline().decode('utf-8').strip()
     # t0 = time.time()
@@ -107,16 +115,16 @@ def update(frame):
         # print(f'Time:{t1-t0}')
         return line1, line2, line3, line4 #timestamp
 
-
-# Set up animation
-ani = animation.FuncAnimation(fig, update, init_func=init, blit=True, interval=0.001)
-
-
-plt.show()
-
-save_data_to_json(t_data, v1_data, v2_data, v3_data, v4_data)
+if __name__ == '__main__':
+    # Set up animation
+    ani = animation.FuncAnimation(fig, update, init_func=init, blit=True, interval=0.001)
 
 
-# Close the serial port after closing the plot window
-ser.close()
+    plt.show()
+
+    save_data_to_json(t_data, v1_data, v2_data, v3_data, v4_data)
+
+
+    # Close the serial port after closing the plot window
+    ser.close()
 
