@@ -26,6 +26,16 @@ from IPython.display import display
 
 annotatedFrames = []
 i=0
+
+V1Slope = 0
+V2Slope= 0
+V3Slope= 0
+V4Slope = 0
+V1Intercept = 0
+V2Intercept = 0
+V3Intercept = 0
+V4Intercept= 0
+
 # Configure the serial connection
 ser = serial.Serial(
     port='COM6',         # Set to the appropriate COM port
@@ -99,12 +109,19 @@ def getPressureFaster():
             match = re.match(r'Time:(-?\d+),V1:(-?\d+),V2:(-?\d+),V3:(-?\d+),V4:(-?\d+)', complete_line)
             if match:
                 _, v1, v2, v3, v4 = map(int, match.groups())
+                v1,v2,v3,v4 = getWeight(v1,v2,v3,v4 )
                 return v1, v2, v3, v4
     except serial.SerialException as e:
         print("Serial communication error:", e)
     return None
 
-
+def getWeight(v1,v2,v3,v4 ):
+    weightedV1 = V1Slope * v1 + V1Intercept
+    weightedV2 = V2Slope * v2 + V2Intercept
+    weightedV3 = V3Slope * v3 + V3Intercept
+    weightedV4 = V4Slope * v4 + V4Intercept
+    return (weightedV1,weightedV2,weightedV3,weightedV4)
+    
 
 def getPressure():
     line = ser.readline().decode('utf-8').strip()
