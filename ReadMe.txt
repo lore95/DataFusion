@@ -19,9 +19,30 @@ CONTRIBUTING
 We welcome contributions! Please feel free to submit a pull request or raise an issue to discuss improvements or report bugs.
 
 
-INSTALLATION AND EXECUTION
-In order to to run the program go to src/DataFusionExe folder and install the packages on the requirements.txt
-After which launch DataFusion.py from command line.
+PROJECT STRUCTURE
+Src/DataFusionExe
+-DataFusion.py
+	This file contains the code responsible for merging the data from the two core technologies used in this project: force sensors from the Wii board and video-based skeleton tracking. The integration of these datasets allows for the creation of a detailed and accurate 3D model, which is essential for evaluating a patient's post-surgery knee recovery.
+
+-ImageRecognition AND PressureReadings:
+	The folder ImageRecognition contains all the code related to skeleton tracking development and testing.
+	The folder PressureReadings contains the implementation for reading force data from the Wii board's sensors.
+
+-Requirements.txt
+	The requirements.txt file lists all necessary dependencies for the project.
+
+-yolov8m-pose.pt
+	We use the yolov8m-pose.pt model for skeleton tracking.
+
+INSTALLATION (WIP)
+Clone the repository: git clone https://github.com/lore95/DataFusion.git
+Install dependencies: pip install -r requirements.txt
+Follow the steps in the Readme file located in PressureReadings
+Run the application: python DataFusion.py
+
+USAGE
+Connect the Wii board to your USB port.
+Start collecting data for post-surgery knee rehabilitation analysis.
 
 The project communication channel: https://app.clickup.com/9012214187/v/b/s/90121097948
 
