@@ -27,15 +27,6 @@ from IPython.display import display
 annotatedFrames = []
 i=0
 
-V1Slope = -8.226448100017724e-05
-V2Slope= -7.85434320639826e-05
-V3Slope= -7.504432096582489e-05
-V4Slope = -9.164715106267143e-05
-V1Intercept = -23.411751479096818
-V2Intercept = -18.091090200637336
-V3Intercept = -6.4262804226066095
-V4Intercept= -14.855359018962712
-
 # Configure the serial connection
 ser = serial.Serial(
     port='COM6',         # Set to the appropriate COM port
@@ -61,6 +52,64 @@ plt.colorbar(heatmap)
 sensor_labels = ['V1', 'V2', 'V3', 'V4']
 for i, label in enumerate(sensor_labels):
     ax.text(i % 2, i // 2, label, ha='center', va='center', color='white')
+
+def getSlopes(sps=640, gain=128):
+    """
+    get the V1,V2,V3,V4 values of the slopes and intercepts from the regressionVi_sps_gain.json
+    """
+    for label in sensor_labels:
+        input_file = 'regression_' + label + '_' + str(sps) + '_' + str(gain) + '.json'
+
+import json
+
+sensor_labels = ['V1', 'V2', 'V3', 'V4']  # Assuming these are the sensor labels
+
+import json
+
+sensor_labels = ['V1', 'V2', 'V3', 'V4']  # Assuming these are the sensor labels
+
+def getSlopes(sps=640, gain=128):
+    """
+    Get the slope and intercept values from the regression JSON files for each sensor.
+    
+    Args:
+    sps (int): Samples per second, default is 640.
+    gain (int): Gain value, default is 128.
+    
+    Returns:
+    tuple: A tuple containing all slope and intercept values for V1, V2, V3, and V4.
+    """
+    slopes = []
+    intercepts = []
+    
+    for label in sensor_labels:
+        # input_file = 'regression_' + label + '_' + str(sps) + '_' + str(gain) + '.json'
+        input_file = f'PressureReadings\\project\\toolchain\\projects\\wiiboard\\sensor_data\\results\\regression_{label}_{sps}_{gain}.json'
+        try:
+            # Open and load the JSON file
+            with open(input_file, 'r') as f:
+                data = json.load(f)
+                
+                # Extract the slope and intercept values
+                slope = data[0]['slope']
+                intercept = data[0]['intercept']
+                
+                slopes.append(slope)
+                intercepts.append(intercept)
+        
+        except FileNotFoundError:
+            print(f"File not found: {input_file}")
+        except json.JSONDecodeError:
+            print(f"Error decoding JSON file: {input_file}")
+        except (KeyError, IndexError):
+            print(f"Error reading slope/intercept from: {input_file}")
+    
+    # Unpack the slopes and intercepts and return as separate variables
+    return (*slopes, *intercepts)
+
+# Example usage to get individual variables
+V1Slope, V2Slope, V3Slope, V4Slope, V1Intercept, V2Intercept, V3Intercept, V4Intercept = getSlopes()
+
 
 def update_heatmap(v1, v2, v3, v4):
     # Create a 2x2 array with the sensor values
