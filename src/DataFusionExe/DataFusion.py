@@ -8,17 +8,11 @@ import cv2
 import ultralytics
 ultralytics.checks()
 from ultralytics import YOLO
-import subprocess
 import re
-import serial
 import serial
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 import re
-from collections import deque
 import json
-from datetime import datetime
-import time
 
 # Some modules to display an animation using imageio.
 from IPython.display import display
@@ -27,18 +21,35 @@ from IPython.display import display
 annotatedFrames = []
 i=0
 
-# Configure the serial connection
-ser = serial.Serial(
-    port='COM6',         # Set to the appropriate COM port
-    baudrate=9600,       # Adjust to match your device's baud rate
-    parity=serial.PARITY_NONE,
-    stopbits=serial.STOPBITS_ONE,
-    bytesize=serial.EIGHTBITS,
-    timeout=1            # Timeout for reading (in seconds)
-)
+_conf = input("Which os system are u using? MAC or WIN \n")
+_maxConf = input("What is the maximum weight expected on the wii board \n")
+
+if _conf == "WIN":
+    # Configure the serial connection
+    ser = serial.Serial(
+        port='COM6',         # Set to the appropriate COM port
+        baudrate=9600,       # Adjust to match your device's baud rate
+        parity=serial.PARITY_NONE,
+        stopbits=serial.STOPBITS_ONE,
+        bytesize=serial.EIGHTBITS,
+        timeout=1            # Timeout for reading (in seconds)
+    )
+elif _conf== "MAC":
+        ser = serial.Serial("/dev/cu.usbmodem101", 9600, timeout=1)
+
+else:
+    # Configure the serial connection
+    ser = serial.Serial(
+        port='COM6',         # Set to the appropriate COM port
+        baudrate=9600,       # Adjust to match your device's baud rate
+        parity=serial.PARITY_NONE,
+        stopbits=serial.STOPBITS_ONE,
+        bytesize=serial.EIGHTBITS,
+        timeout=1            # Timeout for reading (in seconds)
+    )
 
 vmin=0
-vmax=50
+vmax=_maxConf
 
 # Set up the plot
 plt.ion()  # Turn on interactive mode
@@ -60,12 +71,6 @@ def getSlopes(sps=640, gain=128):
     for label in sensor_labels:
         input_file = 'regression_' + label + '_' + str(sps) + '_' + str(gain) + '.json'
 
-import json
-
-sensor_labels = ['V1', 'V2', 'V3', 'V4']  # Assuming these are the sensor labels
-
-import json
-
 sensor_labels = ['V1', 'V2', 'V3', 'V4']  # Assuming these are the sensor labels
 
 def getSlopes(sps=640, gain=128):
@@ -84,12 +89,15 @@ def getSlopes(sps=640, gain=128):
     
     for label in sensor_labels:
         # input_file = 'regression_' + label + '_' + str(sps) + '_' + str(gain) + '.json'
-        input_file = f'PressureReadings\\project\\toolchain\\projects\\wiiboard\\sensor_data\\results\\regression_{label}_{sps}_{gain}.json'
+        if _conf == "MAC":
+            input_file = f'PressureReadings/project/toolchain/projects/wiiboard/sensor_data/results/regression_{label}_{sps}_{gain}.json'
+        else:
+            input_file = f'PressureReadings\\project\\toolchain\\projects\\wiiboard\\sensor_data\\results\\regression_{label}_{sps}_{gain}.json'
+        
         try:
             # Open and load the JSON file
             with open(input_file, 'r') as f:
                 data = json.load(f)
-                
                 # Extract the slope and intercept values
                 slope = data[0]['slope']
                 intercept = data[0]['intercept']
@@ -159,10 +167,10 @@ def getPressureFaster():
             if match:
                 _, v1, v2, v3, v4 = map(int, match.groups())
                 v1,v2,v3,v4 = getWeight(v1,v2,v3,v4 )
-                return v1, v2, v3, v4
+                return (v1, v2, v3, v4)
+        return (0,0,0,0)
     except serial.SerialException as e:
         print("Serial communication error:", e)
-    return None
 
 def getWeight(v1,v2,v3,v4):
     weightedV1 = V1Slope * v1 + V1Intercept
@@ -201,10 +209,9 @@ while cam.isOpened():
 
 #     # Visualize the results on the frame
     annotated_frame = results[0].plot()
-    v1, v2, v3, v4 = getPressureFaster()
+    v1, v2, v3, v4 = getPressureFaster() 
     cv2.imshow("YOLOv8 Tracking", annotated_frame)
     update_heatmap_blit(v1, v2, v3, v4, fig, heatmap, ax)
-    
     
     # Break the loop if 'q' is pressed
     if cv2.waitKey(1) & 0xFF == ord("q"):
