@@ -59,10 +59,10 @@ ax.set_title('Force Sensor Heatmap')
 plt.colorbar(heatmap)
 
 
-# Labels for each sensor
-sensor_labels = ['V1', 'V2', 'V3', 'V4']
-for i, label in enumerate(sensor_labels):
-    ax.text(i % 2, i // 2, label, ha='center', va='center', color='white')
+# Labels for each sensor (need to be changed)
+# sensor_labels = ['V1', 'V2', 'V3', 'V4']
+# for i, label in enumerate(sensor_labels):
+#     ax.text(i // 2, i % 2, label, ha='center', va='center', color='white')
 
 def getSlopes(sps=640, gain=128):
     """
@@ -122,7 +122,7 @@ V1Slope, V2Slope, V3Slope, V4Slope, V1Intercept, V2Intercept, V3Intercept, V4Int
 def update_heatmap(v1, v2, v3, v4):
     # Create a 2x2 array with the sensor values
     print(v1, v2, v3, v4)
-    data = np.array([[v1, v2], [v3, v4]])
+    data = np.array([[v1, v3], [v2, v4]])
     
     # Update the heatmap
     heatmap.set_array(data)
@@ -135,7 +135,7 @@ def update_heatmap(v1, v2, v3, v4):
     fig.canvas.flush_events()
 
 def update_heatmap_blit(v1, v2, v3, v4, fig, heatmap, ax):
-    data = np.array([[v1, v2], [v3, v4]])
+    data = np.array([[v2, v4], [v1, v3]])
     heatmap.set_array(data)
     heatmap.set_clim(vmin=vmin, vmax=vmax)
     
