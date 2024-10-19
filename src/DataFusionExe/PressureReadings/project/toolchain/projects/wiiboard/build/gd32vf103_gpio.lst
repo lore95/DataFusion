@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 1
 
 
    1              		.file	"gd32vf103_gpio.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
   41:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_POSITION_MASK                  ((uint32_t)0x000F0000U)  /*!< AFIO_PCF register position
   42:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_SWJCFG_MASK                    ((uint32_t)0xF0FFFFFFU)  /*!< AFIO_PCF register SWJCFG m
   43:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_LOCATION1_MASK                 ((uint32_t)0x00200000U)  /*!< AFIO_PCF register location
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 2
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 2
 
 
   44:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** #define PCF_LOCATION2_MASK                 ((uint32_t)0x00100000U)  /*!< AFIO_PCF register location
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
   78:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         /* reset GPIOE */
   79:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOERST);
   80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 3
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 3
 
 
   81:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         break;
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
   80:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         break;
   77              		.loc 1 80 9
   78 0060 17030000 		tail	rcu_periph_reset_disable
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 4
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 4
 
 
   78      67000300 
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
   91:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     \retval     none
   92:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** */
   93:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** void gpio_afio_deinit(void)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 5
 
 
   94:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** {
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  107:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_IPU: pull-up input mode
  108:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_OUT_OD: GPIO output with open-drain
  109:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_OUT_PP: GPIO output with push-pull
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 6
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 6
 
 
  110:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_MODE_AF_OD: AFIO output with open-drain
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  126:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     uint16_t i;
  178              		.loc 1 126 1 is_stmt 0
  179 000e 8147     		li	a5,0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 7
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 7
 
 
  142:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         if ((1U << i) & pin) {
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  146:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****             /* set the specified pin mode bits */
  209              		.loc 1 146 17
  210 0036 33785800 		and	a6,a6,t0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 8
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 8
 
 
  211              	.LVL22:
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  238              		.loc 1 175 16
  239 0054 130F8002 		li	t5,40
  176:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 9
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 9
 
 
  177:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****                 GPIO_BC(gpio_periph) = (uint32_t) ((1U << i) & pin);
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  274              		.loc 1 175 13 is_stmt 1
  175:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****                 /* reset the corresponding OCTL bit */
  275              		.loc 1 175 16 is_stmt 0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 10
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 10
 
 
  276 0084 639CE501 		bne	a1,t5,.L20
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  312              		.section	.text.gpio_bit_set,"ax",@progbits
  313              		.align	1
  314              		.globl	gpio_bit_set
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 11
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 11
 
 
  316              	gpio_bit_set:
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  344              	.LFE6:
  346              		.section	.text.gpio_bit_write,"ax",@progbits
  347              		.align	1
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 12
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 12
 
 
  348              		.globl	gpio_bit_write
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  245:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     \retval     none
  246:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** */
  247:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** void gpio_port_write(uint32_t gpio_periph, uint16_t data)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 13
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 13
 
 
  248:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** {
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  414              	.LFB10:
  269:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** 
  270:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** /*!
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 14
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 14
 
 
  271:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     \brief      get GPIO port input status
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  444              		.loc 1 297 1
  445 0004 3335A000 		snez	a0,a0
  446 0008 8280     		ret
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 15
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 15
 
 
  447              		.cfi_endproc
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  327:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_TIMER3_REMAP: TIMER3 remapping
  328:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_PARTIAL_REMAP: CAN0 partial remapping
  329:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_CAN0_FULL_REMAP: CAN0 full remapping
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 16
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 16
 
 
  330:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****       \arg        GPIO_PD01_REMAP: PD01 remapping
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  355:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     remap1 = remap & LSB_16BIT_MASK;
  498              		.loc 1 355 12
  499 0016 4183     		srli	a4,a4,16
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 17
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 17
 
 
  500              	.LVL47:
@@ -1018,7 +1018,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  376:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     if (AFIO_PCF1_FIELDS == (remap & AFIO_PCF1_FIELDS)) {
  535              		.loc 1 376 5 is_stmt 1
  377:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         /* set AFIO_PCF1 regiter value */
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 18
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 18
 
 
  378:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****         AFIO_PCF1 = temp_reg;
@@ -1078,7 +1078,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  575              		.loc 1 368 18 is_stmt 0
  576 006e B706000F 		li	a3,251658240
  577 0072 D58F     		or	a5,a5,a3
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 19
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 19
 
 
  578              	.LVL58:
@@ -1138,7 +1138,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  400:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     uint32_t source = 0U;
  609              		.loc 1 400 5
  401:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c ****     source = ((uint32_t) 0x0FU)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 20
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 20
 
 
  610              		.loc 1 401 5
@@ -1198,7 +1198,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  650              		.loc 1 414 9 is_stmt 1
  651              		.loc 1 414 22 is_stmt 0
  652 003c D847     		lw	a4,12(a5)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 21
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 21
 
 
  653 003e 598D     		or	a0,a4,a0
@@ -1258,7 +1258,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  692              		.globl	gpio_event_output_config
  694              	gpio_event_output_config:
  695              	.LFB15:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 22
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 22
 
 
  431:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** 
@@ -1318,7 +1318,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  720              		.loc 1 458 13 is_stmt 0
  721 0010 0CC3     		sw	a1,0(a4)
  459:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** }
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 23
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 23
 
 
  722              		.loc 1 459 1
@@ -1378,7 +1378,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  759 000a 1CC3     		sw	a5,0(a4)
  481:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** }
  760              		.loc 1 481 1
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 24
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 24
 
 
  761 000c 8280     		ret
@@ -1438,650 +1438,650 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 1
  503:./../../firmware/GD32VF103_standard_peripheral/Source/gd32vf103_gpio.c **** }
  796              		.loc 1 503 1
  797 000e 8280     		ret
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 25
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 25
 
 
  798              		.cfi_endproc
  799              	.LFE18:
  801              		.text
  802              	.Letext0:
- 803              		.file 2 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
- 804              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
+ 803              		.file 2 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\pr
+ 804              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\pr
  805              		.file 4 "./../../firmware/GD32VF103_standard_peripheral/gd32vf103.h"
  806              		.file 5 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_rcu.h"
  807              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
  808              		.file 7 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 26
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 26
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32vf103_gpio.c
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:13     .text.gpio_deinit:0000000000000000 gpio_deinit
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:17     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:19     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:20     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:21     .text.gpio_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:23     .text.gpio_deinit:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:25     .text.gpio_deinit:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:27     .text.gpio_deinit:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:36     .text.gpio_deinit:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:37     .text.gpio_deinit:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:38     .text.gpio_deinit:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:41     .text.gpio_deinit:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:45     .text.gpio_deinit:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:47     .text.gpio_deinit:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:53     .text.gpio_deinit:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:58     .text.gpio_deinit:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:63     .text.gpio_deinit:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:68     .text.gpio_deinit:0000000000000058 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:71     .text.gpio_deinit:000000000000005c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:72     .text.gpio_deinit:000000000000005e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:73     .text.gpio_deinit:000000000000005e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:76     .text.gpio_deinit:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:78     .text.gpio_deinit:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:82     .text.gpio_deinit:0000000000000068 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:84     .text.gpio_deinit:0000000000000068 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:89     .text.gpio_deinit:0000000000000074 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:94     .text.gpio_deinit:000000000000007a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:99     .text.gpio_deinit:0000000000000086 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:104    .text.gpio_deinit:000000000000008c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:109    .text.gpio_deinit:0000000000000098 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:111    .text.gpio_deinit:000000000000009e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:118    .text.gpio_afio_deinit:0000000000000000 gpio_afio_deinit
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:121    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:122    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:123    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:124    .text.gpio_afio_deinit:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:126    .text.gpio_afio_deinit:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:128    .text.gpio_afio_deinit:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:130    .text.gpio_afio_deinit:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:131    .text.gpio_afio_deinit:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:133    .text.gpio_afio_deinit:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:136    .text.gpio_afio_deinit:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:137    .text.gpio_afio_deinit:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:138    .text.gpio_afio_deinit:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:140    .text.gpio_afio_deinit:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:142    .text.gpio_afio_deinit:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:144    .text.gpio_afio_deinit:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:146    .text.gpio_afio_deinit:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:148    .text.gpio_afio_deinit:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:155    .text.gpio_init:0000000000000000 gpio_init
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:158    .text.gpio_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:160    .text.gpio_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:161    .text.gpio_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:162    .text.gpio_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:163    .text.gpio_init:0000000000000000 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 27
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:13     .text.gpio_deinit:0000000000000000 gpio_deinit
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:17     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:19     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:20     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:21     .text.gpio_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:23     .text.gpio_deinit:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:25     .text.gpio_deinit:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:27     .text.gpio_deinit:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:36     .text.gpio_deinit:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:37     .text.gpio_deinit:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:38     .text.gpio_deinit:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:41     .text.gpio_deinit:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:45     .text.gpio_deinit:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:47     .text.gpio_deinit:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:53     .text.gpio_deinit:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:58     .text.gpio_deinit:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:63     .text.gpio_deinit:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:68     .text.gpio_deinit:0000000000000058 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:71     .text.gpio_deinit:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:72     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:73     .text.gpio_deinit:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:76     .text.gpio_deinit:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:78     .text.gpio_deinit:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:82     .text.gpio_deinit:0000000000000068 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:84     .text.gpio_deinit:0000000000000068 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:89     .text.gpio_deinit:0000000000000074 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:94     .text.gpio_deinit:000000000000007a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:99     .text.gpio_deinit:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:104    .text.gpio_deinit:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:109    .text.gpio_deinit:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:111    .text.gpio_deinit:000000000000009e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:118    .text.gpio_afio_deinit:0000000000000000 gpio_afio_deinit
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:121    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:122    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:123    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:124    .text.gpio_afio_deinit:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:126    .text.gpio_afio_deinit:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:128    .text.gpio_afio_deinit:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:130    .text.gpio_afio_deinit:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:131    .text.gpio_afio_deinit:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:133    .text.gpio_afio_deinit:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:136    .text.gpio_afio_deinit:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:137    .text.gpio_afio_deinit:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:138    .text.gpio_afio_deinit:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:140    .text.gpio_afio_deinit:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:142    .text.gpio_afio_deinit:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:144    .text.gpio_afio_deinit:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:146    .text.gpio_afio_deinit:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:148    .text.gpio_afio_deinit:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:155    .text.gpio_init:0000000000000000 gpio_init
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:158    .text.gpio_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:160    .text.gpio_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:161    .text.gpio_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:162    .text.gpio_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:163    .text.gpio_init:0000000000000000 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 27
 
 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:164    .text.gpio_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:165    .text.gpio_init:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:167    .text.gpio_init:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:170    .text.gpio_init:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:171    .text.gpio_init:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:173    .text.gpio_init:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:174    .text.gpio_init:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:178    .text.gpio_init:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:179    .text.gpio_init:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:181    .text.gpio_init:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:183    .text.gpio_init:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:185    .text.gpio_init:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:187    .text.gpio_init:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:189    .text.gpio_init:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:193    .text.gpio_init:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:194    .text.gpio_init:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:196    .text.gpio_init:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:198    .text.gpio_init:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:200    .text.gpio_init:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:202    .text.gpio_init:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:205    .text.gpio_init:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:206    .text.gpio_init:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:208    .text.gpio_init:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:210    .text.gpio_init:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:213    .text.gpio_init:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:214    .text.gpio_init:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:216    .text.gpio_init:000000000000003e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:219    .text.gpio_init:0000000000000042 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:220    .text.gpio_init:0000000000000042 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:222    .text.gpio_init:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:223    .text.gpio_init:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:226    .text.gpio_init:0000000000000048 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:227    .text.gpio_init:0000000000000048 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:233    .text.gpio_init:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:235    .text.gpio_init:0000000000000050 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:237    .text.gpio_init:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:239    .text.gpio_init:0000000000000054 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:241    .text.gpio_init:0000000000000058 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:243    .text.gpio_init:000000000000005c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:247    .text.gpio_init:000000000000005e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:248    .text.gpio_init:000000000000005e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:250    .text.gpio_init:0000000000000062 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:252    .text.gpio_init:0000000000000064 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:254    .text.gpio_init:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:255    .text.gpio_init:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:258    .text.gpio_init:000000000000006c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:261    .text.gpio_init:0000000000000070 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:262    .text.gpio_init:0000000000000070 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:264    .text.gpio_init:0000000000000074 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:266    .text.gpio_init:0000000000000078 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:269    .text.gpio_init:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:270    .text.gpio_init:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:272    .text.gpio_init:0000000000000080 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:275    .text.gpio_init:0000000000000084 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:276    .text.gpio_init:0000000000000084 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:278    .text.gpio_init:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:279    .text.gpio_init:0000000000000088 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 28
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:164    .text.gpio_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:165    .text.gpio_init:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:167    .text.gpio_init:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:170    .text.gpio_init:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:171    .text.gpio_init:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:173    .text.gpio_init:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:174    .text.gpio_init:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:178    .text.gpio_init:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:179    .text.gpio_init:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:181    .text.gpio_init:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:183    .text.gpio_init:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:185    .text.gpio_init:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:187    .text.gpio_init:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:189    .text.gpio_init:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:193    .text.gpio_init:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:194    .text.gpio_init:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:196    .text.gpio_init:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:198    .text.gpio_init:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:200    .text.gpio_init:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:202    .text.gpio_init:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:205    .text.gpio_init:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:206    .text.gpio_init:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:208    .text.gpio_init:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:210    .text.gpio_init:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:213    .text.gpio_init:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:214    .text.gpio_init:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:216    .text.gpio_init:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:219    .text.gpio_init:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:220    .text.gpio_init:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:222    .text.gpio_init:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:223    .text.gpio_init:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:226    .text.gpio_init:0000000000000048 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:227    .text.gpio_init:0000000000000048 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:233    .text.gpio_init:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:235    .text.gpio_init:0000000000000050 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:237    .text.gpio_init:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:239    .text.gpio_init:0000000000000054 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:241    .text.gpio_init:0000000000000058 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:243    .text.gpio_init:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:247    .text.gpio_init:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:248    .text.gpio_init:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:250    .text.gpio_init:0000000000000062 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:252    .text.gpio_init:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:254    .text.gpio_init:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:255    .text.gpio_init:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:258    .text.gpio_init:000000000000006c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:261    .text.gpio_init:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:262    .text.gpio_init:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:264    .text.gpio_init:0000000000000074 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:266    .text.gpio_init:0000000000000078 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:269    .text.gpio_init:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:270    .text.gpio_init:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:272    .text.gpio_init:0000000000000080 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:275    .text.gpio_init:0000000000000084 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:276    .text.gpio_init:0000000000000084 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:278    .text.gpio_init:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:279    .text.gpio_init:0000000000000088 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 28
 
 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:282    .text.gpio_init:000000000000008a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:283    .text.gpio_init:000000000000008a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:289    .text.gpio_init:000000000000008e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:291    .text.gpio_init:0000000000000092 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:295    .text.gpio_init:0000000000000094 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:296    .text.gpio_init:0000000000000094 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:298    .text.gpio_init:0000000000000098 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:299    .text.gpio_init:0000000000000098 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:303    .text.gpio_init:000000000000009c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:304    .text.gpio_init:000000000000009c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:306    .text.gpio_init:00000000000000a0 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:307    .text.gpio_init:00000000000000a0 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:309    .text.gpio_init:00000000000000a4 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:316    .text.gpio_bit_set:0000000000000000 gpio_bit_set
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:319    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:321    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:322    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:323    .text.gpio_bit_set:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:325    .text.gpio_bit_set:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:326    .text.gpio_bit_set:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:333    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:336    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:338    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:339    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:340    .text.gpio_bit_reset:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:342    .text.gpio_bit_reset:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:343    .text.gpio_bit_reset:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:350    .text.gpio_bit_write:0000000000000000 gpio_bit_write
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:353    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:355    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:356    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:357    .text.gpio_bit_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:359    .text.gpio_bit_write:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:360    .text.gpio_bit_write:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:364    .text.gpio_bit_write:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:365    .text.gpio_bit_write:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:367    .text.gpio_bit_write:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:368    .text.gpio_bit_write:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:375    .text.gpio_port_write:0000000000000000 gpio_port_write
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:378    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:380    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:381    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:382    .text.gpio_port_write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:384    .text.gpio_port_write:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:385    .text.gpio_port_write:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:392    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:395    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:397    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:398    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:399    .text.gpio_input_bit_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:402    .text.gpio_input_bit_get:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:404    .text.gpio_input_bit_get:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:406    .text.gpio_input_bit_get:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:413    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:416    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:418    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:419    .text.gpio_input_port_get:0000000000000000 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 29
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:282    .text.gpio_init:000000000000008a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:283    .text.gpio_init:000000000000008a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:289    .text.gpio_init:000000000000008e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:291    .text.gpio_init:0000000000000092 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:295    .text.gpio_init:0000000000000094 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:296    .text.gpio_init:0000000000000094 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:298    .text.gpio_init:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:299    .text.gpio_init:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:303    .text.gpio_init:000000000000009c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:304    .text.gpio_init:000000000000009c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:306    .text.gpio_init:00000000000000a0 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:307    .text.gpio_init:00000000000000a0 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:309    .text.gpio_init:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:316    .text.gpio_bit_set:0000000000000000 gpio_bit_set
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:319    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:321    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:322    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:323    .text.gpio_bit_set:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:325    .text.gpio_bit_set:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:326    .text.gpio_bit_set:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:333    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:336    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:338    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:339    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:340    .text.gpio_bit_reset:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:342    .text.gpio_bit_reset:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:343    .text.gpio_bit_reset:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:350    .text.gpio_bit_write:0000000000000000 gpio_bit_write
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:353    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:355    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:356    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:357    .text.gpio_bit_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:359    .text.gpio_bit_write:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:360    .text.gpio_bit_write:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:364    .text.gpio_bit_write:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:365    .text.gpio_bit_write:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:367    .text.gpio_bit_write:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:368    .text.gpio_bit_write:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:375    .text.gpio_port_write:0000000000000000 gpio_port_write
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:378    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:380    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:381    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:382    .text.gpio_port_write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:384    .text.gpio_port_write:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:385    .text.gpio_port_write:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:392    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:395    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:397    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:398    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:399    .text.gpio_input_bit_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:402    .text.gpio_input_bit_get:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:404    .text.gpio_input_bit_get:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:406    .text.gpio_input_bit_get:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:413    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:416    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:418    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:419    .text.gpio_input_port_get:0000000000000000 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 29
 
 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:420    .text.gpio_input_port_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:423    .text.gpio_input_port_get:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:426    .text.gpio_input_port_get:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:433    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:436    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:438    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:439    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:440    .text.gpio_output_bit_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:443    .text.gpio_output_bit_get:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:445    .text.gpio_output_bit_get:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:447    .text.gpio_output_bit_get:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:454    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:457    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:459    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:460    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:461    .text.gpio_output_port_get:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:464    .text.gpio_output_port_get:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:467    .text.gpio_output_port_get:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:474    .text.gpio_pin_remap_config:0000000000000000 gpio_pin_remap_config
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:477    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:479    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:480    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:481    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:482    .text.gpio_pin_remap_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:484    .text.gpio_pin_remap_config:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:486    .text.gpio_pin_remap_config:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:487    .text.gpio_pin_remap_config:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:491    .text.gpio_pin_remap_config:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:492    .text.gpio_pin_remap_config:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:493    .text.gpio_pin_remap_config:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:495    .text.gpio_pin_remap_config:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:497    .text.gpio_pin_remap_config:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:499    .text.gpio_pin_remap_config:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:502    .text.gpio_pin_remap_config:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:503    .text.gpio_pin_remap_config:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:505    .text.gpio_pin_remap_config:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:506    .text.gpio_pin_remap_config:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:509    .text.gpio_pin_remap_config:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:511    .text.gpio_pin_remap_config:0000000000000026 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:514    .text.gpio_pin_remap_config:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:515    .text.gpio_pin_remap_config:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:521    .text.gpio_pin_remap_config:0000000000000034 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:522    .text.gpio_pin_remap_config:0000000000000034 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:524    .text.gpio_pin_remap_config:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:525    .text.gpio_pin_remap_config:0000000000000036 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:527    .text.gpio_pin_remap_config:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:529    .text.gpio_pin_remap_config:000000000000003c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:532    .text.gpio_pin_remap_config:0000000000000040 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:536    .text.gpio_pin_remap_config:0000000000000042 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:537    .text.gpio_pin_remap_config:0000000000000042 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:539    .text.gpio_pin_remap_config:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:541    .text.gpio_pin_remap_config:000000000000004a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:542    .text.gpio_pin_remap_config:000000000000004a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:547    .text.gpio_pin_remap_config:000000000000004e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:548    .text.gpio_pin_remap_config:000000000000004e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:554    .text.gpio_pin_remap_config:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:555    .text.gpio_pin_remap_config:0000000000000052 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 30
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:420    .text.gpio_input_port_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:423    .text.gpio_input_port_get:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:426    .text.gpio_input_port_get:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:433    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:436    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:438    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:439    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:440    .text.gpio_output_bit_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:443    .text.gpio_output_bit_get:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:445    .text.gpio_output_bit_get:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:447    .text.gpio_output_bit_get:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:454    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:457    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:459    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:460    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:461    .text.gpio_output_port_get:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:464    .text.gpio_output_port_get:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:467    .text.gpio_output_port_get:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:474    .text.gpio_pin_remap_config:0000000000000000 gpio_pin_remap_config
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:477    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:479    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:480    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:481    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:482    .text.gpio_pin_remap_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:484    .text.gpio_pin_remap_config:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:486    .text.gpio_pin_remap_config:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:487    .text.gpio_pin_remap_config:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:491    .text.gpio_pin_remap_config:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:492    .text.gpio_pin_remap_config:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:493    .text.gpio_pin_remap_config:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:495    .text.gpio_pin_remap_config:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:497    .text.gpio_pin_remap_config:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:499    .text.gpio_pin_remap_config:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:502    .text.gpio_pin_remap_config:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:503    .text.gpio_pin_remap_config:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:505    .text.gpio_pin_remap_config:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:506    .text.gpio_pin_remap_config:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:509    .text.gpio_pin_remap_config:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:511    .text.gpio_pin_remap_config:0000000000000026 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:514    .text.gpio_pin_remap_config:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:515    .text.gpio_pin_remap_config:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:521    .text.gpio_pin_remap_config:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:522    .text.gpio_pin_remap_config:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:524    .text.gpio_pin_remap_config:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:525    .text.gpio_pin_remap_config:0000000000000036 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:527    .text.gpio_pin_remap_config:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:529    .text.gpio_pin_remap_config:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:532    .text.gpio_pin_remap_config:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:536    .text.gpio_pin_remap_config:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:537    .text.gpio_pin_remap_config:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:539    .text.gpio_pin_remap_config:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:541    .text.gpio_pin_remap_config:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:542    .text.gpio_pin_remap_config:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:547    .text.gpio_pin_remap_config:000000000000004e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:548    .text.gpio_pin_remap_config:000000000000004e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:554    .text.gpio_pin_remap_config:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:555    .text.gpio_pin_remap_config:0000000000000052 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 30
 
 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:559    .text.gpio_pin_remap_config:000000000000005a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:560    .text.gpio_pin_remap_config:000000000000005a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:561    .text.gpio_pin_remap_config:000000000000005a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:563    .text.gpio_pin_remap_config:000000000000005e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:565    .text.gpio_pin_remap_config:0000000000000062 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:570    .text.gpio_pin_remap_config:0000000000000068 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:572    .text.gpio_pin_remap_config:000000000000006c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:575    .text.gpio_pin_remap_config:000000000000006e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:576    .text.gpio_pin_remap_config:000000000000006e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:583    .text.gpio_pin_remap_config:0000000000000076 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:584    .text.gpio_pin_remap_config:0000000000000076 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:586    .text.gpio_pin_remap_config:000000000000007a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:588    .text.gpio_pin_remap_config:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:593    .text.gpio_pin_remap_config:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:594    .text.gpio_pin_remap_config:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:596    .text.gpio_pin_remap_config:0000000000000084 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:597    .text.gpio_pin_remap_config:0000000000000086 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:604    .text.gpio_exti_source_select:0000000000000000 gpio_exti_source_select
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:607    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:609    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:610    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:611    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:612    .text.gpio_exti_source_select:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:614    .text.gpio_exti_source_select:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:617    .text.gpio_exti_source_select:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:618    .text.gpio_exti_source_select:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:623    .text.gpio_exti_source_select:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:628    .text.gpio_exti_source_select:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:629    .text.gpio_exti_source_select:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:634    .text.gpio_exti_source_select:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:635    .text.gpio_exti_source_select:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:641    .text.gpio_exti_source_select:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:642    .text.gpio_exti_source_select:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:645    .text.gpio_exti_source_select:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:646    .text.gpio_exti_source_select:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:651    .text.gpio_exti_source_select:000000000000003c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:652    .text.gpio_exti_source_select:000000000000003c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:658    .text.gpio_exti_source_select:0000000000000044 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:659    .text.gpio_exti_source_select:0000000000000044 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:662    .text.gpio_exti_source_select:000000000000004a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:663    .text.gpio_exti_source_select:000000000000004a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:668    .text.gpio_exti_source_select:0000000000000054 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:669    .text.gpio_exti_source_select:0000000000000054 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:675    .text.gpio_exti_source_select:000000000000005c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:676    .text.gpio_exti_source_select:000000000000005c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:681    .text.gpio_exti_source_select:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:682    .text.gpio_exti_source_select:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:686    .text.gpio_exti_source_select:000000000000006c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:687    .text.gpio_exti_source_select:000000000000006e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:694    .text.gpio_event_output_config:0000000000000000 gpio_event_output_config
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:697    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:699    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:700    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:701    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:702    .text.gpio_event_output_config:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:706    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:707    .text.gpio_event_output_config:0000000000000006 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 31
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:559    .text.gpio_pin_remap_config:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:560    .text.gpio_pin_remap_config:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:561    .text.gpio_pin_remap_config:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:563    .text.gpio_pin_remap_config:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:565    .text.gpio_pin_remap_config:0000000000000062 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:570    .text.gpio_pin_remap_config:0000000000000068 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:572    .text.gpio_pin_remap_config:000000000000006c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:575    .text.gpio_pin_remap_config:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:576    .text.gpio_pin_remap_config:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:583    .text.gpio_pin_remap_config:0000000000000076 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:584    .text.gpio_pin_remap_config:0000000000000076 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:586    .text.gpio_pin_remap_config:000000000000007a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:588    .text.gpio_pin_remap_config:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:593    .text.gpio_pin_remap_config:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:594    .text.gpio_pin_remap_config:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:596    .text.gpio_pin_remap_config:0000000000000084 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:597    .text.gpio_pin_remap_config:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:604    .text.gpio_exti_source_select:0000000000000000 gpio_exti_source_select
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:607    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:609    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:610    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:611    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:612    .text.gpio_exti_source_select:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:614    .text.gpio_exti_source_select:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:617    .text.gpio_exti_source_select:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:618    .text.gpio_exti_source_select:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:623    .text.gpio_exti_source_select:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:628    .text.gpio_exti_source_select:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:629    .text.gpio_exti_source_select:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:634    .text.gpio_exti_source_select:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:635    .text.gpio_exti_source_select:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:641    .text.gpio_exti_source_select:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:642    .text.gpio_exti_source_select:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:645    .text.gpio_exti_source_select:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:646    .text.gpio_exti_source_select:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:651    .text.gpio_exti_source_select:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:652    .text.gpio_exti_source_select:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:658    .text.gpio_exti_source_select:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:659    .text.gpio_exti_source_select:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:662    .text.gpio_exti_source_select:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:663    .text.gpio_exti_source_select:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:668    .text.gpio_exti_source_select:0000000000000054 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:669    .text.gpio_exti_source_select:0000000000000054 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:675    .text.gpio_exti_source_select:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:676    .text.gpio_exti_source_select:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:681    .text.gpio_exti_source_select:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:682    .text.gpio_exti_source_select:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:686    .text.gpio_exti_source_select:000000000000006c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:687    .text.gpio_exti_source_select:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:694    .text.gpio_event_output_config:0000000000000000 gpio_event_output_config
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:697    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:699    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:700    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:701    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:702    .text.gpio_event_output_config:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:706    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:707    .text.gpio_event_output_config:0000000000000006 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 31
 
 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:708    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:709    .text.gpio_event_output_config:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:712    .text.gpio_event_output_config:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:717    .text.gpio_event_output_config:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:720    .text.gpio_event_output_config:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:721    .text.gpio_event_output_config:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:723    .text.gpio_event_output_config:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:724    .text.gpio_event_output_config:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:731    .text.gpio_event_output_enable:0000000000000000 gpio_event_output_enable
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:734    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:735    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:736    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:737    .text.gpio_event_output_enable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:742    .text.gpio_event_output_enable:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:743    .text.gpio_event_output_enable:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:750    .text.gpio_event_output_disable:0000000000000000 gpio_event_output_disable
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:753    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:754    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:755    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:756    .text.gpio_event_output_disable:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:761    .text.gpio_event_output_disable:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:762    .text.gpio_event_output_disable:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:769    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:772    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:774    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:775    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:776    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:777    .text.gpio_pin_lock:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:781    .text.gpio_pin_lock:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:782    .text.gpio_pin_lock:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:784    .text.gpio_pin_lock:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:785    .text.gpio_pin_lock:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:787    .text.gpio_pin_lock:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:788    .text.gpio_pin_lock:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:790    .text.gpio_pin_lock:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:791    .text.gpio_pin_lock:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:794    .text.gpio_pin_lock:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:795    .text.gpio_pin_lock:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:797    .text.gpio_pin_lock:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:798    .text.gpio_pin_lock:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:114    .text.gpio_deinit:000000000000009e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:151    .text.gpio_afio_deinit:0000000000000020 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:312    .text.gpio_init:00000000000000a4 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:329    .text.gpio_bit_set:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:346    .text.gpio_bit_reset:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:371    .text.gpio_bit_write:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:388    .text.gpio_port_write:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:409    .text.gpio_input_bit_get:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:429    .text.gpio_input_port_get:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:450    .text.gpio_output_bit_get:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:470    .text.gpio_output_port_get:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:600    .text.gpio_pin_remap_config:0000000000000086 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:690    .text.gpio_exti_source_select:000000000000006e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:727    .text.gpio_event_output_config:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:746    .text.gpio_event_output_enable:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:765    .text.gpio_event_output_disable:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:801    .text.gpio_pin_lock:0000000000000010 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 32
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:708    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:709    .text.gpio_event_output_config:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:712    .text.gpio_event_output_config:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:717    .text.gpio_event_output_config:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:720    .text.gpio_event_output_config:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:721    .text.gpio_event_output_config:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:723    .text.gpio_event_output_config:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:724    .text.gpio_event_output_config:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:731    .text.gpio_event_output_enable:0000000000000000 gpio_event_output_enable
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:734    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:735    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:736    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:737    .text.gpio_event_output_enable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:742    .text.gpio_event_output_enable:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:743    .text.gpio_event_output_enable:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:750    .text.gpio_event_output_disable:0000000000000000 gpio_event_output_disable
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:753    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:754    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:755    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:756    .text.gpio_event_output_disable:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:761    .text.gpio_event_output_disable:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:762    .text.gpio_event_output_disable:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:769    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:772    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:774    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:775    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:776    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:777    .text.gpio_pin_lock:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:781    .text.gpio_pin_lock:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:782    .text.gpio_pin_lock:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:784    .text.gpio_pin_lock:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:785    .text.gpio_pin_lock:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:787    .text.gpio_pin_lock:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:788    .text.gpio_pin_lock:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:790    .text.gpio_pin_lock:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:791    .text.gpio_pin_lock:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:794    .text.gpio_pin_lock:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:795    .text.gpio_pin_lock:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:797    .text.gpio_pin_lock:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:798    .text.gpio_pin_lock:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:114    .text.gpio_deinit:000000000000009e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:151    .text.gpio_afio_deinit:0000000000000020 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:312    .text.gpio_init:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:329    .text.gpio_bit_set:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:346    .text.gpio_bit_reset:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:371    .text.gpio_bit_write:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:388    .text.gpio_port_write:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:409    .text.gpio_input_bit_get:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:429    .text.gpio_input_port_get:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:450    .text.gpio_output_bit_get:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:470    .text.gpio_output_port_get:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:600    .text.gpio_pin_remap_config:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:690    .text.gpio_exti_source_select:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:727    .text.gpio_event_output_config:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:746    .text.gpio_event_output_enable:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:765    .text.gpio_event_output_disable:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:801    .text.gpio_pin_lock:0000000000000010 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 32
 
 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:92     .text.gpio_deinit:000000000000007a .L2
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:43     .text.gpio_deinit:0000000000000026 .L3
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:61     .text.gpio_deinit:000000000000004c .L4
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:80     .text.gpio_deinit:0000000000000068 .L5
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:102    .text.gpio_deinit:000000000000008c .L7
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:34     .text.gpio_deinit:0000000000000020 .L1
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:69     .text.gpio_deinit:000000000000005c .L10
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:176    .text.gpio_init:000000000000000e .L14
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:229    .text.gpio_init:000000000000004a .L15
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:293    .text.gpio_init:0000000000000094 .L16
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:191    .text.gpio_init:000000000000001e .L18
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:285    .text.gpio_init:000000000000008c .L19
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:301    .text.gpio_init:000000000000009c .L20
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:244    .text.gpio_init:000000000000005e .L22
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:224    .text.gpio_init:0000000000000048 .L17
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:280    .text.gpio_init:000000000000008a .L21
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:362    .text.gpio_bit_write:0000000000000006 .L37
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:545    .text.gpio_pin_remap_config:000000000000004e .L45
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:552    .text.gpio_pin_remap_config:0000000000000052 .L47
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:534    .text.gpio_pin_remap_config:0000000000000042 .L50
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:591    .text.gpio_pin_remap_config:0000000000000082 .L51
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:489    .text.gpio_pin_remap_config:000000000000000a .L46
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:581    .text.gpio_pin_remap_config:0000000000000076 .L49
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:519    .text.gpio_pin_remap_config:0000000000000034 .L48
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:568    .text.gpio_pin_remap_config:0000000000000068 .L56
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:639    .text.gpio_exti_source_select:000000000000002c .L58
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:656    .text.gpio_exti_source_select:0000000000000044 .L60
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:673    .text.gpio_exti_source_select:000000000000005c .L61
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:1699   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2855   .debug_str:0000000000000021 .LASF89
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3019   .debug_str:0000000000000530 .LASF90
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2919   .debug_str:000000000000022a .LASF91
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2811   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2849   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2949   .debug_str:000000000000036c .LASF0
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2937   .debug_str:0000000000000312 .LASF1
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2911   .debug_str:0000000000000205 .LASF4
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2929   .debug_str:00000000000002d6 .LASF2
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2889   .debug_str:0000000000000187 .LASF3
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2883   .debug_str:0000000000000158 .LASF5
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2963   .debug_str:00000000000003bd .LASF6
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2905   .debug_str:00000000000001e4 .LASF7
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2875   .debug_str:0000000000000131 .LASF8
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2993   .debug_str:000000000000048f .LASF9
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2903   .debug_str:00000000000001d6 .LASF10
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2941   .debug_str:0000000000000329 .LASF11
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2891   .debug_str:0000000000000191 .LASF12
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2951   .debug_str:0000000000000379 .LASF13
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2945   .debug_str:000000000000034d .LASF14
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2983   .debug_str:0000000000000449 .LASF92
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2893   .debug_str:0000000000000199 .LASF15
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3031   .debug_str:00000000000005bb .LASF16
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2969   .debug_str:00000000000003f2 .LASF17
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3009   .debug_str:00000000000004f7 .LASF18
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3027   .debug_str:00000000000005a4 .LASF19
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2857   .debug_str:00000000000000a9 .LASF20
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 33
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:92     .text.gpio_deinit:000000000000007a .L2
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:43     .text.gpio_deinit:0000000000000026 .L3
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:61     .text.gpio_deinit:000000000000004c .L4
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:80     .text.gpio_deinit:0000000000000068 .L5
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:102    .text.gpio_deinit:000000000000008c .L7
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:34     .text.gpio_deinit:0000000000000020 .L1
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:69     .text.gpio_deinit:000000000000005c .L10
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:176    .text.gpio_init:000000000000000e .L14
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:229    .text.gpio_init:000000000000004a .L15
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:293    .text.gpio_init:0000000000000094 .L16
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:191    .text.gpio_init:000000000000001e .L18
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:285    .text.gpio_init:000000000000008c .L19
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:301    .text.gpio_init:000000000000009c .L20
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:244    .text.gpio_init:000000000000005e .L22
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:224    .text.gpio_init:0000000000000048 .L17
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:280    .text.gpio_init:000000000000008a .L21
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:362    .text.gpio_bit_write:0000000000000006 .L37
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:545    .text.gpio_pin_remap_config:000000000000004e .L45
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:552    .text.gpio_pin_remap_config:0000000000000052 .L47
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:534    .text.gpio_pin_remap_config:0000000000000042 .L50
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:591    .text.gpio_pin_remap_config:0000000000000082 .L51
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:489    .text.gpio_pin_remap_config:000000000000000a .L46
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:581    .text.gpio_pin_remap_config:0000000000000076 .L49
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:519    .text.gpio_pin_remap_config:0000000000000034 .L48
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:568    .text.gpio_pin_remap_config:0000000000000068 .L56
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:639    .text.gpio_exti_source_select:000000000000002c .L58
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:656    .text.gpio_exti_source_select:0000000000000044 .L60
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:673    .text.gpio_exti_source_select:000000000000005c .L61
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:1699   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2855   .debug_str:0000000000000021 .LASF89
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3019   .debug_str:000000000000052e .LASF90
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2905   .debug_str:00000000000001e4 .LASF91
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2811   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2849   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2949   .debug_str:000000000000036a .LASF0
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2937   .debug_str:0000000000000310 .LASF1
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2913   .debug_str:0000000000000277 .LASF4
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2929   .debug_str:00000000000002d4 .LASF2
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2889   .debug_str:0000000000000187 .LASF3
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2883   .debug_str:0000000000000158 .LASF5
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2963   .debug_str:00000000000003bb .LASF6
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2907   .debug_str:0000000000000256 .LASF7
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2875   .debug_str:0000000000000131 .LASF8
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2993   .debug_str:000000000000048d .LASF9
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2903   .debug_str:00000000000001d6 .LASF10
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2941   .debug_str:0000000000000327 .LASF11
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2891   .debug_str:0000000000000191 .LASF12
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2951   .debug_str:0000000000000377 .LASF13
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2945   .debug_str:000000000000034b .LASF14
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2983   .debug_str:0000000000000447 .LASF92
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2893   .debug_str:0000000000000199 .LASF15
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3031   .debug_str:00000000000005b9 .LASF16
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2969   .debug_str:00000000000003f0 .LASF17
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3009   .debug_str:00000000000004f5 .LASF18
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3027   .debug_str:00000000000005a2 .LASF19
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2857   .debug_str:00000000000000a9 .LASF20
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 33
 
 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2971   .debug_str:0000000000000400 .LASF21
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2895   .debug_str:00000000000001a1 .LASF22
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2921   .debug_str:000000000000029e .LASF23
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2915   .debug_str:0000000000000216 .LASF24
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2981   .debug_str:000000000000043b .LASF25
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3025   .debug_str:0000000000000596 .LASF26
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3035   .debug_str:00000000000005d0 .LASF27
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2869   .debug_str:00000000000000f3 .LASF28
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2909   .debug_str:00000000000001f9 .LASF29
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2989   .debug_str:000000000000046d .LASF30
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3033   .debug_str:00000000000005c2 .LASF31
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2995   .debug_str:00000000000004a1 .LASF32
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2859   .debug_str:00000000000000b6 .LASF33
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3029   .debug_str:00000000000005af .LASF34
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3003   .debug_str:00000000000004d6 .LASF35
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2863   .debug_str:00000000000000d0 .LASF36
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2899   .debug_str:00000000000001bc .LASF37
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2867   .debug_str:00000000000000e7 .LASF38
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3005   .debug_str:00000000000004e2 .LASF39
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2939   .debug_str:000000000000031e .LASF40
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2931   .debug_str:00000000000002e4 .LASF41
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2943   .debug_str:0000000000000340 .LASF42
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2999   .debug_str:00000000000004bf .LASF43
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2861   .debug_str:00000000000000c3 .LASF44
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2897   .debug_str:00000000000001af .LASF45
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2953   .debug_str:0000000000000382 .LASF46
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2959   .debug_str:000000000000039c .LASF47
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3011   .debug_str:00000000000004fd .LASF48
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2853   .debug_str:0000000000000013 .LASF49
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3015   .debug_str:0000000000000515 .LASF50
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2925   .debug_str:00000000000002bc .LASF51
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2927   .debug_str:00000000000002ca .LASF52
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2865   .debug_str:00000000000000dc .LASF53
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2901   .debug_str:00000000000001c8 .LASF57
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:770    .text.gpio_pin_lock:0000000000000000 .LFB18
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:799    .text.gpio_pin_lock:0000000000000010 .LFE18
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2933   .debug_str:00000000000002ee .LASF54
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2979   .debug_str:0000000000000436 .LASF61
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2235   .debug_loc:0000000000000000 .LLST20
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2887   .debug_str:000000000000016d .LASF55
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:751    .text.gpio_event_output_disable:0000000000000000 .LFB17
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:763    .text.gpio_event_output_disable:000000000000000e .LFE17
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2873   .debug_str:0000000000000118 .LASF56
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:732    .text.gpio_event_output_enable:0000000000000000 .LFB16
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:744    .text.gpio_event_output_enable:000000000000000e .LFE16
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2967   .debug_str:00000000000003d9 .LASF58
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:695    .text.gpio_event_output_config:0000000000000000 .LFB15
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:725    .text.gpio_event_output_config:0000000000000014 .LFE15
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2907   .debug_str:00000000000001ed .LASF59
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2249   .debug_loc:0000000000000021 .LLST17
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2973   .debug_str:000000000000040e .LASF60
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2263   .debug_loc:0000000000000042 .LLST18
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2277   .debug_loc:0000000000000063 .LLST19
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2935   .debug_str:00000000000002fa .LASF62
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:605    .text.gpio_exti_source_select:0000000000000000 .LFB14
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:688    .text.gpio_exti_source_select:000000000000006e .LFE14
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2324   .debug_loc:00000000000000b3 .LLST15
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 34
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2971   .debug_str:00000000000003fe .LASF21
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2895   .debug_str:00000000000001a1 .LASF22
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2921   .debug_str:000000000000029c .LASF23
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2917   .debug_str:0000000000000288 .LASF24
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2981   .debug_str:0000000000000439 .LASF25
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3025   .debug_str:0000000000000594 .LASF26
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3035   .debug_str:00000000000005ce .LASF27
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2869   .debug_str:00000000000000f3 .LASF28
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2911   .debug_str:000000000000026b .LASF29
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2989   .debug_str:000000000000046b .LASF30
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3033   .debug_str:00000000000005c0 .LASF31
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2995   .debug_str:000000000000049f .LASF32
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2859   .debug_str:00000000000000b6 .LASF33
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3029   .debug_str:00000000000005ad .LASF34
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3003   .debug_str:00000000000004d4 .LASF35
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2863   .debug_str:00000000000000d0 .LASF36
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2899   .debug_str:00000000000001bc .LASF37
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2867   .debug_str:00000000000000e7 .LASF38
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3005   .debug_str:00000000000004e0 .LASF39
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2939   .debug_str:000000000000031c .LASF40
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2931   .debug_str:00000000000002e2 .LASF41
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2943   .debug_str:000000000000033e .LASF42
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2999   .debug_str:00000000000004bd .LASF43
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2861   .debug_str:00000000000000c3 .LASF44
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2897   .debug_str:00000000000001af .LASF45
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2953   .debug_str:0000000000000380 .LASF46
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2959   .debug_str:000000000000039a .LASF47
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3011   .debug_str:00000000000004fb .LASF48
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2853   .debug_str:0000000000000013 .LASF49
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3015   .debug_str:0000000000000513 .LASF50
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2925   .debug_str:00000000000002ba .LASF51
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2927   .debug_str:00000000000002c8 .LASF52
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2865   .debug_str:00000000000000dc .LASF53
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2901   .debug_str:00000000000001c8 .LASF57
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:770    .text.gpio_pin_lock:0000000000000000 .LFB18
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:799    .text.gpio_pin_lock:0000000000000010 .LFE18
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2933   .debug_str:00000000000002ec .LASF54
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2979   .debug_str:0000000000000434 .LASF61
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2235   .debug_loc:0000000000000000 .LLST20
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2887   .debug_str:000000000000016d .LASF55
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:751    .text.gpio_event_output_disable:0000000000000000 .LFB17
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:763    .text.gpio_event_output_disable:000000000000000e .LFE17
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2873   .debug_str:0000000000000118 .LASF56
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:732    .text.gpio_event_output_enable:0000000000000000 .LFB16
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:744    .text.gpio_event_output_enable:000000000000000e .LFE16
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2967   .debug_str:00000000000003d7 .LASF58
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:695    .text.gpio_event_output_config:0000000000000000 .LFB15
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:725    .text.gpio_event_output_config:0000000000000014 .LFE15
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2909   .debug_str:000000000000025f .LASF59
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2249   .debug_loc:0000000000000021 .LLST17
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2973   .debug_str:000000000000040c .LASF60
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2263   .debug_loc:0000000000000042 .LLST18
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2277   .debug_loc:0000000000000063 .LLST19
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2935   .debug_str:00000000000002f8 .LASF62
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:605    .text.gpio_exti_source_select:0000000000000000 .LFB14
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:688    .text.gpio_exti_source_select:000000000000006e .LFE14
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2324   .debug_loc:00000000000000b3 .LLST15
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 34
 
 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2913   .debug_str:000000000000020f .LASF63
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2338   .debug_loc:00000000000000d4 .LLST16
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2947   .debug_str:0000000000000356 .LASF64
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:475    .text.gpio_pin_remap_config:0000000000000000 .LFB13
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:598    .text.gpio_pin_remap_config:0000000000000086 .LFE13
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2917   .debug_str:0000000000000224 .LASF65
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2965   .debug_str:00000000000003d0 .LASF66
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3021   .debug_str:0000000000000577 .LASF67
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2366   .debug_loc:000000000000010a .LLST11
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2957   .debug_str:0000000000000395 .LASF68
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2407   .debug_loc:0000000000000162 .LLST12
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2975   .debug_str:0000000000000419 .LASF69
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2437   .debug_loc:00000000000001a1 .LLST13
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3007   .debug_str:00000000000004ed .LASF70
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2474   .debug_loc:0000000000000203 .LLST14
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2961   .debug_str:00000000000003a8 .LASF71
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:455    .text.gpio_output_port_get:0000000000000000 .LFB12
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:468    .text.gpio_output_port_get:0000000000000008 .LFE12
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2507   .debug_loc:0000000000000245 .LLST10
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2977   .debug_str:0000000000000422 .LASF72
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:434    .text.gpio_output_bit_get:0000000000000000 .LFB11
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:448    .text.gpio_output_bit_get:000000000000000a .LFE11
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2521   .debug_loc:0000000000000266 .LLST9
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2991   .debug_str:000000000000047b .LASF73
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:414    .text.gpio_input_port_get:0000000000000000 .LFB10
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:427    .text.gpio_input_port_get:0000000000000008 .LFE10
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2535   .debug_loc:0000000000000287 .LLST8
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2851   .debug_str:0000000000000000 .LASF74
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:393    .text.gpio_input_bit_get:0000000000000000 .LFB9
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:407    .text.gpio_input_bit_get:000000000000000a .LFE9
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2549   .debug_loc:00000000000002a8 .LLST7
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2923   .debug_str:00000000000002ac .LASF75
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:376    .text.gpio_port_write:0000000000000000 .LFB8
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:386    .text.gpio_port_write:0000000000000004 .LFE8
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2987   .debug_str:0000000000000468 .LASF76
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3017   .debug_str:0000000000000521 .LASF77
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:351    .text.gpio_bit_write:0000000000000000 .LFB7
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:369    .text.gpio_bit_write:000000000000000a .LFE7
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2885   .debug_str:0000000000000163 .LASF78
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2985   .debug_str:0000000000000459 .LASF79
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:334    .text.gpio_bit_reset:0000000000000000 .LFB6
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:344    .text.gpio_bit_reset:0000000000000004 .LFE6
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2877   .debug_str:000000000000013c .LASF80
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:317    .text.gpio_bit_set:0000000000000000 .LFB5
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:327    .text.gpio_bit_set:0000000000000004 .LFE5
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3001   .debug_str:00000000000004cc .LASF81
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:156    .text.gpio_init:0000000000000000 .LFB4
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:310    .text.gpio_init:00000000000000a4 .LFE4
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2879   .debug_str:0000000000000149 .LASF82
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2955   .debug_str:000000000000038f .LASF83
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2563   .debug_loc:00000000000002c9 .LLST3
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2577   .debug_loc:00000000000002ea .LLST4
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2881   .debug_str:000000000000014e .LASF84
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2609   .debug_loc:0000000000000339 .LLST5
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2621   .debug_loc:0000000000000358 .LLST6
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2997   .debug_str:00000000000004ae .LASF85
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:119    .text.gpio_afio_deinit:0000000000000000 .LFB3
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 35
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2915   .debug_str:0000000000000281 .LASF63
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2338   .debug_loc:00000000000000d4 .LLST16
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2947   .debug_str:0000000000000354 .LASF64
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:475    .text.gpio_pin_remap_config:0000000000000000 .LFB13
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:598    .text.gpio_pin_remap_config:0000000000000086 .LFE13
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2919   .debug_str:0000000000000296 .LASF65
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2965   .debug_str:00000000000003ce .LASF66
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3021   .debug_str:0000000000000575 .LASF67
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2366   .debug_loc:000000000000010a .LLST11
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2957   .debug_str:0000000000000393 .LASF68
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2407   .debug_loc:0000000000000162 .LLST12
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2975   .debug_str:0000000000000417 .LASF69
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2437   .debug_loc:00000000000001a1 .LLST13
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3007   .debug_str:00000000000004eb .LASF70
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2474   .debug_loc:0000000000000203 .LLST14
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2961   .debug_str:00000000000003a6 .LASF71
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:455    .text.gpio_output_port_get:0000000000000000 .LFB12
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:468    .text.gpio_output_port_get:0000000000000008 .LFE12
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2507   .debug_loc:0000000000000245 .LLST10
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2977   .debug_str:0000000000000420 .LASF72
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:434    .text.gpio_output_bit_get:0000000000000000 .LFB11
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:448    .text.gpio_output_bit_get:000000000000000a .LFE11
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2521   .debug_loc:0000000000000266 .LLST9
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2991   .debug_str:0000000000000479 .LASF73
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:414    .text.gpio_input_port_get:0000000000000000 .LFB10
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:427    .text.gpio_input_port_get:0000000000000008 .LFE10
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2535   .debug_loc:0000000000000287 .LLST8
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2851   .debug_str:0000000000000000 .LASF74
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:393    .text.gpio_input_bit_get:0000000000000000 .LFB9
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:407    .text.gpio_input_bit_get:000000000000000a .LFE9
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2549   .debug_loc:00000000000002a8 .LLST7
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2923   .debug_str:00000000000002aa .LASF75
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:376    .text.gpio_port_write:0000000000000000 .LFB8
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:386    .text.gpio_port_write:0000000000000004 .LFE8
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2987   .debug_str:0000000000000466 .LASF76
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3017   .debug_str:000000000000051f .LASF77
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:351    .text.gpio_bit_write:0000000000000000 .LFB7
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:369    .text.gpio_bit_write:000000000000000a .LFE7
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2885   .debug_str:0000000000000163 .LASF78
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2985   .debug_str:0000000000000457 .LASF79
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:334    .text.gpio_bit_reset:0000000000000000 .LFB6
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:344    .text.gpio_bit_reset:0000000000000004 .LFE6
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2877   .debug_str:000000000000013c .LASF80
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:317    .text.gpio_bit_set:0000000000000000 .LFB5
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:327    .text.gpio_bit_set:0000000000000004 .LFE5
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3001   .debug_str:00000000000004ca .LASF81
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:156    .text.gpio_init:0000000000000000 .LFB4
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:310    .text.gpio_init:00000000000000a4 .LFE4
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2879   .debug_str:0000000000000149 .LASF82
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2955   .debug_str:000000000000038d .LASF83
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2563   .debug_loc:00000000000002c9 .LLST3
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2577   .debug_loc:00000000000002ea .LLST4
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2881   .debug_str:000000000000014e .LASF84
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2609   .debug_loc:0000000000000339 .LLST5
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2621   .debug_loc:0000000000000358 .LLST6
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2997   .debug_str:00000000000004ac .LASF85
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:119    .text.gpio_afio_deinit:0000000000000000 .LFB3
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 35
 
 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:149    .text.gpio_afio_deinit:0000000000000020 .LFE3
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2657   .debug_loc:00000000000003b9 .LLST2
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:134    .text.gpio_afio_deinit:0000000000000010 .LVL15
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:147    .text.gpio_afio_deinit:0000000000000020 .LVL16
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3013   .debug_str:0000000000000509 .LASF86
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:14     .text.gpio_deinit:0000000000000000 .LFB2
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:112    .text.gpio_deinit:000000000000009e .LFE2
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2675   .debug_loc:00000000000003e5 .LLST0
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2708   .debug_loc:0000000000000435 .LLST1
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:56     .text.gpio_deinit:0000000000000046 .LVL2
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:66     .text.gpio_deinit:0000000000000058 .LVL5
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:79     .text.gpio_deinit:0000000000000068 .LVL6
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:87     .text.gpio_deinit:0000000000000074 .LVL8
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:97     .text.gpio_deinit:0000000000000086 .LVL11
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:107    .text.gpio_deinit:0000000000000098 .LVL14
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:3023   .debug_str:000000000000057e .LASF87
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:2871   .debug_str:00000000000000ff .LASF88
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:773    .text.gpio_pin_lock:0000000000000000 .LVL71
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:779    .text.gpio_pin_lock:0000000000000004 .LVL72
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:792    .text.gpio_pin_lock:000000000000000c .LVL73
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:698    .text.gpio_event_output_config:0000000000000000 .LVL65
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:710    .text.gpio_event_output_config:0000000000000008 .LVL67
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:715    .text.gpio_event_output_config:000000000000000e .LVL69
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:704    .text.gpio_event_output_config:0000000000000006 .LVL66
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:713    .text.gpio_event_output_config:000000000000000c .LVL68
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:718    .text.gpio_event_output_config:0000000000000010 .LVL70
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:608    .text.gpio_exti_source_select:0000000000000000 .LVL61
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:621    .text.gpio_exti_source_select:0000000000000010 .LVL63
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:615    .text.gpio_exti_source_select:0000000000000006 .LVL62
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:624    .text.gpio_exti_source_select:0000000000000012 .LVL64
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:478    .text.gpio_pin_remap_config:0000000000000000 .LVL45
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:500    .text.gpio_pin_remap_config:0000000000000018 .LVL47
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:530    .text.gpio_pin_remap_config:0000000000000040 .LVL50
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:544    .text.gpio_pin_remap_config:000000000000004e .LVL52
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:551    .text.gpio_pin_remap_config:0000000000000052 .LVL54
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:590    .text.gpio_pin_remap_config:0000000000000082 .LVL60
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:518    .text.gpio_pin_remap_config:0000000000000034 .LVL49
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:558    .text.gpio_pin_remap_config:000000000000005a .LVL55
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:567    .text.gpio_pin_remap_config:0000000000000068 .LVL56
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:580    .text.gpio_pin_remap_config:0000000000000076 .LVL59
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:488    .text.gpio_pin_remap_config:000000000000000a .LVL46
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:512    .text.gpio_pin_remap_config:000000000000002a .LVL48
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:549    .text.gpio_pin_remap_config:0000000000000050 .LVL53
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:573    .text.gpio_pin_remap_config:000000000000006e .LVL57
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:458    .text.gpio_output_port_get:0000000000000000 .LVL43
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:462    .text.gpio_output_port_get:0000000000000002 .LVL44
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:437    .text.gpio_output_bit_get:0000000000000000 .LVL41
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:441    .text.gpio_output_bit_get:0000000000000002 .LVL42
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:417    .text.gpio_input_port_get:0000000000000000 .LVL39
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:421    .text.gpio_input_port_get:0000000000000002 .LVL40
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:396    .text.gpio_input_bit_get:0000000000000000 .LVL37
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:400    .text.gpio_input_bit_get:0000000000000002 .LVL38
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:159    .text.gpio_init:0000000000000000 .LVL17
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:190    .text.gpio_init:000000000000001e .LVL20
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:175    .text.gpio_init:000000000000000e .LVL19
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:228    .text.gpio_init:000000000000004a .LVL24
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:231    .text.gpio_init:000000000000004c .LVL25
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s 			page 36
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:149    .text.gpio_afio_deinit:0000000000000020 .LFE3
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2657   .debug_loc:00000000000003b9 .LLST2
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:134    .text.gpio_afio_deinit:0000000000000010 .LVL15
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:147    .text.gpio_afio_deinit:0000000000000020 .LVL16
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3013   .debug_str:0000000000000507 .LASF86
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:14     .text.gpio_deinit:0000000000000000 .LFB2
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:112    .text.gpio_deinit:000000000000009e .LFE2
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2675   .debug_loc:00000000000003e5 .LLST0
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2708   .debug_loc:0000000000000435 .LLST1
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:56     .text.gpio_deinit:0000000000000046 .LVL2
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:66     .text.gpio_deinit:0000000000000058 .LVL5
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:79     .text.gpio_deinit:0000000000000068 .LVL6
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:87     .text.gpio_deinit:0000000000000074 .LVL8
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:97     .text.gpio_deinit:0000000000000086 .LVL11
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:107    .text.gpio_deinit:0000000000000098 .LVL14
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:3023   .debug_str:000000000000057c .LASF87
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:2871   .debug_str:00000000000000ff .LASF88
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:773    .text.gpio_pin_lock:0000000000000000 .LVL71
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:779    .text.gpio_pin_lock:0000000000000004 .LVL72
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:792    .text.gpio_pin_lock:000000000000000c .LVL73
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:698    .text.gpio_event_output_config:0000000000000000 .LVL65
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:710    .text.gpio_event_output_config:0000000000000008 .LVL67
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:715    .text.gpio_event_output_config:000000000000000e .LVL69
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:704    .text.gpio_event_output_config:0000000000000006 .LVL66
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:713    .text.gpio_event_output_config:000000000000000c .LVL68
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:718    .text.gpio_event_output_config:0000000000000010 .LVL70
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:608    .text.gpio_exti_source_select:0000000000000000 .LVL61
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:621    .text.gpio_exti_source_select:0000000000000010 .LVL63
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:615    .text.gpio_exti_source_select:0000000000000006 .LVL62
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:624    .text.gpio_exti_source_select:0000000000000012 .LVL64
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:478    .text.gpio_pin_remap_config:0000000000000000 .LVL45
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:500    .text.gpio_pin_remap_config:0000000000000018 .LVL47
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:530    .text.gpio_pin_remap_config:0000000000000040 .LVL50
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:544    .text.gpio_pin_remap_config:000000000000004e .LVL52
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:551    .text.gpio_pin_remap_config:0000000000000052 .LVL54
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:590    .text.gpio_pin_remap_config:0000000000000082 .LVL60
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:518    .text.gpio_pin_remap_config:0000000000000034 .LVL49
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:558    .text.gpio_pin_remap_config:000000000000005a .LVL55
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:567    .text.gpio_pin_remap_config:0000000000000068 .LVL56
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:580    .text.gpio_pin_remap_config:0000000000000076 .LVL59
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:488    .text.gpio_pin_remap_config:000000000000000a .LVL46
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:512    .text.gpio_pin_remap_config:000000000000002a .LVL48
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:549    .text.gpio_pin_remap_config:0000000000000050 .LVL53
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:573    .text.gpio_pin_remap_config:000000000000006e .LVL57
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:458    .text.gpio_output_port_get:0000000000000000 .LVL43
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:462    .text.gpio_output_port_get:0000000000000002 .LVL44
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:437    .text.gpio_output_bit_get:0000000000000000 .LVL41
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:441    .text.gpio_output_bit_get:0000000000000002 .LVL42
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:417    .text.gpio_input_port_get:0000000000000000 .LVL39
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:421    .text.gpio_input_port_get:0000000000000002 .LVL40
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:396    .text.gpio_input_bit_get:0000000000000000 .LVL37
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:400    .text.gpio_input_bit_get:0000000000000002 .LVL38
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:159    .text.gpio_init:0000000000000000 .LVL17
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:190    .text.gpio_init:000000000000001e .LVL20
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:175    .text.gpio_init:000000000000000e .LVL19
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:228    .text.gpio_init:000000000000004a .LVL24
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:231    .text.gpio_init:000000000000004c .LVL25
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s 			page 36
 
 
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:245    .text.gpio_init:000000000000005e .LVL26
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:284    .text.gpio_init:000000000000008c .LVL30
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:287    .text.gpio_init:000000000000008e .LVL31
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:292    .text.gpio_init:0000000000000094 .LVL32
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:168    .text.gpio_init:0000000000000008 .LVL18
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:203    .text.gpio_init:000000000000002e .LVL21
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:211    .text.gpio_init:000000000000003a .LVL22
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:217    .text.gpio_init:0000000000000042 .LVL23
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:259    .text.gpio_init:0000000000000070 .LVL27
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:267    .text.gpio_init:000000000000007c .LVL28
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:273    .text.gpio_init:0000000000000084 .LVL29
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:125    .text.gpio_afio_deinit:0000000000000002 .LCFI5
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:143    .text.gpio_afio_deinit:0000000000000018 .LCFI6
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:22     .text.gpio_deinit:0000000000000002 .LCFI0
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:40     .text.gpio_deinit:0000000000000024 .LCFI1
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:44     .text.gpio_deinit:0000000000000026 .LCFI2
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:75     .text.gpio_deinit:0000000000000060 .LCFI3
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:81     .text.gpio_deinit:0000000000000068 .LCFI4
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:18     .text.gpio_deinit:0000000000000000 .LVL0
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:54     .text.gpio_deinit:000000000000003e .LVL1
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:60     .text.gpio_deinit:000000000000004c .LVL3
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:64     .text.gpio_deinit:0000000000000050 .LVL4
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:85     .text.gpio_deinit:000000000000006c .LVL7
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:91     .text.gpio_deinit:000000000000007a .LVL9
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:95     .text.gpio_deinit:000000000000007e .LVL10
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:101    .text.gpio_deinit:000000000000008c .LVL12
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:105    .text.gpio_deinit:0000000000000090 .LVL13
-C:\Users\marwz\AppData\Local\Temp\cc5iI1gl.s:810    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:245    .text.gpio_init:000000000000005e .LVL26
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:284    .text.gpio_init:000000000000008c .LVL30
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:287    .text.gpio_init:000000000000008e .LVL31
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:292    .text.gpio_init:0000000000000094 .LVL32
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:168    .text.gpio_init:0000000000000008 .LVL18
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:203    .text.gpio_init:000000000000002e .LVL21
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:211    .text.gpio_init:000000000000003a .LVL22
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:217    .text.gpio_init:0000000000000042 .LVL23
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:259    .text.gpio_init:0000000000000070 .LVL27
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:267    .text.gpio_init:000000000000007c .LVL28
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:273    .text.gpio_init:0000000000000084 .LVL29
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:125    .text.gpio_afio_deinit:0000000000000002 .LCFI5
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:143    .text.gpio_afio_deinit:0000000000000018 .LCFI6
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:22     .text.gpio_deinit:0000000000000002 .LCFI0
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:40     .text.gpio_deinit:0000000000000024 .LCFI1
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:44     .text.gpio_deinit:0000000000000026 .LCFI2
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:75     .text.gpio_deinit:0000000000000060 .LCFI3
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:81     .text.gpio_deinit:0000000000000068 .LCFI4
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:18     .text.gpio_deinit:0000000000000000 .LVL0
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:54     .text.gpio_deinit:000000000000003e .LVL1
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:60     .text.gpio_deinit:000000000000004c .LVL3
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:64     .text.gpio_deinit:0000000000000050 .LVL4
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:85     .text.gpio_deinit:000000000000006c .LVL7
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:91     .text.gpio_deinit:000000000000007a .LVL9
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:95     .text.gpio_deinit:000000000000007e .LVL10
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:101    .text.gpio_deinit:000000000000008c .LVL12
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:105    .text.gpio_deinit:0000000000000090 .LVL13
+C:\Users\marwz\AppData\Local\Temp\cc3A3X6g.s:810    .debug_info:0000000000000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

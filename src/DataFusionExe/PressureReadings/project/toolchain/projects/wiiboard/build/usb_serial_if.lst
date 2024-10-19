@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 1
 
 
    1              		.file	"usb_serial_if.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
   24              	.LCFI0:
   25              		.cfi_def_cfa_offset 16
   26 0002 06C6     		sw	ra,12(sp)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 2
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 2
 
 
   27              		.cfi_offset 1, -4
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
   73              		.cfi_offset 18, -16
   74              		.cfi_offset 19, -20
   75              		.cfi_offset 20, -24
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 3
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 3
 
 
   76              		.cfi_offset 21, -28
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
   53:lib/usbcdc/src/usb_serial_if.c ****         for(int i = 0; i < usb_buffer.index; i++) data[i] = usb_buffer.buffer[i];
  115              		.loc 1 53 9 is_stmt 1
  116              	.LBB3:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 4
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 4
 
 
  117              		.loc 1 53 13
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
   41:lib/usbcdc/src/usb_serial_if.c ****                 for(int i = 0; i < receive_length; i++) usb_buffer.buffer[usb_buffer.index + i] = r
  165              		.loc 1 41 13 is_stmt 1
   41:lib/usbcdc/src/usb_serial_if.c ****                 for(int i = 0; i < receive_length; i++) usb_buffer.buffer[usb_buffer.index + i] = r
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 5
 
 
  166              		.loc 1 41 31 is_stmt 0
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  206 00be 23000A00 		sb	zero,%lo(packet_receive)(s4)
   48:lib/usbcdc/src/usb_serial_if.c ****             usbd_ep_recev (&USB_OTG_dev, CDC_ACM_DATA_OUT_EP, receive_buffer, 64);
  207              		.loc 1 48 13 is_stmt 1
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 6
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 6
 
 
   48:lib/usbcdc/src/usb_serial_if.c ****             usbd_ep_recev (&USB_OTG_dev, CDC_ACM_DATA_OUT_EP, receive_buffer, 64);
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  248              	.LCFI5:
  249              		.cfi_def_cfa_offset 16
  250 0002 06C6     		sw	ra,12(sp)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 7
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 7
 
 
  251              		.cfi_offset 1, -4
@@ -418,7 +418,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  289              		.loc 1 70 1
  290 004e 4101     		addi	sp,sp,16
  291              	.LCFI6:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 8
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 8
 
 
  292              		.cfi_def_cfa_offset 0
@@ -478,7 +478,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  339 000c 52C4     		sw	s4,8(sp)
  340 000e 56C2     		sw	s5,4(sp)
  341              		.cfi_offset 18, -16
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 9
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 9
 
 
  342              		.cfi_offset 19, -20
@@ -538,7 +538,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  389 0058 37060000 		lui	a2,%hi(.LANCHOR3)
  390              		.loc 1 82 17 is_stmt 0
  391 005c 23800A00 		sb	zero,%lo(packet_sent)(s5)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 10
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 10
 
 
   83:lib/usbcdc/src/usb_serial_if.c ****     for(int i = 0; i < len; i++) tx_buffer[i] = ((uint8_t*)ptr)[i];
@@ -598,7 +598,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  440              	.L27:
  441              	.LCFI9:
  442              		.cfi_restore_state
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 11
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 11
 
 
  443              	.LBB8:
@@ -658,7 +658,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
   98:lib/usbcdc/src/usb_serial_if.c **** 
   99:lib/usbcdc/src/usb_serial_if.c ****     /* reset HXTALEN, CKMEN, PLLEN bits */
  100:lib/usbcdc/src/usb_serial_if.c ****     RCU_CTL &= ~(RCU_CTL_HXTALEN | RCU_CTL_CKMEN | RCU_CTL_PLLEN);
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 12
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 12
 
 
  483              		.loc 1 100 5 is_stmt 1
@@ -718,7 +718,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  118:lib/usbcdc/src/usb_serial_if.c ****     uint32_t stab_flag = 0U;
  520              		.loc 1 118 5
  119:lib/usbcdc/src/usb_serial_if.c **** 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 13
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 13
 
 
  120:lib/usbcdc/src/usb_serial_if.c ****     /* enable HXTAL */
@@ -778,7 +778,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  560              	.LBB11:
  561              	.LBB12:
  133:lib/usbcdc/src/usb_serial_if.c ****     }
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 14
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 14
 
 
  134:lib/usbcdc/src/usb_serial_if.c **** 
@@ -838,7 +838,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  582              		.loc 1 160 18 is_stmt 0
  583 0096 D843     		lw	a4,4(a5)
  584 0098 758F     		and	a4,a4,a3
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 15
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 15
 
 
  585 009a D8C3     		sw	a4,4(a5)
@@ -898,7 +898,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  621              		.loc 1 175 5 is_stmt 1
  622              		.loc 1 175 14 is_stmt 0
  623 00ce D843     		lw	a4,4(a5)
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 16
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 16
 
 
  624 00d0 719B     		andi	a4,a4,-4
@@ -958,7 +958,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  664              		.section	.data.USB_OTG_dev,"aw"
  665              		.align	2
  666              		.set	.LANCHOR1,. + 0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 17
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 17
 
 
  669              	USB_OTG_dev:
@@ -994,834 +994,834 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 1
  686 0204 00000000 		.word	0
  687              		.text
  688              	.Letext0:
- 689              		.file 2 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
- 690              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
- 691              		.file 4 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
+ 689              		.file 2 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\pr
+ 690              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\pr
+ 691              		.file 4 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\pr
  692              		.file 5 "lib/usbcdc/include/drv_usb_regs.h"
  693              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
  694              		.file 7 "lib/usbcdc/include/usb_ch9_std.h"
  695              		.file 8 "lib/usbcdc/include/drv_usb_core.h"
  696              		.file 9 "lib/usbcdc/include/drv_usb_dev.h"
- 697              		.file 10 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
- 698              		.file 11 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
- 699              		.file 12 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
+ 697              		.file 10 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\p
+ 698              		.file 11 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\p
+ 699              		.file 12 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\p
  700              		.file 13 "lib/usbcdc/include/cdc_acm_core.h"
- 701              		.file 14 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
- 702              		.file 15 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolch
+ 701              		.file 14 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\p
+ 702              		.file 15 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\p
  703              		.file 16 "lib/usbcdc/include/usb_serial_if.h"
  704              		.file 17 "./../../firmware/RISCV/drivers/n200_func.h"
  705              		.file 18 "lib/usbcdc/include/usbd_core.h"
  706              		.file 19 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_eclic.h"
  707              		.file 20 "lib/usbcdc/include/drv_usb_hw.h"
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 18
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usb_serial_if.c
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:682    .data.usb_buffer:0000000000000000 usb_buffer
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:662    .bss.tx_buffer:0000000000000000 tx_buffer
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:669    .data.USB_OTG_dev:0000000000000000 USB_OTG_dev
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:16     .text.usb_serial_connected:0000000000000000 usb_serial_connected
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:20     .text.usb_serial_connected:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:21     .text.usb_serial_connected:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:22     .text.usb_serial_connected:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:23     .text.usb_serial_connected:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:25     .text.usb_serial_connected:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:27     .text.usb_serial_connected:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:29     .text.usb_serial_connected:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:32     .text.usb_serial_connected:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:33     .text.usb_serial_connected:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:37     .text.usb_serial_connected:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:39     .text.usb_serial_connected:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:46     .text.read_usb_serial:0000000000000000 read_usb_serial
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:49     .text.read_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:51     .text.read_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:52     .text.read_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:53     .text.read_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:54     .text.read_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:55     .text.read_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:57     .text.read_usb_serial:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:59     .text.read_usb_serial:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:61     .text.read_usb_serial:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:64     .text.read_usb_serial:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:71     .text.read_usb_serial:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:72     .text.read_usb_serial:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:73     .text.read_usb_serial:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:74     .text.read_usb_serial:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:75     .text.read_usb_serial:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:76     .text.read_usb_serial:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:77     .text.read_usb_serial:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:79     .text.read_usb_serial:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:81     .text.read_usb_serial:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:82     .text.read_usb_serial:000000000000001e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:86     .text.read_usb_serial:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:93     .text.read_usb_serial:000000000000003c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:95     .text.read_usb_serial:0000000000000040 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:97     .text.read_usb_serial:0000000000000042 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:100    .text.read_usb_serial:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:105    .text.read_usb_serial:000000000000004a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:108    .text.read_usb_serial:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:109    .text.read_usb_serial:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:111    .text.read_usb_serial:0000000000000056 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:113    .text.read_usb_serial:000000000000005a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:117    .text.read_usb_serial:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:120    .text.read_usb_serial:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:121    .text.read_usb_serial:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:124    .text.read_usb_serial:0000000000000064 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:128    .text.read_usb_serial:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:134    .text.read_usb_serial:000000000000006e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:135    .text.read_usb_serial:000000000000006e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:137    .text.read_usb_serial:0000000000000072 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:138    .text.read_usb_serial:0000000000000074 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 19
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:682    .data.usb_buffer:0000000000000000 usb_buffer
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:662    .bss.tx_buffer:0000000000000000 tx_buffer
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:669    .data.USB_OTG_dev:0000000000000000 USB_OTG_dev
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:16     .text.usb_serial_connected:0000000000000000 usb_serial_connected
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:20     .text.usb_serial_connected:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:21     .text.usb_serial_connected:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:22     .text.usb_serial_connected:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:23     .text.usb_serial_connected:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:25     .text.usb_serial_connected:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:27     .text.usb_serial_connected:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:29     .text.usb_serial_connected:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:32     .text.usb_serial_connected:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:33     .text.usb_serial_connected:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:37     .text.usb_serial_connected:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:39     .text.usb_serial_connected:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:46     .text.read_usb_serial:0000000000000000 read_usb_serial
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:49     .text.read_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:51     .text.read_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:52     .text.read_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:53     .text.read_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:54     .text.read_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:55     .text.read_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:57     .text.read_usb_serial:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:59     .text.read_usb_serial:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:61     .text.read_usb_serial:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:64     .text.read_usb_serial:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:71     .text.read_usb_serial:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:72     .text.read_usb_serial:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:73     .text.read_usb_serial:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:74     .text.read_usb_serial:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:75     .text.read_usb_serial:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:76     .text.read_usb_serial:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:77     .text.read_usb_serial:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:79     .text.read_usb_serial:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:81     .text.read_usb_serial:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:82     .text.read_usb_serial:000000000000001e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:86     .text.read_usb_serial:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:93     .text.read_usb_serial:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:95     .text.read_usb_serial:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:97     .text.read_usb_serial:0000000000000042 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:100    .text.read_usb_serial:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:105    .text.read_usb_serial:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:108    .text.read_usb_serial:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:109    .text.read_usb_serial:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:111    .text.read_usb_serial:0000000000000056 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:113    .text.read_usb_serial:000000000000005a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:117    .text.read_usb_serial:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:120    .text.read_usb_serial:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:121    .text.read_usb_serial:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:124    .text.read_usb_serial:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:128    .text.read_usb_serial:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:134    .text.read_usb_serial:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:135    .text.read_usb_serial:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:137    .text.read_usb_serial:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:138    .text.read_usb_serial:0000000000000074 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 19
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:139    .text.read_usb_serial:0000000000000074 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:141    .text.read_usb_serial:0000000000000076 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:143    .text.read_usb_serial:0000000000000078 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:145    .text.read_usb_serial:000000000000007a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:147    .text.read_usb_serial:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:149    .text.read_usb_serial:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:151    .text.read_usb_serial:0000000000000080 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:153    .text.read_usb_serial:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:155    .text.read_usb_serial:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:157    .text.read_usb_serial:0000000000000084 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:159    .text.read_usb_serial:0000000000000086 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:164    .text.read_usb_serial:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:166    .text.read_usb_serial:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:167    .text.read_usb_serial:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:169    .text.read_usb_serial:000000000000008c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:172    .text.read_usb_serial:000000000000008e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:175    .text.read_usb_serial:0000000000000092 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:179    .text.read_usb_serial:0000000000000094 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:180    .text.read_usb_serial:0000000000000094 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:182    .text.read_usb_serial:0000000000000098 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:187    .text.read_usb_serial:00000000000000a6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:190    .text.read_usb_serial:00000000000000a8 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:193    .text.read_usb_serial:00000000000000ac .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:194    .text.read_usb_serial:00000000000000ac .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:199    .text.read_usb_serial:00000000000000b2 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:200    .text.read_usb_serial:00000000000000b2 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:201    .text.read_usb_serial:00000000000000b2 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:206    .text.read_usb_serial:00000000000000be .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:208    .text.read_usb_serial:00000000000000c2 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:209    .text.read_usb_serial:00000000000000c2 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:211    .text.read_usb_serial:00000000000000c6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:214    .text.read_usb_serial:00000000000000ce .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:222    .text.read_usb_serial:00000000000000da .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:223    .text.read_usb_serial:00000000000000da .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:226    .text.read_usb_serial:00000000000000e2 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:228    .text.read_usb_serial:00000000000000e6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:231    .text.read_usb_serial:00000000000000e8 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:234    .text.read_usb_serial:00000000000000ee .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:241    .text.configure_usb_serial:0000000000000000 configure_usb_serial
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:244    .text.configure_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:245    .text.configure_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:246    .text.configure_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:247    .text.configure_usb_serial:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:249    .text.configure_usb_serial:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:251    .text.configure_usb_serial:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:464    .text.set_usb_clock_96m_hxtal:0000000000000000 set_usb_clock_96m_hxtal
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:253    .text.configure_usb_serial:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:139    .text.read_usb_serial:0000000000000074 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:141    .text.read_usb_serial:0000000000000076 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:143    .text.read_usb_serial:0000000000000078 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:145    .text.read_usb_serial:000000000000007a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:147    .text.read_usb_serial:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:149    .text.read_usb_serial:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:151    .text.read_usb_serial:0000000000000080 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:153    .text.read_usb_serial:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:155    .text.read_usb_serial:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:157    .text.read_usb_serial:0000000000000084 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:159    .text.read_usb_serial:0000000000000086 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:164    .text.read_usb_serial:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:166    .text.read_usb_serial:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:167    .text.read_usb_serial:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:169    .text.read_usb_serial:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:172    .text.read_usb_serial:000000000000008e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:175    .text.read_usb_serial:0000000000000092 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:179    .text.read_usb_serial:0000000000000094 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:180    .text.read_usb_serial:0000000000000094 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:182    .text.read_usb_serial:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:187    .text.read_usb_serial:00000000000000a6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:190    .text.read_usb_serial:00000000000000a8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:193    .text.read_usb_serial:00000000000000ac .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:194    .text.read_usb_serial:00000000000000ac .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:199    .text.read_usb_serial:00000000000000b2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:200    .text.read_usb_serial:00000000000000b2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:201    .text.read_usb_serial:00000000000000b2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:206    .text.read_usb_serial:00000000000000be .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:208    .text.read_usb_serial:00000000000000c2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:209    .text.read_usb_serial:00000000000000c2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:211    .text.read_usb_serial:00000000000000c6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:214    .text.read_usb_serial:00000000000000ce .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:222    .text.read_usb_serial:00000000000000da .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:223    .text.read_usb_serial:00000000000000da .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:226    .text.read_usb_serial:00000000000000e2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:228    .text.read_usb_serial:00000000000000e6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:231    .text.read_usb_serial:00000000000000e8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:234    .text.read_usb_serial:00000000000000ee .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:241    .text.configure_usb_serial:0000000000000000 configure_usb_serial
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:244    .text.configure_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:245    .text.configure_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:246    .text.configure_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:247    .text.configure_usb_serial:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:249    .text.configure_usb_serial:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:251    .text.configure_usb_serial:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:464    .text.set_usb_clock_96m_hxtal:0000000000000000 set_usb_clock_96m_hxtal
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:253    .text.configure_usb_serial:0000000000000004 .L0 
 lib/usbcdc/src/usb_serial_if.c:63     .text.configure_usb_serial:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:262    .text.configure_usb_serial:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:265    .text.configure_usb_serial:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:269    .text.configure_usb_serial:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:272    .text.configure_usb_serial:000000000000002a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:275    .text.configure_usb_serial:0000000000000032 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:278    .text.configure_usb_serial:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:279    .text.configure_usb_serial:000000000000003a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:280    .text.configure_usb_serial:000000000000003c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:282    .text.configure_usb_serial:000000000000003c .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 20
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:262    .text.configure_usb_serial:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:265    .text.configure_usb_serial:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:269    .text.configure_usb_serial:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:272    .text.configure_usb_serial:000000000000002a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:275    .text.configure_usb_serial:0000000000000032 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:278    .text.configure_usb_serial:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:279    .text.configure_usb_serial:000000000000003a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:280    .text.configure_usb_serial:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:282    .text.configure_usb_serial:000000000000003c .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 20
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:285    .text.configure_usb_serial:0000000000000044 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:286    .text.configure_usb_serial:0000000000000044 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:290    .text.configure_usb_serial:000000000000004e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:292    .text.configure_usb_serial:0000000000000050 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:294    .text.configure_usb_serial:0000000000000050 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:296    .text.configure_usb_serial:0000000000000058 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:303    .text.usb_serial_available:0000000000000000 usb_serial_available
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:306    .text.usb_serial_available:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:307    .text.usb_serial_available:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:308    .text.usb_serial_available:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:309    .text.usb_serial_available:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:313    .text.usb_serial_available:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:315    .text.usb_serial_available:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:317    .text.usb_serial_available:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:324    .text._write:0000000000000000 _write
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:327    .text._write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:329    .text._write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:330    .text._write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:331    .text._write:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:333    .text._write:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:341    .text._write:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:342    .text._write:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:343    .text._write:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:344    .text._write:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:345    .text._write:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:346    .text._write:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:347    .text._write:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:349    .text._write:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:352    .text._write:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:355    .text._write:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:356    .text._write:000000000000001c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:362    .text._write:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:363    .text._write:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:364    .text._write:0000000000000028 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:368    .text._write:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:370    .text._write:0000000000000034 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:377    .text._write:000000000000003e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:378    .text._write:000000000000003e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:381    .text._write:0000000000000044 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:384    .text._write:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:389    .text._write:0000000000000058 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:391    .text._write:000000000000005c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:394    .text._write:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:396    .text._write:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:397    .text._write:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:399    .text._write:0000000000000062 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:403    .text._write:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:406    .text._write:000000000000006a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:415    .text._write:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:416    .text._write:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:418    .text._write:000000000000008c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:419    .text._write:000000000000008c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:421    .text._write:000000000000008e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:424    .text._write:0000000000000090 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:426    .text._write:0000000000000092 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:429    .text._write:0000000000000094 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:432    .text._write:0000000000000096 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 21
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:285    .text.configure_usb_serial:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:286    .text.configure_usb_serial:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:290    .text.configure_usb_serial:000000000000004e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:292    .text.configure_usb_serial:0000000000000050 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:294    .text.configure_usb_serial:0000000000000050 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:296    .text.configure_usb_serial:0000000000000058 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:303    .text.usb_serial_available:0000000000000000 usb_serial_available
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:306    .text.usb_serial_available:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:307    .text.usb_serial_available:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:308    .text.usb_serial_available:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:309    .text.usb_serial_available:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:313    .text.usb_serial_available:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:315    .text.usb_serial_available:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:317    .text.usb_serial_available:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:324    .text._write:0000000000000000 _write
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:327    .text._write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:329    .text._write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:330    .text._write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:331    .text._write:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:333    .text._write:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:341    .text._write:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:342    .text._write:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:343    .text._write:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:344    .text._write:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:345    .text._write:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:346    .text._write:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:347    .text._write:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:349    .text._write:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:352    .text._write:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:355    .text._write:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:356    .text._write:000000000000001c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:362    .text._write:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:363    .text._write:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:364    .text._write:0000000000000028 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:368    .text._write:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:370    .text._write:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:377    .text._write:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:378    .text._write:000000000000003e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:381    .text._write:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:384    .text._write:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:389    .text._write:0000000000000058 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:391    .text._write:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:394    .text._write:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:396    .text._write:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:397    .text._write:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:399    .text._write:0000000000000062 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:403    .text._write:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:406    .text._write:000000000000006a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:415    .text._write:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:416    .text._write:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:418    .text._write:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:419    .text._write:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:421    .text._write:000000000000008e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:424    .text._write:0000000000000090 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:426    .text._write:0000000000000092 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:429    .text._write:0000000000000094 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:432    .text._write:0000000000000096 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 21
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:434    .text._write:0000000000000098 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:437    .text._write:000000000000009a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:442    .text._write:000000000000009c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:445    .text._write:000000000000009c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:446    .text._write:000000000000009c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:449    .text._write:00000000000000a4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:451    .text._write:00000000000000a8 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:454    .text._write:00000000000000aa .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:457    .text._write:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:467    .text.set_usb_clock_96m_hxtal:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:468    .text.set_usb_clock_96m_hxtal:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:469    .text.set_usb_clock_96m_hxtal:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:470    .text.set_usb_clock_96m_hxtal:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:473    .text.set_usb_clock_96m_hxtal:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:476    .text.set_usb_clock_96m_hxtal:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:479    .text.set_usb_clock_96m_hxtal:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:480    .text.set_usb_clock_96m_hxtal:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:484    .text.set_usb_clock_96m_hxtal:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:485    .text.set_usb_clock_96m_hxtal:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:491    .text.set_usb_clock_96m_hxtal:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:492    .text.set_usb_clock_96m_hxtal:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:498    .text.set_usb_clock_96m_hxtal:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:499    .text.set_usb_clock_96m_hxtal:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:505    .text.set_usb_clock_96m_hxtal:000000000000003c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:506    .text.set_usb_clock_96m_hxtal:000000000000003c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:508    .text.set_usb_clock_96m_hxtal:0000000000000040 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:509    .text.set_usb_clock_96m_hxtal:0000000000000040 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:515    .text.set_usb_clock_96m_hxtal:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:516    .text.set_usb_clock_96m_hxtal:000000000000004c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:520    .text.set_usb_clock_96m_hxtal:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:521    .text.set_usb_clock_96m_hxtal:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:522    .text.set_usb_clock_96m_hxtal:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:523    .text.set_usb_clock_96m_hxtal:0000000000000052 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:529    .text.set_usb_clock_96m_hxtal:000000000000005e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:533    .text.set_usb_clock_96m_hxtal:0000000000000062 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:534    .text.set_usb_clock_96m_hxtal:0000000000000062 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:535    .text.set_usb_clock_96m_hxtal:0000000000000062 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:536    .text.set_usb_clock_96m_hxtal:0000000000000062 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:539    .text.set_usb_clock_96m_hxtal:0000000000000064 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:544    .text.set_usb_clock_96m_hxtal:000000000000006e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:548    .text.set_usb_clock_96m_hxtal:0000000000000070 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:549    .text.set_usb_clock_96m_hxtal:0000000000000070 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:552    .text.set_usb_clock_96m_hxtal:0000000000000076 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:557    .text.set_usb_clock_96m_hxtal:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:558    .text.set_usb_clock_96m_hxtal:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:563    .text.set_usb_clock_96m_hxtal:0000000000000080 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:564    .text.set_usb_clock_96m_hxtal:0000000000000080 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:566    .text.set_usb_clock_96m_hxtal:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:569    .text.set_usb_clock_96m_hxtal:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:571    .text.set_usb_clock_96m_hxtal:000000000000008a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:572    .text.set_usb_clock_96m_hxtal:000000000000008a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:575    .text.set_usb_clock_96m_hxtal:000000000000008e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:576    .text.set_usb_clock_96m_hxtal:000000000000008e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:580    .text.set_usb_clock_96m_hxtal:0000000000000096 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:581    .text.set_usb_clock_96m_hxtal:0000000000000096 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:582    .text.set_usb_clock_96m_hxtal:0000000000000096 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:583    .text.set_usb_clock_96m_hxtal:0000000000000096 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 22
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:434    .text._write:0000000000000098 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:437    .text._write:000000000000009a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:442    .text._write:000000000000009c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:445    .text._write:000000000000009c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:446    .text._write:000000000000009c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:449    .text._write:00000000000000a4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:451    .text._write:00000000000000a8 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:454    .text._write:00000000000000aa .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:457    .text._write:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:467    .text.set_usb_clock_96m_hxtal:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:468    .text.set_usb_clock_96m_hxtal:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:469    .text.set_usb_clock_96m_hxtal:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:470    .text.set_usb_clock_96m_hxtal:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:473    .text.set_usb_clock_96m_hxtal:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:476    .text.set_usb_clock_96m_hxtal:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:479    .text.set_usb_clock_96m_hxtal:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:480    .text.set_usb_clock_96m_hxtal:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:484    .text.set_usb_clock_96m_hxtal:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:485    .text.set_usb_clock_96m_hxtal:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:491    .text.set_usb_clock_96m_hxtal:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:492    .text.set_usb_clock_96m_hxtal:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:498    .text.set_usb_clock_96m_hxtal:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:499    .text.set_usb_clock_96m_hxtal:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:505    .text.set_usb_clock_96m_hxtal:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:506    .text.set_usb_clock_96m_hxtal:000000000000003c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:508    .text.set_usb_clock_96m_hxtal:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:509    .text.set_usb_clock_96m_hxtal:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:515    .text.set_usb_clock_96m_hxtal:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:516    .text.set_usb_clock_96m_hxtal:000000000000004c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:520    .text.set_usb_clock_96m_hxtal:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:521    .text.set_usb_clock_96m_hxtal:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:522    .text.set_usb_clock_96m_hxtal:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:523    .text.set_usb_clock_96m_hxtal:0000000000000052 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:529    .text.set_usb_clock_96m_hxtal:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:533    .text.set_usb_clock_96m_hxtal:0000000000000062 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:534    .text.set_usb_clock_96m_hxtal:0000000000000062 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:535    .text.set_usb_clock_96m_hxtal:0000000000000062 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:536    .text.set_usb_clock_96m_hxtal:0000000000000062 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:539    .text.set_usb_clock_96m_hxtal:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:544    .text.set_usb_clock_96m_hxtal:000000000000006e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:548    .text.set_usb_clock_96m_hxtal:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:549    .text.set_usb_clock_96m_hxtal:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:552    .text.set_usb_clock_96m_hxtal:0000000000000076 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:557    .text.set_usb_clock_96m_hxtal:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:558    .text.set_usb_clock_96m_hxtal:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:563    .text.set_usb_clock_96m_hxtal:0000000000000080 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:564    .text.set_usb_clock_96m_hxtal:0000000000000080 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:566    .text.set_usb_clock_96m_hxtal:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:569    .text.set_usb_clock_96m_hxtal:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:571    .text.set_usb_clock_96m_hxtal:000000000000008a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:572    .text.set_usb_clock_96m_hxtal:000000000000008a .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:575    .text.set_usb_clock_96m_hxtal:000000000000008e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:576    .text.set_usb_clock_96m_hxtal:000000000000008e .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:580    .text.set_usb_clock_96m_hxtal:0000000000000096 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:581    .text.set_usb_clock_96m_hxtal:0000000000000096 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:582    .text.set_usb_clock_96m_hxtal:0000000000000096 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:583    .text.set_usb_clock_96m_hxtal:0000000000000096 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 22
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:587    .text.set_usb_clock_96m_hxtal:000000000000009c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:588    .text.set_usb_clock_96m_hxtal:000000000000009c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:593    .text.set_usb_clock_96m_hxtal:00000000000000a6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:594    .text.set_usb_clock_96m_hxtal:00000000000000a6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:599    .text.set_usb_clock_96m_hxtal:00000000000000ae .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:600    .text.set_usb_clock_96m_hxtal:00000000000000ae .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:602    .text.set_usb_clock_96m_hxtal:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:604    .text.set_usb_clock_96m_hxtal:00000000000000b4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:607    .text.set_usb_clock_96m_hxtal:00000000000000ba .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:608    .text.set_usb_clock_96m_hxtal:00000000000000ba .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:612    .text.set_usb_clock_96m_hxtal:00000000000000c0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:613    .text.set_usb_clock_96m_hxtal:00000000000000c0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:616    .text.set_usb_clock_96m_hxtal:00000000000000c4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:617    .text.set_usb_clock_96m_hxtal:00000000000000c4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:619    .text.set_usb_clock_96m_hxtal:00000000000000c6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:622    .text.set_usb_clock_96m_hxtal:00000000000000ce .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:623    .text.set_usb_clock_96m_hxtal:00000000000000ce .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:627    .text.set_usb_clock_96m_hxtal:00000000000000d4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:628    .text.set_usb_clock_96m_hxtal:00000000000000d4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:632    .text.set_usb_clock_96m_hxtal:00000000000000dc .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:633    .text.set_usb_clock_96m_hxtal:00000000000000dc .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:636    .text.set_usb_clock_96m_hxtal:00000000000000e0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:637    .text.set_usb_clock_96m_hxtal:00000000000000e0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:639    .text.set_usb_clock_96m_hxtal:00000000000000e2 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:641    .text.set_usb_clock_96m_hxtal:00000000000000e4 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:643    .text.set_usb_clock_96m_hxtal:00000000000000e6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:647    .text.set_usb_clock_96m_hxtal:00000000000000ee .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:652    .bss.receive_buffer.5944:0000000000000000 .LANCHOR2
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:655    .bss.receive_buffer.5944:0000000000000000 receive_buffer.5944
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:659    .bss.tx_buffer:0000000000000000 .LANCHOR3
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:666    .data.USB_OTG_dev:0000000000000000 .LANCHOR1
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:679    .data.usb_buffer:0000000000000000 .LANCHOR0
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:42     .text.usb_serial_connected:0000000000000016 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:237    .text.read_usb_serial:00000000000000ee .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:299    .text.configure_usb_serial:0000000000000058 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:320    .text.usb_serial_available:0000000000000014 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:460    .text._write:00000000000000b0 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:650    .text.set_usb_clock_96m_hxtal:00000000000000ee .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:587    .text.set_usb_clock_96m_hxtal:000000000000009c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:588    .text.set_usb_clock_96m_hxtal:000000000000009c .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:593    .text.set_usb_clock_96m_hxtal:00000000000000a6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:594    .text.set_usb_clock_96m_hxtal:00000000000000a6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:599    .text.set_usb_clock_96m_hxtal:00000000000000ae .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:600    .text.set_usb_clock_96m_hxtal:00000000000000ae .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:602    .text.set_usb_clock_96m_hxtal:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:604    .text.set_usb_clock_96m_hxtal:00000000000000b4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:607    .text.set_usb_clock_96m_hxtal:00000000000000ba .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:608    .text.set_usb_clock_96m_hxtal:00000000000000ba .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:612    .text.set_usb_clock_96m_hxtal:00000000000000c0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:613    .text.set_usb_clock_96m_hxtal:00000000000000c0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:616    .text.set_usb_clock_96m_hxtal:00000000000000c4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:617    .text.set_usb_clock_96m_hxtal:00000000000000c4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:619    .text.set_usb_clock_96m_hxtal:00000000000000c6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:622    .text.set_usb_clock_96m_hxtal:00000000000000ce .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:623    .text.set_usb_clock_96m_hxtal:00000000000000ce .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:627    .text.set_usb_clock_96m_hxtal:00000000000000d4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:628    .text.set_usb_clock_96m_hxtal:00000000000000d4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:632    .text.set_usb_clock_96m_hxtal:00000000000000dc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:633    .text.set_usb_clock_96m_hxtal:00000000000000dc .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:636    .text.set_usb_clock_96m_hxtal:00000000000000e0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:637    .text.set_usb_clock_96m_hxtal:00000000000000e0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:639    .text.set_usb_clock_96m_hxtal:00000000000000e2 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:641    .text.set_usb_clock_96m_hxtal:00000000000000e4 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:643    .text.set_usb_clock_96m_hxtal:00000000000000e6 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:647    .text.set_usb_clock_96m_hxtal:00000000000000ee .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:652    .bss.receive_buffer.5944:0000000000000000 .LANCHOR2
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:655    .bss.receive_buffer.5944:0000000000000000 receive_buffer.5944
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:659    .bss.tx_buffer:0000000000000000 .LANCHOR3
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:666    .data.USB_OTG_dev:0000000000000000 .LANCHOR1
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:679    .data.usb_buffer:0000000000000000 .LANCHOR0
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:42     .text.usb_serial_connected:0000000000000016 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:237    .text.read_usb_serial:00000000000000ee .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:299    .text.configure_usb_serial:0000000000000058 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:320    .text.usb_serial_available:0000000000000014 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:460    .text._write:00000000000000b0 .L0 
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:650    .text.set_usb_clock_96m_hxtal:00000000000000ee .L0 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:131    .text.read_usb_serial:000000000000006e .L10
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:162    .text.read_usb_serial:0000000000000088 .L7
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:219    .text.read_usb_serial:00000000000000da .L9
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:198    .text.read_usb_serial:00000000000000b2 .L5
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:177    .text.read_usb_serial:0000000000000094 .L6
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:102    .text.read_usb_serial:000000000000004a .L4
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:126    .text.read_usb_serial:0000000000000066 .L8
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:360    .text._write:0000000000000028 .L22
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:387    .text._write:0000000000000058 .L23
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:375    .text._write:000000000000003e .L28
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:440    .text._write:000000000000009c .L27
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:401    .text._write:0000000000000066 .L26
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:546    .text.set_usb_clock_96m_hxtal:0000000000000070 .L31
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:531    .text.set_usb_clock_96m_hxtal:0000000000000062 .L32
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:559    .text.set_usb_clock_96m_hxtal:0000000000000080 .L33
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:555    .text.set_usb_clock_96m_hxtal:000000000000007e .L34
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:614    .text.set_usb_clock_96m_hxtal:00000000000000c4 .L35
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:634    .text.set_usb_clock_96m_hxtal:00000000000000e0 .L36
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 23
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:131    .text.read_usb_serial:000000000000006e .L10
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:162    .text.read_usb_serial:0000000000000088 .L7
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:219    .text.read_usb_serial:00000000000000da .L9
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:198    .text.read_usb_serial:00000000000000b2 .L5
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:177    .text.read_usb_serial:0000000000000094 .L6
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:102    .text.read_usb_serial:000000000000004a .L4
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:126    .text.read_usb_serial:0000000000000066 .L8
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:360    .text._write:0000000000000028 .L22
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:387    .text._write:0000000000000058 .L23
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:375    .text._write:000000000000003e .L28
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:440    .text._write:000000000000009c .L27
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:401    .text._write:0000000000000066 .L26
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:546    .text.set_usb_clock_96m_hxtal:0000000000000070 .L31
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:531    .text.set_usb_clock_96m_hxtal:0000000000000062 .L32
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:559    .text.set_usb_clock_96m_hxtal:0000000000000080 .L33
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:555    .text.set_usb_clock_96m_hxtal:000000000000007e .L34
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:614    .text.set_usb_clock_96m_hxtal:00000000000000c4 .L35
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:634    .text.set_usb_clock_96m_hxtal:00000000000000e0 .L36
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 23
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:5070   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6425   .debug_str:000000000000020a .LASF374
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6905   .debug_str:0000000000000de5 .LASF375
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6699   .debug_str:00000000000008ca .LASF376
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6301   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6337   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6761   .debug_str:0000000000000aa8 .LASF0
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6511   .debug_str:000000000000047a .LASF1
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6447   .debug_str:00000000000002fe .LASF4
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6523   .debug_str:00000000000004da .LASF2
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6975   .debug_str:0000000000000f45 .LASF3
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6581   .debug_str:0000000000000637 .LASF5
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7059   .debug_str:0000000000001119 .LASF6
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6471   .debug_str:0000000000000384 .LASF7
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6709   .debug_str:000000000000097a .LASF8
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6653   .debug_str:00000000000007bf .LASF9
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7011   .debug_str:0000000000000ffb .LASF10
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6713   .debug_str:0000000000000990 .LASF11
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6867   .debug_str:0000000000000d17 .LASF12
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6513   .debug_str:0000000000000486 .LASF13
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6875   .debug_str:0000000000000d4b .LASF14
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7035   .debug_str:00000000000010a1 .LASF15
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7075   .debug_str:0000000000001188 .LASF16
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6667   .debug_str:0000000000000820 .LASF92
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6353   .debug_str:0000000000000064 .LASF17
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6829   .debug_str:0000000000000c4f .LASF18
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6623   .debug_str:0000000000000718 .LASF19
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6591   .debug_str:000000000000067f .LASF20
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6531   .debug_str:0000000000000509 .LASF21
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6715   .debug_str:000000000000099e .LASF22
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6601   .debug_str:00000000000006b6 .LASF23
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6957   .debug_str:0000000000000ee5 .LASF24
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6615   .debug_str:00000000000006f7 .LASF25
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7073   .debug_str:0000000000001182 .LASF26
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6977   .debug_str:0000000000000f4f .LASF27
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7085   .debug_str:00000000000011b9 .LASF28
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7083   .debug_str:00000000000011b1 .LASF29
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6947   .debug_str:0000000000000eb9 .LASF30
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7079   .debug_str:0000000000001198 .LASF31
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7047   .debug_str:00000000000010e3 .LASF32
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6605   .debug_str:00000000000006c6 .LASF33
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6543   .debug_str:000000000000053a .LASF34
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6629   .debug_str:0000000000000741 .LASF35
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7077   .debug_str:0000000000001190 .LASF36
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6435   .debug_str:00000000000002b9 .LASF37
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7067   .debug_str:0000000000001151 .LASF38
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6893   .debug_str:0000000000000da2 .LASF39
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6507   .debug_str:0000000000000466 .LASF40
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6841   .debug_str:0000000000000c97 .LASF41
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7039   .debug_str:00000000000010bc .LASF42
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6939   .debug_str:0000000000000e93 .LASF43
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7065   .debug_str:0000000000001147 .LASF44
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7093   .debug_str:00000000000011ec .LASF45
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6647   .debug_str:00000000000007a7 .LASF46
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6599   .debug_str:00000000000006ad .LASF47
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7055   .debug_str:0000000000001107 .LASF48
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6951   .debug_str:0000000000000eca .LASF49
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 24
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:5070   .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6423   .debug_str:0000000000000200 .LASF374
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6905   .debug_str:0000000000000de3 .LASF375
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6509   .debug_str:0000000000000470 .LASF376
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6301   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6337   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6761   .debug_str:0000000000000aa6 .LASF0
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6511   .debug_str:00000000000004e2 .LASF1
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6445   .debug_str:00000000000002f4 .LASF4
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6523   .debug_str:0000000000000542 .LASF2
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6975   .debug_str:0000000000000f43 .LASF3
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6581   .debug_str:000000000000069f .LASF5
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7059   .debug_str:0000000000001117 .LASF6
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6469   .debug_str:000000000000037a .LASF7
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6709   .debug_str:0000000000000978 .LASF8
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6653   .debug_str:0000000000000827 .LASF9
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7011   .debug_str:0000000000000ff9 .LASF10
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6713   .debug_str:000000000000098e .LASF11
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6867   .debug_str:0000000000000d15 .LASF12
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6513   .debug_str:00000000000004ee .LASF13
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6875   .debug_str:0000000000000d49 .LASF14
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7035   .debug_str:000000000000109f .LASF15
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7075   .debug_str:0000000000001186 .LASF16
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6667   .debug_str:0000000000000888 .LASF92
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6353   .debug_str:0000000000000064 .LASF17
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6829   .debug_str:0000000000000c4d .LASF18
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6623   .debug_str:0000000000000780 .LASF19
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6591   .debug_str:00000000000006e7 .LASF20
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6531   .debug_str:0000000000000571 .LASF21
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6715   .debug_str:000000000000099c .LASF22
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6601   .debug_str:000000000000071e .LASF23
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6957   .debug_str:0000000000000ee3 .LASF24
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6615   .debug_str:000000000000075f .LASF25
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7073   .debug_str:0000000000001180 .LASF26
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6977   .debug_str:0000000000000f4d .LASF27
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7085   .debug_str:00000000000011b7 .LASF28
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7083   .debug_str:00000000000011af .LASF29
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6947   .debug_str:0000000000000eb7 .LASF30
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7079   .debug_str:0000000000001196 .LASF31
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7047   .debug_str:00000000000010e1 .LASF32
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6605   .debug_str:000000000000072e .LASF33
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6543   .debug_str:00000000000005a2 .LASF34
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6629   .debug_str:00000000000007a9 .LASF35
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7077   .debug_str:000000000000118e .LASF36
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6433   .debug_str:00000000000002af .LASF37
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7067   .debug_str:000000000000114f .LASF38
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6893   .debug_str:0000000000000da0 .LASF39
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6505   .debug_str:000000000000045c .LASF40
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6841   .debug_str:0000000000000c95 .LASF41
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7039   .debug_str:00000000000010ba .LASF42
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6939   .debug_str:0000000000000e91 .LASF43
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7065   .debug_str:0000000000001145 .LASF44
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7093   .debug_str:00000000000011ea .LASF45
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6647   .debug_str:000000000000080f .LASF46
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6599   .debug_str:0000000000000715 .LASF47
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7055   .debug_str:0000000000001105 .LASF48
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6951   .debug_str:0000000000000ec8 .LASF49
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 24
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6891   .debug_str:0000000000000d9b .LASF50
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6493   .debug_str:0000000000000409 .LASF51
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6779   .debug_str:0000000000000b2b .LASF52
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6533   .debug_str:0000000000000510 .LASF53
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6537   .debug_str:000000000000051e .LASF54
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6879   .debug_str:0000000000000d60 .LASF55
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6407   .debug_str:0000000000000196 .LASF56
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6559   .debug_str:00000000000005a5 .LASF57
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6693   .debug_str:00000000000008b0 .LASF58
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6579   .debug_str:000000000000062d .LASF59
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7097   .debug_str:00000000000011f8 .LASF60
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6389   .debug_str:0000000000000143 .LASF61
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6593   .debug_str:0000000000000690 .LASF62
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6595   .debug_str:000000000000069b .LASF63
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6991   .debug_str:0000000000000f94 .LASF64
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6541   .debug_str:0000000000000532 .LASF65
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6465   .debug_str:0000000000000364 .LASF66
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6363   .debug_str:0000000000000097 .LASF67
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6889   .debug_str:0000000000000d93 .LASF68
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6467   .debug_str:000000000000036c .LASF69
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6845   .debug_str:0000000000000ca9 .LASF70
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6633   .debug_str:0000000000000754 .LASF71
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7103   .debug_str:0000000000001216 .LASF72
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6987   .debug_str:0000000000000f83 .LASF73
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6995   .debug_str:0000000000000fab .LASF74
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6553   .debug_str:000000000000057c .LASF75
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6385   .debug_str:0000000000000120 .LASF76
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6495   .debug_str:0000000000000414 .LASF77
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6527   .debug_str:00000000000004f6 .LASF78
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6817   .debug_str:0000000000000c0a .LASF79
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6687   .debug_str:0000000000000894 .LASF80
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6503   .debug_str:000000000000044b .LASF81
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6603   .debug_str:00000000000006bd .LASF82
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6737   .debug_str:0000000000000a26 .LASF83
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6979   .debug_str:0000000000000f56 .LASF84
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6483   .debug_str:00000000000003b9 .LASF85
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6609   .debug_str:00000000000006d8 .LASF94
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6475   .debug_str:0000000000000399 .LASF86
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6959   .debug_str:0000000000000eec .LASF87
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6953   .debug_str:0000000000000ed3 .LASF88
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6675   .debug_str:0000000000000858 .LASF89
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6439   .debug_str:00000000000002cb .LASF90
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6849   .debug_str:0000000000000cba .LASF91
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6949   .debug_str:0000000000000ec0 .LASF93
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6619   .debug_str:0000000000000704 .LASF95
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6525   .debug_str:00000000000004e8 .LASF96
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6801   .debug_str:0000000000000b9f .LASF97
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6535   .debug_str:0000000000000517 .LASF98
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6871   .debug_str:0000000000000d3c .LASF99
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6401   .debug_str:0000000000000175 .LASF100
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6697   .debug_str:00000000000008c2 .LASF101
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6449   .debug_str:0000000000000308 .LASF102
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6865   .debug_str:0000000000000d0f .LASF103
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6643   .debug_str:0000000000000788 .LASF104
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6587   .debug_str:000000000000065a .LASF105
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6895   .debug_str:0000000000000da7 .LASF106
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6555   .debug_str:0000000000000587 .LASF107
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 25
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6891   .debug_str:0000000000000d99 .LASF50
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6491   .debug_str:00000000000003ff .LASF51
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6779   .debug_str:0000000000000b29 .LASF52
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6533   .debug_str:0000000000000578 .LASF53
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6537   .debug_str:0000000000000586 .LASF54
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6879   .debug_str:0000000000000d5e .LASF55
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6405   .debug_str:000000000000018c .LASF56
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6559   .debug_str:000000000000060d .LASF57
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6693   .debug_str:0000000000000918 .LASF58
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6579   .debug_str:0000000000000695 .LASF59
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7097   .debug_str:00000000000011f6 .LASF60
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6387   .debug_str:0000000000000139 .LASF61
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6593   .debug_str:00000000000006f8 .LASF62
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6595   .debug_str:0000000000000703 .LASF63
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6991   .debug_str:0000000000000f92 .LASF64
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6541   .debug_str:000000000000059a .LASF65
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6463   .debug_str:000000000000035a .LASF66
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6363   .debug_str:0000000000000097 .LASF67
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6889   .debug_str:0000000000000d91 .LASF68
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6465   .debug_str:0000000000000362 .LASF69
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6845   .debug_str:0000000000000ca7 .LASF70
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6633   .debug_str:00000000000007bc .LASF71
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7103   .debug_str:0000000000001214 .LASF72
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6987   .debug_str:0000000000000f81 .LASF73
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6995   .debug_str:0000000000000fa9 .LASF74
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6553   .debug_str:00000000000005e4 .LASF75
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6383   .debug_str:0000000000000116 .LASF76
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6493   .debug_str:000000000000040a .LASF77
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6527   .debug_str:000000000000055e .LASF78
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6817   .debug_str:0000000000000c08 .LASF79
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6687   .debug_str:00000000000008fc .LASF80
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6501   .debug_str:0000000000000441 .LASF81
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6603   .debug_str:0000000000000725 .LASF82
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6737   .debug_str:0000000000000a24 .LASF83
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6979   .debug_str:0000000000000f54 .LASF84
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6481   .debug_str:00000000000003af .LASF85
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6609   .debug_str:0000000000000740 .LASF94
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6473   .debug_str:000000000000038f .LASF86
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6959   .debug_str:0000000000000eea .LASF87
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6953   .debug_str:0000000000000ed1 .LASF88
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6675   .debug_str:00000000000008c0 .LASF89
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6437   .debug_str:00000000000002c1 .LASF90
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6849   .debug_str:0000000000000cb8 .LASF91
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6949   .debug_str:0000000000000ebe .LASF93
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6619   .debug_str:000000000000076c .LASF95
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6525   .debug_str:0000000000000550 .LASF96
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6801   .debug_str:0000000000000b9d .LASF97
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6535   .debug_str:000000000000057f .LASF98
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6871   .debug_str:0000000000000d3a .LASF99
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6399   .debug_str:000000000000016b .LASF100
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6697   .debug_str:000000000000092a .LASF101
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6447   .debug_str:00000000000002fe .LASF102
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6865   .debug_str:0000000000000d0d .LASF103
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6643   .debug_str:00000000000007f0 .LASF104
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6587   .debug_str:00000000000006c2 .LASF105
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6895   .debug_str:0000000000000da5 .LASF106
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6555   .debug_str:00000000000005ef .LASF107
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 25
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6433   .debug_str:00000000000002b2 .LASF108
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6955   .debug_str:0000000000000ed8 .LASF109
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6379   .debug_str:00000000000000fb .LASF110
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6463   .debug_str:0000000000000354 .LASF111
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6657   .debug_str:00000000000007e7 .LASF112
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6907   .debug_str:0000000000000e04 .LASF113
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6897   .debug_str:0000000000000db5 .LASF114
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6521   .debug_str:00000000000004d0 .LASF115
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6745   .debug_str:0000000000000a4a .LASF116
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6339   .debug_str:0000000000000000 .LASF117
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6659   .debug_str:00000000000007f7 .LASF118
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6655   .debug_str:00000000000007d1 .LASF119
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6727   .debug_str:00000000000009e5 .LASF120
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6569   .debug_str:00000000000005f8 .LASF121
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6833   .debug_str:0000000000000c65 .LASF122
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6765   .debug_str:0000000000000ac0 .LASF123
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6773   .debug_str:0000000000000af8 .LASF124
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6797   .debug_str:0000000000000b85 .LASF125
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6703   .debug_str:0000000000000947 .LASF126
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7043   .debug_str:00000000000010ce .LASF127
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6683   .debug_str:0000000000000878 .LASF128
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6519   .debug_str:00000000000004c2 .LASF129
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6967   .debug_str:0000000000000f0e .LASF130
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6343   .debug_str:0000000000000015 .LASF131
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6671   .debug_str:0000000000000838 .LASF132
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6769   .debug_str:0000000000000ad8 .LASF133
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6943   .debug_str:0000000000000ea1 .LASF134
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6505   .debug_str:0000000000000453 .LASF135
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6925   .debug_str:0000000000000e5c .LASF136
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6347   .debug_str:0000000000000035 .LASF137
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7049   .debug_str:00000000000010ee .LASF138
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6355   .debug_str:000000000000006b .LASF139
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6733   .debug_str:0000000000000a08 .LASF140
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6481   .debug_str:00000000000003af .LASF141
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6649   .debug_str:00000000000007ae .LASF142
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7057   .debug_str:000000000000110f .LASF143
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6689   .debug_str:000000000000089d .LASF144
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6973   .debug_str:0000000000000f3c .LASF145
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6491   .debug_str:0000000000000402 .LASF146
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6345   .debug_str:0000000000000027 .LASF147
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6781   .debug_str:0000000000000b34 .LASF148
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6981   .debug_str:0000000000000f62 .LASF149
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6997   .debug_str:0000000000000fb3 .LASF150
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6819   .debug_str:0000000000000c15 .LASF151
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6857   .debug_str:0000000000000ce1 .LASF152
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6919   .debug_str:0000000000000e39 .LASF153
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6395   .debug_str:000000000000015a .LASF154
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6963   .debug_str:0000000000000efb .LASF155
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6461   .debug_str:000000000000034c .LASF156
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6839   .debug_str:0000000000000c8e .LASF157
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6361   .debug_str:000000000000008f .LASF158
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6719   .debug_str:00000000000009ae .LASF159
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6965   .debug_str:0000000000000f04 .LASF160
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7037   .debug_str:00000000000010aa .LASF161
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6445   .debug_str:00000000000002ed .LASF162
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6529   .debug_str:0000000000000502 .LASF163
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6731   .debug_str:00000000000009fb .LASF164
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 26
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6431   .debug_str:00000000000002a8 .LASF108
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6955   .debug_str:0000000000000ed6 .LASF109
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6377   .debug_str:00000000000000f1 .LASF110
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6461   .debug_str:000000000000034a .LASF111
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6657   .debug_str:000000000000084f .LASF112
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6907   .debug_str:0000000000000e02 .LASF113
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6897   .debug_str:0000000000000db3 .LASF114
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6521   .debug_str:0000000000000538 .LASF115
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6745   .debug_str:0000000000000a48 .LASF116
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6339   .debug_str:0000000000000000 .LASF117
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6659   .debug_str:000000000000085f .LASF118
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6655   .debug_str:0000000000000839 .LASF119
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6727   .debug_str:00000000000009e3 .LASF120
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6569   .debug_str:0000000000000660 .LASF121
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6833   .debug_str:0000000000000c63 .LASF122
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6765   .debug_str:0000000000000abe .LASF123
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6773   .debug_str:0000000000000af6 .LASF124
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6797   .debug_str:0000000000000b83 .LASF125
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6703   .debug_str:0000000000000945 .LASF126
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7043   .debug_str:00000000000010cc .LASF127
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6683   .debug_str:00000000000008e0 .LASF128
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6519   .debug_str:000000000000052a .LASF129
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6967   .debug_str:0000000000000f0c .LASF130
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6343   .debug_str:0000000000000015 .LASF131
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6671   .debug_str:00000000000008a0 .LASF132
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6769   .debug_str:0000000000000ad6 .LASF133
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6943   .debug_str:0000000000000e9f .LASF134
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6503   .debug_str:0000000000000449 .LASF135
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6925   .debug_str:0000000000000e5a .LASF136
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6347   .debug_str:0000000000000035 .LASF137
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7049   .debug_str:00000000000010ec .LASF138
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6355   .debug_str:000000000000006b .LASF139
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6733   .debug_str:0000000000000a06 .LASF140
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6479   .debug_str:00000000000003a5 .LASF141
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6649   .debug_str:0000000000000816 .LASF142
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7057   .debug_str:000000000000110d .LASF143
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6689   .debug_str:0000000000000905 .LASF144
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6973   .debug_str:0000000000000f3a .LASF145
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6489   .debug_str:00000000000003f8 .LASF146
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6345   .debug_str:0000000000000027 .LASF147
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6781   .debug_str:0000000000000b32 .LASF148
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6981   .debug_str:0000000000000f60 .LASF149
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6997   .debug_str:0000000000000fb1 .LASF150
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6819   .debug_str:0000000000000c13 .LASF151
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6857   .debug_str:0000000000000cdf .LASF152
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6919   .debug_str:0000000000000e37 .LASF153
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6393   .debug_str:0000000000000150 .LASF154
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6963   .debug_str:0000000000000ef9 .LASF155
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6459   .debug_str:0000000000000342 .LASF156
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6839   .debug_str:0000000000000c8c .LASF157
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6361   .debug_str:000000000000008f .LASF158
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6719   .debug_str:00000000000009ac .LASF159
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6965   .debug_str:0000000000000f02 .LASF160
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7037   .debug_str:00000000000010a8 .LASF161
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6443   .debug_str:00000000000002e3 .LASF162
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6529   .debug_str:000000000000056a .LASF163
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6731   .debug_str:00000000000009f9 .LASF164
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 26
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6807   .debug_str:0000000000000bb7 .LASF165
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6707   .debug_str:0000000000000972 .LASF166
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6341   .debug_str:0000000000000009 .LASF167
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6961   .debug_str:0000000000000ef3 .LASF168
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6367   .debug_str:00000000000000a8 .LASF169
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6861   .debug_str:0000000000000cf9 .LASF170
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6563   .debug_str:00000000000005cc .LASF171
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6669   .debug_str:0000000000000830 .LASF172
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6423   .debug_str:0000000000000201 .LASF173
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6767   .debug_str:0000000000000acf .LASF174
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7045   .debug_str:00000000000010d8 .LASF175
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6551   .debug_str:0000000000000571 .LASF176
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6415   .debug_str:00000000000001e3 .LASF177
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6621   .debug_str:000000000000070d .LASF178
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6835   .debug_str:0000000000000c72 .LASF179
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7063   .debug_str:0000000000001136 .LASF180
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6933   .debug_str:0000000000000e81 .LASF181
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6929   .debug_str:0000000000000e6c .LASF182
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6873   .debug_str:0000000000000d43 .LASF183
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6501   .debug_str:0000000000000441 .LASF184
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6945   .debug_str:0000000000000eb4 .LASF185
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6597   .debug_str:00000000000006a6 .LASF186
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6451   .debug_str:0000000000000319 .LASF187
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6441   .debug_str:00000000000002d5 .LASF188
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6549   .debug_str:0000000000000568 .LASF189
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6567   .debug_str:00000000000005e5 .LASF190
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6783   .debug_str:0000000000000b3c .LASF191
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6921   .debug_str:0000000000000e42 .LASF192
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6627   .debug_str:0000000000000733 .LASF193
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6417   .debug_str:00000000000001ec .LASF194
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6757   .debug_str:0000000000000a8e .LASF195
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6763   .debug_str:0000000000000ab5 .LASF196
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6869   .debug_str:0000000000000d2e .LASF197
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6901   .debug_str:0000000000000dcc .LASF198
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6915   .debug_str:0000000000000e27 .LASF199
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6927   .debug_str:0000000000000e67 .LASF200
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6751   .debug_str:0000000000000a64 .LASF201
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6785   .debug_str:0000000000000b50 .LASF202
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6985   .debug_str:0000000000000f76 .LASF203
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6443   .debug_str:00000000000002dd .LASF204
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6613   .debug_str:00000000000006ea .LASF377
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6827   .debug_str:0000000000000c42 .LASF205
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6993   .debug_str:0000000000000f9c .LASF206
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6771   .debug_str:0000000000000ae8 .LASF207
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6565   .debug_str:00000000000005d6 .LASF208
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6935   .debug_str:0000000000000e86 .LASF209
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7051   .debug_str:00000000000010fb .LASF210
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6853   .debug_str:0000000000000cd2 .LASF211
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6351   .debug_str:000000000000005b .LASF212
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6457   .debug_str:0000000000000336 .LASF213
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6855   .debug_str:0000000000000cda .LASF214
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6811   .debug_str:0000000000000bcc .LASF215
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6359   .debug_str:0000000000000087 .LASF216
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6923   .debug_str:0000000000000e51 .LASF217
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7033   .debug_str:0000000000001099 .LASF218
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6673   .debug_str:0000000000000846 .LASF219
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6913   .debug_str:0000000000000e1e .LASF220
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 27
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6807   .debug_str:0000000000000bb5 .LASF165
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6707   .debug_str:0000000000000970 .LASF166
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6341   .debug_str:0000000000000009 .LASF167
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6961   .debug_str:0000000000000ef1 .LASF168
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6367   .debug_str:00000000000000a8 .LASF169
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6861   .debug_str:0000000000000cf7 .LASF170
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6563   .debug_str:0000000000000634 .LASF171
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6669   .debug_str:0000000000000898 .LASF172
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6421   .debug_str:00000000000001f7 .LASF173
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6767   .debug_str:0000000000000acd .LASF174
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7045   .debug_str:00000000000010d6 .LASF175
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6551   .debug_str:00000000000005d9 .LASF176
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6413   .debug_str:00000000000001d9 .LASF177
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6621   .debug_str:0000000000000775 .LASF178
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6835   .debug_str:0000000000000c70 .LASF179
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7063   .debug_str:0000000000001134 .LASF180
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6933   .debug_str:0000000000000e7f .LASF181
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6929   .debug_str:0000000000000e6a .LASF182
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6873   .debug_str:0000000000000d41 .LASF183
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6499   .debug_str:0000000000000437 .LASF184
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6945   .debug_str:0000000000000eb2 .LASF185
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6597   .debug_str:000000000000070e .LASF186
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6449   .debug_str:000000000000030f .LASF187
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6439   .debug_str:00000000000002cb .LASF188
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6549   .debug_str:00000000000005d0 .LASF189
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6567   .debug_str:000000000000064d .LASF190
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6783   .debug_str:0000000000000b3a .LASF191
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6921   .debug_str:0000000000000e40 .LASF192
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6627   .debug_str:000000000000079b .LASF193
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6415   .debug_str:00000000000001e2 .LASF194
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6757   .debug_str:0000000000000a8c .LASF195
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6763   .debug_str:0000000000000ab3 .LASF196
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6869   .debug_str:0000000000000d2c .LASF197
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6901   .debug_str:0000000000000dca .LASF198
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6915   .debug_str:0000000000000e25 .LASF199
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6927   .debug_str:0000000000000e65 .LASF200
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6751   .debug_str:0000000000000a62 .LASF201
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6785   .debug_str:0000000000000b4e .LASF202
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6985   .debug_str:0000000000000f74 .LASF203
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6441   .debug_str:00000000000002d3 .LASF204
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6613   .debug_str:0000000000000752 .LASF377
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6827   .debug_str:0000000000000c40 .LASF205
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6993   .debug_str:0000000000000f9a .LASF206
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6771   .debug_str:0000000000000ae6 .LASF207
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6565   .debug_str:000000000000063e .LASF208
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6935   .debug_str:0000000000000e84 .LASF209
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7051   .debug_str:00000000000010f9 .LASF210
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6853   .debug_str:0000000000000cd0 .LASF211
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6351   .debug_str:000000000000005b .LASF212
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6455   .debug_str:000000000000032c .LASF213
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6855   .debug_str:0000000000000cd8 .LASF214
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6811   .debug_str:0000000000000bca .LASF215
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6359   .debug_str:0000000000000087 .LASF216
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6923   .debug_str:0000000000000e4f .LASF217
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7033   .debug_str:0000000000001097 .LASF218
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6673   .debug_str:00000000000008ae .LASF219
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6913   .debug_str:0000000000000e1c .LASF220
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 27
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6691   .debug_str:00000000000008a8 .LASF221
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6937   .debug_str:0000000000000e8d .LASF222
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6695   .debug_str:00000000000008ba .LASF223
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6749   .debug_str:0000000000000a5e .LASF224
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6617   .debug_str:00000000000006ff .LASF225
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6393   .debug_str:0000000000000155 .LASF226
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6399   .debug_str:000000000000016c .LASF227
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7099   .debug_str:0000000000001200 .LASF228
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7061   .debug_str:000000000000112c .LASF229
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6637   .debug_str:0000000000000767 .LASF230
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6497   .debug_str:000000000000041c .LASF231
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6989   .debug_str:0000000000000f8a .LASF232
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6825   .debug_str:0000000000000c38 .LASF233
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6831   .debug_str:0000000000000c5b .LASF234
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7087   .debug_str:00000000000011c1 .LASF235
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6455   .debug_str:0000000000000328 .LASF236
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6419   .debug_str:00000000000001f3 .LASF237
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6877   .debug_str:0000000000000d54 .LASF238
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6983   .debug_str:0000000000000f6d .LASF239
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7015   .debug_str:000000000000100c .LASF240
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6805   .debug_str:0000000000000baf .LASF241
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7009   .debug_str:0000000000000ff6 .LASF242
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6571   .debug_str:0000000000000609 .LASF243
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7013   .debug_str:0000000000001005 .LASF244
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6911   .debug_str:0000000000000e18 .LASF245
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6479   .debug_str:00000000000003a9 .LASF246
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6661   .debug_str:0000000000000805 .LASF247
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6803   .debug_str:0000000000000ba8 .LASF248
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6453   .debug_str:0000000000000322 .LASF249
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7005   .debug_str:0000000000000fe8 .LASF250
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6611   .debug_str:00000000000006e2 .LASF251
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6369   .debug_str:00000000000000b0 .LASF252
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6375   .debug_str:00000000000000e8 .LASF253
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6847   .debug_str:0000000000000cb4 .LASF254
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6573   .debug_str:000000000000060e .LASF255
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6789   .debug_str:0000000000000b60 .LASF256
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6397   .debug_str:0000000000000166 .LASF257
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6887   .debug_str:0000000000000d8a .LASF258
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6631   .debug_str:000000000000074c .LASF259
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6941   .debug_str:0000000000000e9b .LASF260
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6421   .debug_str:00000000000001fb .LASF261
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6795   .debug_str:0000000000000b7c .LASF262
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6665   .debug_str:0000000000000818 .LASF263
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6429   .debug_str:0000000000000298 .LASF264
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6679   .debug_str:0000000000000868 .LASF265
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6585   .debug_str:0000000000000653 .LASF266
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6883   .debug_str:0000000000000d6d .LASF267
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6791   .debug_str:0000000000000b66 .LASF268
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7007   .debug_str:0000000000000ff1 .LASF269
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6711   .debug_str:0000000000000985 .LASF270
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7089   .debug_str:00000000000011cc .LASF271
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7031   .debug_str:0000000000001091 .LASF272
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6663   .debug_str:000000000000080d .LASF273
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6373   .debug_str:00000000000000de .LASF274
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7041   .debug_str:00000000000010c6 .LASF275
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6477   .debug_str:000000000000039f .LASF276
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6651   .debug_str:00000000000007ba .LASF277
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 28
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6691   .debug_str:0000000000000910 .LASF221
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6937   .debug_str:0000000000000e8b .LASF222
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6695   .debug_str:0000000000000922 .LASF223
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6749   .debug_str:0000000000000a5c .LASF224
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6617   .debug_str:0000000000000767 .LASF225
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6391   .debug_str:000000000000014b .LASF226
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6397   .debug_str:0000000000000162 .LASF227
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7099   .debug_str:00000000000011fe .LASF228
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7061   .debug_str:000000000000112a .LASF229
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6637   .debug_str:00000000000007cf .LASF230
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6495   .debug_str:0000000000000412 .LASF231
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6989   .debug_str:0000000000000f88 .LASF232
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6825   .debug_str:0000000000000c36 .LASF233
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6831   .debug_str:0000000000000c59 .LASF234
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7087   .debug_str:00000000000011bf .LASF235
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6453   .debug_str:000000000000031e .LASF236
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6417   .debug_str:00000000000001e9 .LASF237
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6877   .debug_str:0000000000000d52 .LASF238
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6983   .debug_str:0000000000000f6b .LASF239
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7015   .debug_str:000000000000100a .LASF240
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6805   .debug_str:0000000000000bad .LASF241
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7009   .debug_str:0000000000000ff4 .LASF242
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6571   .debug_str:0000000000000671 .LASF243
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7013   .debug_str:0000000000001003 .LASF244
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6911   .debug_str:0000000000000e16 .LASF245
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6477   .debug_str:000000000000039f .LASF246
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6661   .debug_str:000000000000086d .LASF247
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6803   .debug_str:0000000000000ba6 .LASF248
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6451   .debug_str:0000000000000318 .LASF249
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7005   .debug_str:0000000000000fe6 .LASF250
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6611   .debug_str:000000000000074a .LASF251
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6369   .debug_str:00000000000000b0 .LASF252
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6373   .debug_str:00000000000000de .LASF253
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6847   .debug_str:0000000000000cb2 .LASF254
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6573   .debug_str:0000000000000676 .LASF255
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6789   .debug_str:0000000000000b5e .LASF256
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6395   .debug_str:000000000000015c .LASF257
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6887   .debug_str:0000000000000d88 .LASF258
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6631   .debug_str:00000000000007b4 .LASF259
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6941   .debug_str:0000000000000e99 .LASF260
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6419   .debug_str:00000000000001f1 .LASF261
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6795   .debug_str:0000000000000b7a .LASF262
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6665   .debug_str:0000000000000880 .LASF263
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6427   .debug_str:000000000000028e .LASF264
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6679   .debug_str:00000000000008d0 .LASF265
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6585   .debug_str:00000000000006bb .LASF266
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6883   .debug_str:0000000000000d6b .LASF267
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6791   .debug_str:0000000000000b64 .LASF268
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7007   .debug_str:0000000000000fef .LASF269
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6711   .debug_str:0000000000000983 .LASF270
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7089   .debug_str:00000000000011ca .LASF271
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7031   .debug_str:000000000000108f .LASF272
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6663   .debug_str:0000000000000875 .LASF273
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6699   .debug_str:0000000000000932 .LASF274
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7041   .debug_str:00000000000010c4 .LASF275
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6475   .debug_str:0000000000000395 .LASF276
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6651   .debug_str:0000000000000822 .LASF277
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 28
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6741   .debug_str:0000000000000a3a .LASF278
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6383   .debug_str:0000000000000118 .LASF279
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6635   .debug_str:000000000000075f .LASF280
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6787   .debug_str:0000000000000b5b .LASF281
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6701   .debug_str:000000000000093e .LASF282
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6625   .debug_str:0000000000000729 .LASF283
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6723   .debug_str:00000000000009c5 .LASF284
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6365   .debug_str:00000000000000a3 .LASF285
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6823   .debug_str:0000000000000c33 .LASF286
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6917   .debug_str:0000000000000e32 .LASF287
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6747   .debug_str:0000000000000a58 .LASF288
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6717   .debug_str:00000000000009a7 .LASF289
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6743   .debug_str:0000000000000a44 .LASF290
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6881   .debug_str:0000000000000d65 .LASF291
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6843   .debug_str:0000000000000ca3 .LASF292
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6427   .debug_str:0000000000000292 .LASF293
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7053   .debug_str:0000000000001102 .LASF294
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6509   .debug_str:000000000000046d .LASF295
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6899   .debug_str:0000000000000dbf .LASF296
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6381   .debug_str:000000000000010b .LASF297
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6489   .debug_str:00000000000003f3 .LASF298
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6735   .debug_str:0000000000000a17 .LASF299
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6799   .debug_str:0000000000000b94 .LASF300
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6931   .debug_str:0000000000000e7c .LASF301
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6971   .debug_str:0000000000000f2f .LASF302
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6859   .debug_str:0000000000000ceb .LASF303
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6793   .debug_str:0000000000000b6e .LASF304
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6403   .debug_str:000000000000017d .LASF305
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6685   .debug_str:0000000000000888 .LASF306
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7101   .debug_str:0000000000001209 .LASF307
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6469   .debug_str:0000000000000376 .LASF308
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6903   .debug_str:0000000000000dd6 .LASF309
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7069   .debug_str:0000000000001158 .LASF310
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6775   .debug_str:0000000000000b0c .LASF311
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6759   .debug_str:0000000000000a97 .LASF312
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6575   .debug_str:0000000000000615 .LASF313
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7019   .debug_str:0000000000001021 .LASF314
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6729   .debug_str:00000000000009f2 .LASF315
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6391   .debug_str:000000000000014d .LASF316
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6357   .debug_str:000000000000007c .LASF378
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6473   .debug_str:000000000000038d .LASF317
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6815   .debug_str:0000000000000bf7 .LASF318
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6545   .debug_str:0000000000000540 .LASF319
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7091   .debug_str:00000000000011e5 .LASF320
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7021   .debug_str:0000000000001028 .LASF321
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6517   .debug_str:00000000000004b3 .LASF322
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6539   .debug_str:0000000000000523 .LASF323
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6409   .debug_str:000000000000019c .LASF324
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6813   .debug_str:0000000000000bd4 .LASF325
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7027   .debug_str:000000000000106a .LASF326
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6583   .debug_str:0000000000000642 .LASF327
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6515   .debug_str:000000000000048e .LASF328
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6487   .debug_str:00000000000003dc .LASF329
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7001   .debug_str:0000000000000fc6 .LASF330
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6499   .debug_str:0000000000000425 .LASF331
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6641   .debug_str:0000000000000777 .LASF332
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6431   .debug_str:000000000000029f .LASF333
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 29
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6741   .debug_str:0000000000000a38 .LASF278
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6381   .debug_str:000000000000010e .LASF279
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6635   .debug_str:00000000000007c7 .LASF280
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6787   .debug_str:0000000000000b59 .LASF281
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6701   .debug_str:000000000000093c .LASF282
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6625   .debug_str:0000000000000791 .LASF283
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6723   .debug_str:00000000000009c3 .LASF284
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6365   .debug_str:00000000000000a3 .LASF285
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6823   .debug_str:0000000000000c31 .LASF286
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6917   .debug_str:0000000000000e30 .LASF287
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6747   .debug_str:0000000000000a56 .LASF288
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6717   .debug_str:00000000000009a5 .LASF289
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6743   .debug_str:0000000000000a42 .LASF290
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6881   .debug_str:0000000000000d63 .LASF291
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6843   .debug_str:0000000000000ca1 .LASF292
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6425   .debug_str:0000000000000288 .LASF293
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7053   .debug_str:0000000000001100 .LASF294
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6507   .debug_str:0000000000000463 .LASF295
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6899   .debug_str:0000000000000dbd .LASF296
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6379   .debug_str:0000000000000101 .LASF297
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6487   .debug_str:00000000000003e9 .LASF298
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6735   .debug_str:0000000000000a15 .LASF299
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6799   .debug_str:0000000000000b92 .LASF300
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6931   .debug_str:0000000000000e7a .LASF301
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6971   .debug_str:0000000000000f2d .LASF302
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6859   .debug_str:0000000000000ce9 .LASF303
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6793   .debug_str:0000000000000b6c .LASF304
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6401   .debug_str:0000000000000173 .LASF305
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6685   .debug_str:00000000000008f0 .LASF306
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7101   .debug_str:0000000000001207 .LASF307
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6467   .debug_str:000000000000036c .LASF308
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6903   .debug_str:0000000000000dd4 .LASF309
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7069   .debug_str:0000000000001156 .LASF310
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6775   .debug_str:0000000000000b0a .LASF311
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6759   .debug_str:0000000000000a95 .LASF312
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6575   .debug_str:000000000000067d .LASF313
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7019   .debug_str:000000000000101f .LASF314
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6729   .debug_str:00000000000009f0 .LASF315
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6389   .debug_str:0000000000000143 .LASF316
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6357   .debug_str:000000000000007c .LASF378
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6471   .debug_str:0000000000000383 .LASF317
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6815   .debug_str:0000000000000bf5 .LASF318
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6545   .debug_str:00000000000005a8 .LASF319
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7091   .debug_str:00000000000011e3 .LASF320
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7021   .debug_str:0000000000001026 .LASF321
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6517   .debug_str:000000000000051b .LASF322
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6539   .debug_str:000000000000058b .LASF323
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6407   .debug_str:0000000000000192 .LASF324
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6813   .debug_str:0000000000000bd2 .LASF325
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7027   .debug_str:0000000000001068 .LASF326
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6583   .debug_str:00000000000006aa .LASF327
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6515   .debug_str:00000000000004f6 .LASF328
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6485   .debug_str:00000000000003d2 .LASF329
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7001   .debug_str:0000000000000fc4 .LASF330
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6497   .debug_str:000000000000041b .LASF331
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6641   .debug_str:00000000000007df .LASF332
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6429   .debug_str:0000000000000295 .LASF333
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 29
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6387   .debug_str:0000000000000129 .LASF334
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6561   .debug_str:00000000000005b0 .LASF335
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6753   .debug_str:0000000000000a6c .LASF336
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6349   .debug_str:0000000000000042 .LASF337
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6371   .debug_str:00000000000000b6 .LASF338
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7017   .debug_str:0000000000001014 .LASF339
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7025   .debug_str:0000000000001058 .LASF340
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6485   .debug_str:00000000000003c3 .LASF341
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6377   .debug_str:00000000000000ef .LASF342
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6437   .debug_str:00000000000002c3 .LASF343
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6677   .debug_str:000000000000085e .LASF344
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6739   .debug_str:0000000000000a2e .LASF345
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6411   .debug_str:00000000000001ca .LASF346
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6645   .debug_str:0000000000000798 .LASF347
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6721   .debug_str:00000000000009b9 .LASF348
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6607   .debug_str:00000000000006d1 .LASF349
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6681   .debug_str:000000000000086f .LASF350
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6639   .debug_str:0000000000000771 .LASF351
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6837   .debug_str:0000000000000c7a .LASF352
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6909   .debug_str:0000000000000e0d .LASF353
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7023   .debug_str:000000000000104e .LASF354
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6725   .debug_str:00000000000009cd .LASF379
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6755   .debug_str:0000000000000a86 .LASF355
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6413   .debug_str:00000000000001d9 .LASF356
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:325    .text._write:0000000000000000 .LFB10
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:458    .text._write:00000000000000b0 .LFE10
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:5999   .debug_loc:0000000000000000 .LLST7
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6022   .debug_loc:0000000000000038 .LLST8
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6036   .debug_loc:0000000000000059 .LLST9
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6058   .debug_loc:0000000000000090 .LLST10
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7081   .debug_str:00000000000011ac .LASF357
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6073   .debug_loc:00000000000000b9 .LLST11
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6999   .debug_str:0000000000000fbd .LASF358
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6085   .debug_loc:00000000000000d1 .LLST12
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6096   .debug_loc:00000000000000ef .LLST13
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:353    .text._write:000000000000001c .LVL23
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:382    .text._write:000000000000004c .LVL27
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:413    .text._write:0000000000000088 .LVL30
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6885   .debug_str:0000000000000d75 .LASF380
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:304    .text.usb_serial_available:0000000000000000 .LFB9
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:318    .text.usb_serial_available:0000000000000014 .LFE9
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6589   .debug_str:000000000000066a .LASF381
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:242    .text.configure_usb_serial:0000000000000000 .LFB8
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:297    .text.configure_usb_serial:0000000000000058 .LFE8
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6116   .debug_loc:0000000000000124 .LLST6
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:254    .text.configure_usb_serial:000000000000000c .LVL15
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:263    .text.configure_usb_serial:0000000000000018 .LVL16
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:267    .text.configure_usb_serial:0000000000000022 .LVL17
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:270    .text.configure_usb_serial:000000000000002a .LVL18
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:273    .text.configure_usb_serial:0000000000000032 .LVL19
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:276    .text.configure_usb_serial:000000000000003a .LVL20
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:295    .text.configure_usb_serial:0000000000000058 .LVL21
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6969   .debug_str:0000000000000f1f .LASF359
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:47     .text.read_usb_serial:0000000000000000 .LFB7
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:235    .text.read_usb_serial:00000000000000ee .LFE7
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6134   .debug_loc:0000000000000150 .LLST1
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7095   .debug_str:00000000000011f3 .LASF360
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 30
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6385   .debug_str:000000000000011f .LASF334
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6561   .debug_str:0000000000000618 .LASF335
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6753   .debug_str:0000000000000a6a .LASF336
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6349   .debug_str:0000000000000042 .LASF337
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6371   .debug_str:00000000000000b6 .LASF338
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7017   .debug_str:0000000000001012 .LASF339
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7025   .debug_str:0000000000001056 .LASF340
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6483   .debug_str:00000000000003b9 .LASF341
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6375   .debug_str:00000000000000e5 .LASF342
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6435   .debug_str:00000000000002b9 .LASF343
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6677   .debug_str:00000000000008c6 .LASF344
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6739   .debug_str:0000000000000a2c .LASF345
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6409   .debug_str:00000000000001c0 .LASF346
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6645   .debug_str:0000000000000800 .LASF347
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6721   .debug_str:00000000000009b7 .LASF348
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6607   .debug_str:0000000000000739 .LASF349
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6681   .debug_str:00000000000008d7 .LASF350
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6639   .debug_str:00000000000007d9 .LASF351
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6837   .debug_str:0000000000000c78 .LASF352
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6909   .debug_str:0000000000000e0b .LASF353
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7023   .debug_str:000000000000104c .LASF354
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6725   .debug_str:00000000000009cb .LASF379
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6755   .debug_str:0000000000000a84 .LASF355
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6411   .debug_str:00000000000001cf .LASF356
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:325    .text._write:0000000000000000 .LFB10
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:458    .text._write:00000000000000b0 .LFE10
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:5999   .debug_loc:0000000000000000 .LLST7
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6022   .debug_loc:0000000000000038 .LLST8
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6036   .debug_loc:0000000000000059 .LLST9
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6058   .debug_loc:0000000000000090 .LLST10
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7081   .debug_str:00000000000011aa .LASF357
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6073   .debug_loc:00000000000000b9 .LLST11
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6999   .debug_str:0000000000000fbb .LASF358
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6085   .debug_loc:00000000000000d1 .LLST12
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6096   .debug_loc:00000000000000ef .LLST13
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:353    .text._write:000000000000001c .LVL23
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:382    .text._write:000000000000004c .LVL27
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:413    .text._write:0000000000000088 .LVL30
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6885   .debug_str:0000000000000d73 .LASF380
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:304    .text.usb_serial_available:0000000000000000 .LFB9
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:318    .text.usb_serial_available:0000000000000014 .LFE9
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6589   .debug_str:00000000000006d2 .LASF381
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:242    .text.configure_usb_serial:0000000000000000 .LFB8
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:297    .text.configure_usb_serial:0000000000000058 .LFE8
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6116   .debug_loc:0000000000000124 .LLST6
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:254    .text.configure_usb_serial:000000000000000c .LVL15
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:263    .text.configure_usb_serial:0000000000000018 .LVL16
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:267    .text.configure_usb_serial:0000000000000022 .LVL17
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:270    .text.configure_usb_serial:000000000000002a .LVL18
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:273    .text.configure_usb_serial:0000000000000032 .LVL19
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:276    .text.configure_usb_serial:000000000000003a .LVL20
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:295    .text.configure_usb_serial:0000000000000058 .LVL21
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6969   .debug_str:0000000000000f1d .LASF359
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:47     .text.read_usb_serial:0000000000000000 .LFB7
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:235    .text.read_usb_serial:00000000000000ee .LFE7
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6134   .debug_loc:0000000000000150 .LLST1
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7095   .debug_str:00000000000011f1 .LASF360
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 30
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6157   .debug_loc:0000000000000188 .LLST2
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6179   .debug_loc:00000000000001bf .LLST3
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6405   .debug_str:0000000000000187 .LASF361
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6187   .debug_loc:00000000000001d3 .LLST4
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6199   .debug_loc:00000000000001f2 .LLST5
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:212    .text.read_usb_serial:00000000000000ce .LVL11
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:216    .text.read_usb_serial:00000000000000d8 .LVL12
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6547   .debug_str:0000000000000553 .LASF382
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:17     .text.usb_serial_connected:0000000000000000 .LFB6
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:40     .text.usb_serial_connected:0000000000000016 .LFE6
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6215   .debug_loc:000000000000021c .LLST0
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:30     .text.usb_serial_connected:000000000000000c .LVL0
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:465    .text.set_usb_clock_96m_hxtal:0000000000000000 .LFB11
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:648    .text.set_usb_clock_96m_hxtal:00000000000000ee .LFE11
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6233   .debug_loc:0000000000000248 .LLST14
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6260   .debug_loc:000000000000027e .LLST15
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:560    .text.set_usb_clock_96m_hxtal:0000000000000080 .LBB11
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:646    .text.set_usb_clock_96m_hxtal:00000000000000ee .LBE11
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:561    .text.set_usb_clock_96m_hxtal:0000000000000080 .LBB12
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:645    .text.set_usb_clock_96m_hxtal:00000000000000ee .LBE12
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:644    .text.set_usb_clock_96m_hxtal:00000000000000ee .LVL42
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6777   .debug_str:0000000000000b1b .LASF362
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6863   .debug_str:0000000000000d02 .LASF363
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6705   .debug_str:0000000000000954 .LASF364
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7071   .debug_str:0000000000001169 .LASF365
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6577   .debug_str:000000000000061e .LASF366
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6821   .debug_str:0000000000000c24 .LASF367
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6459   .debug_str:000000000000033c .LASF368
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6851   .debug_str:0000000000000cc8 .LASF369
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7003   .debug_str:0000000000000fda .LASF370
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6809   .debug_str:0000000000000bc1 .LASF371
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:6557   .debug_str:000000000000058e .LASF372
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:7029   .debug_str:000000000000107b .LASF373
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:332    .text._write:0000000000000002 .LCFI7
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:436    .text._write:000000000000009a .LCFI8
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:441    .text._write:000000000000009c .LCFI9
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:328    .text._write:0000000000000000 .LVL22
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:430    .text._write:0000000000000094 .LVL33
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:439    .text._write:000000000000009c .LVL34
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:427    .text._write:0000000000000092 .LVL32
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:371    .text._write:0000000000000038 .LVL25
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:359    .text._write:0000000000000028 .LVL24
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:395    .text._write:0000000000000060 .LVL28
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:400    .text._write:0000000000000066 .LVL29
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:422    .text._write:000000000000008e .LVL31
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:248    .text.configure_usb_serial:0000000000000002 .LCFI5
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:291    .text.configure_usb_serial:0000000000000050 .LCFI6
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:56     .text.read_usb_serial:0000000000000002 .LCFI2
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:158    .text.read_usb_serial:0000000000000086 .LCFI3
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:163    .text.read_usb_serial:0000000000000088 .LCFI4
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:50     .text.read_usb_serial:0000000000000000 .LVL1
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:101    .text.read_usb_serial:000000000000004a .LVL2
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:130    .text.read_usb_serial:000000000000006e .LVL5
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:161    .text.read_usb_serial:0000000000000088 .LVL6
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:173    .text.read_usb_serial:0000000000000092 .LVL7
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:176    .text.read_usb_serial:0000000000000094 .LVL8
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:195    .text.read_usb_serial:00000000000000ae .LVL10
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccnCnech.s 			page 31
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6157   .debug_loc:0000000000000188 .LLST2
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6179   .debug_loc:00000000000001bf .LLST3
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6403   .debug_str:000000000000017d .LASF361
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6187   .debug_loc:00000000000001d3 .LLST4
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6199   .debug_loc:00000000000001f2 .LLST5
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:212    .text.read_usb_serial:00000000000000ce .LVL11
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:216    .text.read_usb_serial:00000000000000d8 .LVL12
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6547   .debug_str:00000000000005bb .LASF382
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:17     .text.usb_serial_connected:0000000000000000 .LFB6
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:40     .text.usb_serial_connected:0000000000000016 .LFE6
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6215   .debug_loc:000000000000021c .LLST0
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:30     .text.usb_serial_connected:000000000000000c .LVL0
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:465    .text.set_usb_clock_96m_hxtal:0000000000000000 .LFB11
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:648    .text.set_usb_clock_96m_hxtal:00000000000000ee .LFE11
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6233   .debug_loc:0000000000000248 .LLST14
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6260   .debug_loc:000000000000027e .LLST15
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:560    .text.set_usb_clock_96m_hxtal:0000000000000080 .LBB11
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:646    .text.set_usb_clock_96m_hxtal:00000000000000ee .LBE11
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:561    .text.set_usb_clock_96m_hxtal:0000000000000080 .LBB12
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:645    .text.set_usb_clock_96m_hxtal:00000000000000ee .LBE12
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:644    .text.set_usb_clock_96m_hxtal:00000000000000ee .LVL42
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6777   .debug_str:0000000000000b19 .LASF362
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6863   .debug_str:0000000000000d00 .LASF363
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6705   .debug_str:0000000000000952 .LASF364
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7071   .debug_str:0000000000001167 .LASF365
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6577   .debug_str:0000000000000686 .LASF366
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6821   .debug_str:0000000000000c22 .LASF367
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6457   .debug_str:0000000000000332 .LASF368
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6851   .debug_str:0000000000000cc6 .LASF369
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7003   .debug_str:0000000000000fd8 .LASF370
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6809   .debug_str:0000000000000bbf .LASF371
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:6557   .debug_str:00000000000005f6 .LASF372
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:7029   .debug_str:0000000000001079 .LASF373
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:332    .text._write:0000000000000002 .LCFI7
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:436    .text._write:000000000000009a .LCFI8
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:441    .text._write:000000000000009c .LCFI9
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:328    .text._write:0000000000000000 .LVL22
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:430    .text._write:0000000000000094 .LVL33
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:439    .text._write:000000000000009c .LVL34
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:427    .text._write:0000000000000092 .LVL32
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:371    .text._write:0000000000000038 .LVL25
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:359    .text._write:0000000000000028 .LVL24
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:395    .text._write:0000000000000060 .LVL28
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:400    .text._write:0000000000000066 .LVL29
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:422    .text._write:000000000000008e .LVL31
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:248    .text.configure_usb_serial:0000000000000002 .LCFI5
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:291    .text.configure_usb_serial:0000000000000050 .LCFI6
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:56     .text.read_usb_serial:0000000000000002 .LCFI2
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:158    .text.read_usb_serial:0000000000000086 .LCFI3
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:163    .text.read_usb_serial:0000000000000088 .LCFI4
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:50     .text.read_usb_serial:0000000000000000 .LVL1
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:101    .text.read_usb_serial:000000000000004a .LVL2
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:130    .text.read_usb_serial:000000000000006e .LVL5
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:161    .text.read_usb_serial:0000000000000088 .LVL6
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:173    .text.read_usb_serial:0000000000000092 .LVL7
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:176    .text.read_usb_serial:0000000000000094 .LVL8
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:195    .text.read_usb_serial:00000000000000ae .LVL10
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s 			page 31
 
 
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:118    .text.read_usb_serial:0000000000000060 .LVL3
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:125    .text.read_usb_serial:0000000000000066 .LVL4
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:218    .text.read_usb_serial:00000000000000da .LVL13
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:24     .text.usb_serial_connected:0000000000000002 .LCFI0
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:36     .text.usb_serial_connected:0000000000000014 .LCFI1
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:519    .text.set_usb_clock_96m_hxtal:0000000000000052 .LVL36
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:530    .text.set_usb_clock_96m_hxtal:0000000000000062 .LVL37
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:542    .text.set_usb_clock_96m_hxtal:000000000000006e .LVL39
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:545    .text.set_usb_clock_96m_hxtal:0000000000000070 .LVL40
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:537    .text.set_usb_clock_96m_hxtal:0000000000000064 .LVL38
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:553    .text.set_usb_clock_96m_hxtal:000000000000007a .LVL41
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:709    .debug_info:0000000000000000 .Ldebug_info0
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:98     .text.read_usb_serial:0000000000000046 .LBB2
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:103    .text.read_usb_serial:000000000000004a .LBE2
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:170    .text.read_usb_serial:000000000000008e .LBB5
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:191    .text.read_usb_serial:00000000000000ac .LBE5
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:116    .text.read_usb_serial:0000000000000060 .LBB3
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:119    .text.read_usb_serial:0000000000000060 .LBE3
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:122    .text.read_usb_serial:0000000000000064 .LBB4
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:132    .text.read_usb_serial:000000000000006e .LBE4
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:220    .text.read_usb_serial:00000000000000da .LBB6
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:233    .text.read_usb_serial:00000000000000ee .LBE6
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:393    .text._write:0000000000000060 .LBB7
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:404    .text._write:000000000000006a .LBE7
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:443    .text._write:000000000000009c .LBB8
-C:\Users\marwz\AppData\Local\Temp\ccnCnech.s:456    .text._write:00000000000000b0 .LBE8
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:118    .text.read_usb_serial:0000000000000060 .LVL3
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:125    .text.read_usb_serial:0000000000000066 .LVL4
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:218    .text.read_usb_serial:00000000000000da .LVL13
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:24     .text.usb_serial_connected:0000000000000002 .LCFI0
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:36     .text.usb_serial_connected:0000000000000014 .LCFI1
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:519    .text.set_usb_clock_96m_hxtal:0000000000000052 .LVL36
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:530    .text.set_usb_clock_96m_hxtal:0000000000000062 .LVL37
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:542    .text.set_usb_clock_96m_hxtal:000000000000006e .LVL39
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:545    .text.set_usb_clock_96m_hxtal:0000000000000070 .LVL40
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:537    .text.set_usb_clock_96m_hxtal:0000000000000064 .LVL38
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:553    .text.set_usb_clock_96m_hxtal:000000000000007a .LVL41
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:709    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:98     .text.read_usb_serial:0000000000000046 .LBB2
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:103    .text.read_usb_serial:000000000000004a .LBE2
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:170    .text.read_usb_serial:000000000000008e .LBB5
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:191    .text.read_usb_serial:00000000000000ac .LBE5
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:116    .text.read_usb_serial:0000000000000060 .LBB3
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:119    .text.read_usb_serial:0000000000000060 .LBE3
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:122    .text.read_usb_serial:0000000000000064 .LBB4
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:132    .text.read_usb_serial:000000000000006e .LBE4
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:220    .text.read_usb_serial:00000000000000da .LBB6
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:233    .text.read_usb_serial:00000000000000ee .LBE6
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:393    .text._write:0000000000000060 .LBB7
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:404    .text._write:000000000000006a .LBE7
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:443    .text._write:000000000000009c .LBB8
+C:\Users\marwz\AppData\Local\Temp\ccjlogHc.s:456    .text._write:00000000000000b0 .LBE8
 
 UNDEFINED SYMBOLS
 cdc_acm_get_line_state

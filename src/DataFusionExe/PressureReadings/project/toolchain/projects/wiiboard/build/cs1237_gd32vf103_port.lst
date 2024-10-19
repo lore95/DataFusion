@@ -1,4 +1,4 @@
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 1
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 1
 
 
    1              		.file	"cs1237_gd32vf103_port.c"
@@ -58,7 +58,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 1
   48 001e 032A4600 		lw	s4,4(a2)
   49              	.LVL3:
   50              		.loc 1 6 2 is_stmt 1
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 2
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 2
 
 
   51 0022 93098400 		addi	s3,s0,8
@@ -118,7 +118,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 1
   95              	.LVL10:
   12:lib/cs1237/src/cs1237_gd32vf103_port.c **** }
   96              		.loc 1 12 1 is_stmt 0
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 3
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 3
 
 
   97 0070 F250     		lw	ra,60(sp)
@@ -178,7 +178,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 1
  145      E7800000 
  146              	.LVL18:
    9:lib/cs1237/src/cs1237_gd32vf103_port.c **** 	gpio_bit_write(clock.port, clock.pin, 0);
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 4
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 4
 
 
  147              		.loc 1 9 34 is_stmt 0 discriminator 3
@@ -238,7 +238,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 1
  197              		.align	1
  198              		.globl	cs1237_port_pin_direction_in
  200              	cs1237_port_pin_direction_in:
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 5
 
 
  201              	.LFB5:
@@ -298,7 +298,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 1
  245              		.cfi_def_cfa_offset 0
  246 0018 8280     		jr	ra
  247              		.cfi_endproc
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 6
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 6
 
 
  248              	.LFE6:
@@ -358,7 +358,7 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 1
  292              	.L14:
   38:lib/cs1237/src/cs1237_gd32vf103_port.c **** 
   39:lib/cs1237/src/cs1237_gd32vf103_port.c **** 	do {
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 7
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 7
 
 
   40:lib/cs1237/src/cs1237_gd32vf103_port.c **** 	delta_mtime = get_timer_value() - start_mtime;
@@ -414,11 +414,11 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 1
  335              	.LFE7:
  337              		.text
  338              	.Letext0:
- 339              		.file 2 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
- 340              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\pressure readings\\project\\toolcha
+ 339              		.file 2 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\pr
+ 340              		.file 3 "c:\\users\\marwz\\documents\\github\\datafusion\\src\\datafusionexe\\pressurereadings\\pr
  341              		.file 4 "lib/cs1237/include/cs1237_port.h"
  342              		.file 5 "./../../firmware/RISCV/drivers/n200_func.h"
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 8
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 8
 
 
  343              		.file 6 "./../../firmware/GD32VF103_standard_peripheral/Include/gd32vf103_gpio.h"
@@ -426,275 +426,275 @@ GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 1
  345              		.file 8 "lib/cs1237/include/cs1237.h"
  346              		.file 9 "./../../firmware/GD32VF103_standard_peripheral/system_gd32vf103.h"
  347              		.file 10 "<built-in>"
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 9
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 cs1237_gd32vf103_port.c
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:13     .text.cs1237_port_initialize_pins:0000000000000000 cs1237_port_initialize_pins
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:17     .text.cs1237_port_initialize_pins:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:19     .text.cs1237_port_initialize_pins:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:21     .text.cs1237_port_initialize_pins:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:23     .text.cs1237_port_initialize_pins:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:26     .text.cs1237_port_initialize_pins:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:29     .text.cs1237_port_initialize_pins:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:30     .text.cs1237_port_initialize_pins:000000000000000a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:38     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:39     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:40     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:41     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:42     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:43     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:45     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:51     .text.cs1237_port_initialize_pins:0000000000000022 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:56     .text.cs1237_port_initialize_pins:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:57     .text.cs1237_port_initialize_pins:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:58     .text.cs1237_port_initialize_pins:000000000000002e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:62     .text.cs1237_port_initialize_pins:0000000000000030 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:65     .text.cs1237_port_initialize_pins:0000000000000034 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:73     .text.cs1237_port_initialize_pins:0000000000000044 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:74     .text.cs1237_port_initialize_pins:0000000000000044 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:75     .text.cs1237_port_initialize_pins:0000000000000044 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:79     .text.cs1237_port_initialize_pins:0000000000000046 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:82     .text.cs1237_port_initialize_pins:000000000000004a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:88     .text.cs1237_port_initialize_pins:0000000000000058 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:97     .text.cs1237_port_initialize_pins:0000000000000070 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:98     .text.cs1237_port_initialize_pins:0000000000000072 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:99     .text.cs1237_port_initialize_pins:0000000000000072 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:101    .text.cs1237_port_initialize_pins:0000000000000074 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:103    .text.cs1237_port_initialize_pins:0000000000000076 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:105    .text.cs1237_port_initialize_pins:0000000000000078 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:108    .text.cs1237_port_initialize_pins:000000000000007a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:110    .text.cs1237_port_initialize_pins:000000000000007c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:113    .text.cs1237_port_initialize_pins:000000000000007e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:116    .text.cs1237_port_initialize_pins:0000000000000080 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:119    .text.cs1237_port_initialize_pins:0000000000000082 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:124    .text.cs1237_port_initialize_pins:0000000000000084 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:127    .text.cs1237_port_initialize_pins:0000000000000084 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:129    .text.cs1237_port_initialize_pins:0000000000000088 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:133    .text.cs1237_port_initialize_pins:000000000000008c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:141    .text.cs1237_port_initialize_pins:0000000000000096 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:148    .text.cs1237_port_initialize_pins:00000000000000a6 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:153    .text.cs1237_port_initialize_pins:00000000000000ac .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:160    .text.cs1237_port_set_pin_value:0000000000000000 cs1237_port_set_pin_value
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:163    .text.cs1237_port_set_pin_value:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:165    .text.cs1237_port_set_pin_value:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:166    .text.cs1237_port_set_pin_value:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:173    .text.cs1237_port_set_pin_value:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:180    .text.cs1237_port_pin_direction_out:0000000000000000 cs1237_port_pin_direction_out
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:183    .text.cs1237_port_pin_direction_out:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:185    .text.cs1237_port_pin_direction_out:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:186    .text.cs1237_port_pin_direction_out:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:193    .text.cs1237_port_pin_direction_out:0000000000000010 .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 10
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:13     .text.cs1237_port_initialize_pins:0000000000000000 cs1237_port_initialize_pins
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:17     .text.cs1237_port_initialize_pins:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:19     .text.cs1237_port_initialize_pins:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:21     .text.cs1237_port_initialize_pins:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:23     .text.cs1237_port_initialize_pins:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:26     .text.cs1237_port_initialize_pins:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:29     .text.cs1237_port_initialize_pins:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:30     .text.cs1237_port_initialize_pins:000000000000000a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:38     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:39     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:40     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:41     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:42     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:43     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:45     .text.cs1237_port_initialize_pins:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:51     .text.cs1237_port_initialize_pins:0000000000000022 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:56     .text.cs1237_port_initialize_pins:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:57     .text.cs1237_port_initialize_pins:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:58     .text.cs1237_port_initialize_pins:000000000000002e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:62     .text.cs1237_port_initialize_pins:0000000000000030 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:65     .text.cs1237_port_initialize_pins:0000000000000034 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:73     .text.cs1237_port_initialize_pins:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:74     .text.cs1237_port_initialize_pins:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:75     .text.cs1237_port_initialize_pins:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:79     .text.cs1237_port_initialize_pins:0000000000000046 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:82     .text.cs1237_port_initialize_pins:000000000000004a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:88     .text.cs1237_port_initialize_pins:0000000000000058 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:97     .text.cs1237_port_initialize_pins:0000000000000070 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:98     .text.cs1237_port_initialize_pins:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:99     .text.cs1237_port_initialize_pins:0000000000000072 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:101    .text.cs1237_port_initialize_pins:0000000000000074 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:103    .text.cs1237_port_initialize_pins:0000000000000076 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:105    .text.cs1237_port_initialize_pins:0000000000000078 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:108    .text.cs1237_port_initialize_pins:000000000000007a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:110    .text.cs1237_port_initialize_pins:000000000000007c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:113    .text.cs1237_port_initialize_pins:000000000000007e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:116    .text.cs1237_port_initialize_pins:0000000000000080 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:119    .text.cs1237_port_initialize_pins:0000000000000082 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:124    .text.cs1237_port_initialize_pins:0000000000000084 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:127    .text.cs1237_port_initialize_pins:0000000000000084 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:129    .text.cs1237_port_initialize_pins:0000000000000088 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:133    .text.cs1237_port_initialize_pins:000000000000008c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:141    .text.cs1237_port_initialize_pins:0000000000000096 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:148    .text.cs1237_port_initialize_pins:00000000000000a6 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:153    .text.cs1237_port_initialize_pins:00000000000000ac .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:160    .text.cs1237_port_set_pin_value:0000000000000000 cs1237_port_set_pin_value
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:163    .text.cs1237_port_set_pin_value:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:165    .text.cs1237_port_set_pin_value:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:166    .text.cs1237_port_set_pin_value:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:173    .text.cs1237_port_set_pin_value:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:180    .text.cs1237_port_pin_direction_out:0000000000000000 cs1237_port_pin_direction_out
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:183    .text.cs1237_port_pin_direction_out:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:185    .text.cs1237_port_pin_direction_out:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:186    .text.cs1237_port_pin_direction_out:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:193    .text.cs1237_port_pin_direction_out:0000000000000010 .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 10
 
 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:200    .text.cs1237_port_pin_direction_in:0000000000000000 cs1237_port_pin_direction_in
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:203    .text.cs1237_port_pin_direction_in:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:205    .text.cs1237_port_pin_direction_in:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:206    .text.cs1237_port_pin_direction_in:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:213    .text.cs1237_port_pin_direction_in:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:220    .text.cs1237_port_get_pin_value:0000000000000000 cs1237_port_get_pin_value
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:223    .text.cs1237_port_get_pin_value:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:225    .text.cs1237_port_get_pin_value:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:226    .text.cs1237_port_get_pin_value:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:227    .text.cs1237_port_get_pin_value:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:231    .text.cs1237_port_get_pin_value:0000000000000004 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:233    .text.cs1237_port_get_pin_value:0000000000000006 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:235    .text.cs1237_port_get_pin_value:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:237    .text.cs1237_port_get_pin_value:0000000000000008 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:240    .text.cs1237_port_get_pin_value:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:241    .text.cs1237_port_get_pin_value:0000000000000012 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:245    .text.cs1237_port_get_pin_value:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:247    .text.cs1237_port_get_pin_value:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:254    .text.cs1237_port_wait_min_455ns:0000000000000000 cs1237_port_wait_min_455ns
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:257    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:258    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:259    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:260    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:261    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:263    .text.cs1237_port_wait_min_455ns:0000000000000002 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:269    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:270    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:271    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:272    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:273    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:275    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:282    .text.cs1237_port_wait_min_455ns:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:283    .text.cs1237_port_wait_min_455ns:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:284    .text.cs1237_port_wait_min_455ns:0000000000000018 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:290    .text.cs1237_port_wait_min_455ns:0000000000000024 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:294    .text.cs1237_port_wait_min_455ns:000000000000002c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:301    .text.cs1237_port_wait_min_455ns:0000000000000038 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:302    .text.cs1237_port_wait_min_455ns:0000000000000038 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:303    .text.cs1237_port_wait_min_455ns:0000000000000038 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:306    .text.cs1237_port_wait_min_455ns:0000000000000040 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:308    .text.cs1237_port_wait_min_455ns:0000000000000044 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:313    .text.cs1237_port_wait_min_455ns:0000000000000050 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:315    .text.cs1237_port_wait_min_455ns:0000000000000054 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:319    .text.cs1237_port_wait_min_455ns:000000000000005c .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:320    .text.cs1237_port_wait_min_455ns:000000000000005e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:322    .text.cs1237_port_wait_min_455ns:0000000000000060 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:324    .text.cs1237_port_wait_min_455ns:0000000000000062 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:327    .text.cs1237_port_wait_min_455ns:0000000000000064 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:329    .text.cs1237_port_wait_min_455ns:0000000000000066 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:332    .text.cs1237_port_wait_min_455ns:0000000000000068 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:334    .text.cs1237_port_wait_min_455ns:000000000000006a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:156    .text.cs1237_port_initialize_pins:00000000000000ac .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:176    .text.cs1237_port_set_pin_value:000000000000000e .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:196    .text.cs1237_port_pin_direction_out:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:216    .text.cs1237_port_pin_direction_in:0000000000000010 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:250    .text.cs1237_port_get_pin_value:000000000000001a .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:337    .text.cs1237_port_wait_min_455ns:000000000000006a .L0 
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 11
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:200    .text.cs1237_port_pin_direction_in:0000000000000000 cs1237_port_pin_direction_in
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:203    .text.cs1237_port_pin_direction_in:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:205    .text.cs1237_port_pin_direction_in:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:206    .text.cs1237_port_pin_direction_in:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:213    .text.cs1237_port_pin_direction_in:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:220    .text.cs1237_port_get_pin_value:0000000000000000 cs1237_port_get_pin_value
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:223    .text.cs1237_port_get_pin_value:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:225    .text.cs1237_port_get_pin_value:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:226    .text.cs1237_port_get_pin_value:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:227    .text.cs1237_port_get_pin_value:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:231    .text.cs1237_port_get_pin_value:0000000000000004 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:233    .text.cs1237_port_get_pin_value:0000000000000006 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:235    .text.cs1237_port_get_pin_value:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:237    .text.cs1237_port_get_pin_value:0000000000000008 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:240    .text.cs1237_port_get_pin_value:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:241    .text.cs1237_port_get_pin_value:0000000000000012 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:245    .text.cs1237_port_get_pin_value:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:247    .text.cs1237_port_get_pin_value:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:254    .text.cs1237_port_wait_min_455ns:0000000000000000 cs1237_port_wait_min_455ns
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:257    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:258    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:259    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:260    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:261    .text.cs1237_port_wait_min_455ns:0000000000000000 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:263    .text.cs1237_port_wait_min_455ns:0000000000000002 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:269    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:270    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:271    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:272    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:273    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:275    .text.cs1237_port_wait_min_455ns:000000000000000c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:282    .text.cs1237_port_wait_min_455ns:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:283    .text.cs1237_port_wait_min_455ns:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:284    .text.cs1237_port_wait_min_455ns:0000000000000018 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:290    .text.cs1237_port_wait_min_455ns:0000000000000024 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:294    .text.cs1237_port_wait_min_455ns:000000000000002c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:301    .text.cs1237_port_wait_min_455ns:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:302    .text.cs1237_port_wait_min_455ns:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:303    .text.cs1237_port_wait_min_455ns:0000000000000038 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:306    .text.cs1237_port_wait_min_455ns:0000000000000040 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:308    .text.cs1237_port_wait_min_455ns:0000000000000044 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:313    .text.cs1237_port_wait_min_455ns:0000000000000050 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:315    .text.cs1237_port_wait_min_455ns:0000000000000054 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:319    .text.cs1237_port_wait_min_455ns:000000000000005c .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:320    .text.cs1237_port_wait_min_455ns:000000000000005e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:322    .text.cs1237_port_wait_min_455ns:0000000000000060 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:324    .text.cs1237_port_wait_min_455ns:0000000000000062 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:327    .text.cs1237_port_wait_min_455ns:0000000000000064 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:329    .text.cs1237_port_wait_min_455ns:0000000000000066 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:332    .text.cs1237_port_wait_min_455ns:0000000000000068 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:334    .text.cs1237_port_wait_min_455ns:000000000000006a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:156    .text.cs1237_port_initialize_pins:00000000000000ac .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:176    .text.cs1237_port_set_pin_value:000000000000000e .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:196    .text.cs1237_port_pin_direction_out:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:216    .text.cs1237_port_pin_direction_in:0000000000000010 .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:250    .text.cs1237_port_get_pin_value:000000000000001a .L0 
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:337    .text.cs1237_port_wait_min_455ns:000000000000006a .L0 
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 11
 
 
                      .debug_frame:0000000000000000 .L0 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:122    .text.cs1237_port_initialize_pins:0000000000000084 .L3
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:137    .text.cs1237_port_initialize_pins:0000000000000096 .L5
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:60     .text.cs1237_port_initialize_pins:0000000000000030 .L2
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:77     .text.cs1237_port_initialize_pins:0000000000000046 .L4
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:292    .text.cs1237_port_wait_min_455ns:000000000000002c .L14
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:280    .text.cs1237_port_wait_min_455ns:0000000000000018 .L13
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:317    .text.cs1237_port_wait_min_455ns:000000000000005c .L12
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:299    .text.cs1237_port_wait_min_455ns:0000000000000038 .L15
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:910    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1725   .debug_str:0000000000000106 .LASF36
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1733   .debug_str:00000000000001c9 .LASF37
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1705   .debug_str:0000000000000000 .LASF38
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1675   .debug_ranges:0000000000000000 .Ldebug_ranges0
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1703   .debug_line:0000000000000000 .Ldebug_line0
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1789   .debug_str:0000000000000358 .LASF0
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1707   .debug_str:0000000000000074 .LASF4
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1729   .debug_str:00000000000001ac .LASF1
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1773   .debug_str:00000000000002fc .LASF2
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1737   .debug_str:0000000000000209 .LASF3
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1717   .debug_str:00000000000000cb .LASF5
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1781   .debug_str:000000000000032b .LASF6
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1743   .debug_str:0000000000000235 .LASF7
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1741   .debug_str:0000000000000223 .LASF8
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1759   .debug_str:00000000000002a5 .LASF9
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1775   .debug_str:0000000000000306 .LASF10
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1749   .debug_str:0000000000000253 .LASF11
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1747   .debug_str:0000000000000246 .LASF12
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1751   .debug_str:000000000000026a .LASF13
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1757   .debug_str:000000000000029d .LASF14
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1779   .debug_str:0000000000000322 .LASF15
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1723   .debug_str:00000000000000fd .LASF16
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1769   .debug_str:00000000000002dd .LASF17
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1715   .debug_str:00000000000000c5 .LASF18
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1739   .debug_str:000000000000021c .LASF19
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1777   .debug_str:0000000000000311 .LASF20
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1763   .debug_str:00000000000002ba .LASF39
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1787   .debug_str:000000000000034c .LASF21
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1709   .debug_str:000000000000007e .LASF40
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:255    .text.cs1237_port_wait_min_455ns:0000000000000000 .LFB7
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:335    .text.cs1237_port_wait_min_455ns:000000000000006a .LFE7
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1364   .debug_loc:0000000000000000 .LLST12
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1785   .debug_str:0000000000000340 .LASF22
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1382   .debug_loc:000000000000002c .LLST13
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1783   .debug_str:0000000000000334 .LASF41
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1403   .debug_loc:0000000000000054 .LLST14
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:276    .text.cs1237_port_wait_min_455ns:0000000000000014 .LVL33
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:285    .text.cs1237_port_wait_min_455ns:0000000000000020 .LVL35
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:304    .text.cs1237_port_wait_min_455ns:0000000000000040 .LVL39
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1753   .debug_str:0000000000000272 .LASF42
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:221    .text.cs1237_port_get_pin_value:0000000000000000 .LFB6
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:248    .text.cs1237_port_get_pin_value:000000000000001a .LFE6
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1415   .debug_loc:000000000000006c .LLST10
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1433   .debug_loc:0000000000000098 .LLST11
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:238    .text.cs1237_port_get_pin_value:0000000000000010 .LVL32
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1721   .debug_str:00000000000000e0 .LASF23
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:201    .text.cs1237_port_pin_direction_in:0000000000000000 .LFB5
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 12
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:122    .text.cs1237_port_initialize_pins:0000000000000084 .L3
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:137    .text.cs1237_port_initialize_pins:0000000000000096 .L5
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:60     .text.cs1237_port_initialize_pins:0000000000000030 .L2
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:77     .text.cs1237_port_initialize_pins:0000000000000046 .L4
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:292    .text.cs1237_port_wait_min_455ns:000000000000002c .L14
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:280    .text.cs1237_port_wait_min_455ns:0000000000000018 .L13
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:317    .text.cs1237_port_wait_min_455ns:000000000000005c .L12
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:299    .text.cs1237_port_wait_min_455ns:0000000000000038 .L15
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:910    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1725   .debug_str:0000000000000104 .LASF36
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1733   .debug_str:00000000000001c7 .LASF37
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1723   .debug_str:0000000000000092 .LASF38
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1675   .debug_ranges:0000000000000000 .Ldebug_ranges0
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1703   .debug_line:0000000000000000 .Ldebug_line0
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1789   .debug_str:0000000000000356 .LASF0
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1705   .debug_str:0000000000000000 .LASF4
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1729   .debug_str:00000000000001aa .LASF1
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1773   .debug_str:00000000000002fa .LASF2
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1737   .debug_str:0000000000000207 .LASF3
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1715   .debug_str:0000000000000057 .LASF5
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1781   .debug_str:0000000000000329 .LASF6
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1743   .debug_str:0000000000000233 .LASF7
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1741   .debug_str:0000000000000221 .LASF8
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1759   .debug_str:00000000000002a3 .LASF9
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1775   .debug_str:0000000000000304 .LASF10
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1749   .debug_str:0000000000000251 .LASF11
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1747   .debug_str:0000000000000244 .LASF12
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1751   .debug_str:0000000000000268 .LASF13
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1757   .debug_str:000000000000029b .LASF14
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1779   .debug_str:0000000000000320 .LASF15
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1721   .debug_str:0000000000000089 .LASF16
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1769   .debug_str:00000000000002db .LASF17
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1713   .debug_str:0000000000000051 .LASF18
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1739   .debug_str:000000000000021a .LASF19
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1777   .debug_str:000000000000030f .LASF20
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1763   .debug_str:00000000000002b8 .LASF39
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1787   .debug_str:000000000000034a .LASF21
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1707   .debug_str:000000000000000a .LASF40
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:255    .text.cs1237_port_wait_min_455ns:0000000000000000 .LFB7
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:335    .text.cs1237_port_wait_min_455ns:000000000000006a .LFE7
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1364   .debug_loc:0000000000000000 .LLST12
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1785   .debug_str:000000000000033e .LASF22
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1382   .debug_loc:000000000000002c .LLST13
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1783   .debug_str:0000000000000332 .LASF41
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1403   .debug_loc:0000000000000054 .LLST14
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:276    .text.cs1237_port_wait_min_455ns:0000000000000014 .LVL33
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:285    .text.cs1237_port_wait_min_455ns:0000000000000020 .LVL35
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:304    .text.cs1237_port_wait_min_455ns:0000000000000040 .LVL39
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1753   .debug_str:0000000000000270 .LASF42
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:221    .text.cs1237_port_get_pin_value:0000000000000000 .LFB6
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:248    .text.cs1237_port_get_pin_value:000000000000001a .LFE6
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1415   .debug_loc:000000000000006c .LLST10
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1433   .debug_loc:0000000000000098 .LLST11
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:238    .text.cs1237_port_get_pin_value:0000000000000010 .LVL32
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1719   .debug_str:000000000000006c .LASF23
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:201    .text.cs1237_port_pin_direction_in:0000000000000000 .LFB5
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 12
 
 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:214    .text.cs1237_port_pin_direction_in:0000000000000010 .LFE5
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1447   .debug_loc:00000000000000b9 .LLST9
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:212    .text.cs1237_port_pin_direction_in:0000000000000010 .LVL29
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1727   .debug_str:000000000000018e .LASF24
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:181    .text.cs1237_port_pin_direction_out:0000000000000000 .LFB4
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:194    .text.cs1237_port_pin_direction_out:0000000000000010 .LFE4
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1461   .debug_loc:00000000000000da .LLST8
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:192    .text.cs1237_port_pin_direction_out:0000000000000010 .LVL26
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1771   .debug_str:00000000000002e2 .LASF25
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:161    .text.cs1237_port_set_pin_value:0000000000000000 .LFB3
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:174    .text.cs1237_port_set_pin_value:000000000000000e .LFE3
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1475   .debug_loc:00000000000000fb .LLST6
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1489   .debug_loc:000000000000011c .LLST7
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:172    .text.cs1237_port_set_pin_value:000000000000000e .LVL23
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1711   .debug_str:0000000000000099 .LASF26
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:14     .text.cs1237_port_initialize_pins:0000000000000000 .LFB2
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:154    .text.cs1237_port_initialize_pins:00000000000000ac .LFE2
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1503   .debug_loc:000000000000013d .LLST0
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1719   .debug_str:00000000000000d5 .LASF27
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1526   .debug_loc:0000000000000177 .LLST1
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1765   .debug_str:00000000000002ca .LASF28
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1540   .debug_loc:0000000000000198 .LLST2
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1745   .debug_str:0000000000000240 .LASF29
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1569   .debug_loc:00000000000001dd .LLST3
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1610   .debug_loc:0000000000000227 .LLST4
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:134    .text.cs1237_port_initialize_pins:0000000000000094 .LVL16
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1636   .debug_loc:0000000000000269 .LLST5
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:146    .text.cs1237_port_initialize_pins:00000000000000a6 .LVL18
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:53     .text.cs1237_port_initialize_pins:000000000000002e .LVL4
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:70     .text.cs1237_port_initialize_pins:0000000000000044 .LVL6
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:86     .text.cs1237_port_initialize_pins:0000000000000058 .LVL8
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:92     .text.cs1237_port_initialize_pins:0000000000000066 .LVL9
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:95     .text.cs1237_port_initialize_pins:0000000000000070 .LVL10
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1713   .debug_str:00000000000000b5 .LASF30
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1791   .debug_str:0000000000000364 .LASF31
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1767   .debug_str:00000000000002d3 .LASF32
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1731   .debug_str:00000000000001ba .LASF33
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1793   .debug_str:0000000000000377 .LASF34
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1761   .debug_str:00000000000002b3 .LASF43
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1755   .debug_str:000000000000028c .LASF44
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:1735   .debug_str:00000000000001f0 .LASF35
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:262    .text.cs1237_port_wait_min_455ns:0000000000000002 .LCFI5
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:331    .text.cs1237_port_wait_min_455ns:0000000000000068 .LCFI6
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:288    .text.cs1237_port_wait_min_455ns:0000000000000024 .LVL36
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:298    .text.cs1237_port_wait_min_455ns:0000000000000038 .LVL38
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:325    .text.cs1237_port_wait_min_455ns:0000000000000062 .LVL41
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:279    .text.cs1237_port_wait_min_455ns:0000000000000018 .LVL34
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:295    .text.cs1237_port_wait_min_455ns:0000000000000030 .LVL37
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:232    .text.cs1237_port_get_pin_value:0000000000000006 .LCFI3
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:244    .text.cs1237_port_get_pin_value:0000000000000018 .LCFI4
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:224    .text.cs1237_port_get_pin_value:0000000000000000 .LVL30
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:229    .text.cs1237_port_get_pin_value:0000000000000004 .LVL31
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:204    .text.cs1237_port_pin_direction_in:0000000000000000 .LVL27
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:208    .text.cs1237_port_pin_direction_in:0000000000000004 .LVL28
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:184    .text.cs1237_port_pin_direction_out:0000000000000000 .LVL24
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:188    .text.cs1237_port_pin_direction_out:0000000000000004 .LVL25
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:164    .text.cs1237_port_set_pin_value:0000000000000000 .LVL20
-GAS LISTING C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s 			page 13
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:214    .text.cs1237_port_pin_direction_in:0000000000000010 .LFE5
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1447   .debug_loc:00000000000000b9 .LLST9
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:212    .text.cs1237_port_pin_direction_in:0000000000000010 .LVL29
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1727   .debug_str:000000000000018c .LASF24
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:181    .text.cs1237_port_pin_direction_out:0000000000000000 .LFB4
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:194    .text.cs1237_port_pin_direction_out:0000000000000010 .LFE4
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1461   .debug_loc:00000000000000da .LLST8
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:192    .text.cs1237_port_pin_direction_out:0000000000000010 .LVL26
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1771   .debug_str:00000000000002e0 .LASF25
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:161    .text.cs1237_port_set_pin_value:0000000000000000 .LFB3
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:174    .text.cs1237_port_set_pin_value:000000000000000e .LFE3
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1475   .debug_loc:00000000000000fb .LLST6
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1489   .debug_loc:000000000000011c .LLST7
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:172    .text.cs1237_port_set_pin_value:000000000000000e .LVL23
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1709   .debug_str:0000000000000025 .LASF26
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:14     .text.cs1237_port_initialize_pins:0000000000000000 .LFB2
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:154    .text.cs1237_port_initialize_pins:00000000000000ac .LFE2
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1503   .debug_loc:000000000000013d .LLST0
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1717   .debug_str:0000000000000061 .LASF27
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1526   .debug_loc:0000000000000177 .LLST1
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1765   .debug_str:00000000000002c8 .LASF28
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1540   .debug_loc:0000000000000198 .LLST2
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1745   .debug_str:000000000000023e .LASF29
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1569   .debug_loc:00000000000001dd .LLST3
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1610   .debug_loc:0000000000000227 .LLST4
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:134    .text.cs1237_port_initialize_pins:0000000000000094 .LVL16
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1636   .debug_loc:0000000000000269 .LLST5
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:146    .text.cs1237_port_initialize_pins:00000000000000a6 .LVL18
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:53     .text.cs1237_port_initialize_pins:000000000000002e .LVL4
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:70     .text.cs1237_port_initialize_pins:0000000000000044 .LVL6
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:86     .text.cs1237_port_initialize_pins:0000000000000058 .LVL8
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:92     .text.cs1237_port_initialize_pins:0000000000000066 .LVL9
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:95     .text.cs1237_port_initialize_pins:0000000000000070 .LVL10
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1711   .debug_str:0000000000000041 .LASF30
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1791   .debug_str:0000000000000362 .LASF31
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1767   .debug_str:00000000000002d1 .LASF32
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1731   .debug_str:00000000000001b8 .LASF33
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1793   .debug_str:0000000000000375 .LASF34
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1761   .debug_str:00000000000002b1 .LASF43
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1755   .debug_str:000000000000028a .LASF44
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:1735   .debug_str:00000000000001ee .LASF35
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:262    .text.cs1237_port_wait_min_455ns:0000000000000002 .LCFI5
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:331    .text.cs1237_port_wait_min_455ns:0000000000000068 .LCFI6
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:288    .text.cs1237_port_wait_min_455ns:0000000000000024 .LVL36
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:298    .text.cs1237_port_wait_min_455ns:0000000000000038 .LVL38
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:325    .text.cs1237_port_wait_min_455ns:0000000000000062 .LVL41
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:279    .text.cs1237_port_wait_min_455ns:0000000000000018 .LVL34
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:295    .text.cs1237_port_wait_min_455ns:0000000000000030 .LVL37
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:232    .text.cs1237_port_get_pin_value:0000000000000006 .LCFI3
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:244    .text.cs1237_port_get_pin_value:0000000000000018 .LCFI4
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:224    .text.cs1237_port_get_pin_value:0000000000000000 .LVL30
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:229    .text.cs1237_port_get_pin_value:0000000000000004 .LVL31
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:204    .text.cs1237_port_pin_direction_in:0000000000000000 .LVL27
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:208    .text.cs1237_port_pin_direction_in:0000000000000004 .LVL28
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:184    .text.cs1237_port_pin_direction_out:0000000000000000 .LVL24
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:188    .text.cs1237_port_pin_direction_out:0000000000000004 .LVL25
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:164    .text.cs1237_port_set_pin_value:0000000000000000 .LVL20
+GAS LISTING C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s 			page 13
 
 
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:170    .text.cs1237_port_set_pin_value:0000000000000006 .LVL22
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:168    .text.cs1237_port_set_pin_value:0000000000000004 .LVL21
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:20     .text.cs1237_port_initialize_pins:0000000000000002 .LCFI0
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:118    .text.cs1237_port_initialize_pins:0000000000000082 .LCFI1
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:123    .text.cs1237_port_initialize_pins:0000000000000084 .LCFI2
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:18     .text.cs1237_port_initialize_pins:0000000000000000 .LVL0
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:27     .text.cs1237_port_initialize_pins:0000000000000008 .LVL1
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:76     .text.cs1237_port_initialize_pins:0000000000000046 .LVL7
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:121    .text.cs1237_port_initialize_pins:0000000000000084 .LVL14
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:136    .text.cs1237_port_initialize_pins:0000000000000096 .LVL17
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:47     .text.cs1237_port_initialize_pins:000000000000001e .LVL2
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:49     .text.cs1237_port_initialize_pins:0000000000000022 .LVL3
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:111    .text.cs1237_port_initialize_pins:000000000000007c .LVL12
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:114    .text.cs1237_port_initialize_pins:000000000000007e .LVL13
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:59     .text.cs1237_port_initialize_pins:0000000000000030 .LVL5
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:130    .text.cs1237_port_initialize_pins:000000000000008a .LVL15
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:106    .text.cs1237_port_initialize_pins:0000000000000078 .LVL11
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:349    .debug_info:0000000000000000 .Ldebug_info0
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:55     .text.cs1237_port_initialize_pins:000000000000002e .LBB2
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:63     .text.cs1237_port_initialize_pins:0000000000000034 .LBE2
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:125    .text.cs1237_port_initialize_pins:0000000000000084 .LBB4
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:138    .text.cs1237_port_initialize_pins:0000000000000096 .LBE4
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:72     .text.cs1237_port_initialize_pins:0000000000000044 .LBB3
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:80     .text.cs1237_port_initialize_pins:000000000000004a .LBE3
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:139    .text.cs1237_port_initialize_pins:0000000000000096 .LBB5
-C:\Users\marwz\AppData\Local\Temp\ccxd0rNl.s:152    .text.cs1237_port_initialize_pins:00000000000000ac .LBE5
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:170    .text.cs1237_port_set_pin_value:0000000000000006 .LVL22
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:168    .text.cs1237_port_set_pin_value:0000000000000004 .LVL21
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:20     .text.cs1237_port_initialize_pins:0000000000000002 .LCFI0
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:118    .text.cs1237_port_initialize_pins:0000000000000082 .LCFI1
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:123    .text.cs1237_port_initialize_pins:0000000000000084 .LCFI2
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:18     .text.cs1237_port_initialize_pins:0000000000000000 .LVL0
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:27     .text.cs1237_port_initialize_pins:0000000000000008 .LVL1
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:76     .text.cs1237_port_initialize_pins:0000000000000046 .LVL7
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:121    .text.cs1237_port_initialize_pins:0000000000000084 .LVL14
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:136    .text.cs1237_port_initialize_pins:0000000000000096 .LVL17
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:47     .text.cs1237_port_initialize_pins:000000000000001e .LVL2
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:49     .text.cs1237_port_initialize_pins:0000000000000022 .LVL3
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:111    .text.cs1237_port_initialize_pins:000000000000007c .LVL12
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:114    .text.cs1237_port_initialize_pins:000000000000007e .LVL13
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:59     .text.cs1237_port_initialize_pins:0000000000000030 .LVL5
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:130    .text.cs1237_port_initialize_pins:000000000000008a .LVL15
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:106    .text.cs1237_port_initialize_pins:0000000000000078 .LVL11
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:349    .debug_info:0000000000000000 .Ldebug_info0
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:55     .text.cs1237_port_initialize_pins:000000000000002e .LBB2
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:63     .text.cs1237_port_initialize_pins:0000000000000034 .LBE2
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:125    .text.cs1237_port_initialize_pins:0000000000000084 .LBB4
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:138    .text.cs1237_port_initialize_pins:0000000000000096 .LBE4
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:72     .text.cs1237_port_initialize_pins:0000000000000044 .LBB3
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:80     .text.cs1237_port_initialize_pins:000000000000004a .LBE3
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:139    .text.cs1237_port_initialize_pins:0000000000000096 .LBB5
+C:\Users\marwz\AppData\Local\Temp\cc69MdE8.s:152    .text.cs1237_port_initialize_pins:00000000000000ac .LBE5
 
 UNDEFINED SYMBOLS
 rcu_periph_clock_enable
