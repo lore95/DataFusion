@@ -1,1 +1,7 @@
-serial
+numpy
+opencv-python
+ultralytics
+pyserial
+matplotlib
+ipython
+imageio
