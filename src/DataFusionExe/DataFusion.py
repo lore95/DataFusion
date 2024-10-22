@@ -38,11 +38,8 @@ V4Intercept= -14.855359018962712
 
 # Configure the serial connection
 ser = serial.Serial(
-    port='COM6',         # Set to the appropriate COM port
+    port='/dev/cu.usbmodem11101',         # Set to the appropriate COM port
     baudrate=9600,       # Adjust to match your device's baud rate
-    parity=serial.PARITY_NONE,
-    stopbits=serial.STOPBITS_ONE,
-    bytesize=serial.EIGHTBITS,
     timeout=1            # Timeout for reading (in seconds)
 )
 
@@ -93,8 +90,8 @@ def getPressureFaster():
     try:
         ser_buffer = ""
         # Read available bytes from the serial buffer
-        ser_bytes = ser.read(ser.in_waiting or 1)  # Read what's in the buffer, or at least 1 byte
         
+        ser_bytes = ser.read(ser.in_waiting or 1)  # Read what's in the buffer, or at least 1 byte
         # Accumulate the bytes in a buffer
         ser_buffer += ser_bytes.decode('utf-8')
         
@@ -111,6 +108,7 @@ def getPressureFaster():
                 _, v1, v2, v3, v4 = map(int, match.groups())
                 v1,v2,v3,v4 = getWeight(v1,v2,v3,v4 )
                 return v1, v2, v3, v4
+        return(0,0,0,0)
     except serial.SerialException as e:
         print("Serial communication error:", e)
     return None

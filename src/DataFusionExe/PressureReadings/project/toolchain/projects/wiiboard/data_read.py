@@ -9,7 +9,7 @@ import time
 
 # Configure the serial connection
 ser = serial.Serial(
-    port='COM6',         # Set to the appropriate COM port
+    port='/dev/cu.usbmodem11101',         # Set to the appropriate COM port
     baudrate=9600,       # Adjust to match your device's baud rate
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
